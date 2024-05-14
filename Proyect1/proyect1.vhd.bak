@@ -1,0 +1,46 @@
+library ieee; 
+
+	-- STD_LOGIC and STD_LOGIC_VECTOR types, and relevant functions
+	use ieee.std_logic_1164.all;
+
+	-- SIGNED and UNSIGNED types, and relevant functions
+	use ieee.numeric_std.all;
+	
+entity proyect1 is
+
+	port
+	(
+		-- Input ports
+		clk	: in  std_LOGIC := '0';
+		reset	: in  std_LOGIC := '0';
+
+		-- Output ports
+		dec	: out std_LOGIC_VECTOR (7 downto 0);
+		uni	: out std_LOGIC_VECTOR (7 downto 0);
+		decim : out std_LOGIC_VECTOR (7 downto 0)
+	);
+end proyect1;
+
+
+architecture arch of proyect1 is
+	procedure BCD (signal cont: in integer;
+						signal output : out std_LOGIC_VECTOR(7 downto 0)) is
+	begin
+		with cont select output<= x"3F" when 0,
+										  x"06" when 1,
+										  x"5B" when 2,
+										  x"4F" when 3,
+										  x"66" when 4,
+										  x"6D" when 5,
+										  x"7D" when 6,
+										  x"07" when 7,
+										  x"7F" when 8,
+										  x"6F" when 9;
+ 	end BCD;
+	
+	-- Declarations (optional)
+
+begin
+
+
+end arch;

@@ -1,0 +1,25 @@
+|ej6
+output[0] << cuenta[0].DB_MAX_OUTPUT_PORT_TYPE
+output[1] << cuenta[1].DB_MAX_OUTPUT_PORT_TYPE
+output[2] << cuenta[2].DB_MAX_OUTPUT_PORT_TYPE
+output[3] << cuenta[3].DB_MAX_OUTPUT_PORT_TYPE
+input[0] => cuenta[0].ADATA
+input[1] => cuenta[1].ADATA
+input[2] => cuenta[2].ADATA
+input[3] => cuenta[3].ADATA
+clk => cuenta[0].CLK
+clk => cuenta[1].CLK
+clk => cuenta[2].CLK
+clk => cuenta[3].CLK
+rst => cuenta[0].ACLR
+rst => cuenta[1].ACLR
+rst => cuenta[2].ACLR
+rst => cuenta[3].ACLR
+rst => cuenta[3].IN0
+CE => cuenta[3].ENA
+CE => cuenta[2].ENA
+CE => cuenta[1].ENA
+CE => cuenta[0].ENA
+L => cuenta[3].IN1
+
+

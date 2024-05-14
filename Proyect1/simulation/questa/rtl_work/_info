@@ -1,0 +1,95 @@
+m255
+K4
+z2
+!s11e vcom 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/intelFPGA_lite/Proyect1/simulation/questa
+Eproyect1
+Z1 w1715641527
+Z2 DPx4 ieee 11 numeric_std 0 22 aU^R8eGcicLcUFIaBQSL>3
+Z3 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z4 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
+!i122 0
+R0
+Z5 8C:/intelFPGA_lite/Proyect1/proyect1.vhd
+Z6 FC:/intelFPGA_lite/Proyect1/proyect1.vhd
+l0
+L9 1
+V]PB2cRM55iM[cM3L^AR831
+!s100 I<`KaBL_j?MVP]GL_i@jE0
+Z7 OV;C;2020.1;71
+31
+Z8 !s110 1715697656
+!i10b 1
+Z9 !s108 1715697656.000000
+Z10 !s90 -reportprogress|300|-93|-work|work|C:/intelFPGA_lite/Proyect1/proyect1.vhd|
+Z11 !s107 C:/intelFPGA_lite/Proyect1/proyect1.vhd|
+!i113 1
+Z12 o-93 -work work
+Z13 tExplicit 1 CvgOpt 0
+Aarch
+R2
+R3
+R4
+DEx4 work 8 proyect1 0 22 ]PB2cRM55iM[cM3L^AR831
+!i122 0
+l61
+L25 74
+V9<^UHX`LB_h[zSl`:NoNm3
+!s100 4KO`5H^o4eT5ZM5]=DNCR2
+R7
+31
+R8
+!i10b 1
+R9
+R10
+R11
+!i113 1
+R12
+R13
+Eproyect1_vhd_vec_tst
+Z14 w1715697580
+R3
+R4
+!i122 1
+R0
+Z15 8C:/intelFPGA_lite/Proyect1/simulation/modelsim/Waveform.vwf.vht
+Z16 FC:/intelFPGA_lite/Proyect1/simulation/modelsim/Waveform.vwf.vht
+l0
+L32 1
+VJfKgWjnJIkLAP_0iFYkID3
+!s100 n?X^`XgCC?2nC_YcdWzBA1
+R7
+31
+R8
+!i10b 1
+R9
+Z17 !s90 -reportprogress|300|-93|-work|work|C:/intelFPGA_lite/Proyect1/simulation/modelsim/Waveform.vwf.vht|
+!s107 C:/intelFPGA_lite/Proyect1/simulation/modelsim/Waveform.vwf.vht|
+!i113 1
+R12
+R13
+Aproyect1_arch
+R3
+R4
+DEx4 work 20 proyect1_vhd_vec_tst 0 22 JfKgWjnJIkLAP_0iFYkID3
+!i122 1
+l51
+L34 49
+V;LUVmf5P=mS:b4B;;29za3
+!s100 JJQ<mFodJJ0R00MIh3Db;0
+R7
+31
+R8
+!i10b 1
+R9
+R17
+Z18 !s107 C:/intelFPGA_lite/Proyect1/simulation/modelsim/Waveform.vwf.vht|
+!i113 1
+R12
+R13
