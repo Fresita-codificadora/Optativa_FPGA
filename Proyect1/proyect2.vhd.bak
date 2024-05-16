@@ -1,0 +1,46 @@
+library ieee; 
+
+	-- STD_LOGIC and STD_LOGIC_VECTOR types, and relevant functions
+	use ieee.std_logic_1164.all;
+
+	-- SIGNED and UNSIGNED types, and relevant functions
+	use ieee.numeric_std.all;
+
+entity proyect2 is 
+	port(
+	
+	);
+end entity;
+
+architecture arch of proyect2 is
+procedure BCD (signal cont: in integer;signal output : out std_LOGIC_VECTOR(7 downto 0)) is
+	begin
+		case cont is
+			when 0 =>
+				output <= not x"3F";
+			when 1 =>
+				output <= not x"06";
+			when 2 =>
+				output <= not x"5B";
+			when 3 =>
+				output <= not x"4F";
+			when 4 =>
+				output <= not x"66";
+			when 5 => 
+				output <= not x"6D";
+			when 6 =>
+				output <= not x"7D";
+			when 7 =>
+				output <= not x"07";
+			when 8 =>
+				output <= not x"7F";
+			when 9 =>
+				output <= not x"6F";
+			when others =>
+				output <= not x"01";
+		end case;
+ 	end BCD;
+
+begin
+
+end architecture;
