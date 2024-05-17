@@ -10,7 +10,7 @@ z2
 cModel Technology
 Z0 dC:/Users/Gaspar/Documents/GitHub/optativa_FPGA/guia5/ej4/simulation/questa
 Eej4_a
-Z1 w1715828385
+Z1 w1715864733
 Z2 DPx4 ieee 11 numeric_std 0 22 aU^R8eGcicLcUFIaBQSL>3
 Z3 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
 Z4 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
@@ -24,9 +24,9 @@ V9>R1cW8okQPGPQ0<b3z9A0
 !s100 82d<6f7Sn90;Q<gLMzdBR2
 Z7 OV;C;2020.1;71
 31
-Z8 !s110 1715828415
+Z8 !s110 1715877861
 !i10b 1
-Z9 !s108 1715828415.000000
+Z9 !s108 1715877861.000000
 Z10 !s90 -reportprogress|300|-93|-work|work|C:/Users/Gaspar/Documents/GitHub/optativa_FPGA/guia5/ej4/ej4_a.vhd|
 Z11 !s107 C:/Users/Gaspar/Documents/GitHub/optativa_FPGA/guia5/ej4/ej4_a.vhd|
 !i113 1

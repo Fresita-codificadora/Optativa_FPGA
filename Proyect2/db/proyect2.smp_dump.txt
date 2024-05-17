@@ -1,0 +1,7 @@
+
+State Machine - |proyect2|state
+Name state.valid state.verif state.debounce state.idle 
+state.idle 0 0 0 0 
+state.debounce 0 0 1 1 
+state.verif 0 1 0 1 
+state.valid 1 0 0 1 

@@ -52,10 +52,6 @@
 					"strict" : false
 				},
 				{
-					"name" : "col[0]",
-					"strict" : false
-				},
-				{
 					"name" : "col[1]",
 					"strict" : false
 				},

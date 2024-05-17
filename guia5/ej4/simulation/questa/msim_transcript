@@ -1,51 +1,49 @@
 # Reading pref.tcl
-# do ej4_a_run_msim_gate_verilog.do
-# if {[file exists gate_work]} {
-# 	vdel -lib gate_work -all
+# do ej4_a_run_msim_rtl_vhdl.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
 # }
-# vlib gate_work
-# vmap work gate_work
+# vlib rtl_work
+# vmap work rtl_work
 # Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
-# vmap work gate_work 
+# vmap work rtl_work 
 # Copying C:/intelFPGA/20.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
 # Modifying modelsim.ini
 # 
-# vlog -vlog01compat -work work +incdir+. {ej4_a.vo}
-# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 00:01:12 on May 16,2024
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+." ej4_a.vo 
-# -- Compiling module ej4_a
-# -- Compiling module hard_block
-# 
-# Top level modules:
-# 	ej4_a
-# End time: 00:01:12 on May 16,2024, Elapsed time: 0:00:00
+# vcom -93 -work work {C:/Users/Gaspar/Documents/GitHub/optativa_FPGA/guia5/ej4/ej4_a.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 13:44:21 on May 16,2024
+# vcom -reportprogress 300 -93 -work work C:/Users/Gaspar/Documents/GitHub/optativa_FPGA/guia5/ej4/ej4_a.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity ej4_a
+# -- Compiling architecture arch of ej4_a
+# End time: 13:44:21 on May 16,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # vcom -93 -work work {C:/Users/Gaspar/Documents/GitHub/optativa_FPGA/guia5/ej4/simulation/modelsim/Waveform.vwf.vht}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 00:01:12 on May 16,2024
+# Start time: 13:44:21 on May 16,2024
 # vcom -reportprogress 300 -93 -work work C:/Users/Gaspar/Documents/GitHub/optativa_FPGA/guia5/ej4/simulation/modelsim/Waveform.vwf.vht 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity ej4_a_vhd_vec_tst
 # -- Compiling architecture ej4_a_arch of ej4_a_vhd_vec_tst
-# End time: 00:01:12 on May 16,2024, Elapsed time: 0:00:00
+# End time: 13:44:21 on May 16,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
-# vsim -t 1ps -L altera_ver -L cycloneive_ver -L gate_work -L work -voptargs="+acc"  ej4_a_vhd_vec_tst
-# vsim -t 1ps -L altera_ver -L cycloneive_ver -L gate_work -L work -voptargs=""+acc"" ej4_a_vhd_vec_tst 
-# Start time: 00:01:12 on May 16,2024
+# vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cycloneive -L rtl_work -L work -voptargs="+acc"  ej4_a_vhd_vec_tst
+# vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cycloneive -L rtl_work -L work -voptargs=""+acc"" ej4_a_vhd_vec_tst 
+# Start time: 13:44:21 on May 16,2024
 # Loading std.standard
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
 # Loading work.ej4_a_vhd_vec_tst(ej4_a_arch)
-# Loading work.ej4_a
-# Loading work.hard_block
-# Loading cycloneive_ver.cycloneive_io_obuf
-# Loading cycloneive_ver.cycloneive_io_ibuf
-# Loading cycloneive_ver.cycloneive_lcell_comb
+# Loading ieee.numeric_std(body)
+# Loading work.ej4_a(arch)
 # 
 # add wave *
 # view structure
@@ -53,5 +51,5 @@
 # view signals
 # .main_pane.objects.interior.cs.body.tree
 # run 1 us
-# End time: 00:01:45 on May 16,2024, Elapsed time: 0:00:33
+# End time: 13:45:07 on May 16,2024, Elapsed time: 0:00:46
 # Errors: 0, Warnings: 0
