@@ -27,11 +27,10 @@ signal clk_out : std_LOGIC :='0';
 signal cuenta_4 : std_LOGIC_veCTOR(3 downto 0):="0000";
 --elimina rebote
 signal stp : std_LOGIC:='0'; -- señal de que se detenga si se detecta la tecla presionada
-signal valido : boolean:=false;
-signal i : integer range 0 to 500000 :=500000;
-signal indice : integer range 0 to 15:= 15;
+signal valido : boolean:=false; -- señal para determinar si el boton presionado sigue presionado y escribir los display
+signal indice : integer range 0 to 15:= 15; -- indice utilizado para los display 
 -- señales de alta impedancia
-signal fila : std_LOGIC_VECTOR(3 downto 0);
+signal fila : std_LOGIC_VECTOR(3 downto 0);  -- señal auxiliar por que desp los 0 son alta impedancia
 --procedure declaration
 ----------------------------------------------------------------------------------------------
 --------- Procedimiento encargado de escribir en los display de 7 segmentos ------------------
@@ -72,7 +71,7 @@ procedure BCD (signal cont: in integer;signal output : out std_LOGIC_VECTOR(7 do
 	
 	
 begin
-	process(clk) -- divisor de frecuencia de clk, de un clk de 50 MHZ baja a aprox 10 kHz
+	process(clk) -- divisor de frecuencia de clk, de un clk de 50 MHZ baja a aprox 10 kHz 
 	begin
  		if (clk'event and clk='1') then
 			cuenta <= cuenta +1;
@@ -84,6 +83,7 @@ begin
 	end process;
 	
 	maqu_est_y_cont:process(all)
+		variable i : integer range 0 to 500000 :=500000;
 	begin
 		
 -----------------------------------------------------------
@@ -121,17 +121,17 @@ begin
 				when idle=>
 					if std_match(col,"-011") or std_match(col,"-101") or std_match(col,"-110") then
 						state <= debounce;
-						i<= 500000; --iniciamos el contador de los 10 ms
+						i:= 500000; --iniciamos el contador de los 10 ms
 					else
 						state <= idle;
 					end if;
 				when debounce=>
 					if i = 0 then
 						state <= verif;
-						i<=500000;
+						i:=500000;
 					else
 						state <= debounce;
-						i<=i-1;
+						i:=i-1;
 					end if;
 				when verif=>
 					if std_match(col,"-011") or std_match(col,"-101") or std_match(col,"-110") then
@@ -186,10 +186,10 @@ begin
 --------------------------------------------------------------------------
 --------- Genera la alta impedancia de las lineas de fila ----------------
 --------------------------------------------------------------------------
-			fila_o <= "ZZZ1" when fila = "0001" else
-						 "ZZ1Z" when fila= "0010" else
-						 "Z1ZZ" when fila= "0100" else
-						 "1ZZZ" when fila= "1000" else "ZZZZ";
+			fila_o <= "ZZZ0" when fila = "0001" else
+						 "ZZ0Z" when fila= "0010" else
+						 "Z0ZZ" when fila= "0100" else
+						 "0ZZZ" when fila= "1000" else "ZZZZ";
 		
 		
 	

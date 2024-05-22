@@ -1,5 +1,5 @@
 Analysis & Synthesis report for proyect2
-Wed May 22 11:09:03 2024
+Wed May 22 11:21:44 2024
 Quartus Prime Version 23.1std.0 Build 991 11/28/2023 SC Lite Edition
 
 
@@ -47,7 +47,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                        ;
 +------------------------------------+------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Wed May 22 11:09:03 2024          ;
+; Analysis & Synthesis Status        ; Successful - Wed May 22 11:21:44 2024          ;
 ; Quartus Prime Version              ; 23.1std.0 Build 991 11/28/2023 SC Lite Edition ;
 ; Revision Name                      ; proyect2                                       ;
 ; Top-level Entity Name              ; proyect2                                       ;
@@ -253,25 +253,25 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +----------------------------------------+---------+
 ; Inverted Register                      ; Fan out ;
 +----------------------------------------+---------+
-; i[18]                                  ; 2       ;
-; i[17]                                  ; 2       ;
-; i[16]                                  ; 2       ;
-; i[15]                                  ; 2       ;
-; i[13]                                  ; 2       ;
-; i[8]                                   ; 2       ;
-; i[5]                                   ; 2       ;
+; \maqu_est_y_cont:i[18]                 ; 2       ;
+; \maqu_est_y_cont:i[17]                 ; 2       ;
+; \maqu_est_y_cont:i[16]                 ; 2       ;
+; \maqu_est_y_cont:i[15]                 ; 2       ;
+; \maqu_est_y_cont:i[13]                 ; 2       ;
+; \maqu_est_y_cont:i[8]                  ; 2       ;
+; \maqu_est_y_cont:i[5]                  ; 2       ;
 ; Total number of inverted registers = 7 ;         ;
 +----------------------------------------+---------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                           ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
-; 5:1                ; 12 bits   ; 36 LEs        ; 12 LEs               ; 24 LEs                 ; Yes        ; |proyect2|i[4]             ;
-; 5:1                ; 7 bits    ; 21 LEs        ; 7 LEs                ; 14 LEs                 ; Yes        ; |proyect2|i[8]             ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
++-----------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output      ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------+
+; 5:1                ; 12 bits   ; 36 LEs        ; 12 LEs               ; 24 LEs                 ; Yes        ; |proyect2|\maqu_est_y_cont:i[6] ;
+; 5:1                ; 7 bits    ; 21 LEs        ; 7 LEs                ; 14 LEs                 ; Yes        ; |proyect2|\maqu_est_y_cont:i[8] ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------+
 
 
 +-----------------------------------------------------+
@@ -315,7 +315,7 @@ Note: All latches listed above may not be present at the end of synthesis due to
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 23.1std.0 Build 991 11/28/2023 SC Lite Edition
-    Info: Processing started: Wed May 22 11:08:57 2024
+    Info: Processing started: Wed May 22 11:21:38 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off proyect2 -c proyect2
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 12 of the 12 processors detected
@@ -340,9 +340,9 @@ Info (21057): Implemented 114 device resources after synthesis - the final resou
     Info (21059): Implemented 12 output pins
     Info (21061): Implemented 96 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 6 warnings
-    Info: Peak virtual memory: 4926 megabytes
-    Info: Processing ended: Wed May 22 11:09:03 2024
+    Info: Peak virtual memory: 4918 megabytes
+    Info: Processing ended: Wed May 22 11:21:44 2024
     Info: Elapsed time: 00:00:06
-    Info: Total CPU time (on all processors): 00:00:13
+    Info: Total CPU time (on all processors): 00:00:12
 
 
