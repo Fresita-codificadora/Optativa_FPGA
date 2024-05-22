@@ -28,8 +28,8 @@ signal cuenta_4 : std_LOGIC_veCTOR(3 downto 0):="0000";
 --elimina rebote
 signal stp : std_LOGIC:='0'; -- señal de que se detenga si se detecta la tecla presionada
 signal valido : boolean:=false;
-signal i : integer range 0 to 100 :=100;
-signal indice : integer range 0 to 15;
+signal i : integer range 0 to 500000 :=500000;
+signal indice : integer range 0 to 15:= 15;
 --procedure declaration
 procedure BCD (signal cont: in integer;signal output : out std_LOGIC_VECTOR(7 downto 0)) is
 	begin
@@ -84,7 +84,7 @@ begin
 -----------------------------------------------------------
 ------ contador de cuatro bits ----------------------------
 -----------------------------------------------------------		
-		if reset='1' then
+		if reset='0' then
 			cuenta_4<="0000";
 		elsif (clk_out'event and clk_out='1') and stp='0' then -- contador 4 bits 
 			cuenta_4 <= std_logic_vector(to_unsigned(to_integer(unsigned(cuenta_4)) + 1, 4));
@@ -109,33 +109,33 @@ begin
 ----------------------------------------------------------
 ------ logica de lectura de las columnas -----------------
 ----------------------------------------------------------
-		if reset = '1' then
+		if reset = '0' then
 			state <= idle;
-		elsif (rising_edge(clk_out)) then
+		elsif (rising_edge(clk)) then
 			case state is
 				when idle=>
-					if std_match(col,"011-") or std_match(col,"101-") or std_match(col,"110-") then
+					if std_match(col,"-011") or std_match(col,"-101") or std_match(col,"-110") then
 						state <= debounce;
-						i<= 100; --iniciamos el contador de los 10 ms
+						i<= 500000; --iniciamos el contador de los 10 ms
 					else
 						state <= idle;
 					end if;
 				when debounce=>
 					if i = 0 then
 						state <= verif;
-						i<=100;
+						i<=500000;
 					else
 						state <= debounce;
 						i<=i-1;
 					end if;
 				when verif=>
-					if std_match(col,"011-") or std_match(col,"101-") or std_match(col,"110-") then
+					if std_match(col,"-011") or std_match(col,"-101") or std_match(col,"-110") then
 						state <= valid;
 					else
 						state <= idle;
 					end if;
 				when valid =>
-					if std_match(col,"011-") or std_match(col,"101-") or std_match(col,"110-") then
+					if std_match(col,"-011") or std_match(col,"-101") or std_match(col,"-110") then
 						state <= debounce;
 					else
 						state <= valid;
@@ -152,24 +152,27 @@ begin
 			when idle =>
 				stp <= '0';
 				valido <= false;
-				indice <= 15;
 			when debounce =>
 				stp <= '1';
+				valido <= false;
 			when verif =>
 				stp<='1';
+				valido <= false;
 			when valid =>
-				stp <='0';
+				stp <='1';
 				valido <= true;
-				indice <= to_integer(unsigned(cuenta_4));
 			when others => 
-				stp <= '0';
+				stp <= '1';
 				valido <= false;
 		end case;
 	end process;
 	
 	process (all)
-	begin	
-		if valido then 
+	begin
+		if reset= '0' then
+			indice<=15;
+		elsif valido then
+			indice <= to_integer(unsigned(cuenta_4));
 			BCD(indice,display);
 		end if;
 	end process;
