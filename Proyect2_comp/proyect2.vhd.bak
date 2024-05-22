@@ -1,0 +1,12 @@
+
+entity proyect2 is
+	port (
+	
+	);
+end entity;
+
+architecture arch of proyect2 is
+
+begin
+
+end architecture;

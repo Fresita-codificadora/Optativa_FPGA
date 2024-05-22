@@ -1,0 +1,22 @@
+library ieee; 
+
+	-- STD_LOGIC and STD_LOGIC_VECTOR types, and relevant functions
+	use ieee.std_logic_1164.all;
+
+	-- SIGNED and UNSIGNED types, and relevant functions
+	use ieee.numeric_std.all;
+
+entity deco_2_4 is
+
+port (
+	entrada : in std_LOGIC_VECTOR(1 downto 0);
+	output : out std_LOGIC_VECTOR(3 downto 0)
+);
+
+end entity;
+
+architecture arch of deco_2_4 is 
+
+begin
+
+end architecture;

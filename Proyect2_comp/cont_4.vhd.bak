@@ -1,0 +1,15 @@
+
+
+entity cont_4
+	port (
+		clk,stp : in std_logic;
+		cuenta : out std_logic_vector(3 downto 0)
+	);
+end entity;
+
+architecture arch of cont_4 is
+
+begin
+	
+
+end architecture;
