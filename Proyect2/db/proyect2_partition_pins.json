@@ -4,19 +4,19 @@
 			"name" : "Top",
 			"pins" : [
 				{
-					"name" : "fila[0]",
+					"name" : "fila_o[0]",
 					"strict" : false
 				},
 				{
-					"name" : "fila[1]",
+					"name" : "fila_o[1]",
 					"strict" : false
 				},
 				{
-					"name" : "fila[2]",
+					"name" : "fila_o[2]",
 					"strict" : false
 				},
 				{
-					"name" : "fila[3]",
+					"name" : "fila_o[3]",
 					"strict" : false
 				},
 				{
@@ -52,15 +52,15 @@
 					"strict" : false
 				},
 				{
+					"name" : "col[0]",
+					"strict" : false
+				},
+				{
 					"name" : "col[1]",
 					"strict" : false
 				},
 				{
 					"name" : "col[2]",
-					"strict" : false
-				},
-				{
-					"name" : "col[3]",
 					"strict" : false
 				},
 				{

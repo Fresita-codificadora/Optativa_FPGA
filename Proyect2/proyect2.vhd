@@ -13,7 +13,7 @@ entity proyect2 is
 			col : in std_LOGIC_VECTOR(3 downto 0); -- lector del valor de la columna
 			reset : in std_LOGIC;
 			--salidas
-			fila : out std_LOGIC_VECTOR(3 downto 0); --salida para el selector de fila 
+			fila_o : out std_LOGIC_VECTOR(3 downto 0); --salida para el selector de fila 
 			display	: out std_LOGIC_VECTOR (7 downto 0)  --creo que es la salida para el BCD
 	);
 end entity;
@@ -30,7 +30,12 @@ signal stp : std_LOGIC:='0'; -- señal de que se detenga si se detecta la tecla 
 signal valido : boolean:=false;
 signal i : integer range 0 to 500000 :=500000;
 signal indice : integer range 0 to 15:= 15;
+-- señales de alta impedancia
+signal fila : std_LOGIC_VECTOR(3 downto 0);
 --procedure declaration
+----------------------------------------------------------------------------------------------
+--------- Procedimiento encargado de escribir en los display de 7 segmentos ------------------
+----------------------------------------------------------------------------------------------
 procedure BCD (signal cont: in integer;signal output : out std_LOGIC_VECTOR(7 downto 0)) is
 	begin
 		case cont is
@@ -78,7 +83,7 @@ begin
 		end if;
 	end process;
 	
-	process(all)
+	maqu_est_y_cont:process(all)
 	begin
 		
 -----------------------------------------------------------
@@ -146,7 +151,7 @@ begin
 		end if;
 	end process;
 	-- Output depends solely on the current state
-	process (all)
+	salida_maq_estados:process (all)
 	begin
 		case state is
 			when idle =>
@@ -166,15 +171,26 @@ begin
 				valido <= false;
 		end case;
 	end process;
-	
-	process (all)
+-------------------------------------------------------------------------------------------------
+---------- Escritura en los display -------------------------------------------------------------
+-------------------------------------------------------------------------------------------------	
+	escritura :process (all)
 	begin
 		if reset= '0' then
 			indice<=15;
 		elsif valido then
 			indice <= to_integer(unsigned(cuenta_4));
-			BCD(indice,display);
 		end if;
 	end process;
+	BCD(indice,display);
+--------------------------------------------------------------------------
+--------- Genera la alta impedancia de las lineas de fila ----------------
+--------------------------------------------------------------------------
+			fila_o <= "ZZZ1" when fila = "0001" else
+						 "ZZ1Z" when fila= "0010" else
+						 "Z1ZZ" when fila= "0100" else
+						 "1ZZZ" when fila= "1000" else "ZZZZ";
+		
+		
 	
 end architecture;
