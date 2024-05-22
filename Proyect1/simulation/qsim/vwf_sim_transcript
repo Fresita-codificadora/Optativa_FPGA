@@ -7,7 +7,7 @@ Note: if both Questa Intel FPGA Edition and ModelSim executables are available, 
 
 **** Generating the ModelSim Testbench ****
 
-quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off proyect1 -c proyect1 --vector_source="C:/intelFPGA_lite/Proyect1/Waveform.vwf" --testbench_file="C:/intelFPGA_lite/Proyect1/simulation/qsim/Waveform.vwf.vht"
+quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off proyect1 -c proyect1 --vector_source="C:/intelFPGA_lite/optativa/Optativa_FPGA/Proyect1/Waveform1.vwf" --testbench_file="C:/intelFPGA_lite/optativa/Optativa_FPGA/Proyect1/simulation/qsim/Waveform1.vwf.vht"
 
 Info: *******************************************************************
 Info: Running Quartus Prime EDA Netlist Writer
@@ -26,17 +26,17 @@ Info: Running Quartus Prime EDA Netlist Writer
     Info: Intel and sold by Intel or its authorized distributors.  Please
     Info: refer to the applicable agreement for further details, at
     Info: https://fpgasoftware.intel.com/eula.
-    Info: Processing started: Tue May 14 15:19:43 2024
-Info: Command: quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off proyect1 -c proyect1 --vector_source=C:/intelFPGA_lite/Proyect1/Waveform.vwf --testbench_file=C:/intelFPGA_lite/Proyect1/simulation/qsim/Waveform.vwf.vht
+    Info: Processing started: Fri May 17 15:30:25 2024
+Info: Command: quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off proyect1 -c proyect1 --vector_source=C:/intelFPGA_lite/optativa/Optativa_FPGA/Proyect1/Waveform1.vwf --testbench_file=C:/intelFPGA_lite/optativa/Optativa_FPGA/Proyect1/simulation/qsim/Waveform1.vwf.vht
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 
-oring output pin "uni[2]" in vector source file when writing test bench files
+n writing test bench files
 
 Completed successfully. 
 
 **** Generating the functional simulation netlist ****
 
-quartus_eda --write_settings_files=off --simulation --functional=on --flatten_buses=off --tool=modelsim_oem --format=vhdl --output_directory="C:/intelFPGA_lite/Proyect1/simulation/qsim/" proyect1 -c proyect1
+quartus_eda --write_settings_files=off --simulation --functional=on --flatten_buses=off --tool=modelsim_oem --format=vhdl --output_directory="C:/intelFPGA_lite/optativa/Optativa_FPGA/Proyect1/simulation/qsim/" proyect1 -c proyect1
 
 Info: *******************************************************************
 Info: Running Quartus Prime EDA Netlist Writer
@@ -55,21 +55,21 @@ Info: Running Quartus Prime EDA Netlist Writer
     Info: Intel and sold by Intel or its authorized distributors.  Please
     Info: refer to the applicable agreement for further details, at
     Info: https://fpgasoftware.intel.com/eula.
-    Info: Processing started: Tue May 14 15:19:45 2024
-Info: Command: quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=vhdl --output_directory=C:/intelFPGA_lite/Proyect1/simulation/qsim/ proyect1 -c proyect1
+    Info: Processing started: Fri May 17 15:30:27 2024
+Info: Command: quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=vhdl --output_directory=C:/intelFPGA_lite/optativa/Optativa_FPGA/Proyect1/simulation/qsim/ proyect1 -c proyect1
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (204019): Generated file proyect1.vho in folder "C:/intelFPGA_lite/Proyect1/simulation/qsim//" for EDA simulation tool
+Info (204019): Generated file proyect1.vho in folder "C:/intelFPGA_lite/optativa/Optativa_FPGA/Proyect1/simulation/qsim//" for EDA simulation tool
 Info: Quartus Prime EDA Netlist Writer was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 4634 megabytes
-    Info: Processing ended: Tue May 14 15:19:46 2024
+    Info: Peak virtual memory: 4640 megabytes
+    Info: Processing ended: Fri May 17 15:30:28 2024
     Info: Elapsed time: 00:00:01
-    Info: Total CPU time (on all processors): 00:00:02
+    Info: Total CPU time (on all processors): 00:00:01
 
 Completed successfully. 
 
 **** Generating the ModelSim .do script ****
 
-C:/intelFPGA_lite/Proyect1/simulation/qsim/proyect1.do generated.
+C:/intelFPGA_lite/optativa/Optativa_FPGA/Proyect1/simulation/qsim/proyect1.do generated.
 
 Completed successfully. 
 
@@ -91,7 +91,7 @@ Reading pref.tcl
 
 # Questa Intel Starter FPGA Edition-64 vcom 2023.3 Compiler 2023.07 Jul 17 2023
 
-# Start time: 15:19:48 on May 14,2024
+# Start time: 15:30:31 on May 17,2024
 # vcom -work work proyect1.vho 
 
 # -- Loading package STANDARD
@@ -120,14 +120,14 @@ Reading pref.tcl
 
 # -- Compiling architecture structure of proyect1
 
-# End time: 15:19:48 on May 14,2024, Elapsed time: 0:00:00
+# End time: 15:30:31 on May 17,2024, Elapsed time: 0:00:00
 
 # Errors: 0, Warnings: 0
 
 # Questa Intel Starter FPGA Edition-64 vcom 2023.3 Compiler 2023.07 Jul 17 2023
 
-# Start time: 15:19:48 on May 14,2024
-# vcom -work work Waveform.vwf.vht 
+# Start time: 15:30:31 on May 17,2024
+# vcom -work work Waveform1.vwf.vht 
 
 # -- Loading package STANDARD
 
@@ -139,13 +139,13 @@ Reading pref.tcl
 
 # -- Compiling architecture proyect1_arch of proyect1_vhd_vec_tst
 
-# End time: 15:19:49 on May 14,2024, Elapsed time: 0:00:01
+# End time: 15:30:31 on May 17,2024, Elapsed time: 0:00:00
 
 # Errors: 0, Warnings: 0
 
 # vsim -voptargs=""+acc"" -c -t 1ps -L cycloneive -L altera -L altera_mf -L 220model -L sgate -L altera_lnsim work.proyect1_vhd_vec_tst 
-# Start time: 15:19:49 on May 14,2024
-# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Start time: 15:30:31 on May 17,2024
+# ** Note: (vsim-3812) Design is being optimized...
 # ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility.
 # ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
 # //  Questa Intel Starter FPGA Edition-64
@@ -201,9 +201,9 @@ Reading pref.tcl
 # Loading cycloneive.cycloneive_lcell_comb(vital_lcell_comb)#16
 # Loading cycloneive.cycloneive_lcell_comb(vital_lcell_comb)#17
 # Loading cycloneive.cycloneive_lcell_comb(vital_lcell_comb)#18
-# Loading altera.dffeas(vital_dffeas)#4
 # Loading cycloneive.cycloneive_lcell_comb(vital_lcell_comb)#19
 # Loading cycloneive.cycloneive_lcell_comb(vital_lcell_comb)#20
+# Loading altera.dffeas(vital_dffeas)#4
 # Loading cycloneive.cycloneive_lcell_comb(vital_lcell_comb)#21
 # Loading cycloneive.cycloneive_lcell_comb(vital_lcell_comb)#22
 # Loading cycloneive.cycloneive_lcell_comb(vital_lcell_comb)#23
@@ -221,29 +221,25 @@ Reading pref.tcl
 # Loading cycloneive.cycloneive_lcell_comb(vital_lcell_comb)#35
 # Loading cycloneive.cycloneive_lcell_comb(vital_lcell_comb)#36
 # Loading cycloneive.cycloneive_lcell_comb(vital_lcell_comb)#37
+# Loading cycloneive.cycloneive_lcell_comb(vital_lcell_comb)#38
+# Loading cycloneive.cycloneive_lcell_comb(vital_lcell_comb)#39
 
 # after#36
 
-# Simulation time: 7490000 ps
-
-# Simulation time: 7490000 ps
-
-# Simulation time: 7490000 ps
-
-# End time: 15:20:00 on May 14,2024, Elapsed time: 0:00:11
+# End time: 15:30:44 on May 17,2024, Elapsed time: 0:00:13
 # Errors: 0, Warnings: 1
 
 Completed successfully. 
 
 **** Converting ModelSim VCD to vector waveform ****
 
-Reading C:/intelFPGA_lite/Proyect1/Waveform.vwf...
+Reading C:/intelFPGA_lite/optativa/Optativa_FPGA/Proyect1/Waveform1.vwf...
 
-Reading C:/intelFPGA_lite/Proyect1/simulation/qsim/proyect1.msim.vcd...
+Reading C:/intelFPGA_lite/optativa/Optativa_FPGA/Proyect1/simulation/qsim/proyect1.msim.vcd...
 
 Processing channel transitions... 
 
-Writing the resulting VWF to C:/intelFPGA_lite/Proyect1/simulation/qsim/proyect1_20240514152000.sim.vwf
+Writing the resulting VWF to C:/intelFPGA_lite/optativa/Optativa_FPGA/Proyect1/simulation/qsim/proyect1_20240517153044.sim.vwf
 
 Finished VCD to VWF conversion.
 

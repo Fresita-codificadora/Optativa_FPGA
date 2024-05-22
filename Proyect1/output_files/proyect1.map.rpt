@@ -1,5 +1,5 @@
 Analysis & Synthesis report for proyect1
-Tue May 14 15:35:26 2024
+Fri May 17 15:28:24 2024
 Quartus Prime Version 23.1std.0 Build 991 11/28/2023 SC Lite Edition
 
 
@@ -44,15 +44,15 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                        ;
 +------------------------------------+------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Tue May 14 15:35:26 2024          ;
+; Analysis & Synthesis Status        ; Successful - Fri May 17 15:28:24 2024          ;
 ; Quartus Prime Version              ; 23.1std.0 Build 991 11/28/2023 SC Lite Edition ;
 ; Revision Name                      ; proyect1                                       ;
 ; Top-level Entity Name              ; proyect1                                       ;
 ; Family                             ; Cyclone IV E                                   ;
-; Total logic elements               ; 75                                             ;
-;     Total combinational functions  ; 75                                             ;
-;     Dedicated logic registers      ; 63                                             ;
-; Total registers                    ; 63                                             ;
+; Total logic elements               ; 45                                             ;
+;     Total combinational functions  ; 45                                             ;
+;     Dedicated logic registers      ; 39                                             ;
+; Total registers                    ; 39                                             ;
 ; Total pins                         ; 26                                             ;
 ; Total virtual pins                 ; 0                                              ;
 ; Total memory bits                  ; 0                                              ;
@@ -163,13 +163,13 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                   ;
-+----------------------------------+-----------------+-----------------+-----------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path            ; Library ;
-+----------------------------------+-----------------+-----------------+-----------------------------------------+---------+
-; proyect1.vhd                     ; yes             ; User VHDL File  ; C:/intelFPGA_lite/Proyect1/proyect1.vhd ;         ;
-+----------------------------------+-----------------+-----------------+-----------------------------------------+---------+
++-------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                          ;
++----------------------------------+-----------------+-----------------+----------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                   ; Library ;
++----------------------------------+-----------------+-----------------+----------------------------------------------------------------+---------+
+; proyect1.vhd                     ; yes             ; User VHDL File  ; C:/intelFPGA_lite/optativa/Optativa_FPGA/Proyect1/proyect1.vhd ;         ;
++----------------------------------+-----------------+-----------------+----------------------------------------------------------------+---------+
 
 
 +-------------------------------------------------------+
@@ -177,20 +177,20 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+---------+
 ; Resource                                    ; Usage   ;
 +---------------------------------------------+---------+
-; Estimated Total logic elements              ; 75      ;
+; Estimated Total logic elements              ; 45      ;
 ;                                             ;         ;
-; Total combinational functions               ; 75      ;
+; Total combinational functions               ; 45      ;
 ; Logic element usage by number of LUT inputs ;         ;
-;     -- 4 input functions                    ; 40      ;
-;     -- 3 input functions                    ; 2       ;
-;     -- <=2 input functions                  ; 33      ;
+;     -- 4 input functions                    ; 32      ;
+;     -- 3 input functions                    ; 4       ;
+;     -- <=2 input functions                  ; 9       ;
 ;                                             ;         ;
 ; Logic elements by mode                      ;         ;
-;     -- normal mode                          ; 47      ;
-;     -- arithmetic mode                      ; 28      ;
+;     -- normal mode                          ; 41      ;
+;     -- arithmetic mode                      ; 4       ;
 ;                                             ;         ;
-; Total registers                             ; 63      ;
-;     -- Dedicated logic registers            ; 63      ;
+; Total registers                             ; 39      ;
+;     -- Dedicated logic registers            ; 39      ;
 ;     -- I/O registers                        ; 0       ;
 ;                                             ;         ;
 ; I/O pins                                    ; 26      ;
@@ -199,8 +199,8 @@ https://fpgasoftware.intel.com/eula.
 ;                                             ;         ;
 ; Maximum fan-out node                        ; clk_out ;
 ; Maximum fan-out                             ; 34      ;
-; Total fan-out                               ; 440     ;
-; Average fan-out                             ; 2.32    ;
+; Total fan-out                               ; 318     ;
+; Average fan-out                             ; 2.34    ;
 +---------------------------------------------+---------+
 
 
@@ -209,7 +209,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+-------------+--------------+
 ; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name ; Entity Name ; Library Name ;
 +----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+-------------+--------------+
-; |proyect1                  ; 75 (75)             ; 63 (63)                   ; 0           ; 0            ; 0       ; 0         ; 26   ; 0            ; |proyect1           ; proyect1    ; work         ;
+; |proyect1                  ; 45 (45)             ; 39 (39)                   ; 0           ; 0            ; 0       ; 0         ; 26   ; 0            ; |proyect1           ; proyect1    ; work         ;
 +----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+-------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -231,7 +231,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 63    ;
+; Total registers                              ; 39    ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 12    ;
@@ -247,23 +247,23 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
 ; boundary_port         ; 26                          ;
-; cycloneiii_ff         ; 63                          ;
+; cycloneiii_ff         ; 39                          ;
 ;     CLR               ; 6                           ;
 ;     ENA               ; 21                          ;
 ;     ENA CLR           ; 6                           ;
-;     plain             ; 30                          ;
-; cycloneiii_lcell_comb ; 76                          ;
-;     arith             ; 28                          ;
-;         2 data inputs ; 28                          ;
-;     normal            ; 48                          ;
+;     plain             ; 6                           ;
+; cycloneiii_lcell_comb ; 46                          ;
+;     arith             ; 4                           ;
+;         2 data inputs ; 4                           ;
+;     normal            ; 42                          ;
 ;         0 data inputs ; 1                           ;
 ;         1 data inputs ; 4                           ;
 ;         2 data inputs ; 1                           ;
-;         3 data inputs ; 2                           ;
-;         4 data inputs ; 40                          ;
+;         3 data inputs ; 4                           ;
+;         4 data inputs ; 32                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 3.80                        ;
-; Average LUT depth     ; 2.19                        ;
+; Max LUT depth         ; 3.00                        ;
+; Average LUT depth     ; 1.22                        ;
 +-----------------------+-----------------------------+
 
 
@@ -272,7 +272,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:00     ;
+; Top            ; 00:00:01     ;
 +----------------+--------------+
 
 
@@ -282,29 +282,29 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 23.1std.0 Build 991 11/28/2023 SC Lite Edition
-    Info: Processing started: Tue May 14 15:35:05 2024
+    Info: Processing started: Fri May 17 15:27:54 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off proyect1 -c proyect1
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
 Info (12021): Found 2 design units, including 1 entities, in source file proyect1.vhd
-    Info (12022): Found design unit 1: proyect1-arch File: C:/intelFPGA_lite/Proyect1/proyect1.vhd Line: 27
-    Info (12023): Found entity 1: proyect1 File: C:/intelFPGA_lite/Proyect1/proyect1.vhd Line: 11
+    Info (12022): Found design unit 1: proyect1-arch File: C:/intelFPGA_lite/optativa/Optativa_FPGA/Proyect1/proyect1.vhd Line: 27
+    Info (12023): Found entity 1: proyect1 File: C:/intelFPGA_lite/optativa/Optativa_FPGA/Proyect1/proyect1.vhd Line: 11
 Info (12127): Elaborating entity "proyect1" for the top level hierarchy
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "dec[7]" is stuck at VCC File: C:/intelFPGA_lite/Proyect1/proyect1.vhd Line: 78
-    Warning (13410): Pin "uni[7]" is stuck at VCC File: C:/intelFPGA_lite/Proyect1/proyect1.vhd Line: 78
-    Warning (13410): Pin "decim[7]" is stuck at VCC File: C:/intelFPGA_lite/Proyect1/proyect1.vhd Line: 78
+    Warning (13410): Pin "dec[7]" is stuck at VCC File: C:/intelFPGA_lite/optativa/Optativa_FPGA/Proyect1/proyect1.vhd Line: 79
+    Warning (13410): Pin "uni[7]" is stuck at VCC File: C:/intelFPGA_lite/optativa/Optativa_FPGA/Proyect1/proyect1.vhd Line: 79
+    Warning (13410): Pin "decim[7]" is stuck at VCC File: C:/intelFPGA_lite/optativa/Optativa_FPGA/Proyect1/proyect1.vhd Line: 79
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 101 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 71 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 2 input pins
     Info (21059): Implemented 24 output pins
-    Info (21061): Implemented 75 logic cells
+    Info (21061): Implemented 45 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 5 warnings
-    Info: Peak virtual memory: 4786 megabytes
-    Info: Processing ended: Tue May 14 15:35:26 2024
-    Info: Elapsed time: 00:00:21
+    Info: Peak virtual memory: 4791 megabytes
+    Info: Processing ended: Fri May 17 15:28:24 2024
+    Info: Elapsed time: 00:00:30
     Info: Total CPU time (on all processors): 00:00:43
 
 

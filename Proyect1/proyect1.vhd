@@ -28,7 +28,7 @@ architecture arch of proyect1 is
 	signal cont_dec : integer range 0 to 9 := 0;
 	signal cont_uni : integer range 0 to 9 := 0;
 	signal cont_decim : integer range 0 to 9 := 0;
-	signal cuenta : integer range 0 to (2**29-1) :=0;
+	signal cuenta : integer range 0 to 1_000_000 :=0;
 --	signal cuenta : integer range 0 to 16;
 	signal clk_out: std_LOGIC;
 	procedure BCD (signal cont: in integer;signal output : out std_LOGIC_VECTOR(7 downto 0)) is --procedimiento encargado de convertir integer a BCD}
@@ -67,7 +67,7 @@ begin
 	begin
  		if (clk'event and clk='1') then
 			cuenta <= cuenta +1;
-			if cuenta = (2**29-1) then 
+			if cuenta = 1_000_000 then 
 				cuenta<=0;
 				clk_out <= not clk_out;
 			end if;
@@ -82,9 +82,6 @@ begin
 			cont_dec<=0;
 		elsif (clk_out'event and clk_out='1') then
 			cont_decim<=cont_decim+1;
-			BCD(cont_decim,decim);
-			BCD(cont_uni,uni);
-			BCD(cont_dec,dec);  -- escribimos unidades decenas centenas en cada ciclo de clk
 			if cont_decim=9 then  -- logica de incrementar cada uno 
 				cont_uni<=cont_uni+1;    
 				cont_decim<=0;
@@ -97,6 +94,9 @@ begin
 				end if;
 			end if ;
 		end if;
+		BCD(cont_decim,decim);
+		BCD(cont_uni,uni);
+		BCD(cont_dec,dec);  -- escribimos unidades decenas centenas en cada ciclo de clk
 	end process;
 
 end arch;

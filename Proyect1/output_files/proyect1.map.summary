@@ -1,12 +1,12 @@
-Analysis & Synthesis Status : Successful - Tue May 14 15:35:26 2024
+Analysis & Synthesis Status : Successful - Fri May 17 15:28:24 2024
 Quartus Prime Version : 23.1std.0 Build 991 11/28/2023 SC Lite Edition
 Revision Name : proyect1
 Top-level Entity Name : proyect1
 Family : Cyclone IV E
-Total logic elements : 75
-    Total combinational functions : 75
-    Dedicated logic registers : 63
-Total registers : 63
+Total logic elements : 45
+    Total combinational functions : 45
+    Dedicated logic registers : 39
+Total registers : 39
 Total pins : 26
 Total virtual pins : 0
 Total memory bits : 0

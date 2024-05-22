@@ -1,8 +1,9 @@
 m255
 K4
 z2
-Z0 !s12c _opt
-Z1 !s99 nomlopt
+!s12c _opt1
+Z0 !s99 nomlopt
+Z1 !s12c _opt
 R0
 R1
 R0
@@ -11,6 +12,7 @@ R0
 R1
 R0
 R1
+R0
 !s11e vcom 2023.3 2023.07, Jul 17 2023
 13
 !s112 1.1
@@ -22,155 +24,168 @@ Z2 dC:/intelFPGA_lite/Proyect1/simulation/qsim
 T_opt
 !s110 1715710790
 V1mA>;O19J@j<@cTeL`Rb92
-04 20 13 work proyect1_vhd_vec_tst proyect1_arch 1
+Z3 04 20 13 work proyect1_vhd_vec_tst proyect1_arch 1
 =1-d481d7ab5ad7-6643ab45-2c7-30d8
-R1
-!s12b OEM100
-!s124 OEM10U3 
-o-quiet -auto_acc_if_foreign -work work -L cycloneive -L altera -L altera_mf -L 220model -L sgate -L altera_lnsim +acc
-tCvgOpt 0
+R0
+Z4 !s12b OEM100
+Z5 !s124 OEM10U3 
+Z6 o-quiet -auto_acc_if_foreign -work work -L cycloneive -L altera -L altera_mf -L 220model -L sgate -L altera_lnsim +acc
+Z7 tCvgOpt 0
 n@_opt
-OL;O;2023.3;77
-Ehard_block
-Z3 w1715710786
-Z4 DPx4 ieee 16 vital_primitives 0 22 Y]H?Y_]z4@VoaWAGJ=36m1
-Z5 DPx10 cycloneive 20 cycloneive_atom_pack 0 22 JFD354ZMY?;ZG1UUQ_P^@1
-Z6 DPx4 ieee 12 vital_timing 0 22 6STbz=m1W[80IE06h_el^0
-Z7 DPx3 std 6 textio 0 22 LS[?81n5ZHWBI9JkBZTV<2
-Z8 DPx4 ieee 14 std_logic_1164 0 22 6<US`=mgl_dFdCEFF7J=m1
-Z9 DPx10 cycloneive 21 cycloneive_components 0 22 :CA=Yg0R^TdJ3>^OGfeMR2
-!i122 8
+Z8 OL;O;2023.3;77
 R2
-Z10 8proyect1.vho
-Z11 Fproyect1.vho
+T_opt1
+!s110 1715970634
+V`Ba=hkiIW5TV7?E<WAJ@?3
+R3
+=1-d481d7ab5ad7-6647a248-25d-35f4
+R0
+R4
+R5
+R6
+R7
+n@_opt1
+R8
+Ehard_block
+Z9 w1715970628
+Z10 DPx4 ieee 16 vital_primitives 0 22 Y]H?Y_]z4@VoaWAGJ=36m1
+Z11 DPx10 cycloneive 20 cycloneive_atom_pack 0 22 JFD354ZMY?;ZG1UUQ_P^@1
+Z12 DPx4 ieee 12 vital_timing 0 22 6STbz=m1W[80IE06h_el^0
+Z13 DPx3 std 6 textio 0 22 LS[?81n5ZHWBI9JkBZTV<2
+Z14 DPx4 ieee 14 std_logic_1164 0 22 6<US`=mgl_dFdCEFF7J=m1
+Z15 DPx10 cycloneive 21 cycloneive_components 0 22 :CA=Yg0R^TdJ3>^OGfeMR2
+!i122 12
+Z16 dC:/intelFPGA_lite/optativa/Optativa_FPGA/Proyect1/simulation/qsim
+Z17 8proyect1.vho
+Z18 Fproyect1.vho
 l0
 L35 1
 VO;cUSklm4Sig<`__bK=J@0
 !s100 0CTYib@dc:ObIVR9DRSK?2
-Z12 OL;C;2023.3;77
+Z19 OL;C;2023.3;77
 32
-Z13 !s110 1715710788
+Z20 !s110 1715970631
 !i10b 1
-Z14 !s108 1715710788.000000
-Z15 !s90 -work|work|proyect1.vho|
-Z16 !s107 proyect1.vho|
+Z21 !s108 1715970631.000000
+Z22 !s90 -work|work|proyect1.vho|
+Z23 !s107 proyect1.vho|
 !i113 0
-Z17 o-work work
-Z18 tExplicit 1 CvgOpt 0
+Z24 o-work work
+Z25 tExplicit 1 CvgOpt 0
 Astructure
-R4
-R5
-R6
-R7
-R8
-R9
+R10
+R11
+R12
+R13
+R14
+R15
 DEx4 work 10 hard_block 0 22 O;cUSklm4Sig<`__bK=J@0
-!i122 8
+!i122 12
 l65
 L51 20
 VGLY:g5RDEe^dIV`12>FYD3
 !s100 6LcB1AebN6j_bAmfc?Z:_0
-R12
+R19
 32
-R13
+R20
 !i10b 1
-R14
-R15
-R16
+R21
+R22
+R23
 !i113 0
+R24
+R25
+Eproyect1
+R9
+R11
+R15
+R10
+Z26 DPx6 altera 11 dffeas_pack 0 22 mB4IFnUT3:DoZN@NS]Gzg0
+R12
+R13
+R14
+Z27 DPx6 altera 28 altera_primitives_components 0 22 >1_OP3SHemAi5ZBLF?7g43
+!i122 12
+R16
 R17
 R18
-Eproyect1
-R3
-R5
-R9
-R4
-Z19 DPx6 altera 11 dffeas_pack 0 22 mB4IFnUT3:DoZN@NS]Gzg0
-R6
-R7
-R8
-Z20 DPx6 altera 28 altera_primitives_components 0 22 >1_OP3SHemAi5ZBLF?7g43
-!i122 8
-R2
-R10
-R11
 l0
 L80 1
-VN97cTW9kFEU39mUD[j0fj0
-!s100 g^?Q=QST]0VR@7F@I@i;c3
-R12
-32
-R13
-!i10b 1
-R14
-R15
-R16
-!i113 0
-R17
-R18
-Astructure
-R5
-R9
-R4
+VczzU9QBm6_kdFMhER_6G]1
+!s100 8EQokNE7J0`?L=hhG[96W3
 R19
-R6
-R7
-R8
+32
 R20
-DEx4 work 8 proyect1 0 22 N97cTW9kFEU39mUD[j0fj0
-!i122 8
+!i10b 1
+R21
+R22
+R23
+!i113 0
+R24
+R25
+Astructure
+R11
+R15
+R10
+R26
+R12
+R13
+R14
+R27
+DEx4 work 8 proyect1 0 22 czzU9QBm6_kdFMhER_6G]1
+!i122 12
 l252
 L119 1904
-VAX9cBN4LL`VP:T^9<;VRI2
-!s100 `@U`iN[S9JbP:<BNmG`;I2
-R12
+VhOFlXX:VD>lh7MAgRcQIb2
+!s100 =JB7_Ce:>6F`Snn4FLKf80
+R19
 32
-R13
+R20
 !i10b 1
-R14
-R15
-R16
+R21
+R22
+R23
 !i113 0
-R17
-R18
+R24
+R25
 Eproyect1_vhd_vec_tst
-Z21 w1715710785
-R7
-R8
-!i122 9
-R2
-Z22 8Waveform.vwf.vht
-Z23 FWaveform.vwf.vht
+Z28 w1715970626
+R13
+R14
+!i122 13
+R16
+Z29 8Waveform1.vwf.vht
+Z30 FWaveform1.vwf.vht
 l0
 L32 1
 Ve6LiKmm=jDF0HTI_ohWR:0
 !s100 Lc`5SlHXVzBm2MAX2jIaX2
-R12
+R19
 32
-R13
+R20
 !i10b 1
-R14
-Z24 !s90 -work|work|Waveform.vwf.vht|
-Z25 !s107 Waveform.vwf.vht|
+R21
+Z31 !s90 -work|work|Waveform1.vwf.vht|
+Z32 !s107 Waveform1.vwf.vht|
 !i113 0
-R17
-R18
-Aproyect1_arch
-R7
-R8
-DEx4 work 20 proyect1_vhd_vec_tst 0 22 e6LiKmm=jDF0HTI_ohWR:0
-!i122 9
-l51
-L34 49
-VnZ[63mih2Qg=0iNH<KkS60
-!s100 7okeGh?FP[i_Qn43ba]BC1
-R12
-32
-R13
-!i10b 1
-R14
 R24
 R25
+Aproyect1_arch
+R13
+R14
+DEx4 work 20 proyect1_vhd_vec_tst 0 22 e6LiKmm=jDF0HTI_ohWR:0
+!i122 13
+l51
+L34 49
+Vl7LR2e62Sb]gzzYN@<mk31
+!s100 ]5f4C1oFCz;I=zOWV`;j`0
+R19
+32
+R20
+!i10b 1
+R21
+R31
+R32
 !i113 0
-R17
-R18
+R24
+R25

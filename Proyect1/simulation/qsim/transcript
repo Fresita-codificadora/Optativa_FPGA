@@ -2,7 +2,7 @@
 # ** Warning: (vlib-34) Library already exists at "work".
 # Errors: 0, Warnings: 1
 # Questa Intel Starter FPGA Edition-64 vcom 2023.3 Compiler 2023.07 Jul 17 2023
-# Start time: 15:19:48 on May 14,2024
+# Start time: 15:30:31 on May 17,2024
 # vcom -work work proyect1.vho 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -17,21 +17,21 @@
 # -- Loading package altera_primitives_components
 # -- Compiling entity proyect1
 # -- Compiling architecture structure of proyect1
-# End time: 15:19:48 on May 14,2024, Elapsed time: 0:00:00
+# End time: 15:30:31 on May 17,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Questa Intel Starter FPGA Edition-64 vcom 2023.3 Compiler 2023.07 Jul 17 2023
-# Start time: 15:19:48 on May 14,2024
-# vcom -work work Waveform.vwf.vht 
+# Start time: 15:30:31 on May 17,2024
+# vcom -work work Waveform1.vwf.vht 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity proyect1_vhd_vec_tst
 # -- Compiling architecture proyect1_arch of proyect1_vhd_vec_tst
-# End time: 15:19:49 on May 14,2024, Elapsed time: 0:00:01
+# End time: 15:30:31 on May 17,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vsim -voptargs=""+acc"" -c -t 1ps -L cycloneive -L altera -L altera_mf -L 220model -L sgate -L altera_lnsim work.proyect1_vhd_vec_tst 
-# Start time: 15:19:49 on May 14,2024
-# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Start time: 15:30:31 on May 17,2024
+# ** Note: (vsim-3812) Design is being optimized...
 # ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility.
 # ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
 # //  Questa Intel Starter FPGA Edition-64
@@ -86,9 +86,9 @@
 # Loading cycloneive.cycloneive_lcell_comb(vital_lcell_comb)#16
 # Loading cycloneive.cycloneive_lcell_comb(vital_lcell_comb)#17
 # Loading cycloneive.cycloneive_lcell_comb(vital_lcell_comb)#18
-# Loading altera.dffeas(vital_dffeas)#4
 # Loading cycloneive.cycloneive_lcell_comb(vital_lcell_comb)#19
 # Loading cycloneive.cycloneive_lcell_comb(vital_lcell_comb)#20
+# Loading altera.dffeas(vital_dffeas)#4
 # Loading cycloneive.cycloneive_lcell_comb(vital_lcell_comb)#21
 # Loading cycloneive.cycloneive_lcell_comb(vital_lcell_comb)#22
 # Loading cycloneive.cycloneive_lcell_comb(vital_lcell_comb)#23
@@ -106,9 +106,8 @@
 # Loading cycloneive.cycloneive_lcell_comb(vital_lcell_comb)#35
 # Loading cycloneive.cycloneive_lcell_comb(vital_lcell_comb)#36
 # Loading cycloneive.cycloneive_lcell_comb(vital_lcell_comb)#37
+# Loading cycloneive.cycloneive_lcell_comb(vital_lcell_comb)#38
+# Loading cycloneive.cycloneive_lcell_comb(vital_lcell_comb)#39
 # after#36
-# Simulation time: 7490000 ps
-# Simulation time: 7490000 ps
-# Simulation time: 7490000 ps
-# End time: 15:20:00 on May 14,2024, Elapsed time: 0:00:11
+# End time: 15:30:44 on May 17,2024, Elapsed time: 0:00:13
 # Errors: 0, Warnings: 1
