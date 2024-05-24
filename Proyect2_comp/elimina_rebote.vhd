@@ -27,12 +27,12 @@ begin
 		variable cuenta: integer range 0 to 500000:=500000; -- 10ms son 500000 ciclos a 50 MHz
 		variable cuenta_2 : integer range 0 to 10000:=10000; -- 2 ciclos de la señal de 10 kHz
 	begin
-		if reset = '1' then
+		if reset = '0' then
 			state <= idle;
 		elsif (rising_edge(clk)) then
 			case state is
 				when idle=>
-					if tecla = '1' then
+					if tecla = '0' then
 						state <= debounce;
 					else
 						state <= idle;
@@ -46,7 +46,7 @@ begin
 						state <= debounce;
 					end if;
 				when verif=>
-					if tecla = '1' then
+					if tecla = '0' then
 						state <= valid;
 					else
 						state <= idle;

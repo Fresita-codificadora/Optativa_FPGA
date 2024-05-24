@@ -8,18 +8,19 @@ library ieee;
 
 entity mult_4 is
 	port (
-		input : in std_LOGIC_VECTOR(3 downto 0);
-		output : out std_LOGIC
+		columna : in std_LOGIC_VECTOR(3 downto 0);
+		tecla	: out std_LOGIC;
+		contador : in std_LOGIC_VECTOR(3 downto 0)
 	);
 end entity;
 
 architecture arch of mult_4 is
-
+signal contador_int: std_logic_vector(1 downto 0);
 begin
-	output <= '1' when input ="1110" else
-				'1' when input="1101" else
-				'1' when input= "1011" else
-			   '1' when input="0110" else
-				'1' when input= "0101" else
-				'1' when input="0011" else '0';
+	contador_int <= contador(1 downto 0);
+	tecla <= columna(0) when contador_int="00" else
+				columna(1) when contador_int="01" else
+				columna(2) when contador_int="10" else
+				columna(3) when contador_int="11" else '1';
+
 end architecture;
