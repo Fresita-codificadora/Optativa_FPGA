@@ -1,0 +1,5 @@
+debe tener al menos 6 BCD
+8 leds
+8 sw
+4 pulsadores
+el vga

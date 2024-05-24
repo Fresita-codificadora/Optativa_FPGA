@@ -1,10 +1,10 @@
-Analysis & Synthesis Status : Successful - Fri May 24 14:16:22 2024
-Quartus II 64-Bit Version : 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition
+Analysis & Synthesis Status : Successful - Fri May 24 15:18:02 2024
+Quartus Prime Version : 23.1std.0 Build 991 11/28/2023 SC Lite Edition
 Revision Name : proyect2
 Top-level Entity Name : Block1
-Family : Cyclone II
-Total logic elements : 128
-    Total combinational functions : 128
+Family : Cyclone IV E
+Total logic elements : 130
+    Total combinational functions : 130
     Dedicated logic registers : 55
 Total registers : 55
 Total pins : 18

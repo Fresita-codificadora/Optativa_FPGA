@@ -1,6 +1,6 @@
 Flow report for proyect2
-Fri May 24 14:16:34 2024
-Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+Fri May 24 15:18:24 2024
+Quartus Prime Version 23.1std.0 Build 991 11/28/2023 SC Lite Edition
 
 
 ---------------------
@@ -21,42 +21,43 @@ Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edit
 ----------------
 ; Legal Notice ;
 ----------------
-Copyright (C) 1991-2013 Altera Corporation
-Your use of Altera Corporation's design tools, logic functions 
-and other software and tools, and its AMPP partner logic 
+Copyright (C) 2023  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
 functions, and any output files from any of the foregoing 
 (including device programming or simulation files), and any 
 associated documentation or information are expressly subject 
-to the terms and conditions of the Altera Program License 
-Subscription Agreement, Altera MegaCore Function License 
-Agreement, or other applicable license agreement, including, 
-without limitation, that your use is for the sole purpose of 
-programming logic devices manufactured by Altera and sold by 
-Altera or its authorized distributors.  Please refer to the 
-applicable agreement for further details.
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
 
 
 
-+--------------------------------------------------------------------------------------+
-; Flow Summary                                                                         ;
-+------------------------------------+-------------------------------------------------+
-; Flow Status                        ; Successful - Fri May 24 14:16:33 2024           ;
-; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
-; Revision Name                      ; proyect2                                        ;
-; Top-level Entity Name              ; Block1                                          ;
-; Family                             ; Cyclone II                                      ;
-; Device                             ; EP2C35F672C6                                    ;
-; Timing Models                      ; Final                                           ;
-; Total logic elements               ; 128 / 33,216 ( < 1 % )                          ;
-;     Total combinational functions  ; 128 / 33,216 ( < 1 % )                          ;
-;     Dedicated logic registers      ; 55 / 33,216 ( < 1 % )                           ;
-; Total registers                    ; 55                                              ;
-; Total pins                         ; 18 / 475 ( 4 % )                                ;
-; Total virtual pins                 ; 0                                               ;
-; Total memory bits                  ; 0 / 483,840 ( 0 % )                             ;
-; Embedded Multiplier 9-bit elements ; 0 / 70 ( 0 % )                                  ;
-; Total PLLs                         ; 0 / 4 ( 0 % )                                   ;
-+------------------------------------+-------------------------------------------------+
++-------------------------------------------------------------------------------------+
+; Flow Summary                                                                        ;
++------------------------------------+------------------------------------------------+
+; Flow Status                        ; Successful - Fri May 24 15:18:19 2024          ;
+; Quartus Prime Version              ; 23.1std.0 Build 991 11/28/2023 SC Lite Edition ;
+; Revision Name                      ; proyect2                                       ;
+; Top-level Entity Name              ; Block1                                         ;
+; Family                             ; Cyclone IV E                                   ;
+; Total logic elements               ; 131 / 6,272 ( 2 % )                            ;
+;     Total combinational functions  ; 130 / 6,272 ( 2 % )                            ;
+;     Dedicated logic registers      ; 55 / 6,272 ( < 1 % )                           ;
+; Total registers                    ; 55                                             ;
+; Total pins                         ; 18 / 92 ( 20 % )                               ;
+; Total virtual pins                 ; 0                                              ;
+; Total memory bits                  ; 0 / 276,480 ( 0 % )                            ;
+; Embedded Multiplier 9-bit elements ; 0 / 30 ( 0 % )                                 ;
+; Total PLLs                         ; 0 / 2 ( 0 % )                                  ;
+; Device                             ; EP4CE6E22C6                                    ;
+; Timing Models                      ; Final                                          ;
++------------------------------------+------------------------------------------------+
 
 
 +-----------------------------------------+
@@ -64,57 +65,57 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 05/24/2024 14:16:21 ;
+; Start date & time ; 05/24/2024 15:17:39 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; proyect2            ;
 +-------------------+---------------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------+
-; Flow Non-Default Global Settings                                                                                                        ;
-+-------------------------------------+---------------------------------+---------------+-------------+-----------------------------------+
-; Assignment Name                     ; Value                           ; Default Value ; Entity Name ; Section Id                        ;
-+-------------------------------------+---------------------------------+---------------+-------------+-----------------------------------+
-; COMPILER_SIGNATURE_ID               ; 127846692526277.171657098102200 ; --            ; --          ; --                                ;
-; EDA_GENERATE_FUNCTIONAL_NETLIST     ; Off                             ; --            ; --          ; eda_board_design_timing           ;
-; EDA_GENERATE_FUNCTIONAL_NETLIST     ; Off                             ; --            ; --          ; eda_board_design_symbol           ;
-; EDA_GENERATE_FUNCTIONAL_NETLIST     ; Off                             ; --            ; --          ; eda_board_design_signal_integrity ;
-; EDA_GENERATE_FUNCTIONAL_NETLIST     ; Off                             ; --            ; --          ; eda_board_design_boundary_scan    ;
-; MAX_CORE_JUNCTION_TEMP              ; 85                              ; --            ; --          ; --                                ;
-; MIN_CORE_JUNCTION_TEMP              ; 0                               ; --            ; --          ; --                                ;
-; PARTITION_COLOR                     ; 16764057                        ; --            ; Block1      ; Top                               ;
-; PARTITION_FITTER_PRESERVATION_LEVEL ; PLACEMENT_AND_ROUTING           ; --            ; Block1      ; Top                               ;
-; PARTITION_NETLIST_TYPE              ; SOURCE                          ; --            ; Block1      ; Top                               ;
-; PROJECT_OUTPUT_DIRECTORY            ; output_files                    ; --            ; --          ; --                                ;
-; TOP_LEVEL_ENTITY                    ; Block1                          ; proyect2      ; --          ; --                                ;
-; VHDL_INPUT_VERSION                  ; VHDL_2008                       ; VHDL_1993     ; --          ; --                                ;
-; VHDL_SHOW_LMF_MAPPING_MESSAGES      ; Off                             ; --            ; --          ; --                                ;
-+-------------------------------------+---------------------------------+---------------+-------------+-----------------------------------+
++------------------------------------------------------------------------------------------------------------------------------------------------+
+; Flow Non-Default Global Settings                                                                                                               ;
++-------------------------------------+----------------------------------------+---------------+-------------+-----------------------------------+
+; Assignment Name                     ; Value                                  ; Default Value ; Entity Name ; Section Id                        ;
++-------------------------------------+----------------------------------------+---------------+-------------+-----------------------------------+
+; COMPILER_SIGNATURE_ID               ; 233654134201047.171657465906284        ; --            ; --          ; --                                ;
+; EDA_GENERATE_FUNCTIONAL_NETLIST     ; Off                                    ; --            ; --          ; eda_board_design_timing           ;
+; EDA_GENERATE_FUNCTIONAL_NETLIST     ; Off                                    ; --            ; --          ; eda_board_design_boundary_scan    ;
+; EDA_GENERATE_FUNCTIONAL_NETLIST     ; Off                                    ; --            ; --          ; eda_board_design_signal_integrity ;
+; EDA_GENERATE_FUNCTIONAL_NETLIST     ; Off                                    ; --            ; --          ; eda_board_design_symbol           ;
+; MAX_CORE_JUNCTION_TEMP              ; 85                                     ; --            ; --          ; --                                ;
+; MIN_CORE_JUNCTION_TEMP              ; 0                                      ; --            ; --          ; --                                ;
+; PARTITION_COLOR                     ; -- (Not supported for targeted family) ; --            ; Block1      ; Top                               ;
+; PARTITION_FITTER_PRESERVATION_LEVEL ; -- (Not supported for targeted family) ; --            ; Block1      ; Top                               ;
+; PARTITION_NETLIST_TYPE              ; -- (Not supported for targeted family) ; --            ; Block1      ; Top                               ;
+; PROJECT_OUTPUT_DIRECTORY            ; output_files                           ; --            ; --          ; --                                ;
+; TOP_LEVEL_ENTITY                    ; Block1                                 ; proyect2      ; --          ; --                                ;
+; VHDL_INPUT_VERSION                  ; VHDL_2008                              ; VHDL_1993     ; --          ; --                                ;
+; VHDL_SHOW_LMF_MAPPING_MESSAGES      ; Off                                    ; --            ; --          ; --                                ;
++-------------------------------------+----------------------------------------+---------------+-------------+-----------------------------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------+
-; Flow Elapsed Time                                                                                                             ;
-+---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
-+---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis      ; 00:00:01     ; 1.0                     ; 484 MB              ; 00:00:02                           ;
-; Fitter                    ; 00:00:07     ; 1.0                     ; 651 MB              ; 00:00:06                           ;
-; Assembler                 ; 00:00:02     ; 1.0                     ; 417 MB              ; 00:00:02                           ;
-; TimeQuest Timing Analyzer ; 00:00:01     ; 1.0                     ; 389 MB              ; 00:00:01                           ;
-; Total                     ; 00:00:11     ; --                      ; --                  ; 00:00:11                           ;
-+---------------------------+--------------+-------------------------+---------------------+------------------------------------+
++--------------------------------------------------------------------------------------------------------------------------+
+; Flow Elapsed Time                                                                                                        ;
++----------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
++----------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Analysis & Synthesis ; 00:00:24     ; 1.0                     ; 4787 MB             ; 00:00:42                           ;
+; Fitter               ; 00:00:13     ; 1.0                     ; 5227 MB             ; 00:00:10                           ;
+; Assembler            ; 00:00:01     ; 1.0                     ; 4683 MB             ; 00:00:01                           ;
+; Timing Analyzer      ; 00:00:04     ; 1.0                     ; 4752 MB             ; 00:00:03                           ;
+; Total                ; 00:00:42     ; --                      ; --                  ; 00:00:56                           ;
++----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
-+----------------------------------------------------------------------------------------+
-; Flow OS Summary                                                                        ;
-+---------------------------+------------------+-----------+------------+----------------+
-; Module Name               ; Machine Hostname ; OS Name   ; OS Version ; Processor type ;
-+---------------------------+------------------+-----------+------------+----------------+
-; Analysis & Synthesis      ; CP9              ; Windows 7 ; 6.1        ; x86_64         ;
-; Fitter                    ; CP9              ; Windows 7 ; 6.1        ; x86_64         ;
-; Assembler                 ; CP9              ; Windows 7 ; 6.1        ; x86_64         ;
-; TimeQuest Timing Analyzer ; CP9              ; Windows 7 ; 6.1        ; x86_64         ;
-+---------------------------+------------------+-----------+------------+----------------+
++------------------------------------------------------------------------------------+
+; Flow OS Summary                                                                    ;
++----------------------+------------------+------------+------------+----------------+
+; Module Name          ; Machine Hostname ; OS Name    ; OS Version ; Processor type ;
++----------------------+------------------+------------+------------+----------------+
+; Analysis & Synthesis ; DESKTOP-M6HRPVT  ; Windows 10 ; 10.0       ; x86_64         ;
+; Fitter               ; DESKTOP-M6HRPVT  ; Windows 10 ; 10.0       ; x86_64         ;
+; Assembler            ; DESKTOP-M6HRPVT  ; Windows 10 ; 10.0       ; x86_64         ;
+; Timing Analyzer      ; DESKTOP-M6HRPVT  ; Windows 10 ; 10.0       ; x86_64         ;
++----------------------+------------------+------------+------------+----------------+
 
 
 ------------
