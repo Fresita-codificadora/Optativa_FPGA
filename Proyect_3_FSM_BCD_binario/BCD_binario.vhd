@@ -1,0 +1,135 @@
+-- Quartus Prime VHDL Template
+-- Four-State Moore State Machine
+
+-- A Moore machine's outputs are dependent only on the current state.
+-- The output is written only when the state changes.  (State
+-- transitions are synchronous.)
+
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+
+entity BCD_binario is
+
+	port(
+	--entradas
+		clk		 : in	std_logic;
+		start,charge	: in	std_logic;
+		reset	 : in	std_logic;
+		cent,dec,uni : in std_logic_vector(3 downto 0);
+	-- salidas
+		valid : out std_logic;
+		binary	 : out	std_logic_vector(7 downto 0)
+	);
+
+end entity;
+
+architecture rtl of BCD_binario is
+
+	-- Build an enumerated type for the state machine
+	type state_type is (idle, shift, check_sum, rest,fin);
+
+	-- Register to hold the current state
+	signal state   : state_type;
+	signal uni_reg,dec_reg,cent_reg:std_logic_vector(3 downto 0);
+	signal binary_reg : std_logic_vector(7 downto 0);
+
+begin
+
+	-- Logic to advance to the next state
+	process (all)
+		variable i:integer range 0 to 7:=7;
+	begin
+		if reset = '0' then
+			state <= idle;
+			uni_reg<="0000";
+			dec_reg<="0000";-- reinicio todos los registros
+			cent_reg<="0000";
+			binary_reg<=x"00";
+			i:=7;
+		elsif (rising_edge(clk)) then
+			if charge='0' and start='1' then
+				uni_reg<=uni;
+				dec_reg<=dec;
+				cent_reg<=cent;
+			end if;
+			case state is
+				when idle=>
+					if start = '0' and charge='1' then
+						state <= shift;
+						binary_reg<=x"00";
+					else
+						state <= idle;
+					end if;
+				when shift=>
+					-- processo de shift --
+					--binary_reg
+					binary_reg(0)<=binary_reg(1);
+					binary_reg(1)<=binary_reg(2);
+					binary_reg(2)<=binary_reg(3);
+					binary_reg(3)<=binary_reg(4);
+					binary_reg(4)<=binary_reg(5);
+					binary_reg(5)<=binary_reg(6);
+					binary_reg(6)<=binary_reg(7);
+					binary_reg(7)<=uni_reg(0);
+					--unidades
+					uni_reg(0)<=uni_reg(1);
+					uni_reg(1)<=uni_reg(2);
+					uni_reg(2)<=uni_reg(3);
+					uni_reg(3)<=dec_reg(0);
+					--decenas
+					dec_reg(0)<=dec_reg(1);
+					dec_reg(1)<=dec_reg(2);
+					dec_reg(2)<=dec_reg(3);
+					dec_reg(3)<=cent_reg(0);
+					-- centenas
+					cent_reg(0)<=cent_reg(1);
+					cent_reg(1)<=cent_reg(2);
+					cent_reg(2)<=cent_reg(3);
+					cent_reg(3)<='0';
+					--cambio de estado
+					state<= check_sum;
+				when check_sum=>
+					if i>0 then
+						i:=i-1;--decrementamos la cantidad de veces que lo tiene que hacer
+						state<=rest; -- pasamos al sumador
+					else 
+						state<=fin; -- si ya lo hicimos 8 veces vamos a finalizar y presentar
+					end if;
+				when rest =>
+					if to_integer(unsigned(uni_reg))>=5 then
+						uni_reg<=std_logic_vector(to_unsigned(to_integer(unsigned(uni_reg))-3,4));
+					end if;
+					if to_integer(unsigned(dec_reg))>=5 then
+						dec_reg<=std_logic_vector(to_unsigned(to_integer(unsigned(dec_reg))-3,4));
+					end if;
+					state<=shift;
+				when fin=>
+					state<=fin;
+			end case;
+		end if;
+	end process;
+
+	-- Output depends solely on the current state
+	process (all)
+	begin
+		case state is
+			when idle =>
+				binary<=binary_reg;
+				valid<='0';
+			when shift =>
+				binary<=binary_reg;
+				valid<='0';
+			when check_sum =>
+				binary<=binary_reg;
+				valid<='0';
+			when rest =>
+				binary<=binary_reg;
+				valid<='0';
+			when fin=>
+				binary<=binary_reg;
+				valid<='1';
+		end case;
+	end process;
+
+end rtl;

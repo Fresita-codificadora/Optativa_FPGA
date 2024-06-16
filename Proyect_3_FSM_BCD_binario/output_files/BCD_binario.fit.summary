@@ -1,0 +1,16 @@
+Fitter Status : Successful - Sun Jun 16 19:33:19 2024
+Quartus Prime Version : 23.1std.0 Build 991 11/28/2023 SC Lite Edition
+Revision Name : BCD_binario
+Top-level Entity Name : BCD_binario
+Family : Cyclone IV E
+Device : EP4CE6E22C6
+Timing Models : Final
+Total logic elements : 52 / 6,272 ( < 1 % )
+    Total combinational functions : 51 / 6,272 ( < 1 % )
+    Dedicated logic registers : 28 / 6,272 ( < 1 % )
+Total registers : 28
+Total pins : 25 / 92 ( 27 % )
+Total virtual pins : 0
+Total memory bits : 0 / 276,480 ( 0 % )
+Embedded Multiplier 9-bit elements : 0 / 30 ( 0 % )
+Total PLLs : 0 / 2 ( 0 % )

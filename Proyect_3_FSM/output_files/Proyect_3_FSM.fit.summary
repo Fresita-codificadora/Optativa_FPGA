@@ -1,0 +1,16 @@
+Fitter Status : Successful - Sun Jun 16 13:33:35 2024
+Quartus Prime Version : 23.1std.0 Build 991 11/28/2023 SC Lite Edition
+Revision Name : Proyect_3_FSM
+Top-level Entity Name : Block1
+Family : Cyclone IV E
+Device : EP4CE6E22C6
+Timing Models : Final
+Total logic elements : 74 / 6,272 ( 1 % )
+    Total combinational functions : 69 / 6,272 ( 1 % )
+    Dedicated logic registers : 40 / 6,272 ( < 1 % )
+Total registers : 40
+Total pins : 36 / 92 ( 39 % )
+Total virtual pins : 0
+Total memory bits : 0 / 276,480 ( 0 % )
+Embedded Multiplier 9-bit elements : 0 / 30 ( 0 % )
+Total PLLs : 0 / 2 ( 0 % )

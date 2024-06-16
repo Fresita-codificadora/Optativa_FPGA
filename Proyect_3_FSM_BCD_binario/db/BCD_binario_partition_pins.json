@@ -1,0 +1,109 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "valid",
+					"strict" : false
+				},
+				{
+					"name" : "binary[0]",
+					"strict" : false
+				},
+				{
+					"name" : "binary[1]",
+					"strict" : false
+				},
+				{
+					"name" : "binary[2]",
+					"strict" : false
+				},
+				{
+					"name" : "binary[3]",
+					"strict" : false
+				},
+				{
+					"name" : "binary[4]",
+					"strict" : false
+				},
+				{
+					"name" : "binary[5]",
+					"strict" : false
+				},
+				{
+					"name" : "binary[6]",
+					"strict" : false
+				},
+				{
+					"name" : "binary[7]",
+					"strict" : false
+				},
+				{
+					"name" : "clk",
+					"strict" : false
+				},
+				{
+					"name" : "reset",
+					"strict" : false
+				},
+				{
+					"name" : "start",
+					"strict" : false
+				},
+				{
+					"name" : "charge",
+					"strict" : false
+				},
+				{
+					"name" : "uni[0]",
+					"strict" : false
+				},
+				{
+					"name" : "uni[1]",
+					"strict" : false
+				},
+				{
+					"name" : "uni[3]",
+					"strict" : false
+				},
+				{
+					"name" : "uni[2]",
+					"strict" : false
+				},
+				{
+					"name" : "dec[0]",
+					"strict" : false
+				},
+				{
+					"name" : "dec[1]",
+					"strict" : false
+				},
+				{
+					"name" : "dec[3]",
+					"strict" : false
+				},
+				{
+					"name" : "dec[2]",
+					"strict" : false
+				},
+				{
+					"name" : "cent[0]",
+					"strict" : false
+				},
+				{
+					"name" : "cent[1]",
+					"strict" : false
+				},
+				{
+					"name" : "cent[2]",
+					"strict" : false
+				},
+				{
+					"name" : "cent[3]",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

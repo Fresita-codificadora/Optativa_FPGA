@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Sun Jun 16 13:33:27 2024
+Quartus Prime Version : 23.1std.0 Build 991 11/28/2023 SC Lite Edition
+Revision Name : Proyect_3_FSM
+Top-level Entity Name : Block1
+Family : Cyclone IV E
+Total logic elements : 74
+    Total combinational functions : 69
+    Dedicated logic registers : 40
+Total registers : 40
+Total pins : 36
+Total virtual pins : 0
+Total memory bits : 0
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0
