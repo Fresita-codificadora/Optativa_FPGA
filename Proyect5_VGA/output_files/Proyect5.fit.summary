@@ -1,0 +1,16 @@
+Fitter Status : Successful - Mon Jun 17 15:03:33 2024
+Quartus Prime Version : 23.1std.0 Build 991 11/28/2023 SC Lite Edition
+Revision Name : Proyect5
+Top-level Entity Name : Proyect5
+Family : Cyclone IV E
+Device : EP4CE6E22C6
+Timing Models : Final
+Total logic elements : 64 / 6,272 ( 1 % )
+    Total combinational functions : 63 / 6,272 ( 1 % )
+    Dedicated logic registers : 28 / 6,272 ( < 1 % )
+Total registers : 28
+Total pins : 57 / 92 ( 62 % )
+Total virtual pins : 0
+Total memory bits : 0 / 276,480 ( 0 % )
+Embedded Multiplier 9-bit elements : 0 / 30 ( 0 % )
+Total PLLs : 0 / 2 ( 0 % )

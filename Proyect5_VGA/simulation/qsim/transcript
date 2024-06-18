@@ -1,0 +1,890 @@
+# do Proyect5.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Errors: 0, Warnings: 1
+# Questa Intel Starter FPGA Edition-64 vcom 2023.3 Compiler 2023.07 Jul 17 2023
+# Start time: 15:12:37 on Jun 17,2024
+# vcom -work work Proyect5.vho 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package VITAL_Timing
+# -- Loading package VITAL_Primitives
+# -- Loading package cycloneive_atom_pack
+# -- Loading package cycloneive_components
+# -- Compiling entity hard_block
+# -- Compiling architecture structure of hard_block
+# -- Loading package dffeas_pack
+# -- Loading package altera_primitives_components
+# -- Compiling entity Proyect5
+# -- Compiling architecture structure of Proyect5
+# End time: 15:12:38 on Jun 17,2024, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# Questa Intel Starter FPGA Edition-64 vcom 2023.3 Compiler 2023.07 Jul 17 2023
+# Start time: 15:12:38 on Jun 17,2024
+# vcom -work work Waveform1.vwf.vht 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity Proyect5_vhd_vec_tst
+# -- Compiling architecture Proyect5_arch of Proyect5_vhd_vec_tst
+# End time: 15:12:38 on Jun 17,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -voptargs=""+acc"" -c -t 1ps -L cycloneive -L altera -L altera_mf -L 220model -L sgate -L altera_lnsim work.Proyect5_vhd_vec_tst 
+# Start time: 15:12:38 on Jun 17,2024
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# //  Questa Intel Starter FPGA Edition-64
+# //  Version 2023.3 win64 Jul 17 2023
+# //
+# //  Copyright 1991-2023 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  QuestaSim and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.proyect5_vhd_vec_tst(proyect5_arch)#1
+# Loading ieee.vital_timing(body)
+# Loading ieee.vital_primitives(body)
+# Loading altera.dffeas_pack
+# Loading altera.altera_primitives_components
+# Loading cycloneive.cycloneive_atom_pack(body)
+# Loading cycloneive.cycloneive_components
+# Loading work.proyect5(structure)#1
+# Loading work.hard_block(structure)#1
+# Loading ieee.std_logic_arith(body)
+# Loading cycloneive.cycloneive_io_obuf(arch)#1
+# Loading cycloneive.cycloneive_io_ibuf(arch)#1
+# Loading cycloneive.cycloneive_clkctrl(vital_clkctrl)#1
+# Loading cycloneive.cycloneive_ena_reg(behave)#1
+# Loading cycloneive.cycloneive_lcell_comb(vital_lcell_comb)#1
+# Loading altera.dffeas(vital_dffeas)#1
+# Loading cycloneive.cycloneive_lcell_comb(vital_lcell_comb)#2
+# Loading cycloneive.cycloneive_lcell_comb(vital_lcell_comb)#3
+# Loading cycloneive.cycloneive_lcell_comb(vital_lcell_comb)#4
+# Loading altera.dffeas(vital_dffeas)#2
+# Loading cycloneive.cycloneive_lcell_comb(vital_lcell_comb)#5
+# Loading cycloneive.cycloneive_lcell_comb(vital_lcell_comb)#6
+# Loading cycloneive.cycloneive_lcell_comb(vital_lcell_comb)#7
+# Loading altera.dffeas(vital_dffeas)#3
+# Loading cycloneive.cycloneive_lcell_comb(vital_lcell_comb)#8
+# Loading cycloneive.cycloneive_lcell_comb(vital_lcell_comb)#9
+# Loading cycloneive.cycloneive_lcell_comb(vital_lcell_comb)#10
+# Loading cycloneive.cycloneive_lcell_comb(vital_lcell_comb)#11
+# Loading cycloneive.cycloneive_lcell_comb(vital_lcell_comb)#12
+# Loading cycloneive.cycloneive_lcell_comb(vital_lcell_comb)#13
+# Loading cycloneive.cycloneive_lcell_comb(vital_lcell_comb)#14
+# Loading cycloneive.cycloneive_lcell_comb(vital_lcell_comb)#15
+# Loading cycloneive.cycloneive_lcell_comb(vital_lcell_comb)#16
+# Loading cycloneive.cycloneive_lcell_comb(vital_lcell_comb)#17
+# Loading cycloneive.cycloneive_lcell_comb(vital_lcell_comb)#18
+# Loading cycloneive.cycloneive_lcell_comb(vital_lcell_comb)#19
+# Loading cycloneive.cycloneive_lcell_comb(vital_lcell_comb)#20
+# Loading cycloneive.cycloneive_lcell_comb(vital_lcell_comb)#21
+# Loading cycloneive.cycloneive_lcell_comb(vital_lcell_comb)#22
+# Loading cycloneive.cycloneive_lcell_comb(vital_lcell_comb)#23
+# Loading cycloneive.cycloneive_lcell_comb(vital_lcell_comb)#24
+# Loading cycloneive.cycloneive_lcell_comb(vital_lcell_comb)#25
+# Loading altera.dffeas(vital_dffeas)#4
+# Loading cycloneive.cycloneive_lcell_comb(vital_lcell_comb)#26
+# Loading cycloneive.cycloneive_lcell_comb(vital_lcell_comb)#27
+# Loading cycloneive.cycloneive_lcell_comb(vital_lcell_comb)#28
+# Loading cycloneive.cycloneive_lcell_comb(vital_lcell_comb)#29
+# Loading cycloneive.cycloneive_lcell_comb(vital_lcell_comb)#30
+# Loading cycloneive.cycloneive_lcell_comb(vital_lcell_comb)#31
+# Loading cycloneive.cycloneive_lcell_comb(vital_lcell_comb)#32
+# Loading cycloneive.cycloneive_lcell_comb(vital_lcell_comb)#33
+# Loading cycloneive.cycloneive_lcell_comb(vital_lcell_comb)#34
+# Loading cycloneive.cycloneive_lcell_comb(vital_lcell_comb)#35
+# Loading cycloneive.cycloneive_lcell_comb(vital_lcell_comb)#36
+# Loading cycloneive.cycloneive_lcell_comb(vital_lcell_comb)#37
+# Loading cycloneive.cycloneive_lcell_comb(vital_lcell_comb)#38
+# Loading cycloneive.cycloneive_lcell_comb(vital_lcell_comb)#39
+# Loading cycloneive.cycloneive_lcell_comb(vital_lcell_comb)#40
+# Loading cycloneive.cycloneive_lcell_comb(vital_lcell_comb)#41
+# Loading cycloneive.cycloneive_lcell_comb(vital_lcell_comb)#42
+# Loading cycloneive.cycloneive_lcell_comb(vital_lcell_comb)#43
+# Loading cycloneive.cycloneive_lcell_comb(vital_lcell_comb)#44
+# Loading cycloneive.cycloneive_lcell_comb(vital_lcell_comb)#45
+# Loading cycloneive.cycloneive_lcell_comb(vital_lcell_comb)#46
+# Loading altera.dffeas(vital_dffeas)#5
+# Loading cycloneive.cycloneive_lcell_comb(vital_lcell_comb)#47
+# after#36
+# Simulation time: 4307 ps
+# Simulation time: 4307 ps
+# Simulation time: 4307 ps
+# Simulation time: 4307 ps
+# Simulation time: 4307 ps
+# Simulation time: 4307 ps
+# Simulation time: 4307 ps
+# Simulation time: 4307 ps
+# Simulation time: 107267 ps
+# Simulation time: 107267 ps
+# Simulation time: 107267 ps
+# Simulation time: 107267 ps
+# Simulation time: 107267 ps
+# Simulation time: 107267 ps
+# Simulation time: 107267 ps
+# Simulation time: 107267 ps
+# Simulation time: 212500 ps
+# Simulation time: 212500 ps
+# Simulation time: 212500 ps
+# Simulation time: 212500 ps
+# Simulation time: 212500 ps
+# Simulation time: 212500 ps
+# Simulation time: 212500 ps
+# Simulation time: 212500 ps
+# Simulation time: 316189 ps
+# Simulation time: 316189 ps
+# Simulation time: 316189 ps
+# Simulation time: 316189 ps
+# Simulation time: 316189 ps
+# Simulation time: 316189 ps
+# Simulation time: 316189 ps
+# Simulation time: 316189 ps
+# Simulation time: 420993 ps
+# Simulation time: 420993 ps
+# Simulation time: 420993 ps
+# Simulation time: 420993 ps
+# Simulation time: 420993 ps
+# Simulation time: 420993 ps
+# Simulation time: 420993 ps
+# Simulation time: 420993 ps
+# Simulation time: 526813 ps
+# Simulation time: 526813 ps
+# Simulation time: 526813 ps
+# Simulation time: 526813 ps
+# Simulation time: 526813 ps
+# Simulation time: 526813 ps
+# Simulation time: 526813 ps
+# Simulation time: 526813 ps
+# Simulation time: 633103 ps
+# Simulation time: 633103 ps
+# Simulation time: 633103 ps
+# Simulation time: 633103 ps
+# Simulation time: 633103 ps
+# Simulation time: 633103 ps
+# Simulation time: 633103 ps
+# Simulation time: 633103 ps
+# Simulation time: 735524 ps
+# Simulation time: 735524 ps
+# Simulation time: 735524 ps
+# Simulation time: 735524 ps
+# Simulation time: 735524 ps
+# Simulation time: 735524 ps
+# Simulation time: 735524 ps
+# Simulation time: 841019 ps
+# Simulation time: 841019 ps
+# Simulation time: 841019 ps
+# Simulation time: 841019 ps
+# Simulation time: 841019 ps
+# Simulation time: 841019 ps
+# Simulation time: 841019 ps
+# Simulation time: 841019 ps
+# Simulation time: 946539 ps
+# Simulation time: 946539 ps
+# Simulation time: 946539 ps
+# Simulation time: 946539 ps
+# Simulation time: 946539 ps
+# Simulation time: 946539 ps
+# Simulation time: 946539 ps
+# Simulation time: 946539 ps
+# Simulation time: 1042345 ps
+# Simulation time: 1042345 ps
+# Simulation time: 1042345 ps
+# Simulation time: 1042345 ps
+# Simulation time: 1042345 ps
+# Simulation time: 1042345 ps
+# Simulation time: 1042345 ps
+# Simulation time: 1042345 ps
+# Simulation time: 1146557 ps
+# Simulation time: 1146557 ps
+# Simulation time: 1146557 ps
+# Simulation time: 1146557 ps
+# Simulation time: 1146557 ps
+# Simulation time: 1146557 ps
+# Simulation time: 1146557 ps
+# Simulation time: 1146557 ps
+# Simulation time: 1249931 ps
+# Simulation time: 1249931 ps
+# Simulation time: 1249931 ps
+# Simulation time: 1249931 ps
+# Simulation time: 1249931 ps
+# Simulation time: 1249931 ps
+# Simulation time: 1249931 ps
+# Simulation time: 1249931 ps
+# Simulation time: 1354706 ps
+# Simulation time: 1354706 ps
+# Simulation time: 1354706 ps
+# Simulation time: 1354706 ps
+# Simulation time: 1354706 ps
+# Simulation time: 1354706 ps
+# Simulation time: 1354706 ps
+# Simulation time: 1354706 ps
+# Simulation time: 1458285 ps
+# Simulation time: 1458285 ps
+# Simulation time: 1458285 ps
+# Simulation time: 1458285 ps
+# Simulation time: 1458285 ps
+# Simulation time: 1458285 ps
+# Simulation time: 1458285 ps
+# Simulation time: 1458285 ps
+# Simulation time: 1561613 ps
+# Simulation time: 1561613 ps
+# Simulation time: 1561613 ps
+# Simulation time: 1561613 ps
+# Simulation time: 1561613 ps
+# Simulation time: 1561613 ps
+# Simulation time: 1561613 ps
+# Simulation time: 1561613 ps
+# Simulation time: 1666533 ps
+# Simulation time: 1666533 ps
+# Simulation time: 1666533 ps
+# Simulation time: 1666533 ps
+# Simulation time: 1666533 ps
+# Simulation time: 1666533 ps
+# Simulation time: 1666533 ps
+# Simulation time: 1666533 ps
+# Simulation time: 1772305 ps
+# Simulation time: 1772305 ps
+# Simulation time: 1772305 ps
+# Simulation time: 1772305 ps
+# Simulation time: 1772305 ps
+# Simulation time: 1772305 ps
+# Simulation time: 1772305 ps
+# Simulation time: 1772305 ps
+# Simulation time: 1872944 ps
+# Simulation time: 1872944 ps
+# Simulation time: 1872944 ps
+# Simulation time: 1872944 ps
+# Simulation time: 1872944 ps
+# Simulation time: 1872944 ps
+# Simulation time: 1872944 ps
+# Simulation time: 1872944 ps
+# Simulation time: 1978845 ps
+# Simulation time: 1978845 ps
+# Simulation time: 1978845 ps
+# Simulation time: 1978845 ps
+# Simulation time: 1978845 ps
+# Simulation time: 1978845 ps
+# Simulation time: 1978845 ps
+# Simulation time: 1978845 ps
+# Simulation time: 2081761 ps
+# Simulation time: 2081761 ps
+# Simulation time: 2081761 ps
+# Simulation time: 2081761 ps
+# Simulation time: 2081761 ps
+# Simulation time: 2081761 ps
+# Simulation time: 2081761 ps
+# Simulation time: 2081761 ps
+# Simulation time: 2185429 ps
+# Simulation time: 2185429 ps
+# Simulation time: 2185429 ps
+# Simulation time: 2185429 ps
+# Simulation time: 2185429 ps
+# Simulation time: 2185429 ps
+# Simulation time: 2185429 ps
+# Simulation time: 2185429 ps
+# Simulation time: 2289668 ps
+# Simulation time: 2289668 ps
+# Simulation time: 2289668 ps
+# Simulation time: 2289668 ps
+# Simulation time: 2289668 ps
+# Simulation time: 2289668 ps
+# Simulation time: 2289668 ps
+# Simulation time: 2289668 ps
+# Simulation time: 2393542 ps
+# Simulation time: 2393542 ps
+# Simulation time: 2393542 ps
+# Simulation time: 2393542 ps
+# Simulation time: 2393542 ps
+# Simulation time: 2393542 ps
+# Simulation time: 2393542 ps
+# Simulation time: 2393542 ps
+# Simulation time: 2498393 ps
+# Simulation time: 2498393 ps
+# Simulation time: 2498393 ps
+# Simulation time: 2498393 ps
+# Simulation time: 2498393 ps
+# Simulation time: 2498393 ps
+# Simulation time: 2498393 ps
+# Simulation time: 2498393 ps
+# Simulation time: 2603988 ps
+# Simulation time: 2603988 ps
+# Simulation time: 2603988 ps
+# Simulation time: 2603988 ps
+# Simulation time: 2603988 ps
+# Simulation time: 2603988 ps
+# Simulation time: 2603988 ps
+# Simulation time: 2603988 ps
+# Simulation time: 2707195 ps
+# Simulation time: 2707195 ps
+# Simulation time: 2707195 ps
+# Simulation time: 2707195 ps
+# Simulation time: 2707195 ps
+# Simulation time: 2707195 ps
+# Simulation time: 2707195 ps
+# Simulation time: 2707195 ps
+# Simulation time: 2811125 ps
+# Simulation time: 2811125 ps
+# Simulation time: 2811125 ps
+# Simulation time: 2811125 ps
+# Simulation time: 2811125 ps
+# Simulation time: 2811125 ps
+# Simulation time: 2811125 ps
+# Simulation time: 2811125 ps
+# Simulation time: 2915075 ps
+# Simulation time: 2915075 ps
+# Simulation time: 2915075 ps
+# Simulation time: 2915075 ps
+# Simulation time: 2915075 ps
+# Simulation time: 2915075 ps
+# Simulation time: 2915075 ps
+# Simulation time: 2915075 ps
+# Simulation time: 3019797 ps
+# Simulation time: 3019797 ps
+# Simulation time: 3019797 ps
+# Simulation time: 3019797 ps
+# Simulation time: 3019797 ps
+# Simulation time: 3019797 ps
+# Simulation time: 3019797 ps
+# Simulation time: 3123475 ps
+# Simulation time: 3123475 ps
+# Simulation time: 3123475 ps
+# Simulation time: 3123475 ps
+# Simulation time: 3123475 ps
+# Simulation time: 3123475 ps
+# Simulation time: 3123475 ps
+# Simulation time: 3123475 ps
+# Simulation time: 3204069 ps
+# Simulation time: 3204069 ps
+# Simulation time: 3204069 ps
+# Simulation time: 3204069 ps
+# Simulation time: 3204069 ps
+# Simulation time: 3204069 ps
+# Simulation time: 3204069 ps
+# Simulation time: 3204069 ps
+# Simulation time: 3297985 ps
+# Simulation time: 3297985 ps
+# Simulation time: 3297985 ps
+# Simulation time: 3297985 ps
+# Simulation time: 3297985 ps
+# Simulation time: 3297985 ps
+# Simulation time: 3297985 ps
+# Simulation time: 3297985 ps
+# Simulation time: 3400781 ps
+# Simulation time: 3400781 ps
+# Simulation time: 3400781 ps
+# Simulation time: 3400781 ps
+# Simulation time: 3400781 ps
+# Simulation time: 3400781 ps
+# Simulation time: 3400781 ps
+# Simulation time: 3400781 ps
+# Simulation time: 3503955 ps
+# Simulation time: 3503955 ps
+# Simulation time: 3503955 ps
+# Simulation time: 3503955 ps
+# Simulation time: 3503955 ps
+# Simulation time: 3503955 ps
+# Simulation time: 3503955 ps
+# Simulation time: 3503955 ps
+# Simulation time: 3608779 ps
+# Simulation time: 3608779 ps
+# Simulation time: 3608779 ps
+# Simulation time: 3608779 ps
+# Simulation time: 3608779 ps
+# Simulation time: 3608779 ps
+# Simulation time: 3608779 ps
+# Simulation time: 3608779 ps
+# Simulation time: 3714811 ps
+# Simulation time: 3714811 ps
+# Simulation time: 3714811 ps
+# Simulation time: 3714811 ps
+# Simulation time: 3714811 ps
+# Simulation time: 3714811 ps
+# Simulation time: 3714811 ps
+# Simulation time: 3714811 ps
+# Simulation time: 3818931 ps
+# Simulation time: 3818931 ps
+# Simulation time: 3818931 ps
+# Simulation time: 3818931 ps
+# Simulation time: 3818931 ps
+# Simulation time: 3818931 ps
+# Simulation time: 3818931 ps
+# Simulation time: 3818931 ps
+# Simulation time: 3927033 ps
+# Simulation time: 3927033 ps
+# Simulation time: 3927033 ps
+# Simulation time: 3927033 ps
+# Simulation time: 3927033 ps
+# Simulation time: 3927033 ps
+# Simulation time: 3927033 ps
+# Simulation time: 3927033 ps
+# Simulation time: 4030157 ps
+# Simulation time: 4030157 ps
+# Simulation time: 4030157 ps
+# Simulation time: 4030157 ps
+# Simulation time: 4030157 ps
+# Simulation time: 4030157 ps
+# Simulation time: 4030157 ps
+# Simulation time: 4030157 ps
+# Simulation time: 4134531 ps
+# Simulation time: 4134531 ps
+# Simulation time: 4134531 ps
+# Simulation time: 4134531 ps
+# Simulation time: 4134531 ps
+# Simulation time: 4134531 ps
+# Simulation time: 4134531 ps
+# Simulation time: 4134531 ps
+# Simulation time: 4228149 ps
+# Simulation time: 4228149 ps
+# Simulation time: 4228149 ps
+# Simulation time: 4228149 ps
+# Simulation time: 4228149 ps
+# Simulation time: 4228149 ps
+# Simulation time: 4228149 ps
+# Simulation time: 4228149 ps
+# Simulation time: 4333526 ps
+# Simulation time: 4333526 ps
+# Simulation time: 4333526 ps
+# Simulation time: 4333526 ps
+# Simulation time: 4333526 ps
+# Simulation time: 4333526 ps
+# Simulation time: 4333526 ps
+# Simulation time: 4333526 ps
+# Simulation time: 4433306 ps
+# Simulation time: 4433306 ps
+# Simulation time: 4433306 ps
+# Simulation time: 4433306 ps
+# Simulation time: 4433306 ps
+# Simulation time: 4433306 ps
+# Simulation time: 4433306 ps
+# Simulation time: 4433306 ps
+# Simulation time: 4537047 ps
+# Simulation time: 4537047 ps
+# Simulation time: 4537047 ps
+# Simulation time: 4537047 ps
+# Simulation time: 4537047 ps
+# Simulation time: 4537047 ps
+# Simulation time: 4537047 ps
+# Simulation time: 4537047 ps
+# Simulation time: 4639043 ps
+# Simulation time: 4639043 ps
+# Simulation time: 4639043 ps
+# Simulation time: 4639043 ps
+# Simulation time: 4639043 ps
+# Simulation time: 4639043 ps
+# Simulation time: 4639043 ps
+# Simulation time: 4639043 ps
+# Simulation time: 4746289 ps
+# Simulation time: 4746289 ps
+# Simulation time: 4746289 ps
+# Simulation time: 4746289 ps
+# Simulation time: 4746289 ps
+# Simulation time: 4746289 ps
+# Simulation time: 4746289 ps
+# Simulation time: 4746289 ps
+# Simulation time: 4851971 ps
+# Simulation time: 4851971 ps
+# Simulation time: 4851971 ps
+# Simulation time: 4851971 ps
+# Simulation time: 4851971 ps
+# Simulation time: 4851971 ps
+# Simulation time: 4851971 ps
+# Simulation time: 4851971 ps
+# Simulation time: 4957531 ps
+# Simulation time: 4957531 ps
+# Simulation time: 4957531 ps
+# Simulation time: 4957531 ps
+# Simulation time: 4957531 ps
+# Simulation time: 4957531 ps
+# Simulation time: 4957531 ps
+# Simulation time: 4957531 ps
+# Simulation time: 5063495 ps
+# Simulation time: 5063495 ps
+# Simulation time: 5063495 ps
+# Simulation time: 5063495 ps
+# Simulation time: 5063495 ps
+# Simulation time: 5063495 ps
+# Simulation time: 5063495 ps
+# Simulation time: 5063495 ps
+# Simulation time: 5167022 ps
+# Simulation time: 5167022 ps
+# Simulation time: 5167022 ps
+# Simulation time: 5167022 ps
+# Simulation time: 5167022 ps
+# Simulation time: 5167022 ps
+# Simulation time: 5167022 ps
+# Simulation time: 5270396 ps
+# Simulation time: 5270396 ps
+# Simulation time: 5270396 ps
+# Simulation time: 5270396 ps
+# Simulation time: 5270396 ps
+# Simulation time: 5270396 ps
+# Simulation time: 5270396 ps
+# Simulation time: 5270396 ps
+# Simulation time: 5374169 ps
+# Simulation time: 5374169 ps
+# Simulation time: 5374169 ps
+# Simulation time: 5374169 ps
+# Simulation time: 5374169 ps
+# Simulation time: 5374169 ps
+# Simulation time: 5374169 ps
+# Simulation time: 5374169 ps
+# Simulation time: 5478645 ps
+# Simulation time: 5478645 ps
+# Simulation time: 5478645 ps
+# Simulation time: 5478645 ps
+# Simulation time: 5478645 ps
+# Simulation time: 5478645 ps
+# Simulation time: 5478645 ps
+# Simulation time: 5478645 ps
+# Simulation time: 5583351 ps
+# Simulation time: 5583351 ps
+# Simulation time: 5583351 ps
+# Simulation time: 5583351 ps
+# Simulation time: 5583351 ps
+# Simulation time: 5583351 ps
+# Simulation time: 5583351 ps
+# Simulation time: 5583351 ps
+# Simulation time: 5675229 ps
+# Simulation time: 5675229 ps
+# Simulation time: 5675229 ps
+# Simulation time: 5675229 ps
+# Simulation time: 5675229 ps
+# Simulation time: 5675229 ps
+# Simulation time: 5675229 ps
+# Simulation time: 5675229 ps
+# Simulation time: 5773637 ps
+# Simulation time: 5773637 ps
+# Simulation time: 5773637 ps
+# Simulation time: 5773637 ps
+# Simulation time: 5773637 ps
+# Simulation time: 5773637 ps
+# Simulation time: 5773637 ps
+# Simulation time: 5773637 ps
+# Simulation time: 5878303 ps
+# Simulation time: 5878303 ps
+# Simulation time: 5878303 ps
+# Simulation time: 5878303 ps
+# Simulation time: 5878303 ps
+# Simulation time: 5878303 ps
+# Simulation time: 5878303 ps
+# Simulation time: 5878303 ps
+# Simulation time: 5983289 ps
+# Simulation time: 5983289 ps
+# Simulation time: 5983289 ps
+# Simulation time: 5983289 ps
+# Simulation time: 5983289 ps
+# Simulation time: 5983289 ps
+# Simulation time: 5983289 ps
+# Simulation time: 5983289 ps
+# Simulation time: 6087257 ps
+# Simulation time: 6087257 ps
+# Simulation time: 6087257 ps
+# Simulation time: 6087257 ps
+# Simulation time: 6087257 ps
+# Simulation time: 6087257 ps
+# Simulation time: 6087257 ps
+# Simulation time: 6087257 ps
+# Simulation time: 6190961 ps
+# Simulation time: 6190961 ps
+# Simulation time: 6190961 ps
+# Simulation time: 6190961 ps
+# Simulation time: 6190961 ps
+# Simulation time: 6190961 ps
+# Simulation time: 6190961 ps
+# Simulation time: 6190961 ps
+# Simulation time: 6298374 ps
+# Simulation time: 6298374 ps
+# Simulation time: 6298374 ps
+# Simulation time: 6298374 ps
+# Simulation time: 6298374 ps
+# Simulation time: 6298374 ps
+# Simulation time: 6298374 ps
+# Simulation time: 6298374 ps
+# Simulation time: 6402377 ps
+# Simulation time: 6402377 ps
+# Simulation time: 6402377 ps
+# Simulation time: 6402377 ps
+# Simulation time: 6402377 ps
+# Simulation time: 6402377 ps
+# Simulation time: 6402377 ps
+# Simulation time: 6402377 ps
+# Simulation time: 6507867 ps
+# Simulation time: 6507867 ps
+# Simulation time: 6507867 ps
+# Simulation time: 6507867 ps
+# Simulation time: 6507867 ps
+# Simulation time: 6507867 ps
+# Simulation time: 6507867 ps
+# Simulation time: 6507867 ps
+# Simulation time: 6612375 ps
+# Simulation time: 6612375 ps
+# Simulation time: 6612375 ps
+# Simulation time: 6612375 ps
+# Simulation time: 6612375 ps
+# Simulation time: 6612375 ps
+# Simulation time: 6612375 ps
+# Simulation time: 6612375 ps
+# Simulation time: 6717519 ps
+# Simulation time: 6717519 ps
+# Simulation time: 6717519 ps
+# Simulation time: 6717519 ps
+# Simulation time: 6717519 ps
+# Simulation time: 6717519 ps
+# Simulation time: 6717519 ps
+# Simulation time: 6717519 ps
+# Simulation time: 6822307 ps
+# Simulation time: 6822307 ps
+# Simulation time: 6822307 ps
+# Simulation time: 6822307 ps
+# Simulation time: 6822307 ps
+# Simulation time: 6822307 ps
+# Simulation time: 6822307 ps
+# Simulation time: 6822307 ps
+# Simulation time: 6924527 ps
+# Simulation time: 6924527 ps
+# Simulation time: 6924527 ps
+# Simulation time: 6924527 ps
+# Simulation time: 6924527 ps
+# Simulation time: 6924527 ps
+# Simulation time: 6924527 ps
+# Simulation time: 6924527 ps
+# Simulation time: 7030565 ps
+# Simulation time: 7030565 ps
+# Simulation time: 7030565 ps
+# Simulation time: 7030565 ps
+# Simulation time: 7030565 ps
+# Simulation time: 7030565 ps
+# Simulation time: 7030565 ps
+# Simulation time: 7030565 ps
+# Simulation time: 7135981 ps
+# Simulation time: 7135981 ps
+# Simulation time: 7135981 ps
+# Simulation time: 7135981 ps
+# Simulation time: 7135981 ps
+# Simulation time: 7135981 ps
+# Simulation time: 7135981 ps
+# Simulation time: 7135981 ps
+# Simulation time: 7238578 ps
+# Simulation time: 7238578 ps
+# Simulation time: 7238578 ps
+# Simulation time: 7238578 ps
+# Simulation time: 7238578 ps
+# Simulation time: 7238578 ps
+# Simulation time: 7238578 ps
+# Simulation time: 7238578 ps
+# Simulation time: 7337765 ps
+# Simulation time: 7337765 ps
+# Simulation time: 7337765 ps
+# Simulation time: 7337765 ps
+# Simulation time: 7337765 ps
+# Simulation time: 7337765 ps
+# Simulation time: 7337765 ps
+# Simulation time: 7337765 ps
+# Simulation time: 7441533 ps
+# Simulation time: 7441533 ps
+# Simulation time: 7441533 ps
+# Simulation time: 7441533 ps
+# Simulation time: 7441533 ps
+# Simulation time: 7441533 ps
+# Simulation time: 7441533 ps
+# Simulation time: 7544553 ps
+# Simulation time: 7544553 ps
+# Simulation time: 7544553 ps
+# Simulation time: 7544553 ps
+# Simulation time: 7544553 ps
+# Simulation time: 7544553 ps
+# Simulation time: 7544553 ps
+# Simulation time: 7544553 ps
+# Simulation time: 7648597 ps
+# Simulation time: 7648597 ps
+# Simulation time: 7648597 ps
+# Simulation time: 7648597 ps
+# Simulation time: 7648597 ps
+# Simulation time: 7648597 ps
+# Simulation time: 7648597 ps
+# Simulation time: 7648597 ps
+# Simulation time: 7751061 ps
+# Simulation time: 7751061 ps
+# Simulation time: 7751061 ps
+# Simulation time: 7751061 ps
+# Simulation time: 7751061 ps
+# Simulation time: 7751061 ps
+# Simulation time: 7751061 ps
+# Simulation time: 7751061 ps
+# Simulation time: 7856814 ps
+# Simulation time: 7856814 ps
+# Simulation time: 7856814 ps
+# Simulation time: 7856814 ps
+# Simulation time: 7856814 ps
+# Simulation time: 7856814 ps
+# Simulation time: 7856814 ps
+# Simulation time: 7856814 ps
+# Simulation time: 7960611 ps
+# Simulation time: 7960611 ps
+# Simulation time: 7960611 ps
+# Simulation time: 7960611 ps
+# Simulation time: 7960611 ps
+# Simulation time: 7960611 ps
+# Simulation time: 7960611 ps
+# Simulation time: 7960611 ps
+# Simulation time: 8064773 ps
+# Simulation time: 8064773 ps
+# Simulation time: 8064773 ps
+# Simulation time: 8064773 ps
+# Simulation time: 8064773 ps
+# Simulation time: 8064773 ps
+# Simulation time: 8064773 ps
+# Simulation time: 8064773 ps
+# Simulation time: 8171183 ps
+# Simulation time: 8171183 ps
+# Simulation time: 8171183 ps
+# Simulation time: 8171183 ps
+# Simulation time: 8171183 ps
+# Simulation time: 8171183 ps
+# Simulation time: 8171183 ps
+# Simulation time: 8171183 ps
+# Simulation time: 8277583 ps
+# Simulation time: 8277583 ps
+# Simulation time: 8277583 ps
+# Simulation time: 8277583 ps
+# Simulation time: 8277583 ps
+# Simulation time: 8277583 ps
+# Simulation time: 8277583 ps
+# Simulation time: 8277583 ps
+# Simulation time: 8381675 ps
+# Simulation time: 8381675 ps
+# Simulation time: 8381675 ps
+# Simulation time: 8381675 ps
+# Simulation time: 8381675 ps
+# Simulation time: 8381675 ps
+# Simulation time: 8381675 ps
+# Simulation time: 8381675 ps
+# Simulation time: 8484649 ps
+# Simulation time: 8484649 ps
+# Simulation time: 8484649 ps
+# Simulation time: 8484649 ps
+# Simulation time: 8484649 ps
+# Simulation time: 8484649 ps
+# Simulation time: 8484649 ps
+# Simulation time: 8484649 ps
+# Simulation time: 8588703 ps
+# Simulation time: 8588703 ps
+# Simulation time: 8588703 ps
+# Simulation time: 8588703 ps
+# Simulation time: 8588703 ps
+# Simulation time: 8588703 ps
+# Simulation time: 8588703 ps
+# Simulation time: 8588703 ps
+# Simulation time: 8692931 ps
+# Simulation time: 8692931 ps
+# Simulation time: 8692931 ps
+# Simulation time: 8692931 ps
+# Simulation time: 8692931 ps
+# Simulation time: 8692931 ps
+# Simulation time: 8692931 ps
+# Simulation time: 8692931 ps
+# Simulation time: 8797661 ps
+# Simulation time: 8797661 ps
+# Simulation time: 8797661 ps
+# Simulation time: 8797661 ps
+# Simulation time: 8797661 ps
+# Simulation time: 8797661 ps
+# Simulation time: 8797661 ps
+# Simulation time: 8797661 ps
+# Simulation time: 8899201 ps
+# Simulation time: 8899201 ps
+# Simulation time: 8899201 ps
+# Simulation time: 8899201 ps
+# Simulation time: 8899201 ps
+# Simulation time: 8899201 ps
+# Simulation time: 8899201 ps
+# Simulation time: 8899201 ps
+# Simulation time: 9002679 ps
+# Simulation time: 9002679 ps
+# Simulation time: 9002679 ps
+# Simulation time: 9002679 ps
+# Simulation time: 9002679 ps
+# Simulation time: 9002679 ps
+# Simulation time: 9002679 ps
+# Simulation time: 9002679 ps
+# Simulation time: 9107965 ps
+# Simulation time: 9107965 ps
+# Simulation time: 9107965 ps
+# Simulation time: 9107965 ps
+# Simulation time: 9107965 ps
+# Simulation time: 9107965 ps
+# Simulation time: 9107965 ps
+# Simulation time: 9107965 ps
+# Simulation time: 9212739 ps
+# Simulation time: 9212739 ps
+# Simulation time: 9212739 ps
+# Simulation time: 9212739 ps
+# Simulation time: 9212739 ps
+# Simulation time: 9212739 ps
+# Simulation time: 9212739 ps
+# Simulation time: 9212739 ps
+# Simulation time: 9318221 ps
+# Simulation time: 9318221 ps
+# Simulation time: 9318221 ps
+# Simulation time: 9318221 ps
+# Simulation time: 9318221 ps
+# Simulation time: 9318221 ps
+# Simulation time: 9318221 ps
+# Simulation time: 9318221 ps
+# Simulation time: 9423001 ps
+# Simulation time: 9423001 ps
+# Simulation time: 9423001 ps
+# Simulation time: 9423001 ps
+# Simulation time: 9423001 ps
+# Simulation time: 9423001 ps
+# Simulation time: 9423001 ps
+# Simulation time: 9423001 ps
+# Simulation time: 9527731 ps
+# Simulation time: 9527731 ps
+# Simulation time: 9527731 ps
+# Simulation time: 9527731 ps
+# Simulation time: 9527731 ps
+# Simulation time: 9527731 ps
+# Simulation time: 9527731 ps
+# Simulation time: 9527731 ps
+# Simulation time: 9631717 ps
+# Simulation time: 9631717 ps
+# Simulation time: 9631717 ps
+# Simulation time: 9631717 ps
+# Simulation time: 9631717 ps
+# Simulation time: 9631717 ps
+# Simulation time: 9631717 ps
+# Simulation time: 9738123 ps
+# Simulation time: 9738123 ps
+# Simulation time: 9738123 ps
+# Simulation time: 9738123 ps
+# Simulation time: 9738123 ps
+# Simulation time: 9738123 ps
+# Simulation time: 9738123 ps
+# Simulation time: 9738123 ps
+# Simulation time: 9842425 ps
+# Simulation time: 9842425 ps
+# Simulation time: 9842425 ps
+# Simulation time: 9842425 ps
+# Simulation time: 9842425 ps
+# Simulation time: 9842425 ps
+# Simulation time: 9842425 ps
+# Simulation time: 9842425 ps
+# Simulation time: 9946778 ps
+# Simulation time: 9946778 ps
+# Simulation time: 9946778 ps
+# Simulation time: 9946778 ps
+# Simulation time: 9946778 ps
+# End time: 15:44:47 on Jun 17,2024, Elapsed time: 0:32:09
+# Errors: 0, Warnings: 1
