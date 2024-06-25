@@ -1,5 +1,5 @@
 Flow report for Proyect5
-Mon Jun 17 15:12:36 2024
+Tue Jun 25 12:25:14 2024
 Quartus Prime Version 23.1std.0 Build 991 11/28/2023 SC Lite Edition
 
 
@@ -41,16 +41,16 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------------+
 ; Flow Summary                                                                        ;
 +------------------------------------+------------------------------------------------+
-; Flow Status                        ; Successful - Mon Jun 17 15:12:36 2024          ;
+; Flow Status                        ; Successful - Tue Jun 25 12:25:14 2024          ;
 ; Quartus Prime Version              ; 23.1std.0 Build 991 11/28/2023 SC Lite Edition ;
 ; Revision Name                      ; Proyect5                                       ;
-; Top-level Entity Name              ; Proyect5                                       ;
+; Top-level Entity Name              ; c                                              ;
 ; Family                             ; Cyclone IV E                                   ;
-; Total logic elements               ; 64 / 6,272 ( 1 % )                             ;
-;     Total combinational functions  ; 63 / 6,272 ( 1 % )                             ;
-;     Dedicated logic registers      ; 28 / 6,272 ( < 1 % )                           ;
-; Total registers                    ; 28                                             ;
-; Total pins                         ; 57 / 92 ( 62 % )                               ;
+; Total logic elements               ; 266 / 6,272 ( 4 % )                            ;
+;     Total combinational functions  ; 251 / 6,272 ( 4 % )                            ;
+;     Dedicated logic registers      ; 109 / 6,272 ( 2 % )                            ;
+; Total registers                    ; 109                                            ;
+; Total pins                         ; 41 / 92 ( 45 % )                               ;
 ; Total virtual pins                 ; 0                                              ;
 ; Total memory bits                  ; 0 / 276,480 ( 0 % )                            ;
 ; Embedded Multiplier 9-bit elements ; 0 / 30 ( 0 % )                                 ;
@@ -65,7 +65,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 06/17/2024 15:03:06 ;
+; Start date & time ; 06/25/2024 12:24:39 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; Proyect5            ;
 +-------------------+---------------------+
@@ -76,7 +76,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------+----------------------------------------+---------------+-------------+-----------------------------------+
 ; Assignment Name                     ; Value                                  ; Default Value ; Entity Name ; Section Id                        ;
 +-------------------------------------+----------------------------------------+---------------+-------------+-----------------------------------+
-; COMPILER_SIGNATURE_ID               ; 233654134201047.171864738608128        ; --            ; --          ; --                                ;
+; COMPILER_SIGNATURE_ID               ; 233654134201047.171932907909264        ; --            ; --          ; --                                ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST     ; Off                                    ; --            ; --          ; eda_board_design_timing           ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST     ; Off                                    ; --            ; --          ; eda_board_design_boundary_scan    ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST     ; Off                                    ; --            ; --          ; eda_board_design_signal_integrity ;
@@ -84,10 +84,11 @@ https://fpgasoftware.intel.com/eula.
 ; EDA_OUTPUT_DATA_FORMAT              ; Verilog Hdl                            ; --            ; --          ; eda_simulation                    ;
 ; EDA_SIMULATION_TOOL                 ; Questa Intel FPGA (Verilog)            ; <None>        ; --          ; --                                ;
 ; EDA_TIME_SCALE                      ; 1 ps                                   ; --            ; --          ; eda_simulation                    ;
-; PARTITION_COLOR                     ; -- (Not supported for targeted family) ; --            ; --          ; Top                               ;
-; PARTITION_FITTER_PRESERVATION_LEVEL ; -- (Not supported for targeted family) ; --            ; --          ; Top                               ;
-; PARTITION_NETLIST_TYPE              ; -- (Not supported for targeted family) ; --            ; --          ; Top                               ;
+; PARTITION_COLOR                     ; -- (Not supported for targeted family) ; --            ; c           ; Top                               ;
+; PARTITION_FITTER_PRESERVATION_LEVEL ; -- (Not supported for targeted family) ; --            ; c           ; Top                               ;
+; PARTITION_NETLIST_TYPE              ; -- (Not supported for targeted family) ; --            ; c           ; Top                               ;
 ; PROJECT_OUTPUT_DIRECTORY            ; output_files                           ; --            ; --          ; --                                ;
+; TOP_LEVEL_ENTITY                    ; c                                      ; Proyect5      ; --          ; --                                ;
 ; VHDL_INPUT_VERSION                  ; VHDL_2008                              ; VHDL_1993     ; --          ; --                                ;
 ; VHDL_SHOW_LMF_MAPPING_MESSAGES      ; Off                                    ; --            ; --          ; --                                ;
 +-------------------------------------+----------------------------------------+---------------+-------------+-----------------------------------+
@@ -98,16 +99,12 @@ https://fpgasoftware.intel.com/eula.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:18     ; 1.0                     ; 4787 MB             ; 00:00:40                           ;
-; Fitter               ; 00:00:08     ; 1.0                     ; 5225 MB             ; 00:00:09                           ;
-; Assembler            ; 00:00:01     ; 1.0                     ; 4683 MB             ; 00:00:01                           ;
-; Timing Analyzer      ; 00:00:03     ; 1.0                     ; 4756 MB             ; 00:00:03                           ;
-; EDA Netlist Writer   ; 00:00:00     ; 1.0                     ; 4628 MB             ; 00:00:01                           ;
-; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4633 MB             ; 00:00:01                           ;
+; Analysis & Synthesis ; 00:00:17     ; 1.0                     ; 4787 MB             ; 00:00:38                           ;
+; Fitter               ; 00:00:09     ; 1.0                     ; 5230 MB             ; 00:00:10                           ;
+; Assembler            ; 00:00:01     ; 1.0                     ; 4680 MB             ; 00:00:01                           ;
+; Timing Analyzer      ; 00:00:03     ; 1.0                     ; 4758 MB             ; 00:00:03                           ;
 ; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4634 MB             ; 00:00:01                           ;
-; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4633 MB             ; 00:00:01                           ;
-; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4634 MB             ; 00:00:01                           ;
-; Total                ; 00:00:34     ; --                      ; --                  ; 00:00:58                           ;
+; Total                ; 00:00:31     ; --                      ; --                  ; 00:00:53                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -121,10 +118,6 @@ https://fpgasoftware.intel.com/eula.
 ; Assembler            ; DESKTOP-M6HRPVT  ; Windows 10 ; 10.0       ; x86_64         ;
 ; Timing Analyzer      ; DESKTOP-M6HRPVT  ; Windows 10 ; 10.0       ; x86_64         ;
 ; EDA Netlist Writer   ; DESKTOP-M6HRPVT  ; Windows 10 ; 10.0       ; x86_64         ;
-; EDA Netlist Writer   ; DESKTOP-M6HRPVT  ; Windows 10 ; 10.0       ; x86_64         ;
-; EDA Netlist Writer   ; DESKTOP-M6HRPVT  ; Windows 10 ; 10.0       ; x86_64         ;
-; EDA Netlist Writer   ; DESKTOP-M6HRPVT  ; Windows 10 ; 10.0       ; x86_64         ;
-; EDA Netlist Writer   ; DESKTOP-M6HRPVT  ; Windows 10 ; 10.0       ; x86_64         ;
 +----------------------+------------------+------------+------------+----------------+
 
 
@@ -136,10 +129,6 @@ quartus_fit --read_settings_files=off --write_settings_files=off Proyect5 -c Pro
 quartus_asm --read_settings_files=off --write_settings_files=off Proyect5 -c Proyect5
 quartus_sta Proyect5 -c Proyect5
 quartus_eda --read_settings_files=off --write_settings_files=off Proyect5 -c Proyect5
-quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off Proyect5 -c Proyect5 --vector_source=C:/intelFPGA_lite/optativa/Optativa_FPGA/Proyect5_VGA/Waveform1.vwf --testbench_file=C:/intelFPGA_lite/optativa/Optativa_FPGA/Proyect5_VGA/simulation/qsim/Waveform1.vwf.vht
-quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=vhdl --output_directory=C:/intelFPGA_lite/optativa/Optativa_FPGA/Proyect5_VGA/simulation/qsim/ Proyect5 -c Proyect5
-quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off Proyect5 -c Proyect5 --vector_source=C:/intelFPGA_lite/optativa/Optativa_FPGA/Proyect5_VGA/Waveform1.vwf --testbench_file=C:/intelFPGA_lite/optativa/Optativa_FPGA/Proyect5_VGA/simulation/qsim/Waveform1.vwf.vht
-quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=vhdl --output_directory=C:/intelFPGA_lite/optativa/Optativa_FPGA/Proyect5_VGA/simulation/qsim/ Proyect5 -c Proyect5
 
 
 

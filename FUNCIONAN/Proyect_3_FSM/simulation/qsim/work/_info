@@ -1,0 +1,180 @@
+m255
+K4
+z2
+Z0 !s12c _opt
+Z1 !s99 nomlopt
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+!s11e vcom 2023.3 2023.07, Jul 17 2023
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z2 dC:/intelFPGA_lite/optativa/Optativa_FPGA/Proyect_3_FSM/simulation/qsim
+T_opt
+!s110 1718555059
+VcVS^VbIMIg?M_2ZBW]E1h3
+04 25 18 work proyect_3_fsm_vhd_vec_tst proyect_3_fsm_arch 1
+=1-d481d7ab5ad7-666f11b2-2f5-1728
+R1
+!s12b OEM100
+!s124 OEM10U3 
+o-quiet -auto_acc_if_foreign -work work -L cycloneive -L altera -L altera_mf -L 220model -L sgate -L altera_lnsim +acc
+tCvgOpt 0
+n@_opt
+OL;O;2023.3;77
+Ehard_block
+Z3 w1718555055
+Z4 DPx4 ieee 16 vital_primitives 0 22 Y]H?Y_]z4@VoaWAGJ=36m1
+Z5 DPx10 cycloneive 20 cycloneive_atom_pack 0 22 JFD354ZMY?;ZG1UUQ_P^@1
+Z6 DPx4 ieee 12 vital_timing 0 22 6STbz=m1W[80IE06h_el^0
+Z7 DPx3 std 6 textio 0 22 LS[?81n5ZHWBI9JkBZTV<2
+Z8 DPx4 ieee 14 std_logic_1164 0 22 6<US`=mgl_dFdCEFF7J=m1
+Z9 DPx10 cycloneive 21 cycloneive_components 0 22 :CA=Yg0R^TdJ3>^OGfeMR2
+!i122 14
+R2
+Z10 8Proyect_3_FSM.vho
+Z11 FProyect_3_FSM.vho
+l0
+L35 1
+VO;cUSklm4Sig<`__bK=J@0
+!s100 0CTYib@dc:ObIVR9DRSK?2
+Z12 OL;C;2023.3;77
+32
+Z13 !s110 1718555057
+!i10b 1
+Z14 !s108 1718555057.000000
+Z15 !s90 -work|work|Proyect_3_FSM.vho|
+Z16 !s107 Proyect_3_FSM.vho|
+!i113 0
+Z17 o-work work
+Z18 tExplicit 1 CvgOpt 0
+Astructure
+R4
+R5
+R6
+R7
+R8
+R9
+DEx4 work 10 hard_block 0 22 O;cUSklm4Sig<`__bK=J@0
+!i122 14
+l65
+L51 20
+VGLY:g5RDEe^dIV`12>FYD3
+!s100 6LcB1AebN6j_bAmfc?Z:_0
+R12
+32
+R13
+!i10b 1
+R14
+R15
+R16
+!i113 0
+R17
+R18
+Eproyect_3_fsm
+R3
+R5
+R9
+R4
+Z19 DPx6 altera 11 dffeas_pack 0 22 mB4IFnUT3:DoZN@NS]Gzg0
+R6
+R7
+R8
+Z20 DPx6 altera 28 altera_primitives_components 0 22 >1_OP3SHemAi5ZBLF?7g43
+!i122 14
+R2
+R10
+R11
+l0
+L80 1
+Vd3MNjQU1FPiJh>@<QEi@N0
+!s100 ]ceHaRbANzUSIgJdelGZk3
+R12
+32
+R13
+!i10b 1
+R14
+R15
+R16
+!i113 0
+R17
+R18
+Astructure
+R5
+R9
+R4
+R19
+R6
+R7
+R8
+R20
+DEx4 work 13 proyect_3_fsm 0 22 d3MNjQU1FPiJh>@<QEi@N0
+!i122 14
+l228
+L122 1553
+V3>2R^J@9meKfHWYb?>ZW`0
+!s100 _QYYkh=kBneaO:Mk?^AdM1
+R12
+32
+R13
+!i10b 1
+R14
+R15
+R16
+!i113 0
+R17
+R18
+Eproyect_3_fsm_vhd_vec_tst
+Z21 w1718555054
+R7
+R8
+!i122 15
+R2
+Z22 8Waveform.vwf.vht
+Z23 FWaveform.vwf.vht
+l0
+L32 1
+Ve=mcO_b6UHX93eMRkY<zl1
+!s100 W4BDzcPTAF0iC?nm@9KTF2
+R12
+32
+Z24 !s110 1718555058
+!i10b 1
+R14
+Z25 !s90 -work|work|Waveform.vwf.vht|
+Z26 !s107 Waveform.vwf.vht|
+!i113 0
+R17
+R18
+Aproyect_3_fsm_arch
+R7
+R8
+DEx4 work 25 proyect_3_fsm_vhd_vec_tst 0 22 e=mcO_b6UHX93eMRkY<zl1
+!i122 15
+l59
+L34 187
+VK6`OJGI]Y4e2fOleYIk]h1
+!s100 GboF3kVlXPi5CfJ4Dn=9M2
+R12
+32
+R24
+!i10b 1
+R14
+R25
+R26
+!i113 0
+R17
+R18

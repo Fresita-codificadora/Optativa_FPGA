@@ -4,31 +4,91 @@
 			"name" : "Top",
 			"pins" : [
 				{
-					"name" : "VGA_HS",
+					"name" : "HS",
 					"strict" : false
 				},
 				{
-					"name" : "VGA_VS",
+					"name" : "VS",
 					"strict" : false
 				},
 				{
-					"name" : "VGA_clk",
+					"name" : "BLANK",
 					"strict" : false
 				},
 				{
-					"name" : "h_blank_sim",
+					"name" : "VGA_CLK",
 					"strict" : false
 				},
 				{
-					"name" : "v_blank_sim",
+					"name" : "AZUL[9]",
 					"strict" : false
 				},
 				{
-					"name" : "reset",
+					"name" : "AZUL[8]",
+					"strict" : false
+				},
+				{
+					"name" : "AZUL[7]",
+					"strict" : false
+				},
+				{
+					"name" : "AZUL[6]",
+					"strict" : false
+				},
+				{
+					"name" : "AZUL[5]",
+					"strict" : false
+				},
+				{
+					"name" : "AZUL[4]",
+					"strict" : false
+				},
+				{
+					"name" : "VERDE[9]",
+					"strict" : false
+				},
+				{
+					"name" : "VERDE[8]",
+					"strict" : false
+				},
+				{
+					"name" : "VERDE[7]",
+					"strict" : false
+				},
+				{
+					"name" : "VERDE[6]",
+					"strict" : false
+				},
+				{
+					"name" : "VERDE[5]",
+					"strict" : false
+				},
+				{
+					"name" : "VERDE[4]",
+					"strict" : false
+				},
+				{
+					"name" : "Reset",
 					"strict" : false
 				},
 				{
 					"name" : "clk",
+					"strict" : false
+				},
+				{
+					"name" : "izq_btn",
+					"strict" : false
+				},
+				{
+					"name" : "der_btn",
+					"strict" : false
+				},
+				{
+					"name" : "arriba_btn",
+					"strict" : false
+				},
+				{
+					"name" : "abajo_btn",
 					"strict" : false
 				}
 			]

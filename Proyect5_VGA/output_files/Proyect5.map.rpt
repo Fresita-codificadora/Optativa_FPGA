@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Proyect5
-Mon Jun 17 15:03:24 2024
+Tue Jun 25 12:24:55 2024
 Quartus Prime Version 23.1std.0 Build 991 11/28/2023 SC Lite Edition
 
 
@@ -13,13 +13,15 @@ Quartus Prime Version 23.1std.0 Build 991 11/28/2023 SC Lite Edition
   5. Analysis & Synthesis Source Files Read
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
-  8. State Machine - |Proyect5|state
-  9. General Register Statistics
- 10. Inverted Register Statistics
- 11. Multiplexer Restructuring Statistics (Restructuring Performed)
- 12. Post-Synthesis Netlist Statistics for Top Partition
- 13. Elapsed Time Per Partition
- 14. Analysis & Synthesis Messages
+  8. State Machine - |c|Proyect5:inst1|state
+  9. Registers Removed During Synthesis
+ 10. Removed Registers Triggering Further Register Optimizations
+ 11. General Register Statistics
+ 12. Inverted Register Statistics
+ 13. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 14. Post-Synthesis Netlist Statistics for Top Partition
+ 15. Elapsed Time Per Partition
+ 16. Analysis & Synthesis Messages
 
 
 
@@ -46,16 +48,16 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                        ;
 +------------------------------------+------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Mon Jun 17 15:03:24 2024          ;
+; Analysis & Synthesis Status        ; Successful - Tue Jun 25 12:24:55 2024          ;
 ; Quartus Prime Version              ; 23.1std.0 Build 991 11/28/2023 SC Lite Edition ;
 ; Revision Name                      ; Proyect5                                       ;
-; Top-level Entity Name              ; Proyect5                                       ;
+; Top-level Entity Name              ; c                                              ;
 ; Family                             ; Cyclone IV E                                   ;
-; Total logic elements               ; 63                                             ;
-;     Total combinational functions  ; 63                                             ;
-;     Dedicated logic registers      ; 28                                             ;
-; Total registers                    ; 28                                             ;
-; Total pins                         ; 57                                             ;
+; Total logic elements               ; 263                                            ;
+;     Total combinational functions  ; 251                                            ;
+;     Dedicated logic registers      ; 109                                            ;
+; Total registers                    ; 109                                            ;
+; Total pins                         ; 41                                             ;
 ; Total virtual pins                 ; 0                                              ;
 ; Total memory bits                  ; 0                                              ;
 ; Embedded Multiplier 9-bit elements ; 0                                              ;
@@ -68,7 +70,7 @@ https://fpgasoftware.intel.com/eula.
 +------------------------------------------------------------------+--------------------+--------------------+
 ; Option                                                           ; Setting            ; Default Value      ;
 +------------------------------------------------------------------+--------------------+--------------------+
-; Top-level entity name                                            ; Proyect5           ; Proyect5           ;
+; Top-level entity name                                            ; c                  ; Proyect5           ;
 ; Family name                                                      ; Cyclone IV E       ; Cyclone V          ;
 ; VHDL Show LMF Mapping Messages                                   ; Off                ;                    ;
 ; VHDL Version                                                     ; VHDL_2008          ; VHDL_1993          ;
@@ -166,45 +168,47 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                              ;
-+----------------------------------+-----------------+-----------------+--------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                       ; Library ;
-+----------------------------------+-----------------+-----------------+--------------------------------------------------------------------+---------+
-; Proyect5.vhd                     ; yes             ; User VHDL File  ; C:/intelFPGA_lite/optativa/Optativa_FPGA/Proyect5_VGA/Proyect5.vhd ;         ;
-+----------------------------------+-----------------+-----------------+--------------------------------------------------------------------+---------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                 ;
++----------------------------------+-----------------+------------------------------------+--------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                       ; Library ;
++----------------------------------+-----------------+------------------------------------+--------------------------------------------------------------------+---------+
+; Proyect5.vhd                     ; yes             ; User VHDL File                     ; C:/intelFPGA_lite/optativa/Optativa_FPGA/Proyect5_VGA/Proyect5.vhd ;         ;
+; cuadrado.vhd                     ; yes             ; User VHDL File                     ; C:/intelFPGA_lite/optativa/Optativa_FPGA/Proyect5_VGA/cuadrado.vhd ;         ;
+; c.bdf                            ; yes             ; User Block Diagram/Schematic File  ; C:/intelFPGA_lite/optativa/Optativa_FPGA/Proyect5_VGA/c.bdf        ;         ;
++----------------------------------+-----------------+------------------------------------+--------------------------------------------------------------------+---------+
 
 
-+-----------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary         ;
-+---------------------------------------------+-------+
-; Resource                                    ; Usage ;
-+---------------------------------------------+-------+
-; Estimated Total logic elements              ; 63    ;
-;                                             ;       ;
-; Total combinational functions               ; 63    ;
-; Logic element usage by number of LUT inputs ;       ;
-;     -- 4 input functions                    ; 22    ;
-;     -- 3 input functions                    ; 13    ;
-;     -- <=2 input functions                  ; 28    ;
-;                                             ;       ;
-; Logic elements by mode                      ;       ;
-;     -- normal mode                          ; 44    ;
-;     -- arithmetic mode                      ; 19    ;
-;                                             ;       ;
-; Total registers                             ; 28    ;
-;     -- Dedicated logic registers            ; 28    ;
-;     -- I/O registers                        ; 0     ;
-;                                             ;       ;
-; I/O pins                                    ; 57    ;
-;                                             ;       ;
-; Embedded Multiplier 9-bit elements          ; 0     ;
-;                                             ;       ;
-; Maximum fan-out node                        ; clk_2 ;
-; Maximum fan-out                             ; 27    ;
-; Total fan-out                               ; 346   ;
-; Average fan-out                             ; 1.69  ;
-+---------------------------------------------+-------+
++-----------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary               ;
++---------------------------------------------+-------------+
+; Resource                                    ; Usage       ;
++---------------------------------------------+-------------+
+; Estimated Total logic elements              ; 263         ;
+;                                             ;             ;
+; Total combinational functions               ; 251         ;
+; Logic element usage by number of LUT inputs ;             ;
+;     -- 4 input functions                    ; 75          ;
+;     -- 3 input functions                    ; 106         ;
+;     -- <=2 input functions                  ; 70          ;
+;                                             ;             ;
+; Logic elements by mode                      ;             ;
+;     -- normal mode                          ; 136         ;
+;     -- arithmetic mode                      ; 115         ;
+;                                             ;             ;
+; Total registers                             ; 109         ;
+;     -- Dedicated logic registers            ; 109         ;
+;     -- I/O registers                        ; 0           ;
+;                                             ;             ;
+; I/O pins                                    ; 41          ;
+;                                             ;             ;
+; Embedded Multiplier 9-bit elements          ; 0           ;
+;                                             ;             ;
+; Maximum fan-out node                        ; Reset~input ;
+; Maximum fan-out                             ; 86          ;
+; Total fan-out                               ; 1170        ;
+; Average fan-out                             ; 2.65        ;
++---------------------------------------------+-------------+
 
 
 +----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -212,14 +216,16 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+-------------+--------------+
 ; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name ; Entity Name ; Library Name ;
 +----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+-------------+--------------+
-; |Proyect5                  ; 63 (63)             ; 28 (28)                   ; 0           ; 0            ; 0       ; 0         ; 57   ; 0            ; |Proyect5           ; Proyect5    ; work         ;
+; |c                         ; 251 (0)             ; 109 (0)                   ; 0           ; 0            ; 0       ; 0         ; 41   ; 0            ; |c                  ; c           ; work         ;
+;    |Proyect5:inst1|        ; 71 (71)             ; 49 (49)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |c|Proyect5:inst1   ; Proyect5    ; work         ;
+;    |cuadrado:inst|         ; 180 (180)           ; 60 (60)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |c|cuadrado:inst    ; cuadrado    ; work         ;
 +----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+-------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
 Encoding Type:  One-Hot
 +-------------------------------------------------+
-; State Machine - |Proyect5|state                 ;
+; State Machine - |c|Proyect5:inst1|state         ;
 +---------+---------+---------+---------+---------+
 ; Name    ; state.d ; state.c ; state.b ; state.a ;
 +---------+---------+---------+---------+---------+
@@ -230,39 +236,99 @@ Encoding Type:  One-Hot
 +---------+---------+---------+---------+---------+
 
 
++---------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                              ;
++----------------------------------------+----------------------------------------+
+; Register name                          ; Reason for Removal                     ;
++----------------------------------------+----------------------------------------+
+; cuadrado:inst|rojo[0..5]               ; Stuck at GND due to stuck port data_in ;
+; Proyect5:inst1|rojo_reg[0..5]          ; Stuck at GND due to stuck port data_in ;
+; cuadrado:inst|azul[1..5]               ; Merged with cuadrado:inst|azul[0]      ;
+; cuadrado:inst|verde[1..5]              ; Merged with cuadrado:inst|verde[0]     ;
+; Total Number of Removed Registers = 22 ;                                        ;
++----------------------------------------+----------------------------------------+
+
+
++--------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                ;
++-----------------------+---------------------------+----------------------------------------+
+; Register name         ; Reason for Removal        ; Registers Removed due to This Register ;
++-----------------------+---------------------------+----------------------------------------+
+; cuadrado:inst|rojo[3] ; Stuck at GND              ; Proyect5:inst1|rojo_reg[3]             ;
+;                       ; due to stuck port data_in ;                                        ;
+; cuadrado:inst|rojo[2] ; Stuck at GND              ; Proyect5:inst1|rojo_reg[2]             ;
+;                       ; due to stuck port data_in ;                                        ;
+; cuadrado:inst|rojo[1] ; Stuck at GND              ; Proyect5:inst1|rojo_reg[1]             ;
+;                       ; due to stuck port data_in ;                                        ;
+; cuadrado:inst|rojo[0] ; Stuck at GND              ; Proyect5:inst1|rojo_reg[0]             ;
+;                       ; due to stuck port data_in ;                                        ;
+; cuadrado:inst|rojo[4] ; Stuck at GND              ; Proyect5:inst1|rojo_reg[4]             ;
+;                       ; due to stuck port data_in ;                                        ;
+; cuadrado:inst|rojo[5] ; Stuck at GND              ; Proyect5:inst1|rojo_reg[5]             ;
+;                       ; due to stuck port data_in ;                                        ;
++-----------------------+---------------------------+----------------------------------------+
+
+
 +------------------------------------------------------+
 ; General Register Statistics                          ;
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 28    ;
-; Number of registers using Synchronous Clear  ; 10    ;
-; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 25    ;
+; Total registers                              ; 109   ;
+; Number of registers using Synchronous Clear  ; 20    ;
+; Number of registers using Synchronous Load   ; 4     ;
+; Number of registers using Asynchronous Clear ; 76    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 13    ;
+; Number of registers using Clock Enable       ; 39    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
 
-+--------------------------------------------------+
-; Inverted Register Statistics                     ;
-+----------------------------------------+---------+
-; Inverted Register                      ; Fan out ;
-+----------------------------------------+---------+
-; linea[0]                               ; 6       ;
-; Total number of inverted registers = 1 ;         ;
-+----------------------------------------+---------+
++---------------------------------------------------+
+; Inverted Register Statistics                      ;
++-----------------------------------------+---------+
+; Inverted Register                       ; Fan out ;
++-----------------------------------------+---------+
+; cuadrado:inst|col_ini[8]                ; 5       ;
+; cuadrado:inst|col_ini[7]                ; 4       ;
+; cuadrado:inst|col_ini[5]                ; 3       ;
+; cuadrado:inst|col_ini[4]                ; 3       ;
+; cuadrado:inst|col_ini[2]                ; 2       ;
+; cuadrado:inst|col_ini[1]                ; 2       ;
+; cuadrado:inst|col_ini[0]                ; 2       ;
+; cuadrado:inst|col_fin[8]                ; 4       ;
+; cuadrado:inst|col_fin[7]                ; 4       ;
+; cuadrado:inst|col_fin[6]                ; 4       ;
+; cuadrado:inst|col_fin[5]                ; 4       ;
+; cuadrado:inst|col_fin[3]                ; 3       ;
+; cuadrado:inst|col_fin[0]                ; 3       ;
+; cuadrado:inst|fila_ini[7]               ; 4       ;
+; cuadrado:inst|fila_ini[6]               ; 4       ;
+; cuadrado:inst|fila_ini[5]               ; 4       ;
+; cuadrado:inst|fila_ini[4]               ; 4       ;
+; cuadrado:inst|fila_ini[3]               ; 3       ;
+; cuadrado:inst|fila_ini[1]               ; 3       ;
+; cuadrado:inst|fila_fin[8]               ; 4       ;
+; cuadrado:inst|fila_fin[5]               ; 4       ;
+; cuadrado:inst|fila_fin[3]               ; 4       ;
+; cuadrado:inst|fila_fin[2]               ; 4       ;
+; Total number of inverted registers = 23 ;         ;
++-----------------------------------------+---------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                      ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output            ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------+
-; 5:1                ; 2 bits    ; 6 LEs         ; 4 LEs                ; 2 LEs                  ; Yes        ; |Proyect5|VGA_VS~reg0                 ;
-; 8:1                ; 10 bits   ; 50 LEs        ; 10 LEs               ; 40 LEs                 ; Yes        ; |Proyect5|\VGA_horizontal:cont_int[9] ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                              ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                    ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------+
+; 4:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |c|cuadrado:inst|verde[0]                     ;
+; 5:1                ; 2 bits    ; 6 LEs         ; 4 LEs                ; 2 LEs                  ; Yes        ; |c|Proyect5:inst1|V_blank                     ;
+; 5:1                ; 7 bits    ; 21 LEs        ; 14 LEs               ; 7 LEs                  ; Yes        ; |c|cuadrado:inst|col_ini[6]                   ;
+; 5:1                ; 10 bits   ; 30 LEs        ; 20 LEs               ; 10 LEs                 ; Yes        ; |c|cuadrado:inst|fila_ini[8]                  ;
+; 8:1                ; 10 bits   ; 50 LEs        ; 10 LEs               ; 40 LEs                 ; Yes        ; |c|Proyect5:inst1|\VGA_horizontal:cont_int[0] ;
+; 5:1                ; 13 bits   ; 39 LEs        ; 26 LEs               ; 13 LEs                 ; Yes        ; |c|cuadrado:inst|col_ini[5]                   ;
+; 5:1                ; 10 bits   ; 30 LEs        ; 20 LEs               ; 10 LEs                 ; Yes        ; |c|cuadrado:inst|fila_fin[3]                  ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------+
 
 
 +-----------------------------------------------------+
@@ -270,25 +336,28 @@ Encoding Type:  One-Hot
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; boundary_port         ; 57                          ;
-; cycloneiii_ff         ; 28                          ;
-;     CLR               ; 4                           ;
+; boundary_port         ; 41                          ;
+; cycloneiii_ff         ; 109                         ;
+;     CLR               ; 35                          ;
 ;     CLR SCLR          ; 10                          ;
+;     CLR SLD           ; 4                           ;
 ;     ENA               ; 2                           ;
-;     ENA CLR           ; 11                          ;
-;     plain             ; 1                           ;
-; cycloneiii_lcell_comb ; 64                          ;
-;     arith             ; 19                          ;
-;         2 data inputs ; 19                          ;
-;     normal            ; 45                          ;
+;     ENA CLR           ; 27                          ;
+;     ENA SCLR          ; 10                          ;
+;     plain             ; 21                          ;
+; cycloneiii_lcell_comb ; 252                         ;
+;     arith             ; 115                         ;
+;         2 data inputs ; 47                          ;
+;         3 data inputs ; 68                          ;
+;     normal            ; 137                         ;
 ;         0 data inputs ; 1                           ;
-;         1 data inputs ; 3                           ;
-;         2 data inputs ; 6                           ;
-;         3 data inputs ; 13                          ;
-;         4 data inputs ; 22                          ;
+;         1 data inputs ; 6                           ;
+;         2 data inputs ; 17                          ;
+;         3 data inputs ; 38                          ;
+;         4 data inputs ; 75                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 5.00                        ;
-; Average LUT depth     ; 2.95                        ;
+; Max LUT depth         ; 7.30                        ;
+; Average LUT depth     ; 3.61                        ;
 +-----------------------+-----------------------------+
 
 
@@ -297,7 +366,7 @@ Encoding Type:  One-Hot
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:00     ;
+; Top            ; 00:00:01     ;
 +----------------+--------------+
 
 
@@ -307,84 +376,91 @@ Encoding Type:  One-Hot
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 23.1std.0 Build 991 11/28/2023 SC Lite Edition
-    Info: Processing started: Mon Jun 17 15:03:05 2024
+    Info: Processing started: Tue Jun 25 12:24:38 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Proyect5 -c Proyect5
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
 Info (12021): Found 2 design units, including 1 entities, in source file proyect5.vhd
     Info (12022): Found design unit 1: Proyect5-rtl File: C:/intelFPGA_lite/optativa/Optativa_FPGA/Proyect5_VGA/Proyect5.vhd Line: 19
     Info (12023): Found entity 1: Proyect5 File: C:/intelFPGA_lite/optativa/Optativa_FPGA/Proyect5_VGA/Proyect5.vhd Line: 4
-Info (12127): Elaborating entity "Proyect5" for the top level hierarchy
-Warning (10541): VHDL Signal Declaration warning at Proyect5.vhd(12): used implicit default value for signal "VGA_Blank" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/intelFPGA_lite/optativa/Optativa_FPGA/Proyect5_VGA/Proyect5.vhd Line: 12
-Warning (10541): VHDL Signal Declaration warning at Proyect5.vhd(12): used implicit default value for signal "VGA_Synd" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/intelFPGA_lite/optativa/Optativa_FPGA/Proyect5_VGA/Proyect5.vhd Line: 12
-Warning (10541): VHDL Signal Declaration warning at Proyect5.vhd(13): used implicit default value for signal "rojo_out" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/intelFPGA_lite/optativa/Optativa_FPGA/Proyect5_VGA/Proyect5.vhd Line: 13
-Warning (10541): VHDL Signal Declaration warning at Proyect5.vhd(13): used implicit default value for signal "verde_out" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/intelFPGA_lite/optativa/Optativa_FPGA/Proyect5_VGA/Proyect5.vhd Line: 13
-Warning (10541): VHDL Signal Declaration warning at Proyect5.vhd(13): used implicit default value for signal "azul_out" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/intelFPGA_lite/optativa/Optativa_FPGA/Proyect5_VGA/Proyect5.vhd Line: 13
-Info (13000): Registers with preset signals will power-up high File: C:/intelFPGA_lite/optativa/Optativa_FPGA/Proyect5_VGA/Proyect5.vhd Line: 45
+Info (12021): Found 1 design units, including 1 entities, in source file a.bdf
+    Info (12023): Found entity 1: a
+Info (12021): Found 2 design units, including 1 entities, in source file decod.vhd
+    Info (12022): Found design unit 1: decod-arch File: C:/intelFPGA_lite/optativa/Optativa_FPGA/Proyect5_VGA/decod.vhd Line: 11
+    Info (12023): Found entity 1: decod File: C:/intelFPGA_lite/optativa/Optativa_FPGA/Proyect5_VGA/decod.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file cuadrado.vhd
+    Info (12022): Found design unit 1: cuadrado-arch File: C:/intelFPGA_lite/optativa/Optativa_FPGA/Proyect5_VGA/cuadrado.vhd Line: 13
+    Info (12023): Found entity 1: cuadrado File: C:/intelFPGA_lite/optativa/Optativa_FPGA/Proyect5_VGA/cuadrado.vhd Line: 4
+Info (12021): Found 1 design units, including 1 entities, in source file b.bdf
+    Info (12023): Found entity 1: b
+Info (12021): Found 1 design units, including 1 entities, in source file c.bdf
+    Info (12023): Found entity 1: c
+Info (12021): Found 2 design units, including 1 entities, in source file cuadrado_b.vhd
+    Info (12022): Found design unit 1: cuadrado_b-arch File: C:/intelFPGA_lite/optativa/Optativa_FPGA/Proyect5_VGA/cuadrado_b.vhd Line: 13
+    Info (12023): Found entity 1: cuadrado_b File: C:/intelFPGA_lite/optativa/Optativa_FPGA/Proyect5_VGA/cuadrado_b.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file color_sel.vhd
+    Info (12022): Found design unit 1: color_sel-arch File: C:/intelFPGA_lite/optativa/Optativa_FPGA/Proyect5_VGA/color_sel.vhd Line: 14
+    Info (12023): Found entity 1: color_sel File: C:/intelFPGA_lite/optativa/Optativa_FPGA/Proyect5_VGA/color_sel.vhd Line: 4
+Info (12127): Elaborating entity "c" for the top level hierarchy
+Info (12128): Elaborating entity "Proyect5" for hierarchy "Proyect5:inst1"
+Info (12128): Elaborating entity "cuadrado" for hierarchy "cuadrado:inst"
+Info (13000): Registers with preset signals will power-up high File: C:/intelFPGA_lite/optativa/Optativa_FPGA/Proyect5_VGA/cuadrado.vhd Line: 33
 Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "VGA_Blank" is stuck at GND File: C:/intelFPGA_lite/optativa/Optativa_FPGA/Proyect5_VGA/Proyect5.vhd Line: 12
-    Warning (13410): Pin "VGA_Synd" is stuck at GND File: C:/intelFPGA_lite/optativa/Optativa_FPGA/Proyect5_VGA/Proyect5.vhd Line: 12
-    Warning (13410): Pin "rojo_out[0]" is stuck at GND File: C:/intelFPGA_lite/optativa/Optativa_FPGA/Proyect5_VGA/Proyect5.vhd Line: 13
-    Warning (13410): Pin "rojo_out[1]" is stuck at GND File: C:/intelFPGA_lite/optativa/Optativa_FPGA/Proyect5_VGA/Proyect5.vhd Line: 13
-    Warning (13410): Pin "rojo_out[2]" is stuck at GND File: C:/intelFPGA_lite/optativa/Optativa_FPGA/Proyect5_VGA/Proyect5.vhd Line: 13
-    Warning (13410): Pin "rojo_out[3]" is stuck at GND File: C:/intelFPGA_lite/optativa/Optativa_FPGA/Proyect5_VGA/Proyect5.vhd Line: 13
-    Warning (13410): Pin "rojo_out[4]" is stuck at GND File: C:/intelFPGA_lite/optativa/Optativa_FPGA/Proyect5_VGA/Proyect5.vhd Line: 13
-    Warning (13410): Pin "rojo_out[5]" is stuck at GND File: C:/intelFPGA_lite/optativa/Optativa_FPGA/Proyect5_VGA/Proyect5.vhd Line: 13
-    Warning (13410): Pin "rojo_out[6]" is stuck at GND File: C:/intelFPGA_lite/optativa/Optativa_FPGA/Proyect5_VGA/Proyect5.vhd Line: 13
-    Warning (13410): Pin "rojo_out[7]" is stuck at GND File: C:/intelFPGA_lite/optativa/Optativa_FPGA/Proyect5_VGA/Proyect5.vhd Line: 13
-    Warning (13410): Pin "rojo_out[8]" is stuck at GND File: C:/intelFPGA_lite/optativa/Optativa_FPGA/Proyect5_VGA/Proyect5.vhd Line: 13
-    Warning (13410): Pin "rojo_out[9]" is stuck at GND File: C:/intelFPGA_lite/optativa/Optativa_FPGA/Proyect5_VGA/Proyect5.vhd Line: 13
-    Warning (13410): Pin "verde_out[0]" is stuck at GND File: C:/intelFPGA_lite/optativa/Optativa_FPGA/Proyect5_VGA/Proyect5.vhd Line: 13
-    Warning (13410): Pin "verde_out[1]" is stuck at GND File: C:/intelFPGA_lite/optativa/Optativa_FPGA/Proyect5_VGA/Proyect5.vhd Line: 13
-    Warning (13410): Pin "verde_out[2]" is stuck at GND File: C:/intelFPGA_lite/optativa/Optativa_FPGA/Proyect5_VGA/Proyect5.vhd Line: 13
-    Warning (13410): Pin "verde_out[3]" is stuck at GND File: C:/intelFPGA_lite/optativa/Optativa_FPGA/Proyect5_VGA/Proyect5.vhd Line: 13
-    Warning (13410): Pin "verde_out[4]" is stuck at GND File: C:/intelFPGA_lite/optativa/Optativa_FPGA/Proyect5_VGA/Proyect5.vhd Line: 13
-    Warning (13410): Pin "verde_out[5]" is stuck at GND File: C:/intelFPGA_lite/optativa/Optativa_FPGA/Proyect5_VGA/Proyect5.vhd Line: 13
-    Warning (13410): Pin "verde_out[6]" is stuck at GND File: C:/intelFPGA_lite/optativa/Optativa_FPGA/Proyect5_VGA/Proyect5.vhd Line: 13
-    Warning (13410): Pin "verde_out[7]" is stuck at GND File: C:/intelFPGA_lite/optativa/Optativa_FPGA/Proyect5_VGA/Proyect5.vhd Line: 13
-    Warning (13410): Pin "verde_out[8]" is stuck at GND File: C:/intelFPGA_lite/optativa/Optativa_FPGA/Proyect5_VGA/Proyect5.vhd Line: 13
-    Warning (13410): Pin "verde_out[9]" is stuck at GND File: C:/intelFPGA_lite/optativa/Optativa_FPGA/Proyect5_VGA/Proyect5.vhd Line: 13
-    Warning (13410): Pin "azul_out[0]" is stuck at GND File: C:/intelFPGA_lite/optativa/Optativa_FPGA/Proyect5_VGA/Proyect5.vhd Line: 13
-    Warning (13410): Pin "azul_out[1]" is stuck at GND File: C:/intelFPGA_lite/optativa/Optativa_FPGA/Proyect5_VGA/Proyect5.vhd Line: 13
-    Warning (13410): Pin "azul_out[2]" is stuck at GND File: C:/intelFPGA_lite/optativa/Optativa_FPGA/Proyect5_VGA/Proyect5.vhd Line: 13
-    Warning (13410): Pin "azul_out[3]" is stuck at GND File: C:/intelFPGA_lite/optativa/Optativa_FPGA/Proyect5_VGA/Proyect5.vhd Line: 13
-    Warning (13410): Pin "azul_out[4]" is stuck at GND File: C:/intelFPGA_lite/optativa/Optativa_FPGA/Proyect5_VGA/Proyect5.vhd Line: 13
-    Warning (13410): Pin "azul_out[5]" is stuck at GND File: C:/intelFPGA_lite/optativa/Optativa_FPGA/Proyect5_VGA/Proyect5.vhd Line: 13
-    Warning (13410): Pin "azul_out[6]" is stuck at GND File: C:/intelFPGA_lite/optativa/Optativa_FPGA/Proyect5_VGA/Proyect5.vhd Line: 13
-    Warning (13410): Pin "azul_out[7]" is stuck at GND File: C:/intelFPGA_lite/optativa/Optativa_FPGA/Proyect5_VGA/Proyect5.vhd Line: 13
-    Warning (13410): Pin "azul_out[8]" is stuck at GND File: C:/intelFPGA_lite/optativa/Optativa_FPGA/Proyect5_VGA/Proyect5.vhd Line: 13
-    Warning (13410): Pin "azul_out[9]" is stuck at GND File: C:/intelFPGA_lite/optativa/Optativa_FPGA/Proyect5_VGA/Proyect5.vhd Line: 13
+    Warning (13410): Pin "SYNK" is stuck at GND
+    Warning (13410): Pin "AZUL[3]" is stuck at GND
+    Warning (13410): Pin "AZUL[2]" is stuck at GND
+    Warning (13410): Pin "AZUL[1]" is stuck at GND
+    Warning (13410): Pin "AZUL[0]" is stuck at GND
+    Warning (13410): Pin "ROJO[9]" is stuck at GND
+    Warning (13410): Pin "ROJO[8]" is stuck at GND
+    Warning (13410): Pin "ROJO[7]" is stuck at GND
+    Warning (13410): Pin "ROJO[6]" is stuck at GND
+    Warning (13410): Pin "ROJO[5]" is stuck at GND
+    Warning (13410): Pin "ROJO[4]" is stuck at GND
+    Warning (13410): Pin "ROJO[3]" is stuck at GND
+    Warning (13410): Pin "ROJO[2]" is stuck at GND
+    Warning (13410): Pin "ROJO[1]" is stuck at GND
+    Warning (13410): Pin "ROJO[0]" is stuck at GND
+    Warning (13410): Pin "VERDE[3]" is stuck at GND
+    Warning (13410): Pin "VERDE[2]" is stuck at GND
+    Warning (13410): Pin "VERDE[1]" is stuck at GND
+    Warning (13410): Pin "VERDE[0]" is stuck at GND
 Info (286030): Timing-Driven Synthesis is running
+Critical Warning (18061): Ignored Power-Up Level option on the following registers
+    Critical Warning (18010): Register cuadrado:inst|col_ini[8] will power up to High File: C:/intelFPGA_lite/optativa/Optativa_FPGA/Proyect5_VGA/cuadrado.vhd Line: 33
+    Critical Warning (18010): Register cuadrado:inst|col_ini[7] will power up to High File: C:/intelFPGA_lite/optativa/Optativa_FPGA/Proyect5_VGA/cuadrado.vhd Line: 33
+    Critical Warning (18010): Register cuadrado:inst|col_ini[5] will power up to High File: C:/intelFPGA_lite/optativa/Optativa_FPGA/Proyect5_VGA/cuadrado.vhd Line: 33
+    Critical Warning (18010): Register cuadrado:inst|col_ini[4] will power up to High File: C:/intelFPGA_lite/optativa/Optativa_FPGA/Proyect5_VGA/cuadrado.vhd Line: 33
+    Critical Warning (18010): Register cuadrado:inst|col_ini[2] will power up to High File: C:/intelFPGA_lite/optativa/Optativa_FPGA/Proyect5_VGA/cuadrado.vhd Line: 33
+    Critical Warning (18010): Register cuadrado:inst|col_ini[1] will power up to High File: C:/intelFPGA_lite/optativa/Optativa_FPGA/Proyect5_VGA/cuadrado.vhd Line: 33
+    Critical Warning (18010): Register cuadrado:inst|col_ini[0] will power up to High File: C:/intelFPGA_lite/optativa/Optativa_FPGA/Proyect5_VGA/cuadrado.vhd Line: 33
+    Critical Warning (18010): Register cuadrado:inst|col_fin[8] will power up to High File: C:/intelFPGA_lite/optativa/Optativa_FPGA/Proyect5_VGA/cuadrado.vhd Line: 33
+    Critical Warning (18010): Register cuadrado:inst|col_fin[7] will power up to High File: C:/intelFPGA_lite/optativa/Optativa_FPGA/Proyect5_VGA/cuadrado.vhd Line: 33
+    Critical Warning (18010): Register cuadrado:inst|col_fin[6] will power up to High File: C:/intelFPGA_lite/optativa/Optativa_FPGA/Proyect5_VGA/cuadrado.vhd Line: 33
+    Critical Warning (18010): Register cuadrado:inst|col_fin[5] will power up to High File: C:/intelFPGA_lite/optativa/Optativa_FPGA/Proyect5_VGA/cuadrado.vhd Line: 33
+    Critical Warning (18010): Register cuadrado:inst|col_fin[3] will power up to High File: C:/intelFPGA_lite/optativa/Optativa_FPGA/Proyect5_VGA/cuadrado.vhd Line: 33
+    Critical Warning (18010): Register cuadrado:inst|col_fin[0] will power up to High File: C:/intelFPGA_lite/optativa/Optativa_FPGA/Proyect5_VGA/cuadrado.vhd Line: 33
+    Critical Warning (18010): Register cuadrado:inst|fila_ini[7] will power up to High File: C:/intelFPGA_lite/optativa/Optativa_FPGA/Proyect5_VGA/cuadrado.vhd Line: 33
+    Critical Warning (18010): Register cuadrado:inst|fila_ini[6] will power up to High File: C:/intelFPGA_lite/optativa/Optativa_FPGA/Proyect5_VGA/cuadrado.vhd Line: 33
+    Critical Warning (18010): Register cuadrado:inst|fila_ini[5] will power up to High File: C:/intelFPGA_lite/optativa/Optativa_FPGA/Proyect5_VGA/cuadrado.vhd Line: 33
+    Critical Warning (18010): Register cuadrado:inst|fila_ini[4] will power up to High File: C:/intelFPGA_lite/optativa/Optativa_FPGA/Proyect5_VGA/cuadrado.vhd Line: 33
+    Critical Warning (18010): Register cuadrado:inst|fila_ini[3] will power up to High File: C:/intelFPGA_lite/optativa/Optativa_FPGA/Proyect5_VGA/cuadrado.vhd Line: 33
+    Critical Warning (18010): Register cuadrado:inst|fila_ini[1] will power up to High File: C:/intelFPGA_lite/optativa/Optativa_FPGA/Proyect5_VGA/cuadrado.vhd Line: 33
+    Critical Warning (18010): Register cuadrado:inst|fila_fin[8] will power up to High File: C:/intelFPGA_lite/optativa/Optativa_FPGA/Proyect5_VGA/cuadrado.vhd Line: 33
+    Critical Warning (18010): Register cuadrado:inst|fila_fin[5] will power up to High File: C:/intelFPGA_lite/optativa/Optativa_FPGA/Proyect5_VGA/cuadrado.vhd Line: 33
+    Critical Warning (18010): Register cuadrado:inst|fila_fin[3] will power up to High File: C:/intelFPGA_lite/optativa/Optativa_FPGA/Proyect5_VGA/cuadrado.vhd Line: 33
+    Critical Warning (18010): Register cuadrado:inst|fila_fin[2] will power up to High File: C:/intelFPGA_lite/optativa/Optativa_FPGA/Proyect5_VGA/cuadrado.vhd Line: 33
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 18 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "rojo_in[0]" File: C:/intelFPGA_lite/optativa/Optativa_FPGA/Proyect5_VGA/Proyect5.vhd Line: 9
-    Warning (15610): No output dependent on input pin "rojo_in[1]" File: C:/intelFPGA_lite/optativa/Optativa_FPGA/Proyect5_VGA/Proyect5.vhd Line: 9
-    Warning (15610): No output dependent on input pin "rojo_in[2]" File: C:/intelFPGA_lite/optativa/Optativa_FPGA/Proyect5_VGA/Proyect5.vhd Line: 9
-    Warning (15610): No output dependent on input pin "rojo_in[3]" File: C:/intelFPGA_lite/optativa/Optativa_FPGA/Proyect5_VGA/Proyect5.vhd Line: 9
-    Warning (15610): No output dependent on input pin "rojo_in[4]" File: C:/intelFPGA_lite/optativa/Optativa_FPGA/Proyect5_VGA/Proyect5.vhd Line: 9
-    Warning (15610): No output dependent on input pin "rojo_in[5]" File: C:/intelFPGA_lite/optativa/Optativa_FPGA/Proyect5_VGA/Proyect5.vhd Line: 9
-    Warning (15610): No output dependent on input pin "verde_in[0]" File: C:/intelFPGA_lite/optativa/Optativa_FPGA/Proyect5_VGA/Proyect5.vhd Line: 9
-    Warning (15610): No output dependent on input pin "verde_in[1]" File: C:/intelFPGA_lite/optativa/Optativa_FPGA/Proyect5_VGA/Proyect5.vhd Line: 9
-    Warning (15610): No output dependent on input pin "verde_in[2]" File: C:/intelFPGA_lite/optativa/Optativa_FPGA/Proyect5_VGA/Proyect5.vhd Line: 9
-    Warning (15610): No output dependent on input pin "verde_in[3]" File: C:/intelFPGA_lite/optativa/Optativa_FPGA/Proyect5_VGA/Proyect5.vhd Line: 9
-    Warning (15610): No output dependent on input pin "verde_in[4]" File: C:/intelFPGA_lite/optativa/Optativa_FPGA/Proyect5_VGA/Proyect5.vhd Line: 9
-    Warning (15610): No output dependent on input pin "verde_in[5]" File: C:/intelFPGA_lite/optativa/Optativa_FPGA/Proyect5_VGA/Proyect5.vhd Line: 9
-    Warning (15610): No output dependent on input pin "azul_in[0]" File: C:/intelFPGA_lite/optativa/Optativa_FPGA/Proyect5_VGA/Proyect5.vhd Line: 9
-    Warning (15610): No output dependent on input pin "azul_in[1]" File: C:/intelFPGA_lite/optativa/Optativa_FPGA/Proyect5_VGA/Proyect5.vhd Line: 9
-    Warning (15610): No output dependent on input pin "azul_in[2]" File: C:/intelFPGA_lite/optativa/Optativa_FPGA/Proyect5_VGA/Proyect5.vhd Line: 9
-    Warning (15610): No output dependent on input pin "azul_in[3]" File: C:/intelFPGA_lite/optativa/Optativa_FPGA/Proyect5_VGA/Proyect5.vhd Line: 9
-    Warning (15610): No output dependent on input pin "azul_in[4]" File: C:/intelFPGA_lite/optativa/Optativa_FPGA/Proyect5_VGA/Proyect5.vhd Line: 9
-    Warning (15610): No output dependent on input pin "azul_in[5]" File: C:/intelFPGA_lite/optativa/Optativa_FPGA/Proyect5_VGA/Proyect5.vhd Line: 9
-Info (21057): Implemented 120 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 20 input pins
-    Info (21059): Implemented 37 output pins
-    Info (21061): Implemented 63 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 58 warnings
+Info (21057): Implemented 317 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 6 input pins
+    Info (21059): Implemented 35 output pins
+    Info (21061): Implemented 276 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 45 warnings
     Info: Peak virtual memory: 4787 megabytes
-    Info: Processing ended: Mon Jun 17 15:03:24 2024
-    Info: Elapsed time: 00:00:19
-    Info: Total CPU time (on all processors): 00:00:40
+    Info: Processing ended: Tue Jun 25 12:24:55 2024
+    Info: Elapsed time: 00:00:17
+    Info: Total CPU time (on all processors): 00:00:38
 
 

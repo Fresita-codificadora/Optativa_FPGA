@@ -1,0 +1,3 @@
+Cuando yo le mando reset
+que pasa con el monitor ?? tipo por que yo le voy a decir a mi maquina de estados que esta
+en la fila 1 columna 1, pero el monitor que va a interpretar ?? como le mando la señal de reset al monitor??

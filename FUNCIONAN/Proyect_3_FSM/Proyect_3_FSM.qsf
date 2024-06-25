@@ -1,0 +1,108 @@
+# -------------------------------------------------------------------------- #
+#
+# Copyright (C) 2023  Intel Corporation. All rights reserved.
+# Your use of Intel Corporation's design tools, logic functions 
+# and other software and tools, and any partner logic 
+# functions, and any output files from any of the foregoing 
+# (including device programming or simulation files), and any 
+# associated documentation or information are expressly subject 
+# to the terms and conditions of the Intel Program License 
+# Subscription Agreement, the Intel Quartus Prime License Agreement,
+# the Intel FPGA IP License Agreement, or other applicable license
+# agreement, including, without limitation, that your use is for
+# the sole purpose of programming logic devices manufactured by
+# Intel and sold by Intel or its authorized distributors.  Please
+# refer to the applicable agreement for further details, at
+# https://fpgasoftware.intel.com/eula.
+#
+# -------------------------------------------------------------------------- #
+#
+# Quartus Prime
+# Version 23.1std.0 Build 991 11/28/2023 SC Lite Edition
+# Date created = 11:56:19  June 16, 2024
+#
+# -------------------------------------------------------------------------- #
+#
+# Notes:
+#
+# 1) The default values for assignments are stored in the file:
+#		Proyect_3_FSM_assignment_defaults.qdf
+#    If this file doesn't exist, see file:
+#		assignment_defaults.qdf
+#
+# 2) Intel recommends that you do not modify this file. This
+#    file is updated automatically by the Quartus Prime software
+#    and any changes you make may be lost or overwritten.
+#
+# -------------------------------------------------------------------------- #
+
+
+set_global_assignment -name FAMILY "Cyclone II"
+set_global_assignment -name DEVICE EP2C35F672C6
+set_global_assignment -name TOP_LEVEL_ENTITY Block1
+set_global_assignment -name ORIGINAL_QUARTUS_VERSION 23.1STD.0
+set_global_assignment -name PROJECT_CREATION_TIME_DATE "11:56:19  JUNE 16, 2024"
+set_global_assignment -name LAST_QUARTUS_VERSION "13.0 SP1"
+set_global_assignment -name PROJECT_OUTPUT_DIRECTORY output_files
+set_global_assignment -name EDA_SIMULATION_TOOL "<None>"
+set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST OFF -section_id eda_board_design_timing
+set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST OFF -section_id eda_board_design_symbol
+set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST OFF -section_id eda_board_design_signal_integrity
+set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST OFF -section_id eda_board_design_boundary_scan
+set_global_assignment -name VHDL_FILE Proyect_3_FSM.vhd
+set_global_assignment -name VHDL_INPUT_VERSION VHDL_2008
+set_global_assignment -name VHDL_SHOW_LMF_MAPPING_MESSAGES OFF
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform.vwf
+set_global_assignment -name VHDL_FILE decodificador.vhd
+set_global_assignment -name BDF_FILE Block1.bdf
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
+set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
+set_global_assignment -name STRATIX_DEVICE_IO_STANDARD "3.3-V LVTTL"
+set_location_assignment PIN_AE22 -to centenas[7]
+set_location_assignment PIN_Y24 -to centenas[6]
+set_location_assignment PIN_AB25 -to centenas[5]
+set_location_assignment PIN_AB26 -to centenas[4]
+set_location_assignment PIN_AC26 -to centenas[3]
+set_location_assignment PIN_AC25 -to centenas[2]
+set_location_assignment PIN_V22 -to centenas[1]
+set_location_assignment PIN_AB23 -to centenas[0]
+set_location_assignment PIN_P23 -to Charge
+set_location_assignment PIN_N2 -to CLK
+set_location_assignment PIN_AF22 -to decenas[7]
+set_location_assignment PIN_AB24 -to decenas[6]
+set_location_assignment PIN_AA23 -to decenas[5]
+set_location_assignment PIN_AA24 -to decenas[4]
+set_location_assignment PIN_Y22 -to decenas[3]
+set_location_assignment PIN_W21 -to decenas[2]
+set_location_assignment PIN_V21 -to decenas[1]
+set_location_assignment PIN_V20 -to decenas[0]
+set_location_assignment PIN_AC21 -to Ent_led[7]
+set_location_assignment PIN_AD21 -to Ent_led[6]
+set_location_assignment PIN_AD23 -to Ent_led[5]
+set_location_assignment PIN_AD22 -to Ent_led[4]
+set_location_assignment PIN_AC22 -to Ent_led[3]
+set_location_assignment PIN_AB21 -to Ent_led[2]
+set_location_assignment PIN_AF23 -to Ent_led[1]
+set_location_assignment PIN_AE23 -to Ent_led[0]
+set_location_assignment PIN_C13 -to Entrada[7]
+set_location_assignment PIN_AC13 -to Entrada[6]
+set_location_assignment PIN_AD13 -to Entrada[5]
+set_location_assignment PIN_AF14 -to Entrada[4]
+set_location_assignment PIN_AE14 -to Entrada[3]
+set_location_assignment PIN_P25 -to Entrada[2]
+set_location_assignment PIN_N26 -to Entrada[1]
+set_location_assignment PIN_N25 -to Entrada[0]
+set_location_assignment PIN_G26 -to Reset
+set_location_assignment PIN_N23 -to Start
+set_location_assignment PIN_W19 -to unidades[7]
+set_location_assignment PIN_V13 -to unidades[6]
+set_location_assignment PIN_V14 -to unidades[5]
+set_location_assignment PIN_AE11 -to unidades[4]
+set_location_assignment PIN_AD11 -to unidades[3]
+set_location_assignment PIN_AC12 -to unidades[2]
+set_location_assignment PIN_AB12 -to unidades[1]
+set_location_assignment PIN_AF10 -to unidades[0]
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

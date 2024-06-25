@@ -1,0 +1,8 @@
+
+State Machine - |Block1|BCD_binario:inst|state
+Name state.fin state.rest state.check_sum state.shift state.idle 
+state.idle 0 0 0 0 0 
+state.shift 0 0 0 1 1 
+state.check_sum 0 0 1 0 1 
+state.rest 0 1 0 0 1 
+state.fin 1 0 0 0 1 

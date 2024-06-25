@@ -1,0 +1,174 @@
+m255
+K4
+z2
+Z0 !s12c _opt
+Z1 !s99 nomlopt
+R0
+R1
+R0
+R1
+R0
+R1
+!s11e vcom 2023.3 2023.07, Jul 17 2023
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z2 dC:/intelFPGA_lite/optativa/Optativa_FPGA/Proyect_3_FSM_BCD_binario/simulation/qsim
+T_opt
+!s110 1718577538
+V2ch;GTgTdhM;[K3<J>T;M1
+04 23 16 work bcd_binario_vhd_vec_tst bcd_binario_arch 1
+=1-d481d7ab5ad7-666f6981-32b-2db0
+R1
+!s12b OEM100
+!s124 OEM10U3 
+o-quiet -auto_acc_if_foreign -work work -L cycloneive -L altera -L altera_mf -L 220model -L sgate -L altera_lnsim +acc
+tCvgOpt 0
+n@_opt
+OL;O;2023.3;77
+Ebcd_binario
+Z3 w1718577535
+Z4 DPx10 cycloneive 20 cycloneive_atom_pack 0 22 JFD354ZMY?;ZG1UUQ_P^@1
+Z5 DPx10 cycloneive 21 cycloneive_components 0 22 :CA=Yg0R^TdJ3>^OGfeMR2
+Z6 DPx4 ieee 16 vital_primitives 0 22 Y]H?Y_]z4@VoaWAGJ=36m1
+Z7 DPx6 altera 11 dffeas_pack 0 22 mB4IFnUT3:DoZN@NS]Gzg0
+Z8 DPx4 ieee 12 vital_timing 0 22 6STbz=m1W[80IE06h_el^0
+Z9 DPx3 std 6 textio 0 22 LS[?81n5ZHWBI9JkBZTV<2
+Z10 DPx4 ieee 14 std_logic_1164 0 22 6<US`=mgl_dFdCEFF7J=m1
+Z11 DPx6 altera 28 altera_primitives_components 0 22 >1_OP3SHemAi5ZBLF?7g43
+!i122 6
+R2
+Z12 8BCD_binario.vho
+Z13 FBCD_binario.vho
+l0
+L80 1
+V_EPO[Rd^_2>NGe=8FcbUe3
+!s100 jGXIn2G;^A::?ATj8GTF01
+Z14 OL;C;2023.3;77
+32
+Z15 !s110 1718577536
+!i10b 1
+Z16 !s108 1718577536.000000
+Z17 !s90 -work|work|BCD_binario.vho|
+Z18 !s107 BCD_binario.vho|
+!i113 0
+Z19 o-work work
+Z20 tExplicit 1 CvgOpt 0
+Astructure
+R4
+R5
+R6
+R7
+R8
+R9
+R10
+R11
+DEx4 work 11 bcd_binario 0 22 _EPO[Rd^_2>NGe=8FcbUe3
+!i122 6
+l240
+L122 1748
+Vzi<6a?E<f>hbanHZ@67<h3
+!s100 O2Z3<=:b=9O?E]b6VS4=D3
+R14
+32
+R15
+!i10b 1
+R16
+R17
+R18
+!i113 0
+R19
+R20
+Ebcd_binario_vhd_vec_tst
+Z21 w1718577533
+R9
+R10
+!i122 7
+R2
+Z22 8Waveform.vwf.vht
+Z23 FWaveform.vwf.vht
+l0
+L32 1
+Vmd19`dH28SFnaaQMYAcKj1
+!s100 JdXVk02HI?nnU][dBQ2MX0
+R14
+32
+Z24 !s110 1718577537
+!i10b 1
+R16
+Z25 !s90 -work|work|Waveform.vwf.vht|
+Z26 !s107 Waveform.vwf.vht|
+!i113 0
+R19
+R20
+Abcd_binario_arch
+R9
+R10
+DEx4 work 23 bcd_binario_vhd_vec_tst 0 22 md19`dH28SFnaaQMYAcKj1
+!i122 7
+l59
+L34 185
+VnX][S[oLB1L=YgC4_93>e3
+!s100 ^WOajH0eA@>_0CQg<R7Y52
+R14
+32
+R24
+!i10b 1
+R16
+R25
+R26
+!i113 0
+R19
+R20
+Ehard_block
+R3
+R6
+R4
+R8
+R9
+R10
+R5
+!i122 6
+R2
+R12
+R13
+l0
+L35 1
+VO;cUSklm4Sig<`__bK=J@0
+!s100 0CTYib@dc:ObIVR9DRSK?2
+R14
+32
+R15
+!i10b 1
+R16
+R17
+R18
+!i113 0
+R19
+R20
+Astructure
+R6
+R4
+R8
+R9
+R10
+R5
+DEx4 work 10 hard_block 0 22 O;cUSklm4Sig<`__bK=J@0
+!i122 6
+l65
+L51 20
+VGLY:g5RDEe^dIV`12>FYD3
+!s100 6LcB1AebN6j_bAmfc?Z:_0
+R14
+32
+R15
+!i10b 1
+R16
+R17
+R18
+!i113 0
+R19
+R20

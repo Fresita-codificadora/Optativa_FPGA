@@ -1,0 +1,1359 @@
+TimeQuest Timing Analyzer report for BCD_binario
+Mon Jun 24 13:57:31 2024
+Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. TimeQuest Timing Analyzer Summary
+  3. Parallel Compilation
+  4. Clocks
+  5. Slow Model Fmax Summary
+  6. Slow Model Setup Summary
+  7. Slow Model Hold Summary
+  8. Slow Model Recovery Summary
+  9. Slow Model Removal Summary
+ 10. Slow Model Minimum Pulse Width Summary
+ 11. Slow Model Setup: 'CLK'
+ 12. Slow Model Hold: 'CLK'
+ 13. Slow Model Minimum Pulse Width: 'CLK'
+ 14. Setup Times
+ 15. Hold Times
+ 16. Clock to Output Times
+ 17. Minimum Clock to Output Times
+ 18. Fast Model Setup Summary
+ 19. Fast Model Hold Summary
+ 20. Fast Model Recovery Summary
+ 21. Fast Model Removal Summary
+ 22. Fast Model Minimum Pulse Width Summary
+ 23. Fast Model Setup: 'CLK'
+ 24. Fast Model Hold: 'CLK'
+ 25. Fast Model Minimum Pulse Width: 'CLK'
+ 26. Setup Times
+ 27. Hold Times
+ 28. Clock to Output Times
+ 29. Minimum Clock to Output Times
+ 30. Multicorner Timing Analysis Summary
+ 31. Setup Times
+ 32. Hold Times
+ 33. Clock to Output Times
+ 34. Minimum Clock to Output Times
+ 35. Setup Transfers
+ 36. Hold Transfers
+ 37. Report TCCS
+ 38. Report RSKM
+ 39. Unconstrained Paths
+ 40. TimeQuest Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++----------------------------------------------------------------------------------------+
+; TimeQuest Timing Analyzer Summary                                                      ;
++--------------------+-------------------------------------------------------------------+
+; Quartus II Version ; Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition ;
+; Revision Name      ; BCD_binario                                                       ;
+; Device Family      ; Cyclone II                                                        ;
+; Device Name        ; EP2C35F672C6                                                      ;
+; Timing Models      ; Final                                                             ;
+; Delay Model        ; Combined                                                          ;
+; Rise/Fall Delays   ; Unavailable                                                       ;
++--------------------+-------------------------------------------------------------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 4      ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clocks                                                                                                                                                                          ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------+
+; Clock Name ; Type ; Period ; Frequency  ; Rise  ; Fall  ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source ; Targets ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------+
+; CLK        ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { CLK } ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------+
+
+
++--------------------------------------------------+
+; Slow Model Fmax Summary                          ;
++------------+-----------------+------------+------+
+; Fmax       ; Restricted Fmax ; Clock Name ; Note ;
++------------+-----------------+------------+------+
+; 405.35 MHz ; 405.35 MHz      ; CLK        ;      ;
++------------+-----------------+------------+------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
+
+
++--------------------------------+
+; Slow Model Setup Summary       ;
++-------+--------+---------------+
+; Clock ; Slack  ; End Point TNS ;
++-------+--------+---------------+
+; CLK   ; -1.467 ; -21.798       ;
++-------+--------+---------------+
+
+
++-------------------------------+
+; Slow Model Hold Summary       ;
++-------+-------+---------------+
+; Clock ; Slack ; End Point TNS ;
++-------+-------+---------------+
+; CLK   ; 0.391 ; 0.000         ;
++-------+-------+---------------+
+
+
+-------------------------------
+; Slow Model Recovery Summary ;
+-------------------------------
+No paths to report.
+
+
+------------------------------
+; Slow Model Removal Summary ;
+------------------------------
+No paths to report.
+
+
++----------------------------------------+
+; Slow Model Minimum Pulse Width Summary ;
++-------+--------+-----------------------+
+; Clock ; Slack  ; End Point TNS         ;
++-------+--------+-----------------------+
+; CLK   ; -1.380 ; -40.380               ;
++-------+--------+-----------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Setup: 'CLK'                                                                                                                            ;
++--------+----------------------------------+----------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                        ; To Node                          ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+----------------------------------+----------------------------------+--------------+-------------+--------------+------------+------------+
+; -1.467 ; BCD_binario:inst|dec_reg[3]      ; BCD_binario:inst|dec_reg[1]      ; CLK          ; CLK         ; 1.000        ; 0.000      ; 2.503      ;
+; -1.467 ; BCD_binario:inst|dec_reg[3]      ; BCD_binario:inst|dec_reg[0]      ; CLK          ; CLK         ; 1.000        ; 0.000      ; 2.503      ;
+; -1.453 ; BCD_binario:inst|uni_reg[0]      ; BCD_binario:inst|uni_reg[1]      ; CLK          ; CLK         ; 1.000        ; 0.000      ; 2.489      ;
+; -1.453 ; BCD_binario:inst|uni_reg[0]      ; BCD_binario:inst|uni_reg[0]      ; CLK          ; CLK         ; 1.000        ; 0.000      ; 2.489      ;
+; -1.416 ; BCD_binario:inst|dec_reg[2]      ; BCD_binario:inst|dec_reg[1]      ; CLK          ; CLK         ; 1.000        ; 0.000      ; 2.452      ;
+; -1.416 ; BCD_binario:inst|dec_reg[2]      ; BCD_binario:inst|dec_reg[0]      ; CLK          ; CLK         ; 1.000        ; 0.000      ; 2.452      ;
+; -1.407 ; BCD_binario:inst|uni_reg[1]      ; BCD_binario:inst|uni_reg[1]      ; CLK          ; CLK         ; 1.000        ; 0.000      ; 2.443      ;
+; -1.407 ; BCD_binario:inst|uni_reg[1]      ; BCD_binario:inst|uni_reg[0]      ; CLK          ; CLK         ; 1.000        ; 0.000      ; 2.443      ;
+; -1.307 ; BCD_binario:inst|dec_reg[3]      ; BCD_binario:inst|dec_reg[3]      ; CLK          ; CLK         ; 1.000        ; 0.000      ; 2.343      ;
+; -1.307 ; BCD_binario:inst|dec_reg[3]      ; BCD_binario:inst|dec_reg[2]      ; CLK          ; CLK         ; 1.000        ; 0.000      ; 2.343      ;
+; -1.296 ; BCD_binario:inst|dec_reg[0]      ; BCD_binario:inst|dec_reg[1]      ; CLK          ; CLK         ; 1.000        ; 0.000      ; 2.332      ;
+; -1.296 ; BCD_binario:inst|dec_reg[0]      ; BCD_binario:inst|dec_reg[0]      ; CLK          ; CLK         ; 1.000        ; 0.000      ; 2.332      ;
+; -1.292 ; BCD_binario:inst|uni_reg[0]      ; BCD_binario:inst|uni_reg[2]      ; CLK          ; CLK         ; 1.000        ; 0.000      ; 2.328      ;
+; -1.288 ; BCD_binario:inst|uni_reg[0]      ; BCD_binario:inst|uni_reg[3]      ; CLK          ; CLK         ; 1.000        ; 0.000      ; 2.324      ;
+; -1.265 ; BCD_binario:inst|uni_reg[2]      ; BCD_binario:inst|uni_reg[1]      ; CLK          ; CLK         ; 1.000        ; 0.000      ; 2.301      ;
+; -1.265 ; BCD_binario:inst|uni_reg[2]      ; BCD_binario:inst|uni_reg[0]      ; CLK          ; CLK         ; 1.000        ; 0.000      ; 2.301      ;
+; -1.256 ; BCD_binario:inst|dec_reg[2]      ; BCD_binario:inst|dec_reg[3]      ; CLK          ; CLK         ; 1.000        ; 0.000      ; 2.292      ;
+; -1.256 ; BCD_binario:inst|dec_reg[2]      ; BCD_binario:inst|dec_reg[2]      ; CLK          ; CLK         ; 1.000        ; 0.000      ; 2.292      ;
+; -1.246 ; BCD_binario:inst|uni_reg[1]      ; BCD_binario:inst|uni_reg[2]      ; CLK          ; CLK         ; 1.000        ; 0.000      ; 2.282      ;
+; -1.242 ; BCD_binario:inst|uni_reg[1]      ; BCD_binario:inst|uni_reg[3]      ; CLK          ; CLK         ; 1.000        ; 0.000      ; 2.278      ;
+; -1.209 ; BCD_binario:inst|state.shift     ; BCD_binario:inst|dec_reg[1]      ; CLK          ; CLK         ; 1.000        ; 0.001      ; 2.246      ;
+; -1.209 ; BCD_binario:inst|state.shift     ; BCD_binario:inst|dec_reg[0]      ; CLK          ; CLK         ; 1.000        ; 0.001      ; 2.246      ;
+; -1.191 ; BCD_binario:inst|uni_reg[3]      ; BCD_binario:inst|uni_reg[3]      ; CLK          ; CLK         ; 1.000        ; 0.000      ; 2.227      ;
+; -1.183 ; BCD_binario:inst|state.shift     ; BCD_binario:inst|uni_reg[1]      ; CLK          ; CLK         ; 1.000        ; -0.001     ; 2.218      ;
+; -1.183 ; BCD_binario:inst|state.shift     ; BCD_binario:inst|uni_reg[0]      ; CLK          ; CLK         ; 1.000        ; -0.001     ; 2.218      ;
+; -1.164 ; BCD_binario:inst|dec_reg[1]      ; BCD_binario:inst|dec_reg[1]      ; CLK          ; CLK         ; 1.000        ; 0.000      ; 2.200      ;
+; -1.164 ; BCD_binario:inst|dec_reg[1]      ; BCD_binario:inst|dec_reg[0]      ; CLK          ; CLK         ; 1.000        ; 0.000      ; 2.200      ;
+; -1.136 ; BCD_binario:inst|dec_reg[0]      ; BCD_binario:inst|dec_reg[3]      ; CLK          ; CLK         ; 1.000        ; 0.000      ; 2.172      ;
+; -1.136 ; BCD_binario:inst|dec_reg[0]      ; BCD_binario:inst|dec_reg[2]      ; CLK          ; CLK         ; 1.000        ; 0.000      ; 2.172      ;
+; -1.129 ; BCD_binario:inst|uni_reg[3]      ; BCD_binario:inst|uni_reg[1]      ; CLK          ; CLK         ; 1.000        ; 0.000      ; 2.165      ;
+; -1.129 ; BCD_binario:inst|uni_reg[3]      ; BCD_binario:inst|uni_reg[0]      ; CLK          ; CLK         ; 1.000        ; 0.000      ; 2.165      ;
+; -1.104 ; BCD_binario:inst|uni_reg[2]      ; BCD_binario:inst|uni_reg[2]      ; CLK          ; CLK         ; 1.000        ; 0.000      ; 2.140      ;
+; -1.100 ; BCD_binario:inst|uni_reg[2]      ; BCD_binario:inst|uni_reg[3]      ; CLK          ; CLK         ; 1.000        ; 0.000      ; 2.136      ;
+; -1.094 ; BCD_binario:inst|state.rest      ; BCD_binario:inst|dec_reg[1]      ; CLK          ; CLK         ; 1.000        ; 0.001      ; 2.131      ;
+; -1.094 ; BCD_binario:inst|state.rest      ; BCD_binario:inst|dec_reg[0]      ; CLK          ; CLK         ; 1.000        ; 0.001      ; 2.131      ;
+; -1.070 ; BCD_binario:inst|state.rest      ; BCD_binario:inst|uni_reg[1]      ; CLK          ; CLK         ; 1.000        ; -0.001     ; 2.105      ;
+; -1.070 ; BCD_binario:inst|state.rest      ; BCD_binario:inst|uni_reg[0]      ; CLK          ; CLK         ; 1.000        ; -0.001     ; 2.105      ;
+; -1.063 ; BCD_binario:inst|state.shift     ; BCD_binario:inst|uni_reg[3]      ; CLK          ; CLK         ; 1.000        ; -0.001     ; 2.098      ;
+; -1.049 ; BCD_binario:inst|state.shift     ; BCD_binario:inst|dec_reg[3]      ; CLK          ; CLK         ; 1.000        ; 0.001      ; 2.086      ;
+; -1.049 ; BCD_binario:inst|state.shift     ; BCD_binario:inst|dec_reg[2]      ; CLK          ; CLK         ; 1.000        ; 0.001      ; 2.086      ;
+; -1.025 ; BCD_binario:inst|dec_reg[1]      ; BCD_binario:inst|dec_reg[3]      ; CLK          ; CLK         ; 1.000        ; 0.000      ; 2.061      ;
+; -1.022 ; BCD_binario:inst|state.shift     ; BCD_binario:inst|uni_reg[2]      ; CLK          ; CLK         ; 1.000        ; -0.001     ; 2.057      ;
+; -1.005 ; BCD_binario:inst|i[0]            ; BCD_binario:inst|state.rest      ; CLK          ; CLK         ; 1.000        ; 0.002      ; 2.043      ;
+; -1.004 ; BCD_binario:inst|dec_reg[1]      ; BCD_binario:inst|dec_reg[2]      ; CLK          ; CLK         ; 1.000        ; 0.000      ; 2.040      ;
+; -1.001 ; BCD_binario:inst|state.shift     ; BCD_binario:inst|cent_reg[2]     ; CLK          ; CLK         ; 1.000        ; 0.001      ; 2.038      ;
+; -1.001 ; BCD_binario:inst|state.shift     ; BCD_binario:inst|cent_reg[1]     ; CLK          ; CLK         ; 1.000        ; 0.001      ; 2.038      ;
+; -1.001 ; BCD_binario:inst|state.shift     ; BCD_binario:inst|cent_reg[0]     ; CLK          ; CLK         ; 1.000        ; 0.001      ; 2.038      ;
+; -0.969 ; BCD_binario:inst|i[2]            ; BCD_binario:inst|state.rest      ; CLK          ; CLK         ; 1.000        ; 0.002      ; 2.007      ;
+; -0.968 ; BCD_binario:inst|uni_reg[3]      ; BCD_binario:inst|uni_reg[2]      ; CLK          ; CLK         ; 1.000        ; 0.000      ; 2.004      ;
+; -0.958 ; BCD_binario:inst|dec_reg[0]      ; BCD_binario:inst|uni_reg[3]      ; CLK          ; CLK         ; 1.000        ; -0.002     ; 1.992      ;
+; -0.934 ; BCD_binario:inst|state.rest      ; BCD_binario:inst|dec_reg[3]      ; CLK          ; CLK         ; 1.000        ; 0.001      ; 1.971      ;
+; -0.934 ; BCD_binario:inst|state.rest      ; BCD_binario:inst|dec_reg[2]      ; CLK          ; CLK         ; 1.000        ; 0.001      ; 1.971      ;
+; -0.909 ; BCD_binario:inst|state.rest      ; BCD_binario:inst|uni_reg[2]      ; CLK          ; CLK         ; 1.000        ; -0.001     ; 1.944      ;
+; -0.905 ; BCD_binario:inst|state.rest      ; BCD_binario:inst|uni_reg[3]      ; CLK          ; CLK         ; 1.000        ; -0.001     ; 1.940      ;
+; -0.875 ; BCD_binario:inst|cent_reg[0]     ; BCD_binario:inst|dec_reg[3]      ; CLK          ; CLK         ; 1.000        ; 0.000      ; 1.911      ;
+; -0.837 ; BCD_binario:inst|state.check_sum ; BCD_binario:inst|state.rest      ; CLK          ; CLK         ; 1.000        ; 0.002      ; 1.875      ;
+; -0.693 ; BCD_binario:inst|i[1]            ; BCD_binario:inst|state.rest      ; CLK          ; CLK         ; 1.000        ; 0.002      ; 1.731      ;
+; -0.691 ; BCD_binario:inst|state.idle      ; BCD_binario:inst|binary_reg[7]   ; CLK          ; CLK         ; 1.000        ; 0.000      ; 1.727      ;
+; -0.691 ; BCD_binario:inst|state.idle      ; BCD_binario:inst|binary_reg[6]   ; CLK          ; CLK         ; 1.000        ; 0.000      ; 1.727      ;
+; -0.691 ; BCD_binario:inst|state.idle      ; BCD_binario:inst|binary_reg[5]   ; CLK          ; CLK         ; 1.000        ; 0.000      ; 1.727      ;
+; -0.691 ; BCD_binario:inst|state.idle      ; BCD_binario:inst|binary_reg[4]   ; CLK          ; CLK         ; 1.000        ; 0.000      ; 1.727      ;
+; -0.691 ; BCD_binario:inst|state.idle      ; BCD_binario:inst|binary_reg[3]   ; CLK          ; CLK         ; 1.000        ; 0.000      ; 1.727      ;
+; -0.691 ; BCD_binario:inst|state.idle      ; BCD_binario:inst|binary_reg[2]   ; CLK          ; CLK         ; 1.000        ; 0.000      ; 1.727      ;
+; -0.691 ; BCD_binario:inst|state.idle      ; BCD_binario:inst|binary_reg[1]   ; CLK          ; CLK         ; 1.000        ; 0.000      ; 1.727      ;
+; -0.691 ; BCD_binario:inst|state.idle      ; BCD_binario:inst|binary_reg[0]   ; CLK          ; CLK         ; 1.000        ; 0.000      ; 1.727      ;
+; -0.583 ; BCD_binario:inst|state.shift     ; BCD_binario:inst|binary_reg[7]   ; CLK          ; CLK         ; 1.000        ; 0.000      ; 1.619      ;
+; -0.583 ; BCD_binario:inst|state.shift     ; BCD_binario:inst|binary_reg[6]   ; CLK          ; CLK         ; 1.000        ; 0.000      ; 1.619      ;
+; -0.583 ; BCD_binario:inst|state.shift     ; BCD_binario:inst|binary_reg[5]   ; CLK          ; CLK         ; 1.000        ; 0.000      ; 1.619      ;
+; -0.583 ; BCD_binario:inst|state.shift     ; BCD_binario:inst|binary_reg[4]   ; CLK          ; CLK         ; 1.000        ; 0.000      ; 1.619      ;
+; -0.583 ; BCD_binario:inst|state.shift     ; BCD_binario:inst|binary_reg[3]   ; CLK          ; CLK         ; 1.000        ; 0.000      ; 1.619      ;
+; -0.583 ; BCD_binario:inst|state.shift     ; BCD_binario:inst|binary_reg[2]   ; CLK          ; CLK         ; 1.000        ; 0.000      ; 1.619      ;
+; -0.583 ; BCD_binario:inst|state.shift     ; BCD_binario:inst|binary_reg[1]   ; CLK          ; CLK         ; 1.000        ; 0.000      ; 1.619      ;
+; -0.583 ; BCD_binario:inst|state.shift     ; BCD_binario:inst|binary_reg[0]   ; CLK          ; CLK         ; 1.000        ; 0.000      ; 1.619      ;
+; -0.473 ; BCD_binario:inst|state.shift     ; BCD_binario:inst|cent_reg[3]     ; CLK          ; CLK         ; 1.000        ; 0.001      ; 1.510      ;
+; -0.389 ; BCD_binario:inst|binary_reg[2]   ; BCD_binario:inst|binary_reg[1]   ; CLK          ; CLK         ; 1.000        ; 0.000      ; 1.425      ;
+; -0.372 ; BCD_binario:inst|state.shift     ; BCD_binario:inst|state.check_sum ; CLK          ; CLK         ; 1.000        ; -0.002     ; 1.406      ;
+; -0.242 ; BCD_binario:inst|i[2]            ; BCD_binario:inst|i[0]            ; CLK          ; CLK         ; 1.000        ; 0.000      ; 1.278      ;
+; -0.164 ; BCD_binario:inst|uni_reg[0]      ; BCD_binario:inst|binary_reg[7]   ; CLK          ; CLK         ; 1.000        ; 0.001      ; 1.201      ;
+; -0.071 ; BCD_binario:inst|i[0]            ; BCD_binario:inst|i[1]            ; CLK          ; CLK         ; 1.000        ; 0.000      ; 1.107      ;
+; -0.070 ; BCD_binario:inst|i[0]            ; BCD_binario:inst|i[2]            ; CLK          ; CLK         ; 1.000        ; 0.000      ; 1.106      ;
+; -0.045 ; BCD_binario:inst|state.check_sum ; BCD_binario:inst|i[1]            ; CLK          ; CLK         ; 1.000        ; 0.000      ; 1.081      ;
+; -0.044 ; BCD_binario:inst|state.check_sum ; BCD_binario:inst|i[2]            ; CLK          ; CLK         ; 1.000        ; 0.000      ; 1.080      ;
+; -0.042 ; BCD_binario:inst|state.check_sum ; BCD_binario:inst|i[0]            ; CLK          ; CLK         ; 1.000        ; 0.000      ; 1.078      ;
+; -0.025 ; BCD_binario:inst|cent_reg[1]     ; BCD_binario:inst|cent_reg[0]     ; CLK          ; CLK         ; 1.000        ; 0.000      ; 1.061      ;
+; -0.020 ; BCD_binario:inst|cent_reg[2]     ; BCD_binario:inst|cent_reg[1]     ; CLK          ; CLK         ; 1.000        ; 0.000      ; 1.056      ;
+; 0.050  ; BCD_binario:inst|state.rest      ; BCD_binario:inst|state.shift     ; CLK          ; CLK         ; 1.000        ; 0.000      ; 0.986      ;
+; 0.110  ; BCD_binario:inst|binary_reg[5]   ; BCD_binario:inst|binary_reg[4]   ; CLK          ; CLK         ; 1.000        ; 0.000      ; 0.926      ;
+; 0.111  ; BCD_binario:inst|state.idle      ; BCD_binario:inst|state.shift     ; CLK          ; CLK         ; 1.000        ; 0.000      ; 0.925      ;
+; 0.119  ; BCD_binario:inst|cent_reg[3]     ; BCD_binario:inst|cent_reg[2]     ; CLK          ; CLK         ; 1.000        ; 0.000      ; 0.917      ;
+; 0.235  ; BCD_binario:inst|binary_reg[7]   ; BCD_binario:inst|binary_reg[6]   ; CLK          ; CLK         ; 1.000        ; 0.000      ; 0.801      ;
+; 0.238  ; BCD_binario:inst|binary_reg[4]   ; BCD_binario:inst|binary_reg[3]   ; CLK          ; CLK         ; 1.000        ; 0.000      ; 0.798      ;
+; 0.239  ; BCD_binario:inst|binary_reg[6]   ; BCD_binario:inst|binary_reg[5]   ; CLK          ; CLK         ; 1.000        ; 0.000      ; 0.797      ;
+; 0.239  ; BCD_binario:inst|i[1]            ; BCD_binario:inst|i[0]            ; CLK          ; CLK         ; 1.000        ; 0.000      ; 0.797      ;
+; 0.240  ; BCD_binario:inst|binary_reg[1]   ; BCD_binario:inst|binary_reg[0]   ; CLK          ; CLK         ; 1.000        ; 0.000      ; 0.796      ;
+; 0.240  ; BCD_binario:inst|i[2]            ; BCD_binario:inst|i[1]            ; CLK          ; CLK         ; 1.000        ; 0.000      ; 0.796      ;
+; 0.240  ; BCD_binario:inst|i[1]            ; BCD_binario:inst|i[2]            ; CLK          ; CLK         ; 1.000        ; 0.000      ; 0.796      ;
+; 0.243  ; BCD_binario:inst|binary_reg[3]   ; BCD_binario:inst|binary_reg[2]   ; CLK          ; CLK         ; 1.000        ; 0.000      ; 0.793      ;
+; 0.379  ; BCD_binario:inst|state.idle      ; BCD_binario:inst|state.idle      ; CLK          ; CLK         ; 1.000        ; 0.000      ; 0.657      ;
+; 0.379  ; BCD_binario:inst|cent_reg[3]     ; BCD_binario:inst|cent_reg[3]     ; CLK          ; CLK         ; 1.000        ; 0.000      ; 0.657      ;
+; 0.379  ; BCD_binario:inst|i[0]            ; BCD_binario:inst|i[0]            ; CLK          ; CLK         ; 1.000        ; 0.000      ; 0.657      ;
++--------+----------------------------------+----------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Hold: 'CLK'                                                                                                                            ;
++-------+----------------------------------+----------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                        ; To Node                          ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+----------------------------------+----------------------------------+--------------+-------------+--------------+------------+------------+
+; 0.391 ; BCD_binario:inst|i[0]            ; BCD_binario:inst|i[0]            ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; BCD_binario:inst|i[2]            ; BCD_binario:inst|i[2]            ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; BCD_binario:inst|i[1]            ; BCD_binario:inst|i[1]            ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; BCD_binario:inst|state.idle      ; BCD_binario:inst|state.idle      ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; BCD_binario:inst|cent_reg[3]     ; BCD_binario:inst|cent_reg[3]     ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; BCD_binario:inst|dec_reg[3]      ; BCD_binario:inst|dec_reg[3]      ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; BCD_binario:inst|dec_reg[2]      ; BCD_binario:inst|dec_reg[2]      ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; BCD_binario:inst|uni_reg[2]      ; BCD_binario:inst|uni_reg[2]      ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; BCD_binario:inst|uni_reg[3]      ; BCD_binario:inst|uni_reg[3]      ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.657      ;
+; 0.527 ; BCD_binario:inst|binary_reg[3]   ; BCD_binario:inst|binary_reg[2]   ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.793      ;
+; 0.530 ; BCD_binario:inst|binary_reg[1]   ; BCD_binario:inst|binary_reg[0]   ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.796      ;
+; 0.530 ; BCD_binario:inst|i[1]            ; BCD_binario:inst|i[2]            ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.796      ;
+; 0.530 ; BCD_binario:inst|i[2]            ; BCD_binario:inst|i[1]            ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.796      ;
+; 0.531 ; BCD_binario:inst|binary_reg[6]   ; BCD_binario:inst|binary_reg[5]   ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.797      ;
+; 0.531 ; BCD_binario:inst|i[1]            ; BCD_binario:inst|i[0]            ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.797      ;
+; 0.532 ; BCD_binario:inst|binary_reg[4]   ; BCD_binario:inst|binary_reg[3]   ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.798      ;
+; 0.535 ; BCD_binario:inst|binary_reg[7]   ; BCD_binario:inst|binary_reg[6]   ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.801      ;
+; 0.555 ; BCD_binario:inst|dec_reg[1]      ; BCD_binario:inst|dec_reg[0]      ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.821      ;
+; 0.651 ; BCD_binario:inst|cent_reg[3]     ; BCD_binario:inst|cent_reg[2]     ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.917      ;
+; 0.659 ; BCD_binario:inst|state.idle      ; BCD_binario:inst|state.shift     ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.925      ;
+; 0.660 ; BCD_binario:inst|binary_reg[5]   ; BCD_binario:inst|binary_reg[4]   ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.926      ;
+; 0.720 ; BCD_binario:inst|state.rest      ; BCD_binario:inst|state.shift     ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.986      ;
+; 0.725 ; BCD_binario:inst|dec_reg[2]      ; BCD_binario:inst|dec_reg[1]      ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.991      ;
+; 0.728 ; BCD_binario:inst|uni_reg[2]      ; BCD_binario:inst|uni_reg[1]      ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.994      ;
+; 0.790 ; BCD_binario:inst|cent_reg[2]     ; BCD_binario:inst|cent_reg[1]     ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.056      ;
+; 0.795 ; BCD_binario:inst|cent_reg[1]     ; BCD_binario:inst|cent_reg[0]     ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.061      ;
+; 0.812 ; BCD_binario:inst|state.check_sum ; BCD_binario:inst|i[0]            ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.078      ;
+; 0.814 ; BCD_binario:inst|state.check_sum ; BCD_binario:inst|i[2]            ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.080      ;
+; 0.815 ; BCD_binario:inst|state.check_sum ; BCD_binario:inst|i[1]            ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.081      ;
+; 0.840 ; BCD_binario:inst|i[0]            ; BCD_binario:inst|i[2]            ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.106      ;
+; 0.841 ; BCD_binario:inst|i[0]            ; BCD_binario:inst|i[1]            ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.107      ;
+; 0.934 ; BCD_binario:inst|uni_reg[0]      ; BCD_binario:inst|binary_reg[7]   ; CLK          ; CLK         ; 0.000        ; 0.001      ; 1.201      ;
+; 0.980 ; BCD_binario:inst|state.shift     ; BCD_binario:inst|uni_reg[0]      ; CLK          ; CLK         ; 0.000        ; -0.001     ; 1.245      ;
+; 0.982 ; BCD_binario:inst|state.shift     ; BCD_binario:inst|cent_reg[1]     ; CLK          ; CLK         ; 0.000        ; 0.001      ; 1.249      ;
+; 0.985 ; BCD_binario:inst|state.shift     ; BCD_binario:inst|cent_reg[2]     ; CLK          ; CLK         ; 0.000        ; 0.001      ; 1.252      ;
+; 0.985 ; BCD_binario:inst|state.shift     ; BCD_binario:inst|cent_reg[0]     ; CLK          ; CLK         ; 0.000        ; 0.001      ; 1.252      ;
+; 1.012 ; BCD_binario:inst|i[2]            ; BCD_binario:inst|i[0]            ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.278      ;
+; 1.013 ; BCD_binario:inst|uni_reg[1]      ; BCD_binario:inst|uni_reg[0]      ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.279      ;
+; 1.026 ; BCD_binario:inst|state.shift     ; BCD_binario:inst|binary_reg[4]   ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.292      ;
+; 1.094 ; BCD_binario:inst|uni_reg[1]      ; BCD_binario:inst|uni_reg[1]      ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.360      ;
+; 1.142 ; BCD_binario:inst|state.shift     ; BCD_binario:inst|state.check_sum ; CLK          ; CLK         ; 0.000        ; -0.002     ; 1.406      ;
+; 1.159 ; BCD_binario:inst|binary_reg[2]   ; BCD_binario:inst|binary_reg[1]   ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.425      ;
+; 1.227 ; BCD_binario:inst|state.shift     ; BCD_binario:inst|uni_reg[1]      ; CLK          ; CLK         ; 0.000        ; -0.001     ; 1.492      ;
+; 1.237 ; BCD_binario:inst|uni_reg[0]      ; BCD_binario:inst|uni_reg[1]      ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.503      ;
+; 1.243 ; BCD_binario:inst|state.shift     ; BCD_binario:inst|cent_reg[3]     ; CLK          ; CLK         ; 0.000        ; 0.001      ; 1.510      ;
+; 1.261 ; BCD_binario:inst|state.shift     ; BCD_binario:inst|dec_reg[1]      ; CLK          ; CLK         ; 0.000        ; 0.001      ; 1.528      ;
+; 1.264 ; BCD_binario:inst|state.shift     ; BCD_binario:inst|dec_reg[0]      ; CLK          ; CLK         ; 0.000        ; 0.001      ; 1.531      ;
+; 1.300 ; BCD_binario:inst|state.shift     ; BCD_binario:inst|binary_reg[3]   ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.566      ;
+; 1.302 ; BCD_binario:inst|state.shift     ; BCD_binario:inst|binary_reg[2]   ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.568      ;
+; 1.303 ; BCD_binario:inst|state.shift     ; BCD_binario:inst|binary_reg[7]   ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.569      ;
+; 1.306 ; BCD_binario:inst|state.shift     ; BCD_binario:inst|binary_reg[6]   ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.572      ;
+; 1.306 ; BCD_binario:inst|state.shift     ; BCD_binario:inst|binary_reg[1]   ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.572      ;
+; 1.308 ; BCD_binario:inst|state.shift     ; BCD_binario:inst|binary_reg[5]   ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.574      ;
+; 1.309 ; BCD_binario:inst|state.shift     ; BCD_binario:inst|binary_reg[0]   ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.575      ;
+; 1.391 ; BCD_binario:inst|dec_reg[0]      ; BCD_binario:inst|dec_reg[1]      ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.657      ;
+; 1.426 ; BCD_binario:inst|state.rest      ; BCD_binario:inst|uni_reg[3]      ; CLK          ; CLK         ; 0.000        ; -0.001     ; 1.691      ;
+; 1.427 ; BCD_binario:inst|state.rest      ; BCD_binario:inst|uni_reg[2]      ; CLK          ; CLK         ; 0.000        ; -0.001     ; 1.692      ;
+; 1.435 ; BCD_binario:inst|state.rest      ; BCD_binario:inst|dec_reg[2]      ; CLK          ; CLK         ; 0.000        ; 0.001      ; 1.702      ;
+; 1.453 ; BCD_binario:inst|state.rest      ; BCD_binario:inst|dec_reg[3]      ; CLK          ; CLK         ; 0.000        ; 0.001      ; 1.720      ;
+; 1.461 ; BCD_binario:inst|state.idle      ; BCD_binario:inst|binary_reg[7]   ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.727      ;
+; 1.461 ; BCD_binario:inst|state.idle      ; BCD_binario:inst|binary_reg[6]   ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.727      ;
+; 1.461 ; BCD_binario:inst|state.idle      ; BCD_binario:inst|binary_reg[5]   ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.727      ;
+; 1.461 ; BCD_binario:inst|state.idle      ; BCD_binario:inst|binary_reg[4]   ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.727      ;
+; 1.461 ; BCD_binario:inst|state.idle      ; BCD_binario:inst|binary_reg[3]   ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.727      ;
+; 1.461 ; BCD_binario:inst|state.idle      ; BCD_binario:inst|binary_reg[2]   ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.727      ;
+; 1.461 ; BCD_binario:inst|state.idle      ; BCD_binario:inst|binary_reg[1]   ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.727      ;
+; 1.461 ; BCD_binario:inst|state.idle      ; BCD_binario:inst|binary_reg[0]   ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.727      ;
+; 1.463 ; BCD_binario:inst|i[1]            ; BCD_binario:inst|state.rest      ; CLK          ; CLK         ; 0.000        ; 0.002      ; 1.731      ;
+; 1.477 ; BCD_binario:inst|dec_reg[3]      ; BCD_binario:inst|dec_reg[2]      ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.743      ;
+; 1.491 ; BCD_binario:inst|uni_reg[3]      ; BCD_binario:inst|uni_reg[2]      ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.757      ;
+; 1.502 ; BCD_binario:inst|dec_reg[1]      ; BCD_binario:inst|dec_reg[2]      ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.768      ;
+; 1.532 ; BCD_binario:inst|dec_reg[1]      ; BCD_binario:inst|dec_reg[1]      ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.798      ;
+; 1.547 ; BCD_binario:inst|state.rest      ; BCD_binario:inst|dec_reg[1]      ; CLK          ; CLK         ; 0.000        ; 0.001      ; 1.814      ;
+; 1.547 ; BCD_binario:inst|state.rest      ; BCD_binario:inst|dec_reg[0]      ; CLK          ; CLK         ; 0.000        ; 0.001      ; 1.814      ;
+; 1.607 ; BCD_binario:inst|state.check_sum ; BCD_binario:inst|state.rest      ; CLK          ; CLK         ; 0.000        ; 0.002      ; 1.875      ;
+; 1.630 ; BCD_binario:inst|dec_reg[0]      ; BCD_binario:inst|dec_reg[3]      ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.896      ;
+; 1.634 ; BCD_binario:inst|dec_reg[0]      ; BCD_binario:inst|dec_reg[2]      ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.900      ;
+; 1.645 ; BCD_binario:inst|cent_reg[0]     ; BCD_binario:inst|dec_reg[3]      ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.911      ;
+; 1.654 ; BCD_binario:inst|uni_reg[1]      ; BCD_binario:inst|uni_reg[2]      ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.920      ;
+; 1.661 ; BCD_binario:inst|uni_reg[0]      ; BCD_binario:inst|uni_reg[0]      ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.927      ;
+; 1.662 ; BCD_binario:inst|dec_reg[2]      ; BCD_binario:inst|dec_reg[3]      ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.928      ;
+; 1.674 ; BCD_binario:inst|dec_reg[0]      ; BCD_binario:inst|dec_reg[0]      ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.940      ;
+; 1.728 ; BCD_binario:inst|dec_reg[0]      ; BCD_binario:inst|uni_reg[3]      ; CLK          ; CLK         ; 0.000        ; -0.002     ; 1.992      ;
+; 1.739 ; BCD_binario:inst|i[2]            ; BCD_binario:inst|state.rest      ; CLK          ; CLK         ; 0.000        ; 0.002      ; 2.007      ;
+; 1.768 ; BCD_binario:inst|state.shift     ; BCD_binario:inst|dec_reg[2]      ; CLK          ; CLK         ; 0.000        ; 0.001      ; 2.035      ;
+; 1.774 ; BCD_binario:inst|dec_reg[1]      ; BCD_binario:inst|dec_reg[3]      ; CLK          ; CLK         ; 0.000        ; 0.000      ; 2.040      ;
+; 1.775 ; BCD_binario:inst|i[0]            ; BCD_binario:inst|state.rest      ; CLK          ; CLK         ; 0.000        ; 0.002      ; 2.043      ;
+; 1.788 ; BCD_binario:inst|state.shift     ; BCD_binario:inst|uni_reg[3]      ; CLK          ; CLK         ; 0.000        ; -0.001     ; 2.053      ;
+; 1.792 ; BCD_binario:inst|state.shift     ; BCD_binario:inst|uni_reg[2]      ; CLK          ; CLK         ; 0.000        ; -0.001     ; 2.057      ;
+; 1.794 ; BCD_binario:inst|uni_reg[0]      ; BCD_binario:inst|uni_reg[3]      ; CLK          ; CLK         ; 0.000        ; 0.000      ; 2.060      ;
+; 1.797 ; BCD_binario:inst|state.shift     ; BCD_binario:inst|dec_reg[3]      ; CLK          ; CLK         ; 0.000        ; 0.001      ; 2.064      ;
+; 1.815 ; BCD_binario:inst|uni_reg[0]      ; BCD_binario:inst|uni_reg[2]      ; CLK          ; CLK         ; 0.000        ; 0.000      ; 2.081      ;
+; 1.824 ; BCD_binario:inst|state.rest      ; BCD_binario:inst|uni_reg[1]      ; CLK          ; CLK         ; 0.000        ; -0.001     ; 2.089      ;
+; 1.824 ; BCD_binario:inst|state.rest      ; BCD_binario:inst|uni_reg[0]      ; CLK          ; CLK         ; 0.000        ; -0.001     ; 2.089      ;
+; 1.835 ; BCD_binario:inst|uni_reg[2]      ; BCD_binario:inst|uni_reg[3]      ; CLK          ; CLK         ; 0.000        ; 0.000      ; 2.101      ;
+; 1.887 ; BCD_binario:inst|uni_reg[3]      ; BCD_binario:inst|uni_reg[1]      ; CLK          ; CLK         ; 0.000        ; 0.000      ; 2.153      ;
+; 1.887 ; BCD_binario:inst|uni_reg[3]      ; BCD_binario:inst|uni_reg[0]      ; CLK          ; CLK         ; 0.000        ; 0.000      ; 2.153      ;
+; 1.930 ; BCD_binario:inst|uni_reg[1]      ; BCD_binario:inst|uni_reg[3]      ; CLK          ; CLK         ; 0.000        ; 0.000      ; 2.196      ;
+; 2.023 ; BCD_binario:inst|uni_reg[2]      ; BCD_binario:inst|uni_reg[0]      ; CLK          ; CLK         ; 0.000        ; 0.000      ; 2.289      ;
+; 2.170 ; BCD_binario:inst|dec_reg[2]      ; BCD_binario:inst|dec_reg[0]      ; CLK          ; CLK         ; 0.000        ; 0.000      ; 2.436      ;
++-------+----------------------------------+----------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++-------------------------------------------------------------------------------------------------------------------+
+; Slow Model Minimum Pulse Width: 'CLK'                                                                             ;
++--------+--------------+----------------+------------------+-------+------------+----------------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock ; Clock Edge ; Target                           ;
++--------+--------------+----------------+------------------+-------+------------+----------------------------------+
+; -1.380 ; 1.000        ; 2.380          ; Port Rate        ; CLK   ; Rise       ; CLK                              ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; BCD_binario:inst|binary_reg[0]   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; BCD_binario:inst|binary_reg[0]   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; BCD_binario:inst|binary_reg[1]   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; BCD_binario:inst|binary_reg[1]   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; BCD_binario:inst|binary_reg[2]   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; BCD_binario:inst|binary_reg[2]   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; BCD_binario:inst|binary_reg[3]   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; BCD_binario:inst|binary_reg[3]   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; BCD_binario:inst|binary_reg[4]   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; BCD_binario:inst|binary_reg[4]   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; BCD_binario:inst|binary_reg[5]   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; BCD_binario:inst|binary_reg[5]   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; BCD_binario:inst|binary_reg[6]   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; BCD_binario:inst|binary_reg[6]   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; BCD_binario:inst|binary_reg[7]   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; BCD_binario:inst|binary_reg[7]   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; BCD_binario:inst|cent_reg[0]     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; BCD_binario:inst|cent_reg[0]     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; BCD_binario:inst|cent_reg[1]     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; BCD_binario:inst|cent_reg[1]     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; BCD_binario:inst|cent_reg[2]     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; BCD_binario:inst|cent_reg[2]     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; BCD_binario:inst|cent_reg[3]     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; BCD_binario:inst|cent_reg[3]     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; BCD_binario:inst|dec_reg[0]      ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; BCD_binario:inst|dec_reg[0]      ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; BCD_binario:inst|dec_reg[1]      ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; BCD_binario:inst|dec_reg[1]      ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; BCD_binario:inst|dec_reg[2]      ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; BCD_binario:inst|dec_reg[2]      ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; BCD_binario:inst|dec_reg[3]      ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; BCD_binario:inst|dec_reg[3]      ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; BCD_binario:inst|i[0]            ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; BCD_binario:inst|i[0]            ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; BCD_binario:inst|i[1]            ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; BCD_binario:inst|i[1]            ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; BCD_binario:inst|i[2]            ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; BCD_binario:inst|i[2]            ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; BCD_binario:inst|state.check_sum ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; BCD_binario:inst|state.check_sum ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; BCD_binario:inst|state.idle      ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; BCD_binario:inst|state.idle      ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; BCD_binario:inst|state.rest      ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; BCD_binario:inst|state.rest      ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; BCD_binario:inst|state.shift     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; BCD_binario:inst|state.shift     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; BCD_binario:inst|uni_reg[0]      ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; BCD_binario:inst|uni_reg[0]      ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; BCD_binario:inst|uni_reg[1]      ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; BCD_binario:inst|uni_reg[1]      ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; BCD_binario:inst|uni_reg[2]      ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; BCD_binario:inst|uni_reg[2]      ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; BCD_binario:inst|uni_reg[3]      ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; BCD_binario:inst|uni_reg[3]      ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; decodificador:inst1|num_int[0]   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; decodificador:inst1|num_int[0]   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; decodificador:inst1|num_int[1]   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; decodificador:inst1|num_int[1]   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; decodificador:inst1|num_int[2]   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; decodificador:inst1|num_int[2]   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; decodificador:inst1|num_int[3]   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; decodificador:inst1|num_int[3]   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; decodificador:inst2|num_int[0]   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; decodificador:inst2|num_int[0]   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; decodificador:inst2|num_int[1]   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; decodificador:inst2|num_int[1]   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; decodificador:inst2|num_int[2]   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; decodificador:inst2|num_int[2]   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; decodificador:inst2|num_int[3]   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; decodificador:inst2|num_int[3]   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; decodificador:inst3|num_int[0]   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; decodificador:inst3|num_int[0]   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; decodificador:inst3|num_int[1]   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; decodificador:inst3|num_int[1]   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; decodificador:inst3|num_int[2]   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; decodificador:inst3|num_int[2]   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; decodificador:inst3|num_int[3]   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; decodificador:inst3|num_int[3]   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK   ; Rise       ; CLK|combout                      ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLK   ; Rise       ; CLK|combout                      ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK   ; Rise       ; CLK~clkctrl|inclk[0]             ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLK   ; Rise       ; CLK~clkctrl|inclk[0]             ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK   ; Rise       ; CLK~clkctrl|outclk               ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLK   ; Rise       ; CLK~clkctrl|outclk               ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK   ; Rise       ; inst1|num_int[0]|clk             ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLK   ; Rise       ; inst1|num_int[0]|clk             ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK   ; Rise       ; inst1|num_int[1]|clk             ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLK   ; Rise       ; inst1|num_int[1]|clk             ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK   ; Rise       ; inst1|num_int[2]|clk             ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLK   ; Rise       ; inst1|num_int[2]|clk             ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK   ; Rise       ; inst1|num_int[3]|clk             ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLK   ; Rise       ; inst1|num_int[3]|clk             ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK   ; Rise       ; inst2|num_int[0]|clk             ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLK   ; Rise       ; inst2|num_int[0]|clk             ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK   ; Rise       ; inst2|num_int[1]|clk             ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLK   ; Rise       ; inst2|num_int[1]|clk             ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK   ; Rise       ; inst2|num_int[2]|clk             ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLK   ; Rise       ; inst2|num_int[2]|clk             ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK   ; Rise       ; inst2|num_int[3]|clk             ;
++--------+--------------+----------------+------------------+-------+------------+----------------------------------+
+
+
++--------------------------------------------------------------------------+
+; Setup Times                                                              ;
++--------------+------------+-------+-------+------------+-----------------+
+; Data Port    ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++--------------+------------+-------+-------+------------+-----------------+
+; CENTENAS[*]  ; CLK        ; 5.075 ; 5.075 ; Rise       ; CLK             ;
+;  CENTENAS[0] ; CLK        ; 4.961 ; 4.961 ; Rise       ; CLK             ;
+;  CENTENAS[1] ; CLK        ; 4.882 ; 4.882 ; Rise       ; CLK             ;
+;  CENTENAS[2] ; CLK        ; 5.075 ; 5.075 ; Rise       ; CLK             ;
+;  CENTENAS[3] ; CLK        ; 5.061 ; 5.061 ; Rise       ; CLK             ;
+; CHARGE       ; CLK        ; 6.374 ; 6.374 ; Rise       ; CLK             ;
+; DECENAS[*]   ; CLK        ; 2.154 ; 2.154 ; Rise       ; CLK             ;
+;  DECENAS[0]  ; CLK        ; 1.215 ; 1.215 ; Rise       ; CLK             ;
+;  DECENAS[1]  ; CLK        ; 1.134 ; 1.134 ; Rise       ; CLK             ;
+;  DECENAS[2]  ; CLK        ; 2.102 ; 2.102 ; Rise       ; CLK             ;
+;  DECENAS[3]  ; CLK        ; 2.154 ; 2.154 ; Rise       ; CLK             ;
+; RESET        ; CLK        ; 5.214 ; 5.214 ; Rise       ; CLK             ;
+; START        ; CLK        ; 6.290 ; 6.290 ; Rise       ; CLK             ;
+; UNIDADES[*]  ; CLK        ; 2.090 ; 2.090 ; Rise       ; CLK             ;
+;  UNIDADES[0] ; CLK        ; 0.203 ; 0.203 ; Rise       ; CLK             ;
+;  UNIDADES[1] ; CLK        ; 0.282 ; 0.282 ; Rise       ; CLK             ;
+;  UNIDADES[2] ; CLK        ; 1.042 ; 1.042 ; Rise       ; CLK             ;
+;  UNIDADES[3] ; CLK        ; 2.090 ; 2.090 ; Rise       ; CLK             ;
++--------------+------------+-------+-------+------------+-----------------+
+
+
++----------------------------------------------------------------------------+
+; Hold Times                                                                 ;
++--------------+------------+--------+--------+------------+-----------------+
+; Data Port    ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++--------------+------------+--------+--------+------------+-----------------+
+; CENTENAS[*]  ; CLK        ; -4.648 ; -4.648 ; Rise       ; CLK             ;
+;  CENTENAS[0] ; CLK        ; -4.727 ; -4.727 ; Rise       ; CLK             ;
+;  CENTENAS[1] ; CLK        ; -4.652 ; -4.652 ; Rise       ; CLK             ;
+;  CENTENAS[2] ; CLK        ; -4.818 ; -4.818 ; Rise       ; CLK             ;
+;  CENTENAS[3] ; CLK        ; -4.648 ; -4.648 ; Rise       ; CLK             ;
+; CHARGE       ; CLK        ; -3.901 ; -3.901 ; Rise       ; CLK             ;
+; DECENAS[*]   ; CLK        ; -0.762 ; -0.762 ; Rise       ; CLK             ;
+;  DECENAS[0]  ; CLK        ; -0.843 ; -0.843 ; Rise       ; CLK             ;
+;  DECENAS[1]  ; CLK        ; -0.762 ; -0.762 ; Rise       ; CLK             ;
+;  DECENAS[2]  ; CLK        ; -0.924 ; -0.924 ; Rise       ; CLK             ;
+;  DECENAS[3]  ; CLK        ; -0.909 ; -0.909 ; Rise       ; CLK             ;
+; RESET        ; CLK        ; -4.224 ; -4.224 ; Rise       ; CLK             ;
+; START        ; CLK        ; -4.208 ; -4.208 ; Rise       ; CLK             ;
+; UNIDADES[*]  ; CLK        ; 0.176  ; 0.176  ; Rise       ; CLK             ;
+;  UNIDADES[0] ; CLK        ; 0.176  ; 0.176  ; Rise       ; CLK             ;
+;  UNIDADES[1] ; CLK        ; 0.128  ; 0.128  ; Rise       ; CLK             ;
+;  UNIDADES[2] ; CLK        ; 0.029  ; 0.029  ; Rise       ; CLK             ;
+;  UNIDADES[3] ; CLK        ; -1.262 ; -1.262 ; Rise       ; CLK             ;
++--------------+------------+--------+--------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Clock to Output Times                                                   ;
++-------------+------------+-------+-------+------------+-----------------+
+; Data Port   ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-------------+------------+-------+-------+------------+-----------------+
+; Centena[*]  ; CLK        ; 7.403 ; 7.403 ; Rise       ; CLK             ;
+;  Centena[0] ; CLK        ; 7.017 ; 7.017 ; Rise       ; CLK             ;
+;  Centena[1] ; CLK        ; 7.306 ; 7.306 ; Rise       ; CLK             ;
+;  Centena[2] ; CLK        ; 7.343 ; 7.343 ; Rise       ; CLK             ;
+;  Centena[3] ; CLK        ; 7.075 ; 7.075 ; Rise       ; CLK             ;
+;  Centena[4] ; CLK        ; 7.377 ; 7.377 ; Rise       ; CLK             ;
+;  Centena[5] ; CLK        ; 7.345 ; 7.345 ; Rise       ; CLK             ;
+;  Centena[6] ; CLK        ; 7.403 ; 7.403 ; Rise       ; CLK             ;
+; Decena[*]   ; CLK        ; 7.678 ; 7.678 ; Rise       ; CLK             ;
+;  Decena[0]  ; CLK        ; 7.645 ; 7.645 ; Rise       ; CLK             ;
+;  Decena[1]  ; CLK        ; 7.678 ; 7.678 ; Rise       ; CLK             ;
+;  Decena[2]  ; CLK        ; 7.478 ; 7.478 ; Rise       ; CLK             ;
+;  Decena[3]  ; CLK        ; 7.455 ; 7.455 ; Rise       ; CLK             ;
+;  Decena[4]  ; CLK        ; 7.408 ; 7.408 ; Rise       ; CLK             ;
+;  Decena[5]  ; CLK        ; 7.188 ; 7.188 ; Rise       ; CLK             ;
+;  Decena[6]  ; CLK        ; 7.262 ; 7.262 ; Rise       ; CLK             ;
+; Unidade[*]  ; CLK        ; 9.810 ; 9.810 ; Rise       ; CLK             ;
+;  Unidade[0] ; CLK        ; 9.696 ; 9.696 ; Rise       ; CLK             ;
+;  Unidade[1] ; CLK        ; 9.508 ; 9.508 ; Rise       ; CLK             ;
+;  Unidade[2] ; CLK        ; 9.453 ; 9.453 ; Rise       ; CLK             ;
+;  Unidade[3] ; CLK        ; 9.810 ; 9.810 ; Rise       ; CLK             ;
+;  Unidade[4] ; CLK        ; 9.711 ; 9.711 ; Rise       ; CLK             ;
+;  Unidade[5] ; CLK        ; 9.276 ; 9.276 ; Rise       ; CLK             ;
+;  Unidade[6] ; CLK        ; 8.605 ; 8.605 ; Rise       ; CLK             ;
+; binary[*]   ; CLK        ; 7.132 ; 7.132 ; Rise       ; CLK             ;
+;  binary[0]  ; CLK        ; 6.675 ; 6.675 ; Rise       ; CLK             ;
+;  binary[1]  ; CLK        ; 6.905 ; 6.905 ; Rise       ; CLK             ;
+;  binary[2]  ; CLK        ; 7.132 ; 7.132 ; Rise       ; CLK             ;
+;  binary[3]  ; CLK        ; 6.668 ; 6.668 ; Rise       ; CLK             ;
+;  binary[4]  ; CLK        ; 6.703 ; 6.703 ; Rise       ; CLK             ;
+;  binary[5]  ; CLK        ; 6.695 ; 6.695 ; Rise       ; CLK             ;
+;  binary[6]  ; CLK        ; 6.915 ; 6.915 ; Rise       ; CLK             ;
+;  binary[7]  ; CLK        ; 6.934 ; 6.934 ; Rise       ; CLK             ;
++-------------+------------+-------+-------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                           ;
++-------------+------------+-------+-------+------------+-----------------+
+; Data Port   ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-------------+------------+-------+-------+------------+-----------------+
+; Centena[*]  ; CLK        ; 6.711 ; 6.711 ; Rise       ; CLK             ;
+;  Centena[0] ; CLK        ; 6.711 ; 6.711 ; Rise       ; CLK             ;
+;  Centena[1] ; CLK        ; 6.964 ; 6.964 ; Rise       ; CLK             ;
+;  Centena[2] ; CLK        ; 7.017 ; 7.017 ; Rise       ; CLK             ;
+;  Centena[3] ; CLK        ; 6.726 ; 6.726 ; Rise       ; CLK             ;
+;  Centena[4] ; CLK        ; 7.034 ; 7.034 ; Rise       ; CLK             ;
+;  Centena[5] ; CLK        ; 7.014 ; 7.014 ; Rise       ; CLK             ;
+;  Centena[6] ; CLK        ; 7.054 ; 7.054 ; Rise       ; CLK             ;
+; Decena[*]   ; CLK        ; 6.477 ; 6.477 ; Rise       ; CLK             ;
+;  Decena[0]  ; CLK        ; 6.929 ; 6.929 ; Rise       ; CLK             ;
+;  Decena[1]  ; CLK        ; 6.974 ; 6.974 ; Rise       ; CLK             ;
+;  Decena[2]  ; CLK        ; 6.788 ; 6.788 ; Rise       ; CLK             ;
+;  Decena[3]  ; CLK        ; 6.748 ; 6.748 ; Rise       ; CLK             ;
+;  Decena[4]  ; CLK        ; 6.704 ; 6.704 ; Rise       ; CLK             ;
+;  Decena[5]  ; CLK        ; 6.477 ; 6.477 ; Rise       ; CLK             ;
+;  Decena[6]  ; CLK        ; 6.537 ; 6.537 ; Rise       ; CLK             ;
+; Unidade[*]  ; CLK        ; 8.083 ; 8.083 ; Rise       ; CLK             ;
+;  Unidade[0] ; CLK        ; 9.214 ; 9.214 ; Rise       ; CLK             ;
+;  Unidade[1] ; CLK        ; 8.986 ; 8.986 ; Rise       ; CLK             ;
+;  Unidade[2] ; CLK        ; 8.931 ; 8.931 ; Rise       ; CLK             ;
+;  Unidade[3] ; CLK        ; 9.286 ; 9.286 ; Rise       ; CLK             ;
+;  Unidade[4] ; CLK        ; 9.189 ; 9.189 ; Rise       ; CLK             ;
+;  Unidade[5] ; CLK        ; 8.754 ; 8.754 ; Rise       ; CLK             ;
+;  Unidade[6] ; CLK        ; 8.083 ; 8.083 ; Rise       ; CLK             ;
+; binary[*]   ; CLK        ; 6.668 ; 6.668 ; Rise       ; CLK             ;
+;  binary[0]  ; CLK        ; 6.675 ; 6.675 ; Rise       ; CLK             ;
+;  binary[1]  ; CLK        ; 6.905 ; 6.905 ; Rise       ; CLK             ;
+;  binary[2]  ; CLK        ; 7.132 ; 7.132 ; Rise       ; CLK             ;
+;  binary[3]  ; CLK        ; 6.668 ; 6.668 ; Rise       ; CLK             ;
+;  binary[4]  ; CLK        ; 6.703 ; 6.703 ; Rise       ; CLK             ;
+;  binary[5]  ; CLK        ; 6.695 ; 6.695 ; Rise       ; CLK             ;
+;  binary[6]  ; CLK        ; 6.915 ; 6.915 ; Rise       ; CLK             ;
+;  binary[7]  ; CLK        ; 6.934 ; 6.934 ; Rise       ; CLK             ;
++-------------+------------+-------+-------+------------+-----------------+
+
+
++--------------------------------+
+; Fast Model Setup Summary       ;
++-------+--------+---------------+
+; Clock ; Slack  ; End Point TNS ;
++-------+--------+---------------+
+; CLK   ; -0.186 ; -0.852        ;
++-------+--------+---------------+
+
+
++-------------------------------+
+; Fast Model Hold Summary       ;
++-------+-------+---------------+
+; Clock ; Slack ; End Point TNS ;
++-------+-------+---------------+
+; CLK   ; 0.215 ; 0.000         ;
++-------+-------+---------------+
+
+
+-------------------------------
+; Fast Model Recovery Summary ;
+-------------------------------
+No paths to report.
+
+
+------------------------------
+; Fast Model Removal Summary ;
+------------------------------
+No paths to report.
+
+
++----------------------------------------+
+; Fast Model Minimum Pulse Width Summary ;
++-------+--------+-----------------------+
+; Clock ; Slack  ; End Point TNS         ;
++-------+--------+-----------------------+
+; CLK   ; -1.380 ; -40.380               ;
++-------+--------+-----------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Setup: 'CLK'                                                                                                                            ;
++--------+----------------------------------+----------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                        ; To Node                          ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+----------------------------------+----------------------------------+--------------+-------------+--------------+------------+------------+
+; -0.186 ; BCD_binario:inst|dec_reg[3]      ; BCD_binario:inst|dec_reg[1]      ; CLK          ; CLK         ; 1.000        ; 0.000      ; 1.218      ;
+; -0.186 ; BCD_binario:inst|dec_reg[3]      ; BCD_binario:inst|dec_reg[0]      ; CLK          ; CLK         ; 1.000        ; 0.000      ; 1.218      ;
+; -0.177 ; BCD_binario:inst|uni_reg[0]      ; BCD_binario:inst|uni_reg[1]      ; CLK          ; CLK         ; 1.000        ; 0.000      ; 1.209      ;
+; -0.177 ; BCD_binario:inst|uni_reg[0]      ; BCD_binario:inst|uni_reg[0]      ; CLK          ; CLK         ; 1.000        ; 0.000      ; 1.209      ;
+; -0.167 ; BCD_binario:inst|dec_reg[2]      ; BCD_binario:inst|dec_reg[1]      ; CLK          ; CLK         ; 1.000        ; 0.000      ; 1.199      ;
+; -0.167 ; BCD_binario:inst|dec_reg[2]      ; BCD_binario:inst|dec_reg[0]      ; CLK          ; CLK         ; 1.000        ; 0.000      ; 1.199      ;
+; -0.156 ; BCD_binario:inst|uni_reg[1]      ; BCD_binario:inst|uni_reg[1]      ; CLK          ; CLK         ; 1.000        ; 0.000      ; 1.188      ;
+; -0.156 ; BCD_binario:inst|uni_reg[1]      ; BCD_binario:inst|uni_reg[0]      ; CLK          ; CLK         ; 1.000        ; 0.000      ; 1.188      ;
+; -0.110 ; BCD_binario:inst|dec_reg[0]      ; BCD_binario:inst|dec_reg[1]      ; CLK          ; CLK         ; 1.000        ; 0.000      ; 1.142      ;
+; -0.110 ; BCD_binario:inst|dec_reg[0]      ; BCD_binario:inst|dec_reg[0]      ; CLK          ; CLK         ; 1.000        ; 0.000      ; 1.142      ;
+; -0.092 ; BCD_binario:inst|uni_reg[2]      ; BCD_binario:inst|uni_reg[1]      ; CLK          ; CLK         ; 1.000        ; 0.000      ; 1.124      ;
+; -0.092 ; BCD_binario:inst|uni_reg[2]      ; BCD_binario:inst|uni_reg[0]      ; CLK          ; CLK         ; 1.000        ; 0.000      ; 1.124      ;
+; -0.079 ; BCD_binario:inst|state.shift     ; BCD_binario:inst|dec_reg[1]      ; CLK          ; CLK         ; 1.000        ; 0.001      ; 1.112      ;
+; -0.079 ; BCD_binario:inst|state.shift     ; BCD_binario:inst|dec_reg[0]      ; CLK          ; CLK         ; 1.000        ; 0.001      ; 1.112      ;
+; -0.062 ; BCD_binario:inst|dec_reg[1]      ; BCD_binario:inst|dec_reg[1]      ; CLK          ; CLK         ; 1.000        ; 0.000      ; 1.094      ;
+; -0.062 ; BCD_binario:inst|dec_reg[1]      ; BCD_binario:inst|dec_reg[0]      ; CLK          ; CLK         ; 1.000        ; 0.000      ; 1.094      ;
+; -0.062 ; BCD_binario:inst|state.shift     ; BCD_binario:inst|uni_reg[1]      ; CLK          ; CLK         ; 1.000        ; 0.000      ; 1.094      ;
+; -0.062 ; BCD_binario:inst|state.shift     ; BCD_binario:inst|uni_reg[0]      ; CLK          ; CLK         ; 1.000        ; 0.000      ; 1.094      ;
+; -0.037 ; BCD_binario:inst|dec_reg[3]      ; BCD_binario:inst|dec_reg[3]      ; CLK          ; CLK         ; 1.000        ; 0.000      ; 1.069      ;
+; -0.037 ; BCD_binario:inst|dec_reg[3]      ; BCD_binario:inst|dec_reg[2]      ; CLK          ; CLK         ; 1.000        ; 0.000      ; 1.069      ;
+; -0.036 ; BCD_binario:inst|uni_reg[3]      ; BCD_binario:inst|uni_reg[1]      ; CLK          ; CLK         ; 1.000        ; 0.000      ; 1.068      ;
+; -0.036 ; BCD_binario:inst|uni_reg[3]      ; BCD_binario:inst|uni_reg[0]      ; CLK          ; CLK         ; 1.000        ; 0.000      ; 1.068      ;
+; -0.028 ; BCD_binario:inst|uni_reg[0]      ; BCD_binario:inst|uni_reg[2]      ; CLK          ; CLK         ; 1.000        ; 0.000      ; 1.060      ;
+; -0.028 ; BCD_binario:inst|state.rest      ; BCD_binario:inst|dec_reg[1]      ; CLK          ; CLK         ; 1.000        ; 0.001      ; 1.061      ;
+; -0.028 ; BCD_binario:inst|state.rest      ; BCD_binario:inst|dec_reg[0]      ; CLK          ; CLK         ; 1.000        ; 0.001      ; 1.061      ;
+; -0.024 ; BCD_binario:inst|uni_reg[0]      ; BCD_binario:inst|uni_reg[3]      ; CLK          ; CLK         ; 1.000        ; 0.000      ; 1.056      ;
+; -0.021 ; BCD_binario:inst|state.rest      ; BCD_binario:inst|uni_reg[1]      ; CLK          ; CLK         ; 1.000        ; 0.000      ; 1.053      ;
+; -0.021 ; BCD_binario:inst|state.rest      ; BCD_binario:inst|uni_reg[0]      ; CLK          ; CLK         ; 1.000        ; 0.000      ; 1.053      ;
+; -0.018 ; BCD_binario:inst|dec_reg[2]      ; BCD_binario:inst|dec_reg[3]      ; CLK          ; CLK         ; 1.000        ; 0.000      ; 1.050      ;
+; -0.018 ; BCD_binario:inst|dec_reg[2]      ; BCD_binario:inst|dec_reg[2]      ; CLK          ; CLK         ; 1.000        ; 0.000      ; 1.050      ;
+; -0.007 ; BCD_binario:inst|uni_reg[1]      ; BCD_binario:inst|uni_reg[2]      ; CLK          ; CLK         ; 1.000        ; 0.000      ; 1.039      ;
+; -0.003 ; BCD_binario:inst|uni_reg[1]      ; BCD_binario:inst|uni_reg[3]      ; CLK          ; CLK         ; 1.000        ; 0.000      ; 1.035      ;
+; 0.010  ; BCD_binario:inst|state.shift     ; BCD_binario:inst|cent_reg[2]     ; CLK          ; CLK         ; 1.000        ; 0.001      ; 1.023      ;
+; 0.010  ; BCD_binario:inst|state.shift     ; BCD_binario:inst|cent_reg[1]     ; CLK          ; CLK         ; 1.000        ; 0.001      ; 1.023      ;
+; 0.010  ; BCD_binario:inst|state.shift     ; BCD_binario:inst|cent_reg[0]     ; CLK          ; CLK         ; 1.000        ; 0.001      ; 1.023      ;
+; 0.032  ; BCD_binario:inst|uni_reg[3]      ; BCD_binario:inst|uni_reg[3]      ; CLK          ; CLK         ; 1.000        ; 0.000      ; 1.000      ;
+; 0.039  ; BCD_binario:inst|dec_reg[0]      ; BCD_binario:inst|dec_reg[3]      ; CLK          ; CLK         ; 1.000        ; 0.000      ; 0.993      ;
+; 0.039  ; BCD_binario:inst|dec_reg[0]      ; BCD_binario:inst|dec_reg[2]      ; CLK          ; CLK         ; 1.000        ; 0.000      ; 0.993      ;
+; 0.057  ; BCD_binario:inst|uni_reg[2]      ; BCD_binario:inst|uni_reg[2]      ; CLK          ; CLK         ; 1.000        ; 0.000      ; 0.975      ;
+; 0.061  ; BCD_binario:inst|uni_reg[2]      ; BCD_binario:inst|uni_reg[3]      ; CLK          ; CLK         ; 1.000        ; 0.000      ; 0.971      ;
+; 0.070  ; BCD_binario:inst|state.shift     ; BCD_binario:inst|dec_reg[3]      ; CLK          ; CLK         ; 1.000        ; 0.001      ; 0.963      ;
+; 0.070  ; BCD_binario:inst|state.shift     ; BCD_binario:inst|dec_reg[2]      ; CLK          ; CLK         ; 1.000        ; 0.001      ; 0.963      ;
+; 0.074  ; BCD_binario:inst|state.shift     ; BCD_binario:inst|uni_reg[3]      ; CLK          ; CLK         ; 1.000        ; 0.000      ; 0.958      ;
+; 0.080  ; BCD_binario:inst|i[0]            ; BCD_binario:inst|state.rest      ; CLK          ; CLK         ; 1.000        ; 0.001      ; 0.953      ;
+; 0.087  ; BCD_binario:inst|dec_reg[1]      ; BCD_binario:inst|dec_reg[3]      ; CLK          ; CLK         ; 1.000        ; 0.000      ; 0.945      ;
+; 0.087  ; BCD_binario:inst|dec_reg[1]      ; BCD_binario:inst|dec_reg[2]      ; CLK          ; CLK         ; 1.000        ; 0.000      ; 0.945      ;
+; 0.087  ; BCD_binario:inst|state.shift     ; BCD_binario:inst|uni_reg[2]      ; CLK          ; CLK         ; 1.000        ; 0.000      ; 0.945      ;
+; 0.095  ; BCD_binario:inst|i[2]            ; BCD_binario:inst|state.rest      ; CLK          ; CLK         ; 1.000        ; 0.001      ; 0.938      ;
+; 0.113  ; BCD_binario:inst|uni_reg[3]      ; BCD_binario:inst|uni_reg[2]      ; CLK          ; CLK         ; 1.000        ; 0.000      ; 0.919      ;
+; 0.121  ; BCD_binario:inst|state.rest      ; BCD_binario:inst|dec_reg[3]      ; CLK          ; CLK         ; 1.000        ; 0.001      ; 0.912      ;
+; 0.121  ; BCD_binario:inst|state.rest      ; BCD_binario:inst|dec_reg[2]      ; CLK          ; CLK         ; 1.000        ; 0.001      ; 0.912      ;
+; 0.121  ; BCD_binario:inst|dec_reg[0]      ; BCD_binario:inst|uni_reg[3]      ; CLK          ; CLK         ; 1.000        ; -0.001     ; 0.910      ;
+; 0.128  ; BCD_binario:inst|state.rest      ; BCD_binario:inst|uni_reg[2]      ; CLK          ; CLK         ; 1.000        ; 0.000      ; 0.904      ;
+; 0.129  ; BCD_binario:inst|state.check_sum ; BCD_binario:inst|state.rest      ; CLK          ; CLK         ; 1.000        ; 0.001      ; 0.904      ;
+; 0.132  ; BCD_binario:inst|state.rest      ; BCD_binario:inst|uni_reg[3]      ; CLK          ; CLK         ; 1.000        ; 0.000      ; 0.900      ;
+; 0.152  ; BCD_binario:inst|state.idle      ; BCD_binario:inst|binary_reg[7]   ; CLK          ; CLK         ; 1.000        ; 0.000      ; 0.880      ;
+; 0.152  ; BCD_binario:inst|state.idle      ; BCD_binario:inst|binary_reg[6]   ; CLK          ; CLK         ; 1.000        ; 0.000      ; 0.880      ;
+; 0.152  ; BCD_binario:inst|state.idle      ; BCD_binario:inst|binary_reg[5]   ; CLK          ; CLK         ; 1.000        ; 0.000      ; 0.880      ;
+; 0.152  ; BCD_binario:inst|state.idle      ; BCD_binario:inst|binary_reg[4]   ; CLK          ; CLK         ; 1.000        ; 0.000      ; 0.880      ;
+; 0.152  ; BCD_binario:inst|state.idle      ; BCD_binario:inst|binary_reg[3]   ; CLK          ; CLK         ; 1.000        ; 0.000      ; 0.880      ;
+; 0.152  ; BCD_binario:inst|state.idle      ; BCD_binario:inst|binary_reg[2]   ; CLK          ; CLK         ; 1.000        ; 0.000      ; 0.880      ;
+; 0.152  ; BCD_binario:inst|state.idle      ; BCD_binario:inst|binary_reg[1]   ; CLK          ; CLK         ; 1.000        ; 0.000      ; 0.880      ;
+; 0.152  ; BCD_binario:inst|state.idle      ; BCD_binario:inst|binary_reg[0]   ; CLK          ; CLK         ; 1.000        ; 0.000      ; 0.880      ;
+; 0.161  ; BCD_binario:inst|cent_reg[0]     ; BCD_binario:inst|dec_reg[3]      ; CLK          ; CLK         ; 1.000        ; 0.000      ; 0.871      ;
+; 0.195  ; BCD_binario:inst|state.shift     ; BCD_binario:inst|binary_reg[7]   ; CLK          ; CLK         ; 1.000        ; 0.000      ; 0.837      ;
+; 0.195  ; BCD_binario:inst|state.shift     ; BCD_binario:inst|binary_reg[6]   ; CLK          ; CLK         ; 1.000        ; 0.000      ; 0.837      ;
+; 0.195  ; BCD_binario:inst|state.shift     ; BCD_binario:inst|binary_reg[5]   ; CLK          ; CLK         ; 1.000        ; 0.000      ; 0.837      ;
+; 0.195  ; BCD_binario:inst|state.shift     ; BCD_binario:inst|binary_reg[4]   ; CLK          ; CLK         ; 1.000        ; 0.000      ; 0.837      ;
+; 0.195  ; BCD_binario:inst|state.shift     ; BCD_binario:inst|binary_reg[3]   ; CLK          ; CLK         ; 1.000        ; 0.000      ; 0.837      ;
+; 0.195  ; BCD_binario:inst|state.shift     ; BCD_binario:inst|binary_reg[2]   ; CLK          ; CLK         ; 1.000        ; 0.000      ; 0.837      ;
+; 0.195  ; BCD_binario:inst|state.shift     ; BCD_binario:inst|binary_reg[1]   ; CLK          ; CLK         ; 1.000        ; 0.000      ; 0.837      ;
+; 0.195  ; BCD_binario:inst|state.shift     ; BCD_binario:inst|binary_reg[0]   ; CLK          ; CLK         ; 1.000        ; 0.000      ; 0.837      ;
+; 0.211  ; BCD_binario:inst|i[1]            ; BCD_binario:inst|state.rest      ; CLK          ; CLK         ; 1.000        ; 0.001      ; 0.822      ;
+; 0.249  ; BCD_binario:inst|state.shift     ; BCD_binario:inst|cent_reg[3]     ; CLK          ; CLK         ; 1.000        ; 0.001      ; 0.784      ;
+; 0.333  ; BCD_binario:inst|state.shift     ; BCD_binario:inst|state.check_sum ; CLK          ; CLK         ; 1.000        ; -0.001     ; 0.698      ;
+; 0.361  ; BCD_binario:inst|binary_reg[2]   ; BCD_binario:inst|binary_reg[1]   ; CLK          ; CLK         ; 1.000        ; 0.000      ; 0.671      ;
+; 0.431  ; BCD_binario:inst|i[2]            ; BCD_binario:inst|i[0]            ; CLK          ; CLK         ; 1.000        ; 0.000      ; 0.601      ;
+; 0.458  ; BCD_binario:inst|uni_reg[0]      ; BCD_binario:inst|binary_reg[7]   ; CLK          ; CLK         ; 1.000        ; 0.000      ; 0.574      ;
+; 0.504  ; BCD_binario:inst|i[0]            ; BCD_binario:inst|i[1]            ; CLK          ; CLK         ; 1.000        ; 0.000      ; 0.528      ;
+; 0.505  ; BCD_binario:inst|i[0]            ; BCD_binario:inst|i[2]            ; CLK          ; CLK         ; 1.000        ; 0.000      ; 0.527      ;
+; 0.510  ; BCD_binario:inst|state.check_sum ; BCD_binario:inst|i[1]            ; CLK          ; CLK         ; 1.000        ; 0.000      ; 0.522      ;
+; 0.511  ; BCD_binario:inst|state.check_sum ; BCD_binario:inst|i[2]            ; CLK          ; CLK         ; 1.000        ; 0.000      ; 0.521      ;
+; 0.514  ; BCD_binario:inst|state.check_sum ; BCD_binario:inst|i[0]            ; CLK          ; CLK         ; 1.000        ; 0.000      ; 0.518      ;
+; 0.517  ; BCD_binario:inst|cent_reg[1]     ; BCD_binario:inst|cent_reg[0]     ; CLK          ; CLK         ; 1.000        ; 0.000      ; 0.515      ;
+; 0.520  ; BCD_binario:inst|cent_reg[2]     ; BCD_binario:inst|cent_reg[1]     ; CLK          ; CLK         ; 1.000        ; 0.000      ; 0.512      ;
+; 0.552  ; BCD_binario:inst|state.rest      ; BCD_binario:inst|state.shift     ; CLK          ; CLK         ; 1.000        ; 0.000      ; 0.480      ;
+; 0.561  ; BCD_binario:inst|binary_reg[5]   ; BCD_binario:inst|binary_reg[4]   ; CLK          ; CLK         ; 1.000        ; 0.000      ; 0.471      ;
+; 0.582  ; BCD_binario:inst|state.idle      ; BCD_binario:inst|state.shift     ; CLK          ; CLK         ; 1.000        ; 0.000      ; 0.450      ;
+; 0.587  ; BCD_binario:inst|cent_reg[3]     ; BCD_binario:inst|cent_reg[2]     ; CLK          ; CLK         ; 1.000        ; 0.000      ; 0.445      ;
+; 0.633  ; BCD_binario:inst|i[1]            ; BCD_binario:inst|i[0]            ; CLK          ; CLK         ; 1.000        ; 0.000      ; 0.399      ;
+; 0.634  ; BCD_binario:inst|binary_reg[7]   ; BCD_binario:inst|binary_reg[6]   ; CLK          ; CLK         ; 1.000        ; 0.000      ; 0.398      ;
+; 0.635  ; BCD_binario:inst|binary_reg[4]   ; BCD_binario:inst|binary_reg[3]   ; CLK          ; CLK         ; 1.000        ; 0.000      ; 0.397      ;
+; 0.635  ; BCD_binario:inst|i[1]            ; BCD_binario:inst|i[2]            ; CLK          ; CLK         ; 1.000        ; 0.000      ; 0.397      ;
+; 0.636  ; BCD_binario:inst|binary_reg[6]   ; BCD_binario:inst|binary_reg[5]   ; CLK          ; CLK         ; 1.000        ; 0.000      ; 0.396      ;
+; 0.637  ; BCD_binario:inst|binary_reg[1]   ; BCD_binario:inst|binary_reg[0]   ; CLK          ; CLK         ; 1.000        ; 0.000      ; 0.395      ;
+; 0.637  ; BCD_binario:inst|i[2]            ; BCD_binario:inst|i[1]            ; CLK          ; CLK         ; 1.000        ; 0.000      ; 0.395      ;
+; 0.639  ; BCD_binario:inst|binary_reg[3]   ; BCD_binario:inst|binary_reg[2]   ; CLK          ; CLK         ; 1.000        ; 0.000      ; 0.393      ;
+; 0.665  ; BCD_binario:inst|state.idle      ; BCD_binario:inst|state.idle      ; CLK          ; CLK         ; 1.000        ; 0.000      ; 0.367      ;
+; 0.665  ; BCD_binario:inst|cent_reg[3]     ; BCD_binario:inst|cent_reg[3]     ; CLK          ; CLK         ; 1.000        ; 0.000      ; 0.367      ;
+; 0.665  ; BCD_binario:inst|i[0]            ; BCD_binario:inst|i[0]            ; CLK          ; CLK         ; 1.000        ; 0.000      ; 0.367      ;
++--------+----------------------------------+----------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Hold: 'CLK'                                                                                                                            ;
++-------+----------------------------------+----------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                        ; To Node                          ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+----------------------------------+----------------------------------+--------------+-------------+--------------+------------+------------+
+; 0.215 ; BCD_binario:inst|i[0]            ; BCD_binario:inst|i[0]            ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; BCD_binario:inst|i[2]            ; BCD_binario:inst|i[2]            ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; BCD_binario:inst|i[1]            ; BCD_binario:inst|i[1]            ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; BCD_binario:inst|state.idle      ; BCD_binario:inst|state.idle      ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; BCD_binario:inst|cent_reg[3]     ; BCD_binario:inst|cent_reg[3]     ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; BCD_binario:inst|dec_reg[3]      ; BCD_binario:inst|dec_reg[3]      ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; BCD_binario:inst|dec_reg[2]      ; BCD_binario:inst|dec_reg[2]      ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; BCD_binario:inst|uni_reg[2]      ; BCD_binario:inst|uni_reg[2]      ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; BCD_binario:inst|uni_reg[3]      ; BCD_binario:inst|uni_reg[3]      ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.241 ; BCD_binario:inst|binary_reg[3]   ; BCD_binario:inst|binary_reg[2]   ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.393      ;
+; 0.243 ; BCD_binario:inst|binary_reg[1]   ; BCD_binario:inst|binary_reg[0]   ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.395      ;
+; 0.243 ; BCD_binario:inst|i[2]            ; BCD_binario:inst|i[1]            ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.395      ;
+; 0.244 ; BCD_binario:inst|binary_reg[6]   ; BCD_binario:inst|binary_reg[5]   ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.396      ;
+; 0.245 ; BCD_binario:inst|binary_reg[4]   ; BCD_binario:inst|binary_reg[3]   ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.397      ;
+; 0.245 ; BCD_binario:inst|i[1]            ; BCD_binario:inst|i[2]            ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.397      ;
+; 0.246 ; BCD_binario:inst|binary_reg[7]   ; BCD_binario:inst|binary_reg[6]   ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.398      ;
+; 0.247 ; BCD_binario:inst|i[1]            ; BCD_binario:inst|i[0]            ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.399      ;
+; 0.259 ; BCD_binario:inst|dec_reg[1]      ; BCD_binario:inst|dec_reg[0]      ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.411      ;
+; 0.293 ; BCD_binario:inst|cent_reg[3]     ; BCD_binario:inst|cent_reg[2]     ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.445      ;
+; 0.298 ; BCD_binario:inst|state.idle      ; BCD_binario:inst|state.shift     ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.450      ;
+; 0.319 ; BCD_binario:inst|binary_reg[5]   ; BCD_binario:inst|binary_reg[4]   ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.471      ;
+; 0.328 ; BCD_binario:inst|state.rest      ; BCD_binario:inst|state.shift     ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.480      ;
+; 0.332 ; BCD_binario:inst|dec_reg[2]      ; BCD_binario:inst|dec_reg[1]      ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.484      ;
+; 0.333 ; BCD_binario:inst|uni_reg[2]      ; BCD_binario:inst|uni_reg[1]      ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.485      ;
+; 0.360 ; BCD_binario:inst|cent_reg[2]     ; BCD_binario:inst|cent_reg[1]     ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.512      ;
+; 0.363 ; BCD_binario:inst|cent_reg[1]     ; BCD_binario:inst|cent_reg[0]     ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.515      ;
+; 0.366 ; BCD_binario:inst|state.check_sum ; BCD_binario:inst|i[0]            ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.518      ;
+; 0.369 ; BCD_binario:inst|state.check_sum ; BCD_binario:inst|i[2]            ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.521      ;
+; 0.370 ; BCD_binario:inst|state.check_sum ; BCD_binario:inst|i[1]            ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.522      ;
+; 0.375 ; BCD_binario:inst|i[0]            ; BCD_binario:inst|i[2]            ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.527      ;
+; 0.376 ; BCD_binario:inst|i[0]            ; BCD_binario:inst|i[1]            ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.528      ;
+; 0.422 ; BCD_binario:inst|uni_reg[0]      ; BCD_binario:inst|binary_reg[7]   ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.574      ;
+; 0.443 ; BCD_binario:inst|state.shift     ; BCD_binario:inst|uni_reg[0]      ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.595      ;
+; 0.447 ; BCD_binario:inst|state.shift     ; BCD_binario:inst|cent_reg[1]     ; CLK          ; CLK         ; 0.000        ; 0.001      ; 0.600      ;
+; 0.449 ; BCD_binario:inst|i[2]            ; BCD_binario:inst|i[0]            ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.601      ;
+; 0.450 ; BCD_binario:inst|state.shift     ; BCD_binario:inst|cent_reg[2]     ; CLK          ; CLK         ; 0.000        ; 0.001      ; 0.603      ;
+; 0.451 ; BCD_binario:inst|state.shift     ; BCD_binario:inst|cent_reg[0]     ; CLK          ; CLK         ; 0.000        ; 0.001      ; 0.604      ;
+; 0.458 ; BCD_binario:inst|uni_reg[1]      ; BCD_binario:inst|uni_reg[0]      ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.610      ;
+; 0.472 ; BCD_binario:inst|state.shift     ; BCD_binario:inst|binary_reg[4]   ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.624      ;
+; 0.512 ; BCD_binario:inst|uni_reg[1]      ; BCD_binario:inst|uni_reg[1]      ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.664      ;
+; 0.519 ; BCD_binario:inst|binary_reg[2]   ; BCD_binario:inst|binary_reg[1]   ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.671      ;
+; 0.547 ; BCD_binario:inst|state.shift     ; BCD_binario:inst|state.check_sum ; CLK          ; CLK         ; 0.000        ; -0.001     ; 0.698      ;
+; 0.564 ; BCD_binario:inst|state.shift     ; BCD_binario:inst|uni_reg[1]      ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.716      ;
+; 0.569 ; BCD_binario:inst|uni_reg[0]      ; BCD_binario:inst|uni_reg[1]      ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.721      ;
+; 0.574 ; BCD_binario:inst|state.shift     ; BCD_binario:inst|dec_reg[1]      ; CLK          ; CLK         ; 0.000        ; 0.001      ; 0.727      ;
+; 0.576 ; BCD_binario:inst|state.shift     ; BCD_binario:inst|dec_reg[0]      ; CLK          ; CLK         ; 0.000        ; 0.001      ; 0.729      ;
+; 0.602 ; BCD_binario:inst|state.shift     ; BCD_binario:inst|binary_reg[3]   ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.754      ;
+; 0.604 ; BCD_binario:inst|state.shift     ; BCD_binario:inst|binary_reg[2]   ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.756      ;
+; 0.605 ; BCD_binario:inst|state.shift     ; BCD_binario:inst|binary_reg[7]   ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.757      ;
+; 0.607 ; BCD_binario:inst|state.shift     ; BCD_binario:inst|binary_reg[5]   ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.759      ;
+; 0.607 ; BCD_binario:inst|state.shift     ; BCD_binario:inst|binary_reg[6]   ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.759      ;
+; 0.608 ; BCD_binario:inst|state.shift     ; BCD_binario:inst|binary_reg[1]   ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.760      ;
+; 0.609 ; BCD_binario:inst|state.shift     ; BCD_binario:inst|binary_reg[0]   ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.761      ;
+; 0.630 ; BCD_binario:inst|state.rest      ; BCD_binario:inst|dec_reg[2]      ; CLK          ; CLK         ; 0.000        ; 0.001      ; 0.783      ;
+; 0.631 ; BCD_binario:inst|state.shift     ; BCD_binario:inst|cent_reg[3]     ; CLK          ; CLK         ; 0.000        ; 0.001      ; 0.784      ;
+; 0.632 ; BCD_binario:inst|state.rest      ; BCD_binario:inst|uni_reg[3]      ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.784      ;
+; 0.633 ; BCD_binario:inst|state.rest      ; BCD_binario:inst|uni_reg[2]      ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.785      ;
+; 0.643 ; BCD_binario:inst|state.rest      ; BCD_binario:inst|dec_reg[3]      ; CLK          ; CLK         ; 0.000        ; 0.001      ; 0.796      ;
+; 0.644 ; BCD_binario:inst|dec_reg[0]      ; BCD_binario:inst|dec_reg[1]      ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.796      ;
+; 0.644 ; BCD_binario:inst|dec_reg[3]      ; BCD_binario:inst|dec_reg[2]      ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.796      ;
+; 0.646 ; BCD_binario:inst|uni_reg[3]      ; BCD_binario:inst|uni_reg[2]      ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.798      ;
+; 0.655 ; BCD_binario:inst|dec_reg[1]      ; BCD_binario:inst|dec_reg[2]      ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.807      ;
+; 0.669 ; BCD_binario:inst|i[1]            ; BCD_binario:inst|state.rest      ; CLK          ; CLK         ; 0.000        ; 0.001      ; 0.822      ;
+; 0.701 ; BCD_binario:inst|dec_reg[1]      ; BCD_binario:inst|dec_reg[1]      ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.853      ;
+; 0.703 ; BCD_binario:inst|dec_reg[0]      ; BCD_binario:inst|dec_reg[2]      ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.855      ;
+; 0.705 ; BCD_binario:inst|dec_reg[0]      ; BCD_binario:inst|dec_reg[3]      ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.857      ;
+; 0.719 ; BCD_binario:inst|cent_reg[0]     ; BCD_binario:inst|dec_reg[3]      ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.871      ;
+; 0.723 ; BCD_binario:inst|dec_reg[2]      ; BCD_binario:inst|dec_reg[3]      ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.875      ;
+; 0.728 ; BCD_binario:inst|state.idle      ; BCD_binario:inst|binary_reg[7]   ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.880      ;
+; 0.728 ; BCD_binario:inst|state.idle      ; BCD_binario:inst|binary_reg[6]   ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.880      ;
+; 0.728 ; BCD_binario:inst|state.idle      ; BCD_binario:inst|binary_reg[5]   ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.880      ;
+; 0.728 ; BCD_binario:inst|state.idle      ; BCD_binario:inst|binary_reg[4]   ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.880      ;
+; 0.728 ; BCD_binario:inst|state.idle      ; BCD_binario:inst|binary_reg[3]   ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.880      ;
+; 0.728 ; BCD_binario:inst|state.idle      ; BCD_binario:inst|binary_reg[2]   ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.880      ;
+; 0.728 ; BCD_binario:inst|state.idle      ; BCD_binario:inst|binary_reg[1]   ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.880      ;
+; 0.728 ; BCD_binario:inst|state.idle      ; BCD_binario:inst|binary_reg[0]   ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.880      ;
+; 0.732 ; BCD_binario:inst|uni_reg[1]      ; BCD_binario:inst|uni_reg[2]      ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.884      ;
+; 0.742 ; BCD_binario:inst|state.rest      ; BCD_binario:inst|dec_reg[1]      ; CLK          ; CLK         ; 0.000        ; 0.001      ; 0.895      ;
+; 0.742 ; BCD_binario:inst|state.rest      ; BCD_binario:inst|dec_reg[0]      ; CLK          ; CLK         ; 0.000        ; 0.001      ; 0.895      ;
+; 0.751 ; BCD_binario:inst|state.check_sum ; BCD_binario:inst|state.rest      ; CLK          ; CLK         ; 0.000        ; 0.001      ; 0.904      ;
+; 0.759 ; BCD_binario:inst|dec_reg[0]      ; BCD_binario:inst|uni_reg[3]      ; CLK          ; CLK         ; 0.000        ; -0.001     ; 0.910      ;
+; 0.771 ; BCD_binario:inst|state.shift     ; BCD_binario:inst|dec_reg[2]      ; CLK          ; CLK         ; 0.000        ; 0.001      ; 0.924      ;
+; 0.772 ; BCD_binario:inst|uni_reg[0]      ; BCD_binario:inst|uni_reg[3]      ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.924      ;
+; 0.774 ; BCD_binario:inst|dec_reg[1]      ; BCD_binario:inst|dec_reg[3]      ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.926      ;
+; 0.775 ; BCD_binario:inst|uni_reg[0]      ; BCD_binario:inst|uni_reg[0]      ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.927      ;
+; 0.785 ; BCD_binario:inst|i[2]            ; BCD_binario:inst|state.rest      ; CLK          ; CLK         ; 0.000        ; 0.001      ; 0.938      ;
+; 0.786 ; BCD_binario:inst|dec_reg[0]      ; BCD_binario:inst|dec_reg[0]      ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.938      ;
+; 0.787 ; BCD_binario:inst|uni_reg[0]      ; BCD_binario:inst|uni_reg[2]      ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.939      ;
+; 0.787 ; BCD_binario:inst|state.shift     ; BCD_binario:inst|uni_reg[2]      ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.939      ;
+; 0.789 ; BCD_binario:inst|state.shift     ; BCD_binario:inst|uni_reg[3]      ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.941      ;
+; 0.792 ; BCD_binario:inst|state.shift     ; BCD_binario:inst|dec_reg[3]      ; CLK          ; CLK         ; 0.000        ; 0.001      ; 0.945      ;
+; 0.797 ; BCD_binario:inst|uni_reg[2]      ; BCD_binario:inst|uni_reg[3]      ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.949      ;
+; 0.800 ; BCD_binario:inst|i[0]            ; BCD_binario:inst|state.rest      ; CLK          ; CLK         ; 0.000        ; 0.001      ; 0.953      ;
+; 0.837 ; BCD_binario:inst|uni_reg[1]      ; BCD_binario:inst|uni_reg[3]      ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.989      ;
+; 0.865 ; BCD_binario:inst|state.rest      ; BCD_binario:inst|uni_reg[1]      ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.017      ;
+; 0.865 ; BCD_binario:inst|state.rest      ; BCD_binario:inst|uni_reg[0]      ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.017      ;
+; 0.901 ; BCD_binario:inst|uni_reg[3]      ; BCD_binario:inst|uni_reg[1]      ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.053      ;
+; 0.901 ; BCD_binario:inst|uni_reg[3]      ; BCD_binario:inst|uni_reg[0]      ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.053      ;
+; 0.957 ; BCD_binario:inst|uni_reg[2]      ; BCD_binario:inst|uni_reg[0]      ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.109      ;
+; 1.031 ; BCD_binario:inst|dec_reg[2]      ; BCD_binario:inst|dec_reg[0]      ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.183      ;
++-------+----------------------------------+----------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++-------------------------------------------------------------------------------------------------------------------+
+; Fast Model Minimum Pulse Width: 'CLK'                                                                             ;
++--------+--------------+----------------+------------------+-------+------------+----------------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock ; Clock Edge ; Target                           ;
++--------+--------------+----------------+------------------+-------+------------+----------------------------------+
+; -1.380 ; 1.000        ; 2.380          ; Port Rate        ; CLK   ; Rise       ; CLK                              ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; BCD_binario:inst|binary_reg[0]   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; BCD_binario:inst|binary_reg[0]   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; BCD_binario:inst|binary_reg[1]   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; BCD_binario:inst|binary_reg[1]   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; BCD_binario:inst|binary_reg[2]   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; BCD_binario:inst|binary_reg[2]   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; BCD_binario:inst|binary_reg[3]   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; BCD_binario:inst|binary_reg[3]   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; BCD_binario:inst|binary_reg[4]   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; BCD_binario:inst|binary_reg[4]   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; BCD_binario:inst|binary_reg[5]   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; BCD_binario:inst|binary_reg[5]   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; BCD_binario:inst|binary_reg[6]   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; BCD_binario:inst|binary_reg[6]   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; BCD_binario:inst|binary_reg[7]   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; BCD_binario:inst|binary_reg[7]   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; BCD_binario:inst|cent_reg[0]     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; BCD_binario:inst|cent_reg[0]     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; BCD_binario:inst|cent_reg[1]     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; BCD_binario:inst|cent_reg[1]     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; BCD_binario:inst|cent_reg[2]     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; BCD_binario:inst|cent_reg[2]     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; BCD_binario:inst|cent_reg[3]     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; BCD_binario:inst|cent_reg[3]     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; BCD_binario:inst|dec_reg[0]      ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; BCD_binario:inst|dec_reg[0]      ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; BCD_binario:inst|dec_reg[1]      ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; BCD_binario:inst|dec_reg[1]      ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; BCD_binario:inst|dec_reg[2]      ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; BCD_binario:inst|dec_reg[2]      ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; BCD_binario:inst|dec_reg[3]      ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; BCD_binario:inst|dec_reg[3]      ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; BCD_binario:inst|i[0]            ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; BCD_binario:inst|i[0]            ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; BCD_binario:inst|i[1]            ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; BCD_binario:inst|i[1]            ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; BCD_binario:inst|i[2]            ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; BCD_binario:inst|i[2]            ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; BCD_binario:inst|state.check_sum ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; BCD_binario:inst|state.check_sum ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; BCD_binario:inst|state.idle      ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; BCD_binario:inst|state.idle      ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; BCD_binario:inst|state.rest      ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; BCD_binario:inst|state.rest      ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; BCD_binario:inst|state.shift     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; BCD_binario:inst|state.shift     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; BCD_binario:inst|uni_reg[0]      ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; BCD_binario:inst|uni_reg[0]      ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; BCD_binario:inst|uni_reg[1]      ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; BCD_binario:inst|uni_reg[1]      ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; BCD_binario:inst|uni_reg[2]      ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; BCD_binario:inst|uni_reg[2]      ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; BCD_binario:inst|uni_reg[3]      ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; BCD_binario:inst|uni_reg[3]      ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; decodificador:inst1|num_int[0]   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; decodificador:inst1|num_int[0]   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; decodificador:inst1|num_int[1]   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; decodificador:inst1|num_int[1]   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; decodificador:inst1|num_int[2]   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; decodificador:inst1|num_int[2]   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; decodificador:inst1|num_int[3]   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; decodificador:inst1|num_int[3]   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; decodificador:inst2|num_int[0]   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; decodificador:inst2|num_int[0]   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; decodificador:inst2|num_int[1]   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; decodificador:inst2|num_int[1]   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; decodificador:inst2|num_int[2]   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; decodificador:inst2|num_int[2]   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; decodificador:inst2|num_int[3]   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; decodificador:inst2|num_int[3]   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; decodificador:inst3|num_int[0]   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; decodificador:inst3|num_int[0]   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; decodificador:inst3|num_int[1]   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; decodificador:inst3|num_int[1]   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; decodificador:inst3|num_int[2]   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; decodificador:inst3|num_int[2]   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; decodificador:inst3|num_int[3]   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; decodificador:inst3|num_int[3]   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK   ; Rise       ; CLK|combout                      ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLK   ; Rise       ; CLK|combout                      ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK   ; Rise       ; CLK~clkctrl|inclk[0]             ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLK   ; Rise       ; CLK~clkctrl|inclk[0]             ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK   ; Rise       ; CLK~clkctrl|outclk               ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLK   ; Rise       ; CLK~clkctrl|outclk               ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK   ; Rise       ; inst1|num_int[0]|clk             ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLK   ; Rise       ; inst1|num_int[0]|clk             ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK   ; Rise       ; inst1|num_int[1]|clk             ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLK   ; Rise       ; inst1|num_int[1]|clk             ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK   ; Rise       ; inst1|num_int[2]|clk             ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLK   ; Rise       ; inst1|num_int[2]|clk             ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK   ; Rise       ; inst1|num_int[3]|clk             ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLK   ; Rise       ; inst1|num_int[3]|clk             ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK   ; Rise       ; inst2|num_int[0]|clk             ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLK   ; Rise       ; inst2|num_int[0]|clk             ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK   ; Rise       ; inst2|num_int[1]|clk             ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLK   ; Rise       ; inst2|num_int[1]|clk             ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK   ; Rise       ; inst2|num_int[2]|clk             ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLK   ; Rise       ; inst2|num_int[2]|clk             ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK   ; Rise       ; inst2|num_int[3]|clk             ;
++--------+--------------+----------------+------------------+-------+------------+----------------------------------+
+
+
++----------------------------------------------------------------------------+
+; Setup Times                                                                ;
++--------------+------------+--------+--------+------------+-----------------+
+; Data Port    ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++--------------+------------+--------+--------+------------+-----------------+
+; CENTENAS[*]  ; CLK        ; 2.720  ; 2.720  ; Rise       ; CLK             ;
+;  CENTENAS[0] ; CLK        ; 2.705  ; 2.705  ; Rise       ; CLK             ;
+;  CENTENAS[1] ; CLK        ; 2.641  ; 2.641  ; Rise       ; CLK             ;
+;  CENTENAS[2] ; CLK        ; 2.720  ; 2.720  ; Rise       ; CLK             ;
+;  CENTENAS[3] ; CLK        ; 2.701  ; 2.701  ; Rise       ; CLK             ;
+; CHARGE       ; CLK        ; 3.302  ; 3.302  ; Rise       ; CLK             ;
+; DECENAS[*]   ; CLK        ; 0.767  ; 0.767  ; Rise       ; CLK             ;
+;  DECENAS[0]  ; CLK        ; 0.385  ; 0.385  ; Rise       ; CLK             ;
+;  DECENAS[1]  ; CLK        ; 0.323  ; 0.323  ; Rise       ; CLK             ;
+;  DECENAS[2]  ; CLK        ; 0.739  ; 0.739  ; Rise       ; CLK             ;
+;  DECENAS[3]  ; CLK        ; 0.767  ; 0.767  ; Rise       ; CLK             ;
+; RESET        ; CLK        ; 2.802  ; 2.802  ; Rise       ; CLK             ;
+; START        ; CLK        ; 3.265  ; 3.265  ; Rise       ; CLK             ;
+; UNIDADES[*]  ; CLK        ; 0.733  ; 0.733  ; Rise       ; CLK             ;
+;  UNIDADES[0] ; CLK        ; -0.205 ; -0.205 ; Rise       ; CLK             ;
+;  UNIDADES[1] ; CLK        ; -0.176 ; -0.176 ; Rise       ; CLK             ;
+;  UNIDADES[2] ; CLK        ; 0.146  ; 0.146  ; Rise       ; CLK             ;
+;  UNIDADES[3] ; CLK        ; 0.733  ; 0.733  ; Rise       ; CLK             ;
++--------------+------------+--------+--------+------------+-----------------+
+
+
++----------------------------------------------------------------------------+
+; Hold Times                                                                 ;
++--------------+------------+--------+--------+------------+-----------------+
+; Data Port    ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++--------------+------------+--------+--------+------------+-----------------+
+; CENTENAS[*]  ; CLK        ; -2.491 ; -2.491 ; Rise       ; CLK             ;
+;  CENTENAS[0] ; CLK        ; -2.560 ; -2.560 ; Rise       ; CLK             ;
+;  CENTENAS[1] ; CLK        ; -2.491 ; -2.491 ; Rise       ; CLK             ;
+;  CENTENAS[2] ; CLK        ; -2.595 ; -2.595 ; Rise       ; CLK             ;
+;  CENTENAS[3] ; CLK        ; -2.523 ; -2.523 ; Rise       ; CLK             ;
+; CHARGE       ; CLK        ; -2.114 ; -2.114 ; Rise       ; CLK             ;
+; DECENAS[*]   ; CLK        ; -0.159 ; -0.159 ; Rise       ; CLK             ;
+;  DECENAS[0]  ; CLK        ; -0.218 ; -0.218 ; Rise       ; CLK             ;
+;  DECENAS[1]  ; CLK        ; -0.159 ; -0.159 ; Rise       ; CLK             ;
+;  DECENAS[2]  ; CLK        ; -0.242 ; -0.242 ; Rise       ; CLK             ;
+;  DECENAS[3]  ; CLK        ; -0.237 ; -0.237 ; Rise       ; CLK             ;
+; RESET        ; CLK        ; -2.324 ; -2.324 ; Rise       ; CLK             ;
+; START        ; CLK        ; -2.258 ; -2.258 ; Rise       ; CLK             ;
+; UNIDADES[*]  ; CLK        ; 0.374  ; 0.374  ; Rise       ; CLK             ;
+;  UNIDADES[0] ; CLK        ; 0.374  ; 0.374  ; Rise       ; CLK             ;
+;  UNIDADES[1] ; CLK        ; 0.350  ; 0.350  ; Rise       ; CLK             ;
+;  UNIDADES[2] ; CLK        ; 0.313  ; 0.313  ; Rise       ; CLK             ;
+;  UNIDADES[3] ; CLK        ; -0.386 ; -0.386 ; Rise       ; CLK             ;
++--------------+------------+--------+--------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Clock to Output Times                                                   ;
++-------------+------------+-------+-------+------------+-----------------+
+; Data Port   ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-------------+------------+-------+-------+------------+-----------------+
+; Centena[*]  ; CLK        ; 4.077 ; 4.077 ; Rise       ; CLK             ;
+;  Centena[0] ; CLK        ; 3.907 ; 3.907 ; Rise       ; CLK             ;
+;  Centena[1] ; CLK        ; 4.002 ; 4.002 ; Rise       ; CLK             ;
+;  Centena[2] ; CLK        ; 4.033 ; 4.033 ; Rise       ; CLK             ;
+;  Centena[3] ; CLK        ; 3.927 ; 3.927 ; Rise       ; CLK             ;
+;  Centena[4] ; CLK        ; 4.056 ; 4.056 ; Rise       ; CLK             ;
+;  Centena[5] ; CLK        ; 4.033 ; 4.033 ; Rise       ; CLK             ;
+;  Centena[6] ; CLK        ; 4.077 ; 4.077 ; Rise       ; CLK             ;
+; Decena[*]   ; CLK        ; 4.230 ; 4.230 ; Rise       ; CLK             ;
+;  Decena[0]  ; CLK        ; 4.221 ; 4.221 ; Rise       ; CLK             ;
+;  Decena[1]  ; CLK        ; 4.230 ; 4.230 ; Rise       ; CLK             ;
+;  Decena[2]  ; CLK        ; 4.094 ; 4.094 ; Rise       ; CLK             ;
+;  Decena[3]  ; CLK        ; 4.066 ; 4.066 ; Rise       ; CLK             ;
+;  Decena[4]  ; CLK        ; 4.057 ; 4.057 ; Rise       ; CLK             ;
+;  Decena[5]  ; CLK        ; 3.955 ; 3.955 ; Rise       ; CLK             ;
+;  Decena[6]  ; CLK        ; 4.003 ; 4.003 ; Rise       ; CLK             ;
+; Unidade[*]  ; CLK        ; 5.218 ; 5.218 ; Rise       ; CLK             ;
+;  Unidade[0] ; CLK        ; 5.172 ; 5.172 ; Rise       ; CLK             ;
+;  Unidade[1] ; CLK        ; 5.094 ; 5.094 ; Rise       ; CLK             ;
+;  Unidade[2] ; CLK        ; 5.031 ; 5.031 ; Rise       ; CLK             ;
+;  Unidade[3] ; CLK        ; 5.218 ; 5.218 ; Rise       ; CLK             ;
+;  Unidade[4] ; CLK        ; 5.153 ; 5.153 ; Rise       ; CLK             ;
+;  Unidade[5] ; CLK        ; 5.000 ; 5.000 ; Rise       ; CLK             ;
+;  Unidade[6] ; CLK        ; 4.701 ; 4.701 ; Rise       ; CLK             ;
+; binary[*]   ; CLK        ; 3.997 ; 3.997 ; Rise       ; CLK             ;
+;  binary[0]  ; CLK        ; 3.806 ; 3.806 ; Rise       ; CLK             ;
+;  binary[1]  ; CLK        ; 3.903 ; 3.903 ; Rise       ; CLK             ;
+;  binary[2]  ; CLK        ; 3.997 ; 3.997 ; Rise       ; CLK             ;
+;  binary[3]  ; CLK        ; 3.791 ; 3.791 ; Rise       ; CLK             ;
+;  binary[4]  ; CLK        ; 3.828 ; 3.828 ; Rise       ; CLK             ;
+;  binary[5]  ; CLK        ; 3.819 ; 3.819 ; Rise       ; CLK             ;
+;  binary[6]  ; CLK        ; 3.910 ; 3.910 ; Rise       ; CLK             ;
+;  binary[7]  ; CLK        ; 3.901 ; 3.901 ; Rise       ; CLK             ;
++-------------+------------+-------+-------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                           ;
++-------------+------------+-------+-------+------------+-----------------+
+; Data Port   ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-------------+------------+-------+-------+------------+-----------------+
+; Centena[*]  ; CLK        ; 3.754 ; 3.754 ; Rise       ; CLK             ;
+;  Centena[0] ; CLK        ; 3.754 ; 3.754 ; Rise       ; CLK             ;
+;  Centena[1] ; CLK        ; 3.852 ; 3.852 ; Rise       ; CLK             ;
+;  Centena[2] ; CLK        ; 3.897 ; 3.897 ; Rise       ; CLK             ;
+;  Centena[3] ; CLK        ; 3.770 ; 3.770 ; Rise       ; CLK             ;
+;  Centena[4] ; CLK        ; 3.906 ; 3.906 ; Rise       ; CLK             ;
+;  Centena[5] ; CLK        ; 3.894 ; 3.894 ; Rise       ; CLK             ;
+;  Centena[6] ; CLK        ; 3.920 ; 3.920 ; Rise       ; CLK             ;
+; Decena[*]   ; CLK        ; 3.640 ; 3.640 ; Rise       ; CLK             ;
+;  Decena[0]  ; CLK        ; 3.896 ; 3.896 ; Rise       ; CLK             ;
+;  Decena[1]  ; CLK        ; 3.924 ; 3.924 ; Rise       ; CLK             ;
+;  Decena[2]  ; CLK        ; 3.777 ; 3.777 ; Rise       ; CLK             ;
+;  Decena[3]  ; CLK        ; 3.757 ; 3.757 ; Rise       ; CLK             ;
+;  Decena[4]  ; CLK        ; 3.752 ; 3.752 ; Rise       ; CLK             ;
+;  Decena[5]  ; CLK        ; 3.640 ; 3.640 ; Rise       ; CLK             ;
+;  Decena[6]  ; CLK        ; 3.679 ; 3.679 ; Rise       ; CLK             ;
+; Unidade[*]  ; CLK        ; 4.480 ; 4.480 ; Rise       ; CLK             ;
+;  Unidade[0] ; CLK        ; 4.951 ; 4.951 ; Rise       ; CLK             ;
+;  Unidade[1] ; CLK        ; 4.873 ; 4.873 ; Rise       ; CLK             ;
+;  Unidade[2] ; CLK        ; 4.811 ; 4.811 ; Rise       ; CLK             ;
+;  Unidade[3] ; CLK        ; 4.997 ; 4.997 ; Rise       ; CLK             ;
+;  Unidade[4] ; CLK        ; 4.933 ; 4.933 ; Rise       ; CLK             ;
+;  Unidade[5] ; CLK        ; 4.779 ; 4.779 ; Rise       ; CLK             ;
+;  Unidade[6] ; CLK        ; 4.480 ; 4.480 ; Rise       ; CLK             ;
+; binary[*]   ; CLK        ; 3.791 ; 3.791 ; Rise       ; CLK             ;
+;  binary[0]  ; CLK        ; 3.806 ; 3.806 ; Rise       ; CLK             ;
+;  binary[1]  ; CLK        ; 3.903 ; 3.903 ; Rise       ; CLK             ;
+;  binary[2]  ; CLK        ; 3.997 ; 3.997 ; Rise       ; CLK             ;
+;  binary[3]  ; CLK        ; 3.791 ; 3.791 ; Rise       ; CLK             ;
+;  binary[4]  ; CLK        ; 3.828 ; 3.828 ; Rise       ; CLK             ;
+;  binary[5]  ; CLK        ; 3.819 ; 3.819 ; Rise       ; CLK             ;
+;  binary[6]  ; CLK        ; 3.910 ; 3.910 ; Rise       ; CLK             ;
+;  binary[7]  ; CLK        ; 3.901 ; 3.901 ; Rise       ; CLK             ;
++-------------+------------+-------+-------+------------+-----------------+
+
+
++-------------------------------------------------------------------------------+
+; Multicorner Timing Analysis Summary                                           ;
++------------------+---------+-------+----------+---------+---------------------+
+; Clock            ; Setup   ; Hold  ; Recovery ; Removal ; Minimum Pulse Width ;
++------------------+---------+-------+----------+---------+---------------------+
+; Worst-case Slack ; -1.467  ; 0.215 ; N/A      ; N/A     ; -1.380              ;
+;  CLK             ; -1.467  ; 0.215 ; N/A      ; N/A     ; -1.380              ;
+; Design-wide TNS  ; -21.798 ; 0.0   ; 0.0      ; 0.0     ; -40.38              ;
+;  CLK             ; -21.798 ; 0.000 ; N/A      ; N/A     ; -40.380             ;
++------------------+---------+-------+----------+---------+---------------------+
+
+
++--------------------------------------------------------------------------+
+; Setup Times                                                              ;
++--------------+------------+-------+-------+------------+-----------------+
+; Data Port    ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++--------------+------------+-------+-------+------------+-----------------+
+; CENTENAS[*]  ; CLK        ; 5.075 ; 5.075 ; Rise       ; CLK             ;
+;  CENTENAS[0] ; CLK        ; 4.961 ; 4.961 ; Rise       ; CLK             ;
+;  CENTENAS[1] ; CLK        ; 4.882 ; 4.882 ; Rise       ; CLK             ;
+;  CENTENAS[2] ; CLK        ; 5.075 ; 5.075 ; Rise       ; CLK             ;
+;  CENTENAS[3] ; CLK        ; 5.061 ; 5.061 ; Rise       ; CLK             ;
+; CHARGE       ; CLK        ; 6.374 ; 6.374 ; Rise       ; CLK             ;
+; DECENAS[*]   ; CLK        ; 2.154 ; 2.154 ; Rise       ; CLK             ;
+;  DECENAS[0]  ; CLK        ; 1.215 ; 1.215 ; Rise       ; CLK             ;
+;  DECENAS[1]  ; CLK        ; 1.134 ; 1.134 ; Rise       ; CLK             ;
+;  DECENAS[2]  ; CLK        ; 2.102 ; 2.102 ; Rise       ; CLK             ;
+;  DECENAS[3]  ; CLK        ; 2.154 ; 2.154 ; Rise       ; CLK             ;
+; RESET        ; CLK        ; 5.214 ; 5.214 ; Rise       ; CLK             ;
+; START        ; CLK        ; 6.290 ; 6.290 ; Rise       ; CLK             ;
+; UNIDADES[*]  ; CLK        ; 2.090 ; 2.090 ; Rise       ; CLK             ;
+;  UNIDADES[0] ; CLK        ; 0.203 ; 0.203 ; Rise       ; CLK             ;
+;  UNIDADES[1] ; CLK        ; 0.282 ; 0.282 ; Rise       ; CLK             ;
+;  UNIDADES[2] ; CLK        ; 1.042 ; 1.042 ; Rise       ; CLK             ;
+;  UNIDADES[3] ; CLK        ; 2.090 ; 2.090 ; Rise       ; CLK             ;
++--------------+------------+-------+-------+------------+-----------------+
+
+
++----------------------------------------------------------------------------+
+; Hold Times                                                                 ;
++--------------+------------+--------+--------+------------+-----------------+
+; Data Port    ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++--------------+------------+--------+--------+------------+-----------------+
+; CENTENAS[*]  ; CLK        ; -2.491 ; -2.491 ; Rise       ; CLK             ;
+;  CENTENAS[0] ; CLK        ; -2.560 ; -2.560 ; Rise       ; CLK             ;
+;  CENTENAS[1] ; CLK        ; -2.491 ; -2.491 ; Rise       ; CLK             ;
+;  CENTENAS[2] ; CLK        ; -2.595 ; -2.595 ; Rise       ; CLK             ;
+;  CENTENAS[3] ; CLK        ; -2.523 ; -2.523 ; Rise       ; CLK             ;
+; CHARGE       ; CLK        ; -2.114 ; -2.114 ; Rise       ; CLK             ;
+; DECENAS[*]   ; CLK        ; -0.159 ; -0.159 ; Rise       ; CLK             ;
+;  DECENAS[0]  ; CLK        ; -0.218 ; -0.218 ; Rise       ; CLK             ;
+;  DECENAS[1]  ; CLK        ; -0.159 ; -0.159 ; Rise       ; CLK             ;
+;  DECENAS[2]  ; CLK        ; -0.242 ; -0.242 ; Rise       ; CLK             ;
+;  DECENAS[3]  ; CLK        ; -0.237 ; -0.237 ; Rise       ; CLK             ;
+; RESET        ; CLK        ; -2.324 ; -2.324 ; Rise       ; CLK             ;
+; START        ; CLK        ; -2.258 ; -2.258 ; Rise       ; CLK             ;
+; UNIDADES[*]  ; CLK        ; 0.374  ; 0.374  ; Rise       ; CLK             ;
+;  UNIDADES[0] ; CLK        ; 0.374  ; 0.374  ; Rise       ; CLK             ;
+;  UNIDADES[1] ; CLK        ; 0.350  ; 0.350  ; Rise       ; CLK             ;
+;  UNIDADES[2] ; CLK        ; 0.313  ; 0.313  ; Rise       ; CLK             ;
+;  UNIDADES[3] ; CLK        ; -0.386 ; -0.386 ; Rise       ; CLK             ;
++--------------+------------+--------+--------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Clock to Output Times                                                   ;
++-------------+------------+-------+-------+------------+-----------------+
+; Data Port   ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-------------+------------+-------+-------+------------+-----------------+
+; Centena[*]  ; CLK        ; 7.403 ; 7.403 ; Rise       ; CLK             ;
+;  Centena[0] ; CLK        ; 7.017 ; 7.017 ; Rise       ; CLK             ;
+;  Centena[1] ; CLK        ; 7.306 ; 7.306 ; Rise       ; CLK             ;
+;  Centena[2] ; CLK        ; 7.343 ; 7.343 ; Rise       ; CLK             ;
+;  Centena[3] ; CLK        ; 7.075 ; 7.075 ; Rise       ; CLK             ;
+;  Centena[4] ; CLK        ; 7.377 ; 7.377 ; Rise       ; CLK             ;
+;  Centena[5] ; CLK        ; 7.345 ; 7.345 ; Rise       ; CLK             ;
+;  Centena[6] ; CLK        ; 7.403 ; 7.403 ; Rise       ; CLK             ;
+; Decena[*]   ; CLK        ; 7.678 ; 7.678 ; Rise       ; CLK             ;
+;  Decena[0]  ; CLK        ; 7.645 ; 7.645 ; Rise       ; CLK             ;
+;  Decena[1]  ; CLK        ; 7.678 ; 7.678 ; Rise       ; CLK             ;
+;  Decena[2]  ; CLK        ; 7.478 ; 7.478 ; Rise       ; CLK             ;
+;  Decena[3]  ; CLK        ; 7.455 ; 7.455 ; Rise       ; CLK             ;
+;  Decena[4]  ; CLK        ; 7.408 ; 7.408 ; Rise       ; CLK             ;
+;  Decena[5]  ; CLK        ; 7.188 ; 7.188 ; Rise       ; CLK             ;
+;  Decena[6]  ; CLK        ; 7.262 ; 7.262 ; Rise       ; CLK             ;
+; Unidade[*]  ; CLK        ; 9.810 ; 9.810 ; Rise       ; CLK             ;
+;  Unidade[0] ; CLK        ; 9.696 ; 9.696 ; Rise       ; CLK             ;
+;  Unidade[1] ; CLK        ; 9.508 ; 9.508 ; Rise       ; CLK             ;
+;  Unidade[2] ; CLK        ; 9.453 ; 9.453 ; Rise       ; CLK             ;
+;  Unidade[3] ; CLK        ; 9.810 ; 9.810 ; Rise       ; CLK             ;
+;  Unidade[4] ; CLK        ; 9.711 ; 9.711 ; Rise       ; CLK             ;
+;  Unidade[5] ; CLK        ; 9.276 ; 9.276 ; Rise       ; CLK             ;
+;  Unidade[6] ; CLK        ; 8.605 ; 8.605 ; Rise       ; CLK             ;
+; binary[*]   ; CLK        ; 7.132 ; 7.132 ; Rise       ; CLK             ;
+;  binary[0]  ; CLK        ; 6.675 ; 6.675 ; Rise       ; CLK             ;
+;  binary[1]  ; CLK        ; 6.905 ; 6.905 ; Rise       ; CLK             ;
+;  binary[2]  ; CLK        ; 7.132 ; 7.132 ; Rise       ; CLK             ;
+;  binary[3]  ; CLK        ; 6.668 ; 6.668 ; Rise       ; CLK             ;
+;  binary[4]  ; CLK        ; 6.703 ; 6.703 ; Rise       ; CLK             ;
+;  binary[5]  ; CLK        ; 6.695 ; 6.695 ; Rise       ; CLK             ;
+;  binary[6]  ; CLK        ; 6.915 ; 6.915 ; Rise       ; CLK             ;
+;  binary[7]  ; CLK        ; 6.934 ; 6.934 ; Rise       ; CLK             ;
++-------------+------------+-------+-------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                           ;
++-------------+------------+-------+-------+------------+-----------------+
+; Data Port   ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-------------+------------+-------+-------+------------+-----------------+
+; Centena[*]  ; CLK        ; 3.754 ; 3.754 ; Rise       ; CLK             ;
+;  Centena[0] ; CLK        ; 3.754 ; 3.754 ; Rise       ; CLK             ;
+;  Centena[1] ; CLK        ; 3.852 ; 3.852 ; Rise       ; CLK             ;
+;  Centena[2] ; CLK        ; 3.897 ; 3.897 ; Rise       ; CLK             ;
+;  Centena[3] ; CLK        ; 3.770 ; 3.770 ; Rise       ; CLK             ;
+;  Centena[4] ; CLK        ; 3.906 ; 3.906 ; Rise       ; CLK             ;
+;  Centena[5] ; CLK        ; 3.894 ; 3.894 ; Rise       ; CLK             ;
+;  Centena[6] ; CLK        ; 3.920 ; 3.920 ; Rise       ; CLK             ;
+; Decena[*]   ; CLK        ; 3.640 ; 3.640 ; Rise       ; CLK             ;
+;  Decena[0]  ; CLK        ; 3.896 ; 3.896 ; Rise       ; CLK             ;
+;  Decena[1]  ; CLK        ; 3.924 ; 3.924 ; Rise       ; CLK             ;
+;  Decena[2]  ; CLK        ; 3.777 ; 3.777 ; Rise       ; CLK             ;
+;  Decena[3]  ; CLK        ; 3.757 ; 3.757 ; Rise       ; CLK             ;
+;  Decena[4]  ; CLK        ; 3.752 ; 3.752 ; Rise       ; CLK             ;
+;  Decena[5]  ; CLK        ; 3.640 ; 3.640 ; Rise       ; CLK             ;
+;  Decena[6]  ; CLK        ; 3.679 ; 3.679 ; Rise       ; CLK             ;
+; Unidade[*]  ; CLK        ; 4.480 ; 4.480 ; Rise       ; CLK             ;
+;  Unidade[0] ; CLK        ; 4.951 ; 4.951 ; Rise       ; CLK             ;
+;  Unidade[1] ; CLK        ; 4.873 ; 4.873 ; Rise       ; CLK             ;
+;  Unidade[2] ; CLK        ; 4.811 ; 4.811 ; Rise       ; CLK             ;
+;  Unidade[3] ; CLK        ; 4.997 ; 4.997 ; Rise       ; CLK             ;
+;  Unidade[4] ; CLK        ; 4.933 ; 4.933 ; Rise       ; CLK             ;
+;  Unidade[5] ; CLK        ; 4.779 ; 4.779 ; Rise       ; CLK             ;
+;  Unidade[6] ; CLK        ; 4.480 ; 4.480 ; Rise       ; CLK             ;
+; binary[*]   ; CLK        ; 3.791 ; 3.791 ; Rise       ; CLK             ;
+;  binary[0]  ; CLK        ; 3.806 ; 3.806 ; Rise       ; CLK             ;
+;  binary[1]  ; CLK        ; 3.903 ; 3.903 ; Rise       ; CLK             ;
+;  binary[2]  ; CLK        ; 3.997 ; 3.997 ; Rise       ; CLK             ;
+;  binary[3]  ; CLK        ; 3.791 ; 3.791 ; Rise       ; CLK             ;
+;  binary[4]  ; CLK        ; 3.828 ; 3.828 ; Rise       ; CLK             ;
+;  binary[5]  ; CLK        ; 3.819 ; 3.819 ; Rise       ; CLK             ;
+;  binary[6]  ; CLK        ; 3.910 ; 3.910 ; Rise       ; CLK             ;
+;  binary[7]  ; CLK        ; 3.901 ; 3.901 ; Rise       ; CLK             ;
++-------------+------------+-------+-------+------------+-----------------+
+
+
++-------------------------------------------------------------------+
+; Setup Transfers                                                   ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; CLK        ; CLK      ; 185      ; 0        ; 0        ; 0        ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++-------------------------------------------------------------------+
+; Hold Transfers                                                    ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; CLK        ; CLK      ; 185      ; 0        ; 0        ; 0        ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
+---------------
+; Report TCCS ;
+---------------
+No dedicated SERDES Transmitter circuitry present in device or used in design
+
+
+---------------
+; Report RSKM ;
+---------------
+No dedicated SERDES Receiver circuitry present in device or used in design
+
+
++------------------------------------------------+
+; Unconstrained Paths                            ;
++---------------------------------+-------+------+
+; Property                        ; Setup ; Hold ;
++---------------------------------+-------+------+
+; Illegal Clocks                  ; 0     ; 0    ;
+; Unconstrained Clocks            ; 0     ; 0    ;
+; Unconstrained Input Ports       ; 15    ; 15   ;
+; Unconstrained Input Port Paths  ; 107   ; 107  ;
+; Unconstrained Output Ports      ; 29    ; 29   ;
+; Unconstrained Output Port Paths ; 92    ; 92   ;
++---------------------------------+-------+------+
+
+
++------------------------------------+
+; TimeQuest Timing Analyzer Messages ;
++------------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit TimeQuest Timing Analyzer
+    Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+    Info: Processing started: Mon Jun 24 13:57:31 2024
+Info: Command: quartus_sta BCD_binario -c BCD_binario
+Info: qsta_default_script.tcl version: #1
+Warning (20028): Parallel compilation is not licensed and has been disabled
+Info (21077): Low junction temperature is 0 degrees C
+Info (21077): High junction temperature is 85 degrees C
+Critical Warning (332012): Synopsys Design Constraints File file not found: 'BCD_binario.sdc'. A Synopsys Design Constraints File is required by the TimeQuest Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
+Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
+Info (332105): Deriving Clocks
+    Info (332105): create_clock -period 1.000 -name CLK CLK
+Info: Found TIMEQUEST_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
+Info: Analyzing Slow Model
+Critical Warning (332148): Timing requirements not met
+Info (332146): Worst-case setup slack is -1.467
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -1.467       -21.798 CLK 
+Info (332146): Worst-case hold slack is 0.391
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):     0.391         0.000 CLK 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -1.380
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -1.380       -40.380 CLK 
+Info (332001): The selected device family is not supported by the report_metastability command.
+Info: Analyzing Fast Model
+Critical Warning (332148): Timing requirements not met
+Info (332146): Worst-case setup slack is -0.186
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -0.186        -0.852 CLK 
+Info (332146): Worst-case hold slack is 0.215
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):     0.215         0.000 CLK 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -1.380
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -1.380       -40.380 CLK 
+Info (332001): The selected device family is not supported by the report_metastability command.
+Info (332102): Design is not fully constrained for setup requirements
+Info (332102): Design is not fully constrained for hold requirements
+Info: Quartus II 64-Bit TimeQuest Timing Analyzer was successful. 0 errors, 4 warnings
+    Info: Peak virtual memory: 399 megabytes
+    Info: Processing ended: Mon Jun 24 13:57:31 2024
+    Info: Elapsed time: 00:00:00
+    Info: Total CPU time (on all processors): 00:00:01
+
+

@@ -1,0 +1,11 @@
+
+State Machine - |Block1|Proyect4:inst|state
+Name state.final state.r_b state.b_mayor state.r_a state.a_mayor state.dato_b state.dato_a state.idle 
+state.idle 0 0 0 0 0 0 0 0 
+state.dato_a 0 0 0 0 0 0 1 1 
+state.dato_b 0 0 0 0 0 1 0 1 
+state.a_mayor 0 0 0 0 1 0 0 1 
+state.r_a 0 0 0 1 0 0 0 1 
+state.b_mayor 0 0 1 0 0 0 0 1 
+state.r_b 0 1 0 0 0 0 0 1 
+state.final 1 0 0 0 0 0 0 1 

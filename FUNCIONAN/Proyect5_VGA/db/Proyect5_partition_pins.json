@@ -1,0 +1,129 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "HS",
+					"strict" : false
+				},
+				{
+					"name" : "VS",
+					"strict" : false
+				},
+				{
+					"name" : "BLANK",
+					"strict" : false
+				},
+				{
+					"name" : "VGA_CLK",
+					"strict" : false
+				},
+				{
+					"name" : "AZUL[9]",
+					"strict" : false
+				},
+				{
+					"name" : "AZUL[8]",
+					"strict" : false
+				},
+				{
+					"name" : "AZUL[7]",
+					"strict" : false
+				},
+				{
+					"name" : "AZUL[6]",
+					"strict" : false
+				},
+				{
+					"name" : "AZUL[5]",
+					"strict" : false
+				},
+				{
+					"name" : "AZUL[4]",
+					"strict" : false
+				},
+				{
+					"name" : "ROJO[9]",
+					"strict" : false
+				},
+				{
+					"name" : "ROJO[8]",
+					"strict" : false
+				},
+				{
+					"name" : "ROJO[7]",
+					"strict" : false
+				},
+				{
+					"name" : "ROJO[6]",
+					"strict" : false
+				},
+				{
+					"name" : "ROJO[5]",
+					"strict" : false
+				},
+				{
+					"name" : "ROJO[4]",
+					"strict" : false
+				},
+				{
+					"name" : "VERDE[9]",
+					"strict" : false
+				},
+				{
+					"name" : "VERDE[8]",
+					"strict" : false
+				},
+				{
+					"name" : "VERDE[7]",
+					"strict" : false
+				},
+				{
+					"name" : "VERDE[6]",
+					"strict" : false
+				},
+				{
+					"name" : "VERDE[5]",
+					"strict" : false
+				},
+				{
+					"name" : "VERDE[4]",
+					"strict" : false
+				},
+				{
+					"name" : "Reset",
+					"strict" : false
+				},
+				{
+					"name" : "clk",
+					"strict" : false
+				},
+				{
+					"name" : "ROJO_back",
+					"strict" : false
+				},
+				{
+					"name" : "VERDE_back",
+					"strict" : false
+				},
+				{
+					"name" : "ROJO_cuad",
+					"strict" : false
+				},
+				{
+					"name" : "VERDE_cuad",
+					"strict" : false
+				},
+				{
+					"name" : "AZUL_back",
+					"strict" : false
+				},
+				{
+					"name" : "AZUL_cuad",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

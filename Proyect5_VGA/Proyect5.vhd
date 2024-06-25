@@ -9,9 +9,9 @@ entity Proyect5 is
 		rojo_in,verde_in,azul_in	 : in	std_logic_vector(5 downto 0);
 		reset	 : in	std_logic;
 	-- salidas
-		VGA_HS,VGA_VS,VGA_Blank,VGA_Synd,VGA_clk,h_blank_sim,v_blank_sim: out std_logic;
-		rojo_out,verde_out,azul_out : out std_logic_vector(9 downto 0)
-		
+		VGA_HS,VGA_VS,VGA_Blank,VGA_Sync,VGA_clk,h_blank_sim,v_blank_sim: out std_logic;
+		rojo_out,verde_out,azul_out : out std_logic_vector(9 downto 0);
+		fila,columna : out integer range 0 to 1023
 	);
 
 end entity;
@@ -25,8 +25,11 @@ architecture rtl of Proyect5 is
 	signal state   : state_type;
 	signal clk_2 : std_logic;
 	signal H_blank,V_blank : std_logic;
-	signal linea : integer range 0 to 1024:=1;
+	signal linea,col_int : integer range 0 to 1023:=0;
+	signal azul_reg,rojo_reg,verde_reg : std_logic_vector (5 downto 0):="000000";
 begin
+
+	VGA_Sync<='0'; -- VGA_sync debe estar en bajo parece
 
 	gen_clk : process(clk)
 	begin
@@ -38,15 +41,16 @@ begin
 	
 
 	
-	-- Logid to advande to the next state
+	-- generacion de la señal de sincronizacion horizontal
 	VGA_horizontal:process (all)
-		variable cont_int : integer range 0 to 1023;
+		variable cont_int : integer range 0 to 1023:=0;
 	begin
 		if reset = '0' then
 			state <= a ;
 			cont_int:=0;
-			linea<=1;
+			linea<=0;
 		elsif (rising_edge(clk_2)) then
+		col_int<=col_int+1;
 			case state is
 				when a=>
 					if cont_int<94 then
@@ -77,17 +81,19 @@ begin
 						cont_int:=cont_int+1;
 						state <= d;
 					else
-					linea<=linea+1;
-					if linea= 525 then
-						linea<=1;
-					end if;
+						linea<=linea+1;
+						if linea= 524 then
+							linea<=0;
+						end if;
 						cont_int:=0;
+						col_int<=0; -- reiniciamos el contador de columnas
 						state <= a;
 					end if;
 			end case;
 		end if;
 	end process;
-
+fila<=linea; -- da a la salida el numero de linea en el que se encuentra
+columna<=col_int;
 	-- Output depends solely on the durrent state
 	VGA_horizontal_salida:process (all)
 	begin
@@ -108,7 +114,7 @@ begin
 	end process;
 	h_blank_sim<=H_blank;
 		
-
+-- Generacion de las señal de sincronizacion vertical
 	VGA_vertical:process (all)
 	begin
 		if (rising_edge(clk)) then
@@ -128,4 +134,29 @@ begin
 		end if;
 	end process;
 	v_blank_sim<=v_blank;
+	
+	VGA_Blank<=v_blank and H_blank; --generacion de VGA_Blank
+	
+	
+	-- salida de color
+	-- el color solo puede cambiar en el flanco descendiente de VGA_Clk ya que este se latchea en el flanco ascendiente
+	-- de VGA_Clk
+	color_control: process(all)
+	begin
+	if reset='0' then
+		rojo_reg<="000000";
+		azul_reg<="000000";
+		verde_reg<="000000";
+	elsif falling_edge(clk_2) then
+		rojo_reg<=rojo_in;
+		azul_reg<=azul_in;
+		verde_reg<=verde_in;
+	end if;
+	end process;
+	rojo_out(9 downto 4)<=rojo_reg;
+	rojo_out(3 downto 0)<="0000";
+	azul_out(9 downto 4)<=azul_reg;
+	azul_out(3 downto 0)<="0000";
+	verde_out(9 downto 4)<=verde_reg;
+	verde_out(3 downto 0)<="0000";
 end rtl;
