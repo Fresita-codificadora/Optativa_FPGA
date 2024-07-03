@@ -37,12 +37,12 @@
 # -------------------------------------------------------------------------- #
 
 
-set_global_assignment -name FAMILY "Cyclone II"
-set_global_assignment -name DEVICE EP2C35F672C6
+set_global_assignment -name FAMILY "Cyclone IV E"
+set_global_assignment -name DEVICE EP4CE115F29C7
 set_global_assignment -name TOP_LEVEL_ENTITY Block1
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION 23.1STD.0
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "11:56:19  JUNE 16, 2024"
-set_global_assignment -name LAST_QUARTUS_VERSION "13.0 SP1"
+set_global_assignment -name LAST_QUARTUS_VERSION "23.1std.0 Lite Edition"
 set_global_assignment -name PROJECT_OUTPUT_DIRECTORY output_files
 set_global_assignment -name EDA_SIMULATION_TOOL "<None>"
 set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST OFF -section_id eda_board_design_timing
@@ -61,48 +61,60 @@ set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
 set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
 set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
 set_global_assignment -name STRATIX_DEVICE_IO_STANDARD "3.3-V LVTTL"
-set_location_assignment PIN_AE22 -to centenas[7]
-set_location_assignment PIN_Y24 -to centenas[6]
-set_location_assignment PIN_AB25 -to centenas[5]
-set_location_assignment PIN_AB26 -to centenas[4]
-set_location_assignment PIN_AC26 -to centenas[3]
-set_location_assignment PIN_AC25 -to centenas[2]
-set_location_assignment PIN_V22 -to centenas[1]
-set_location_assignment PIN_AB23 -to centenas[0]
-set_location_assignment PIN_P23 -to Charge
-set_location_assignment PIN_N2 -to CLK
-set_location_assignment PIN_AF22 -to decenas[7]
-set_location_assignment PIN_AB24 -to decenas[6]
-set_location_assignment PIN_AA23 -to decenas[5]
-set_location_assignment PIN_AA24 -to decenas[4]
-set_location_assignment PIN_Y22 -to decenas[3]
+set_location_assignment PIN_E21 -to centenas[7]
+set_location_assignment PIN_W28 -to centenas[6]
+set_location_assignment PIN_W27 -to centenas[5]
+set_location_assignment PIN_Y26 -to centenas[4]
+set_location_assignment PIN_W26 -to centenas[3]
+set_location_assignment PIN_Y25 -to centenas[2]
+set_location_assignment PIN_AA26 -to centenas[1]
+set_location_assignment PIN_AA25 -to centenas[0]
+set_location_assignment PIN_N21 -to Charge
+set_location_assignment PIN_Y2 -to CLK
+set_location_assignment PIN_E22 -to decenas[7]
+set_location_assignment PIN_U24 -to decenas[6]
+set_location_assignment PIN_U23 -to decenas[5]
+set_location_assignment PIN_W25 -to decenas[4]
+set_location_assignment PIN_W22 -to decenas[3]
 set_location_assignment PIN_W21 -to decenas[2]
-set_location_assignment PIN_V21 -to decenas[1]
-set_location_assignment PIN_V20 -to decenas[0]
-set_location_assignment PIN_AC21 -to Ent_led[7]
-set_location_assignment PIN_AD21 -to Ent_led[6]
-set_location_assignment PIN_AD23 -to Ent_led[5]
-set_location_assignment PIN_AD22 -to Ent_led[4]
-set_location_assignment PIN_AC22 -to Ent_led[3]
-set_location_assignment PIN_AB21 -to Ent_led[2]
-set_location_assignment PIN_AF23 -to Ent_led[1]
-set_location_assignment PIN_AE23 -to Ent_led[0]
-set_location_assignment PIN_C13 -to Entrada[7]
-set_location_assignment PIN_AC13 -to Entrada[6]
-set_location_assignment PIN_AD13 -to Entrada[5]
-set_location_assignment PIN_AF14 -to Entrada[4]
-set_location_assignment PIN_AE14 -to Entrada[3]
-set_location_assignment PIN_P25 -to Entrada[2]
-set_location_assignment PIN_N26 -to Entrada[1]
-set_location_assignment PIN_N25 -to Entrada[0]
-set_location_assignment PIN_G26 -to Reset
-set_location_assignment PIN_N23 -to Start
-set_location_assignment PIN_W19 -to unidades[7]
-set_location_assignment PIN_V13 -to unidades[6]
-set_location_assignment PIN_V14 -to unidades[5]
-set_location_assignment PIN_AE11 -to unidades[4]
-set_location_assignment PIN_AD11 -to unidades[3]
-set_location_assignment PIN_AC12 -to unidades[2]
-set_location_assignment PIN_AB12 -to unidades[1]
-set_location_assignment PIN_AF10 -to unidades[0]
+set_location_assignment PIN_Y22 -to decenas[1]
+set_location_assignment PIN_M24 -to decenas[0]
+set_location_assignment PIN_H19 -to Ent_led[7]
+set_location_assignment PIN_J19 -to Ent_led[6]
+set_location_assignment PIN_E18 -to Ent_led[5]
+set_location_assignment PIN_F18 -to Ent_led[4]
+set_location_assignment PIN_F21 -to Ent_led[3]
+set_location_assignment PIN_E19 -to Ent_led[2]
+set_location_assignment PIN_F19 -to Ent_led[1]
+set_location_assignment PIN_G19 -to Ent_led[0]
+set_location_assignment PIN_AB26 -to Entrada[7]
+set_location_assignment PIN_AD26 -to Entrada[6]
+set_location_assignment PIN_AC26 -to Entrada[5]
+set_location_assignment PIN_AB27 -to Entrada[4]
+set_location_assignment PIN_AD27 -to Entrada[3]
+set_location_assignment PIN_AC27 -to Entrada[2]
+set_location_assignment PIN_AC28 -to Entrada[1]
+set_location_assignment PIN_AB28 -to Entrada[0]
+set_location_assignment PIN_M23 -to Reset
+set_location_assignment PIN_M21 -to Start
+set_location_assignment PIN_E25 -to unidades[7]
+set_location_assignment PIN_H22 -to unidades[6]
+set_location_assignment PIN_J22 -to unidades[5]
+set_location_assignment PIN_L25 -to unidades[4]
+set_location_assignment PIN_L26 -to unidades[3]
+set_location_assignment PIN_E17 -to unidades[2]
+set_location_assignment PIN_F22 -to unidades[1]
+set_location_assignment PIN_G18 -to unidades[0]
+set_global_assignment -name ENABLE_OCT_DONE OFF
+set_global_assignment -name ENABLE_CONFIGURATION_PINS OFF
+set_global_assignment -name ENABLE_BOOT_SEL_PIN OFF
+set_global_assignment -name USE_CONFIGURATION_DEVICE ON
+set_global_assignment -name CYCLONEIII_CONFIGURATION_DEVICE EPCS64
+set_global_assignment -name CRC_ERROR_OPEN_DRAIN OFF
+set_global_assignment -name OUTPUT_IO_TIMING_NEAR_END_VMEAS "HALF VCCIO" -rise
+set_global_assignment -name OUTPUT_IO_TIMING_NEAR_END_VMEAS "HALF VCCIO" -fall
+set_global_assignment -name OUTPUT_IO_TIMING_FAR_END_VMEAS "HALF SIGNAL SWING" -rise
+set_global_assignment -name OUTPUT_IO_TIMING_FAR_END_VMEAS "HALF SIGNAL SWING" -fall
+set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
+set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

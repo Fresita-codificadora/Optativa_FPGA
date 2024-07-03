@@ -1,5 +1,11 @@
 
-State Machine - |c|Proyect5:inst1|state
+State Machine - |d|control_imagen:inst2|state
+Name state.columna_state state.fila_state state.idle 
+state.idle 0 0 0 
+state.fila_state 0 1 1 
+state.columna_state 1 0 1 
+
+State Machine - |d|Proyect5_8bit:inst|state
 Name state.d state.c state.b state.a 
 state.a 0 0 0 0 
 state.b 0 0 1 1 

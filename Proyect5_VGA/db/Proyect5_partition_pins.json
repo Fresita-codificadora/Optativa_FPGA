@@ -4,91 +4,111 @@
 			"name" : "Top",
 			"pins" : [
 				{
-					"name" : "HS",
+					"name" : "q[0]",
 					"strict" : false
 				},
 				{
-					"name" : "VS",
+					"name" : "q[1]",
 					"strict" : false
 				},
 				{
-					"name" : "BLANK",
+					"name" : "q[2]",
 					"strict" : false
 				},
 				{
-					"name" : "VGA_CLK",
+					"name" : "q[3]",
 					"strict" : false
 				},
 				{
-					"name" : "AZUL[9]",
+					"name" : "q[4]",
 					"strict" : false
 				},
 				{
-					"name" : "AZUL[8]",
+					"name" : "q[5]",
 					"strict" : false
 				},
 				{
-					"name" : "AZUL[7]",
+					"name" : "q[6]",
 					"strict" : false
 				},
 				{
-					"name" : "AZUL[6]",
+					"name" : "q[7]",
 					"strict" : false
 				},
 				{
-					"name" : "AZUL[5]",
+					"name" : "we",
 					"strict" : false
 				},
 				{
-					"name" : "AZUL[4]",
+					"name" : "inclock",
 					"strict" : false
 				},
 				{
-					"name" : "VERDE[9]",
+					"name" : "outclock",
 					"strict" : false
 				},
 				{
-					"name" : "VERDE[8]",
+					"name" : "data[0]",
 					"strict" : false
 				},
 				{
-					"name" : "VERDE[7]",
+					"name" : "address[0]",
 					"strict" : false
 				},
 				{
-					"name" : "VERDE[6]",
+					"name" : "address[1]",
 					"strict" : false
 				},
 				{
-					"name" : "VERDE[5]",
+					"name" : "address[2]",
 					"strict" : false
 				},
 				{
-					"name" : "VERDE[4]",
+					"name" : "address[3]",
 					"strict" : false
 				},
 				{
-					"name" : "Reset",
+					"name" : "address[4]",
 					"strict" : false
 				},
 				{
-					"name" : "clk",
+					"name" : "address[5]",
 					"strict" : false
 				},
 				{
-					"name" : "izq_btn",
+					"name" : "address[6]",
 					"strict" : false
 				},
 				{
-					"name" : "der_btn",
+					"name" : "address[7]",
 					"strict" : false
 				},
 				{
-					"name" : "arriba_btn",
+					"name" : "data[1]",
 					"strict" : false
 				},
 				{
-					"name" : "abajo_btn",
+					"name" : "data[2]",
+					"strict" : false
+				},
+				{
+					"name" : "data[3]",
+					"strict" : false
+				},
+				{
+					"name" : "data[4]",
+					"strict" : false
+				},
+				{
+					"name" : "data[5]",
+					"strict" : false
+				},
+				{
+					"name" : "data[6]",
+					"strict" : false
+				},
+				{
+					"name" : "data[7]",
 					"strict" : false
 				}
 			]

@@ -1,17 +1,10 @@
-onerror {exit -code 1}
+onerror {quit -f}
 vlib work
-vcom -work work Proyect5.vho
-vcom -work work Waveform2.vwf.vht
-vsim -voptargs="+acc" -c -t 1ps -L cycloneive -L altera -L altera_mf -L 220model -L sgate -L altera_lnsim work.decod_vhd_vec_tst
+vlog -work work Proyect5.vo
+vlog -work work Proyect5.vt
+vsim -novopt -c -t 1ps -L cycloneii_ver -L altera_ver -L altera_mf_ver -L 220model_ver -L sgate work.Test_cont_img_vlg_vec_tst
 vcd file -direction Proyect5.msim.vcd
-vcd add -internal decod_vhd_vec_tst/*
-vcd add -internal decod_vhd_vec_tst/i1/*
-proc simTimestamp {} {
-    echo "Simulation time: $::now ps"
-    if { [string equal running [runStatus]] } {
-        after 2500 simTimestamp
-    }
-}
-after 2500 simTimestamp
+vcd add -internal Test_cont_img_vlg_vec_tst/*
+vcd add -internal Test_cont_img_vlg_vec_tst/i1/*
+add wave /*
 run -all
-quit -f

@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Proyect_3_FSM
-Sun Jun 16 13:33:27 2024
+Thu Jun 27 19:35:05 2024
 Quartus Prime Version 23.1std.0 Build 991 11/28/2023 SC Lite Edition
 
 
@@ -46,7 +46,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                        ;
 +------------------------------------+------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sun Jun 16 13:33:27 2024          ;
+; Analysis & Synthesis Status        ; Successful - Thu Jun 27 19:35:05 2024          ;
 ; Quartus Prime Version              ; 23.1std.0 Build 991 11/28/2023 SC Lite Edition ;
 ; Revision Name                      ; Proyect_3_FSM                                  ;
 ; Top-level Entity Name              ; Block1                                         ;
@@ -68,6 +68,7 @@ https://fpgasoftware.intel.com/eula.
 +------------------------------------------------------------------+--------------------+--------------------+
 ; Option                                                           ; Setting            ; Default Value      ;
 +------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                           ; EP4CE115F29C7      ;                    ;
 ; Top-level entity name                                            ; Block1             ; Proyect_3_FSM      ;
 ; Family name                                                      ; Cyclone IV E       ; Cyclone V          ;
 ; VHDL Show LMF Mapping Messages                                   ; Off                ;                    ;
@@ -154,27 +155,27 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 4           ;
-; Maximum allowed            ; 2           ;
+; Number detected on machine ; 12          ;
+; Maximum allowed            ; 12          ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
-; Maximum used               ; 2           ;
+; Maximum used               ; 12          ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   0.0%      ;
+;     Processors 2-12        ;   0.0%      ;
 +----------------------------+-------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                       ;
-+----------------------------------+-----------------+------------------------------------+--------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                             ; Library ;
-+----------------------------------+-----------------+------------------------------------+--------------------------------------------------------------------------+---------+
-; Proyect_3_FSM.vhd                ; yes             ; User VHDL File                     ; C:/intelFPGA_lite/optativa/Optativa_FPGA/Proyect_3_FSM/Proyect_3_FSM.vhd ;         ;
-; decodificador.vhd                ; yes             ; User VHDL File                     ; C:/intelFPGA_lite/optativa/Optativa_FPGA/Proyect_3_FSM/decodificador.vhd ;         ;
-; Block1.bdf                       ; yes             ; User Block Diagram/Schematic File  ; C:/intelFPGA_lite/optativa/Optativa_FPGA/Proyect_3_FSM/Block1.bdf        ;         ;
-+----------------------------------+-----------------+------------------------------------+--------------------------------------------------------------------------+---------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                             ;
++----------------------------------+-----------------+------------------------------------+--------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                                   ; Library ;
++----------------------------------+-----------------+------------------------------------+--------------------------------------------------------------------------------+---------+
+; Proyect_3_FSM.vhd                ; yes             ; User VHDL File                     ; C:/Users/Gaspar/Documents/GitHub/optativa_FPGA/Proyect_3_FSM/Proyect_3_FSM.vhd ;         ;
+; decodificador.vhd                ; yes             ; User VHDL File                     ; C:/Users/Gaspar/Documents/GitHub/optativa_FPGA/Proyect_3_FSM/decodificador.vhd ;         ;
+; Block1.bdf                       ; yes             ; User Block Diagram/Schematic File  ; C:/Users/Gaspar/Documents/GitHub/optativa_FPGA/Proyect_3_FSM/Block1.bdf        ;         ;
++----------------------------------+-----------------+------------------------------------+--------------------------------------------------------------------------------+---------+
 
 
 +-----------------------------------------------------------+
@@ -269,8 +270,8 @@ Encoding Type:  One-Hot
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output              ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------+
-; 3:1                ; 7 bits    ; 14 LEs        ; 7 LEs                ; 7 LEs                  ; Yes        ; |Block1|Proyect_3_FSM:inst|input_reg[7] ;
 ; 3:1                ; 12 bits   ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; Yes        ; |Block1|decodificador:inst3|num_int[3]  ;
+; 3:1                ; 7 bits    ; 14 LEs        ; 7 LEs                ; 7 LEs                  ; Yes        ; |Block1|Proyect_3_FSM:inst|input_reg[7] ;
 ; 4:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |Block1|Proyect_3_FSM:inst|dec_reg[3]   ;
 ; 4:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |Block1|Proyect_3_FSM:inst|uni_reg[3]   ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------+
@@ -316,22 +317,22 @@ Encoding Type:  One-Hot
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 23.1std.0 Build 991 11/28/2023 SC Lite Edition
-    Info: Processing started: Sun Jun 16 13:33:10 2024
+    Info: Processing started: Thu Jun 27 19:34:59 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Proyect_3_FSM -c Proyect_3_FSM
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
+Info (20030): Parallel compilation is enabled and will use 12 of the 12 processors detected
 Info (12021): Found 2 design units, including 1 entities, in source file proyect_3_fsm.vhd
-    Info (12022): Found design unit 1: Proyect_3_FSM-rtl File: C:/intelFPGA_lite/optativa/Optativa_FPGA/Proyect_3_FSM/Proyect_3_FSM.vhd Line: 25
-    Info (12023): Found entity 1: Proyect_3_FSM File: C:/intelFPGA_lite/optativa/Optativa_FPGA/Proyect_3_FSM/Proyect_3_FSM.vhd Line: 12
+    Info (12022): Found design unit 1: Proyect_3_FSM-rtl File: C:/Users/Gaspar/Documents/GitHub/optativa_FPGA/Proyect_3_FSM/Proyect_3_FSM.vhd Line: 25
+    Info (12023): Found entity 1: Proyect_3_FSM File: C:/Users/Gaspar/Documents/GitHub/optativa_FPGA/Proyect_3_FSM/Proyect_3_FSM.vhd Line: 12
 Info (12021): Found 2 design units, including 1 entities, in source file decodificador.vhd
-    Info (12022): Found design unit 1: decodificador-arch File: C:/intelFPGA_lite/optativa/Optativa_FPGA/Proyect_3_FSM/decodificador.vhd Line: 12
-    Info (12023): Found entity 1: decodificador File: C:/intelFPGA_lite/optativa/Optativa_FPGA/Proyect_3_FSM/decodificador.vhd Line: 4
+    Info (12022): Found design unit 1: decodificador-arch File: C:/Users/Gaspar/Documents/GitHub/optativa_FPGA/Proyect_3_FSM/decodificador.vhd Line: 12
+    Info (12023): Found entity 1: decodificador File: C:/Users/Gaspar/Documents/GitHub/optativa_FPGA/Proyect_3_FSM/decodificador.vhd Line: 4
 Info (12021): Found 1 design units, including 1 entities, in source file block1.bdf
     Info (12023): Found entity 1: Block1
 Info (12127): Elaborating entity "Block1" for the top level hierarchy
 Info (12128): Elaborating entity "decodificador" for hierarchy "decodificador:inst3"
 Info (12128): Elaborating entity "Proyect_3_FSM" for hierarchy "Proyect_3_FSM:inst"
-Info (13000): Registers with preset signals will power-up high File: C:/intelFPGA_lite/optativa/Optativa_FPGA/Proyect_3_FSM/Proyect_3_FSM.vhd Line: 40
+Info (13000): Registers with preset signals will power-up high File: C:/Users/Gaspar/Documents/GitHub/optativa_FPGA/Proyect_3_FSM/Proyect_3_FSM.vhd Line: 40
 Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
 Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "centenas[7]" is stuck at VCC
@@ -345,9 +346,9 @@ Info (21057): Implemented 110 device resources after synthesis - the final resou
     Info (21059): Implemented 24 output pins
     Info (21061): Implemented 74 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 5 warnings
-    Info: Peak virtual memory: 4779 megabytes
-    Info: Processing ended: Sun Jun 16 13:33:27 2024
-    Info: Elapsed time: 00:00:17
-    Info: Total CPU time (on all processors): 00:00:36
+    Info: Peak virtual memory: 4857 megabytes
+    Info: Processing ended: Thu Jun 27 19:35:05 2024
+    Info: Elapsed time: 00:00:06
+    Info: Total CPU time (on all processors): 00:00:12
 
 

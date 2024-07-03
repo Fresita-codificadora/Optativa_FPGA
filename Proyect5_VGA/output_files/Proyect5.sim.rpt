@@ -1,0 +1,874 @@
+Simulator report for Proyect5
+Tue Jul 02 20:27:58 2024
+Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Simulator Summary
+  3. Simulator Settings
+  4. Simulation Waveforms
+  5. Coverage Summary
+  6. Complete 1/0-Value Coverage
+  7. Missing 1-Value Coverage
+  8. Missing 0-Value Coverage
+  9. Simulator INI Usage
+ 10. Simulator Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------+
+; Simulator Summary                          ;
++-----------------------------+--------------+
+; Type                        ; Value        ;
++-----------------------------+--------------+
+; Simulation Start Time       ; 0 ps         ;
+; Simulation End Time         ; 40.0 us      ;
+; Simulation Netlist Size     ; 548 nodes    ;
+; Simulation Coverage         ;      65.88 % ;
+; Total Number of Transitions ; 889942       ;
+; Simulation Breakpoints      ; 0            ;
+; Family                      ; Cyclone II   ;
++-----------------------------+--------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Simulator Settings                                                                                                                                                                     ;
++--------------------------------------------------------------------------------------------+---------------------------------------------------------------------------+---------------+
+; Option                                                                                     ; Setting                                                                   ; Default Value ;
++--------------------------------------------------------------------------------------------+---------------------------------------------------------------------------+---------------+
+; Simulation mode                                                                            ; Functional                                                                ; Timing        ;
+; Start time                                                                                 ; 0 ns                                                                      ; 0 ns          ;
+; Simulation results format                                                                  ; VWF                                                                       ;               ;
+; Vector input source                                                                        ; C:/Users/Gaspar/Documents/GitHub/optativa_FPGA/Proyect5_VGA/Waveform3.vwf ;               ;
+; Add pins automatically to simulation output waveforms                                      ; On                                                                        ; On            ;
+; Check outputs                                                                              ; Off                                                                       ; Off           ;
+; Report simulation coverage                                                                 ; On                                                                        ; On            ;
+; Display complete 1/0 value coverage report                                                 ; On                                                                        ; On            ;
+; Display missing 1-value coverage report                                                    ; On                                                                        ; On            ;
+; Display missing 0-value coverage report                                                    ; On                                                                        ; On            ;
+; Detect setup and hold time violations                                                      ; Off                                                                       ; Off           ;
+; Detect glitches                                                                            ; Off                                                                       ; Off           ;
+; Disable timing delays in Timing Simulation                                                 ; Off                                                                       ; Off           ;
+; Generate Signal Activity File                                                              ; Off                                                                       ; Off           ;
+; Generate VCD File for PowerPlay Power Analyzer                                             ; Off                                                                       ; Off           ;
+; Group bus channels in simulation results                                                   ; Off                                                                       ; Off           ;
+; Preserve fewer signal transitions to reduce memory requirements                            ; On                                                                        ; On            ;
+; Trigger vector comparison with the specified mode                                          ; INPUT_EDGE                                                                ; INPUT_EDGE    ;
+; Disable setup and hold time violations detection in input registers of bi-directional pins ; Off                                                                       ; Off           ;
+; Overwrite Waveform Inputs With Simulation Outputs                                          ; Off                                                                       ;               ;
+; Perform Glitch Filtering in Timing Simulation                                              ; Auto                                                                      ; Auto          ;
++--------------------------------------------------------------------------------------------+---------------------------------------------------------------------------+---------------+
+
+
++----------------------+
+; Simulation Waveforms ;
++----------------------+
+Waveform report data cannot be output to ASCII.
+Please use Quartus II 64-Bit to view the waveform report data.
+
+
++--------------------------------------------------------------------+
+; Coverage Summary                                                   ;
++-----------------------------------------------------+--------------+
+; Type                                                ; Value        ;
++-----------------------------------------------------+--------------+
+; Total coverage as a percentage                      ;      65.88 % ;
+; Total nodes checked                                 ; 548          ;
+; Total output ports checked                          ; 548          ;
+; Total output ports with complete 1/0-value coverage ; 361          ;
+; Total output ports with no 1/0-value coverage       ; 163          ;
+; Total output ports with no 1-value coverage         ; 168          ;
+; Total output ports with no 0-value coverage         ; 182          ;
++-----------------------------------------------------+--------------+
+
+
+The following table displays output ports that toggle between 1 and 0 during simulation.
++--------------------------------------------------------------------------------------------------------------------------------------+
+; Complete 1/0-Value Coverage                                                                                                          ;
++---------------------------------------------------------+---------------------------------------------------------+------------------+
+; Node Name                                               ; Output Port Name                                        ; Output Port Type ;
++---------------------------------------------------------+---------------------------------------------------------+------------------+
+; |Test_cont_img|col_sim[9]                               ; |Test_cont_img|col_sim[9]                               ; pin_out          ;
+; |Test_cont_img|col_sim[8]                               ; |Test_cont_img|col_sim[8]                               ; pin_out          ;
+; |Test_cont_img|col_sim[7]                               ; |Test_cont_img|col_sim[7]                               ; pin_out          ;
+; |Test_cont_img|col_sim[6]                               ; |Test_cont_img|col_sim[6]                               ; pin_out          ;
+; |Test_cont_img|col_sim[5]                               ; |Test_cont_img|col_sim[5]                               ; pin_out          ;
+; |Test_cont_img|col_sim[4]                               ; |Test_cont_img|col_sim[4]                               ; pin_out          ;
+; |Test_cont_img|col_sim[3]                               ; |Test_cont_img|col_sim[3]                               ; pin_out          ;
+; |Test_cont_img|clk                                      ; |Test_cont_img|clk                                      ; out              ;
+; |Test_cont_img|Col_som_int[9]                           ; |Test_cont_img|Col_som_int[9]                           ; pin_out          ;
+; |Test_cont_img|Col_som_int[8]                           ; |Test_cont_img|Col_som_int[8]                           ; pin_out          ;
+; |Test_cont_img|Col_som_int[7]                           ; |Test_cont_img|Col_som_int[7]                           ; pin_out          ;
+; |Test_cont_img|Col_som_int[6]                           ; |Test_cont_img|Col_som_int[6]                           ; pin_out          ;
+; |Test_cont_img|Col_som_int[5]                           ; |Test_cont_img|Col_som_int[5]                           ; pin_out          ;
+; |Test_cont_img|Col_som_int[4]                           ; |Test_cont_img|Col_som_int[4]                           ; pin_out          ;
+; |Test_cont_img|Col_som_int[3]                           ; |Test_cont_img|Col_som_int[3]                           ; pin_out          ;
+; |Test_cont_img|Col_som_int[2]                           ; |Test_cont_img|Col_som_int[2]                           ; pin_out          ;
+; |Test_cont_img|Col_som_int[1]                           ; |Test_cont_img|Col_som_int[1]                           ; pin_out          ;
+; |Test_cont_img|Col_som_int[0]                           ; |Test_cont_img|Col_som_int[0]                           ; pin_out          ;
+; |Test_cont_img|dir[8]                                   ; |Test_cont_img|dir[8]                                   ; pin_out          ;
+; |Test_cont_img|dir[7]                                   ; |Test_cont_img|dir[7]                                   ; pin_out          ;
+; |Test_cont_img|dir[6]                                   ; |Test_cont_img|dir[6]                                   ; pin_out          ;
+; |Test_cont_img|dir[5]                                   ; |Test_cont_img|dir[5]                                   ; pin_out          ;
+; |Test_cont_img|dir[4]                                   ; |Test_cont_img|dir[4]                                   ; pin_out          ;
+; |Test_cont_img|dir[3]                                   ; |Test_cont_img|dir[3]                                   ; pin_out          ;
+; |Test_cont_img|dir[2]                                   ; |Test_cont_img|dir[2]                                   ; pin_out          ;
+; |Test_cont_img|dir[1]                                   ; |Test_cont_img|dir[1]                                   ; pin_out          ;
+; |Test_cont_img|dir[0]                                   ; |Test_cont_img|dir[0]                                   ; pin_out          ;
+; |Test_cont_img|estado[1]                                ; |Test_cont_img|estado[1]                                ; pin_out          ;
+; |Test_cont_img|estado[0]                                ; |Test_cont_img|estado[0]                                ; pin_out          ;
+; |Test_cont_img|fila_sim[3]                              ; |Test_cont_img|fila_sim[3]                              ; pin_out          ;
+; |Test_cont_img|Fila_sim_int[4]                          ; |Test_cont_img|Fila_sim_int[4]                          ; pin_out          ;
+; |Test_cont_img|Fila_sim_int[3]                          ; |Test_cont_img|Fila_sim_int[3]                          ; pin_out          ;
+; |Test_cont_img|Fila_sim_int[2]                          ; |Test_cont_img|Fila_sim_int[2]                          ; pin_out          ;
+; |Test_cont_img|Fila_sim_int[1]                          ; |Test_cont_img|Fila_sim_int[1]                          ; pin_out          ;
+; |Test_cont_img|Fila_sim_int[0]                          ; |Test_cont_img|Fila_sim_int[0]                          ; pin_out          ;
+; |Test_cont_img|test_control_img:inst|columna_int[0]     ; |Test_cont_img|test_control_img:inst|columna_int[0]     ; regout           ;
+; |Test_cont_img|test_control_img:inst|fila_int~2         ; |Test_cont_img|test_control_img:inst|fila_int~2         ; out              ;
+; |Test_cont_img|test_control_img:inst|fila_int~3         ; |Test_cont_img|test_control_img:inst|fila_int~3         ; out              ;
+; |Test_cont_img|test_control_img:inst|fila_int~4         ; |Test_cont_img|test_control_img:inst|fila_int~4         ; out              ;
+; |Test_cont_img|test_control_img:inst|fila_int~5         ; |Test_cont_img|test_control_img:inst|fila_int~5         ; out              ;
+; |Test_cont_img|test_control_img:inst|fila_int~6         ; |Test_cont_img|test_control_img:inst|fila_int~6         ; out              ;
+; |Test_cont_img|test_control_img:inst|fila_int~7         ; |Test_cont_img|test_control_img:inst|fila_int~7         ; out              ;
+; |Test_cont_img|test_control_img:inst|fila_int~8         ; |Test_cont_img|test_control_img:inst|fila_int~8         ; out              ;
+; |Test_cont_img|test_control_img:inst|fila_int~9         ; |Test_cont_img|test_control_img:inst|fila_int~9         ; out              ;
+; |Test_cont_img|test_control_img:inst|columna_int~0      ; |Test_cont_img|test_control_img:inst|columna_int~0      ; out              ;
+; |Test_cont_img|test_control_img:inst|columna_int~1      ; |Test_cont_img|test_control_img:inst|columna_int~1      ; out              ;
+; |Test_cont_img|test_control_img:inst|columna_int~2      ; |Test_cont_img|test_control_img:inst|columna_int~2      ; out              ;
+; |Test_cont_img|test_control_img:inst|columna_int~3      ; |Test_cont_img|test_control_img:inst|columna_int~3      ; out              ;
+; |Test_cont_img|test_control_img:inst|columna_int~4      ; |Test_cont_img|test_control_img:inst|columna_int~4      ; out              ;
+; |Test_cont_img|test_control_img:inst|columna_int~5      ; |Test_cont_img|test_control_img:inst|columna_int~5      ; out              ;
+; |Test_cont_img|test_control_img:inst|columna_int~6      ; |Test_cont_img|test_control_img:inst|columna_int~6      ; out              ;
+; |Test_cont_img|test_control_img:inst|columna_int~7      ; |Test_cont_img|test_control_img:inst|columna_int~7      ; out              ;
+; |Test_cont_img|test_control_img:inst|columna_int~8      ; |Test_cont_img|test_control_img:inst|columna_int~8      ; out              ;
+; |Test_cont_img|test_control_img:inst|columna_int~9      ; |Test_cont_img|test_control_img:inst|columna_int~9      ; out              ;
+; |Test_cont_img|test_control_img:inst|clk_2              ; |Test_cont_img|test_control_img:inst|clk_2              ; regout           ;
+; |Test_cont_img|test_control_img:inst|fila_int[4]        ; |Test_cont_img|test_control_img:inst|fila_int[4]        ; regout           ;
+; |Test_cont_img|test_control_img:inst|fila_int[3]        ; |Test_cont_img|test_control_img:inst|fila_int[3]        ; regout           ;
+; |Test_cont_img|test_control_img:inst|fila_int[2]        ; |Test_cont_img|test_control_img:inst|fila_int[2]        ; regout           ;
+; |Test_cont_img|test_control_img:inst|fila_int[1]        ; |Test_cont_img|test_control_img:inst|fila_int[1]        ; regout           ;
+; |Test_cont_img|test_control_img:inst|fila_int[0]        ; |Test_cont_img|test_control_img:inst|fila_int[0]        ; regout           ;
+; |Test_cont_img|test_control_img:inst|columna_int[9]     ; |Test_cont_img|test_control_img:inst|columna_int[9]     ; regout           ;
+; |Test_cont_img|test_control_img:inst|columna_int[8]     ; |Test_cont_img|test_control_img:inst|columna_int[8]     ; regout           ;
+; |Test_cont_img|test_control_img:inst|columna_int[7]     ; |Test_cont_img|test_control_img:inst|columna_int[7]     ; regout           ;
+; |Test_cont_img|test_control_img:inst|columna_int[6]     ; |Test_cont_img|test_control_img:inst|columna_int[6]     ; regout           ;
+; |Test_cont_img|test_control_img:inst|columna_int[5]     ; |Test_cont_img|test_control_img:inst|columna_int[5]     ; regout           ;
+; |Test_cont_img|test_control_img:inst|columna_int[4]     ; |Test_cont_img|test_control_img:inst|columna_int[4]     ; regout           ;
+; |Test_cont_img|test_control_img:inst|columna_int[3]     ; |Test_cont_img|test_control_img:inst|columna_int[3]     ; regout           ;
+; |Test_cont_img|test_control_img:inst|columna_int[2]     ; |Test_cont_img|test_control_img:inst|columna_int[2]     ; regout           ;
+; |Test_cont_img|test_control_img:inst|columna_int[1]     ; |Test_cont_img|test_control_img:inst|columna_int[1]     ; regout           ;
+; |Test_cont_img|control_imagen:inst1|process_0~1         ; |Test_cont_img|control_imagen:inst1|process_0~1         ; out0             ;
+; |Test_cont_img|control_imagen:inst1|process_0~2         ; |Test_cont_img|control_imagen:inst1|process_0~2         ; out0             ;
+; |Test_cont_img|control_imagen:inst1|col_n~0             ; |Test_cont_img|control_imagen:inst1|col_n~0             ; out              ;
+; |Test_cont_img|control_imagen:inst1|col_n~1             ; |Test_cont_img|control_imagen:inst1|col_n~1             ; out              ;
+; |Test_cont_img|control_imagen:inst1|col_n~2             ; |Test_cont_img|control_imagen:inst1|col_n~2             ; out              ;
+; |Test_cont_img|control_imagen:inst1|col_n~3             ; |Test_cont_img|control_imagen:inst1|col_n~3             ; out              ;
+; |Test_cont_img|control_imagen:inst1|col_n~4             ; |Test_cont_img|control_imagen:inst1|col_n~4             ; out              ;
+; |Test_cont_img|control_imagen:inst1|col_n~5             ; |Test_cont_img|control_imagen:inst1|col_n~5             ; out              ;
+; |Test_cont_img|control_imagen:inst1|col_n~6             ; |Test_cont_img|control_imagen:inst1|col_n~6             ; out              ;
+; |Test_cont_img|control_imagen:inst1|fila_n~5            ; |Test_cont_img|control_imagen:inst1|fila_n~5            ; out              ;
+; |Test_cont_img|control_imagen:inst1|fila_n~6            ; |Test_cont_img|control_imagen:inst1|fila_n~6            ; out              ;
+; |Test_cont_img|control_imagen:inst1|mem_dir_int~5       ; |Test_cont_img|control_imagen:inst1|mem_dir_int~5       ; out              ;
+; |Test_cont_img|control_imagen:inst1|mem_dir_int~6       ; |Test_cont_img|control_imagen:inst1|mem_dir_int~6       ; out              ;
+; |Test_cont_img|control_imagen:inst1|mem_dir_int~7       ; |Test_cont_img|control_imagen:inst1|mem_dir_int~7       ; out              ;
+; |Test_cont_img|control_imagen:inst1|mem_dir_int~8       ; |Test_cont_img|control_imagen:inst1|mem_dir_int~8       ; out              ;
+; |Test_cont_img|control_imagen:inst1|mem_dir_int~9       ; |Test_cont_img|control_imagen:inst1|mem_dir_int~9       ; out              ;
+; |Test_cont_img|control_imagen:inst1|fila_n~16           ; |Test_cont_img|control_imagen:inst1|fila_n~16           ; out              ;
+; |Test_cont_img|control_imagen:inst1|mem_dir_int~10      ; |Test_cont_img|control_imagen:inst1|mem_dir_int~10      ; out              ;
+; |Test_cont_img|control_imagen:inst1|mem_dir_int~11      ; |Test_cont_img|control_imagen:inst1|mem_dir_int~11      ; out              ;
+; |Test_cont_img|control_imagen:inst1|mem_dir_int~12      ; |Test_cont_img|control_imagen:inst1|mem_dir_int~12      ; out              ;
+; |Test_cont_img|control_imagen:inst1|mem_dir_int~13      ; |Test_cont_img|control_imagen:inst1|mem_dir_int~13      ; out              ;
+; |Test_cont_img|control_imagen:inst1|mem_dir_int~14      ; |Test_cont_img|control_imagen:inst1|mem_dir_int~14      ; out              ;
+; |Test_cont_img|control_imagen:inst1|mem_dir_int~15      ; |Test_cont_img|control_imagen:inst1|mem_dir_int~15      ; out              ;
+; |Test_cont_img|control_imagen:inst1|mem_dir_int~16      ; |Test_cont_img|control_imagen:inst1|mem_dir_int~16      ; out              ;
+; |Test_cont_img|control_imagen:inst1|mem_dir_int~17      ; |Test_cont_img|control_imagen:inst1|mem_dir_int~17      ; out              ;
+; |Test_cont_img|control_imagen:inst1|mem_dir_int~18      ; |Test_cont_img|control_imagen:inst1|mem_dir_int~18      ; out              ;
+; |Test_cont_img|control_imagen:inst1|mem_dir_int~19      ; |Test_cont_img|control_imagen:inst1|mem_dir_int~19      ; out              ;
+; |Test_cont_img|control_imagen:inst1|mem_dir_int~20      ; |Test_cont_img|control_imagen:inst1|mem_dir_int~20      ; out              ;
+; |Test_cont_img|control_imagen:inst1|mem_dir_int~21      ; |Test_cont_img|control_imagen:inst1|mem_dir_int~21      ; out              ;
+; |Test_cont_img|control_imagen:inst1|mem_dir_int~22      ; |Test_cont_img|control_imagen:inst1|mem_dir_int~22      ; out              ;
+; |Test_cont_img|control_imagen:inst1|mem_dir_int~23      ; |Test_cont_img|control_imagen:inst1|mem_dir_int~23      ; out              ;
+; |Test_cont_img|control_imagen:inst1|mem_dir_int~24      ; |Test_cont_img|control_imagen:inst1|mem_dir_int~24      ; out              ;
+; |Test_cont_img|control_imagen:inst1|mem_dir_int~25      ; |Test_cont_img|control_imagen:inst1|mem_dir_int~25      ; out              ;
+; |Test_cont_img|control_imagen:inst1|mem_dir_int~26      ; |Test_cont_img|control_imagen:inst1|mem_dir_int~26      ; out              ;
+; |Test_cont_img|control_imagen:inst1|mem_dir_int~27      ; |Test_cont_img|control_imagen:inst1|mem_dir_int~27      ; out              ;
+; |Test_cont_img|control_imagen:inst1|mem_dir_int~28      ; |Test_cont_img|control_imagen:inst1|mem_dir_int~28      ; out              ;
+; |Test_cont_img|control_imagen:inst1|mem_dir_int~29      ; |Test_cont_img|control_imagen:inst1|mem_dir_int~29      ; out              ;
+; |Test_cont_img|control_imagen:inst1|mem_dir_int~30      ; |Test_cont_img|control_imagen:inst1|mem_dir_int~30      ; out              ;
+; |Test_cont_img|control_imagen:inst1|mem_dir_int~31      ; |Test_cont_img|control_imagen:inst1|mem_dir_int~31      ; out              ;
+; |Test_cont_img|control_imagen:inst1|mem_dir_int~32      ; |Test_cont_img|control_imagen:inst1|mem_dir_int~32      ; out              ;
+; |Test_cont_img|control_imagen:inst1|mem_dir_int~33      ; |Test_cont_img|control_imagen:inst1|mem_dir_int~33      ; out              ;
+; |Test_cont_img|control_imagen:inst1|col_n~10            ; |Test_cont_img|control_imagen:inst1|col_n~10            ; out              ;
+; |Test_cont_img|control_imagen:inst1|col_n~11            ; |Test_cont_img|control_imagen:inst1|col_n~11            ; out              ;
+; |Test_cont_img|control_imagen:inst1|col_n~12            ; |Test_cont_img|control_imagen:inst1|col_n~12            ; out              ;
+; |Test_cont_img|control_imagen:inst1|col_n~13            ; |Test_cont_img|control_imagen:inst1|col_n~13            ; out              ;
+; |Test_cont_img|control_imagen:inst1|col_n~14            ; |Test_cont_img|control_imagen:inst1|col_n~14            ; out              ;
+; |Test_cont_img|control_imagen:inst1|col_n~15            ; |Test_cont_img|control_imagen:inst1|col_n~15            ; out              ;
+; |Test_cont_img|control_imagen:inst1|col_n~16            ; |Test_cont_img|control_imagen:inst1|col_n~16            ; out              ;
+; |Test_cont_img|control_imagen:inst1|col_n~20            ; |Test_cont_img|control_imagen:inst1|col_n~20            ; out              ;
+; |Test_cont_img|control_imagen:inst1|col_n~21            ; |Test_cont_img|control_imagen:inst1|col_n~21            ; out              ;
+; |Test_cont_img|control_imagen:inst1|col_n~22            ; |Test_cont_img|control_imagen:inst1|col_n~22            ; out              ;
+; |Test_cont_img|control_imagen:inst1|col_n~23            ; |Test_cont_img|control_imagen:inst1|col_n~23            ; out              ;
+; |Test_cont_img|control_imagen:inst1|col_n~24            ; |Test_cont_img|control_imagen:inst1|col_n~24            ; out              ;
+; |Test_cont_img|control_imagen:inst1|col_n~25            ; |Test_cont_img|control_imagen:inst1|col_n~25            ; out              ;
+; |Test_cont_img|control_imagen:inst1|col_n~26            ; |Test_cont_img|control_imagen:inst1|col_n~26            ; out              ;
+; |Test_cont_img|control_imagen:inst1|state~0             ; |Test_cont_img|control_imagen:inst1|state~0             ; out              ;
+; |Test_cont_img|control_imagen:inst1|state~1             ; |Test_cont_img|control_imagen:inst1|state~1             ; out              ;
+; |Test_cont_img|control_imagen:inst1|fila_n[3]           ; |Test_cont_img|control_imagen:inst1|fila_n[3]           ; regout           ;
+; |Test_cont_img|control_imagen:inst1|col_n[9]            ; |Test_cont_img|control_imagen:inst1|col_n[9]            ; regout           ;
+; |Test_cont_img|control_imagen:inst1|col_n[8]            ; |Test_cont_img|control_imagen:inst1|col_n[8]            ; regout           ;
+; |Test_cont_img|control_imagen:inst1|col_n[7]            ; |Test_cont_img|control_imagen:inst1|col_n[7]            ; regout           ;
+; |Test_cont_img|control_imagen:inst1|col_n[6]            ; |Test_cont_img|control_imagen:inst1|col_n[6]            ; regout           ;
+; |Test_cont_img|control_imagen:inst1|col_n[5]            ; |Test_cont_img|control_imagen:inst1|col_n[5]            ; regout           ;
+; |Test_cont_img|control_imagen:inst1|col_n[4]            ; |Test_cont_img|control_imagen:inst1|col_n[4]            ; regout           ;
+; |Test_cont_img|control_imagen:inst1|col_n[3]            ; |Test_cont_img|control_imagen:inst1|col_n[3]            ; regout           ;
+; |Test_cont_img|control_imagen:inst1|state.idle          ; |Test_cont_img|control_imagen:inst1|state.idle          ; regout           ;
+; |Test_cont_img|control_imagen:inst1|state.fila_state    ; |Test_cont_img|control_imagen:inst1|state.fila_state    ; regout           ;
+; |Test_cont_img|control_imagen:inst1|state.columna_state ; |Test_cont_img|control_imagen:inst1|state.columna_state ; regout           ;
+; |Test_cont_img|control_imagen:inst1|mem_dir_int[8]      ; |Test_cont_img|control_imagen:inst1|mem_dir_int[8]      ; regout           ;
+; |Test_cont_img|control_imagen:inst1|mem_dir_int[7]      ; |Test_cont_img|control_imagen:inst1|mem_dir_int[7]      ; regout           ;
+; |Test_cont_img|control_imagen:inst1|mem_dir_int[6]      ; |Test_cont_img|control_imagen:inst1|mem_dir_int[6]      ; regout           ;
+; |Test_cont_img|control_imagen:inst1|mem_dir_int[5]      ; |Test_cont_img|control_imagen:inst1|mem_dir_int[5]      ; regout           ;
+; |Test_cont_img|control_imagen:inst1|mem_dir_int[4]      ; |Test_cont_img|control_imagen:inst1|mem_dir_int[4]      ; regout           ;
+; |Test_cont_img|control_imagen:inst1|mem_dir_int[3]      ; |Test_cont_img|control_imagen:inst1|mem_dir_int[3]      ; regout           ;
+; |Test_cont_img|control_imagen:inst1|mem_dir_int[2]      ; |Test_cont_img|control_imagen:inst1|mem_dir_int[2]      ; regout           ;
+; |Test_cont_img|control_imagen:inst1|mem_dir_int[1]      ; |Test_cont_img|control_imagen:inst1|mem_dir_int[1]      ; regout           ;
+; |Test_cont_img|control_imagen:inst1|mem_dir_int[0]      ; |Test_cont_img|control_imagen:inst1|mem_dir_int[0]      ; regout           ;
+; |Test_cont_img|control_imagen:inst1|estado[1]           ; |Test_cont_img|control_imagen:inst1|estado[1]           ; regout           ;
+; |Test_cont_img|control_imagen:inst1|estado[0]           ; |Test_cont_img|control_imagen:inst1|estado[0]           ; regout           ;
+; |Test_cont_img|control_imagen:inst1|state~2             ; |Test_cont_img|control_imagen:inst1|state~2             ; out0             ;
+; |Test_cont_img|control_imagen:inst1|state.idle~0        ; |Test_cont_img|control_imagen:inst1|state.idle~0        ; out0             ;
+; |Test_cont_img|control_imagen:inst1|Selector0~0         ; |Test_cont_img|control_imagen:inst1|Selector0~0         ; out0             ;
+; |Test_cont_img|control_imagen:inst1|Selector0~1         ; |Test_cont_img|control_imagen:inst1|Selector0~1         ; out0             ;
+; |Test_cont_img|control_imagen:inst1|Selector0~2         ; |Test_cont_img|control_imagen:inst1|Selector0~2         ; out0             ;
+; |Test_cont_img|control_imagen:inst1|state~7             ; |Test_cont_img|control_imagen:inst1|state~7             ; out0             ;
+; |Test_cont_img|control_imagen:inst1|Selector0~3         ; |Test_cont_img|control_imagen:inst1|Selector0~3         ; out              ;
+; |Test_cont_img|control_imagen:inst1|Selector0~4         ; |Test_cont_img|control_imagen:inst1|Selector0~4         ; out              ;
+; |Test_cont_img|control_imagen:inst1|Selector1~0         ; |Test_cont_img|control_imagen:inst1|Selector1~0         ; out0             ;
+; |Test_cont_img|control_imagen:inst1|Selector1~1         ; |Test_cont_img|control_imagen:inst1|Selector1~1         ; out0             ;
+; |Test_cont_img|control_imagen:inst1|Selector1~2         ; |Test_cont_img|control_imagen:inst1|Selector1~2         ; out0             ;
+; |Test_cont_img|control_imagen:inst1|Selector2~0         ; |Test_cont_img|control_imagen:inst1|Selector2~0         ; out0             ;
+; |Test_cont_img|control_imagen:inst1|Selector2~1         ; |Test_cont_img|control_imagen:inst1|Selector2~1         ; out0             ;
+; |Test_cont_img|control_imagen:inst1|Selector2~2         ; |Test_cont_img|control_imagen:inst1|Selector2~2         ; out0             ;
+; |Test_cont_img|control_imagen:inst1|Selector3~0         ; |Test_cont_img|control_imagen:inst1|Selector3~0         ; out              ;
+; |Test_cont_img|control_imagen:inst1|Selector3~1         ; |Test_cont_img|control_imagen:inst1|Selector3~1         ; out              ;
+; |Test_cont_img|control_imagen:inst1|Selector4~0         ; |Test_cont_img|control_imagen:inst1|Selector4~0         ; out              ;
+; |Test_cont_img|control_imagen:inst1|Selector4~1         ; |Test_cont_img|control_imagen:inst1|Selector4~1         ; out              ;
+; |Test_cont_img|control_imagen:inst1|Selector5~0         ; |Test_cont_img|control_imagen:inst1|Selector5~0         ; out              ;
+; |Test_cont_img|control_imagen:inst1|Selector5~1         ; |Test_cont_img|control_imagen:inst1|Selector5~1         ; out              ;
+; |Test_cont_img|control_imagen:inst1|Selector6~0         ; |Test_cont_img|control_imagen:inst1|Selector6~0         ; out              ;
+; |Test_cont_img|control_imagen:inst1|Selector6~1         ; |Test_cont_img|control_imagen:inst1|Selector6~1         ; out              ;
+; |Test_cont_img|control_imagen:inst1|Selector7~0         ; |Test_cont_img|control_imagen:inst1|Selector7~0         ; out              ;
+; |Test_cont_img|control_imagen:inst1|Selector7~1         ; |Test_cont_img|control_imagen:inst1|Selector7~1         ; out              ;
+; |Test_cont_img|control_imagen:inst1|Selector8~0         ; |Test_cont_img|control_imagen:inst1|Selector8~0         ; out              ;
+; |Test_cont_img|control_imagen:inst1|Selector8~1         ; |Test_cont_img|control_imagen:inst1|Selector8~1         ; out              ;
+; |Test_cont_img|control_imagen:inst1|Selector9~0         ; |Test_cont_img|control_imagen:inst1|Selector9~0         ; out              ;
+; |Test_cont_img|control_imagen:inst1|Selector9~1         ; |Test_cont_img|control_imagen:inst1|Selector9~1         ; out              ;
+; |Test_cont_img|control_imagen:inst1|Selector18~0        ; |Test_cont_img|control_imagen:inst1|Selector18~0        ; out              ;
+; |Test_cont_img|control_imagen:inst1|Selector19~0        ; |Test_cont_img|control_imagen:inst1|Selector19~0        ; out              ;
+; |Test_cont_img|control_imagen:inst1|Selector19~1        ; |Test_cont_img|control_imagen:inst1|Selector19~1        ; out              ;
+; |Test_cont_img|control_imagen:inst1|Selector28~0        ; |Test_cont_img|control_imagen:inst1|Selector28~0        ; out              ;
+; |Test_cont_img|control_imagen:inst1|Selector28~1        ; |Test_cont_img|control_imagen:inst1|Selector28~1        ; out              ;
+; |Test_cont_img|control_imagen:inst1|Selector29~0        ; |Test_cont_img|control_imagen:inst1|Selector29~0        ; out              ;
+; |Test_cont_img|control_imagen:inst1|Selector29~1        ; |Test_cont_img|control_imagen:inst1|Selector29~1        ; out              ;
+; |Test_cont_img|control_imagen:inst1|Selector30~0        ; |Test_cont_img|control_imagen:inst1|Selector30~0        ; out              ;
+; |Test_cont_img|control_imagen:inst1|Selector30~1        ; |Test_cont_img|control_imagen:inst1|Selector30~1        ; out              ;
+; |Test_cont_img|control_imagen:inst1|Selector31~0        ; |Test_cont_img|control_imagen:inst1|Selector31~0        ; out              ;
+; |Test_cont_img|control_imagen:inst1|Selector31~1        ; |Test_cont_img|control_imagen:inst1|Selector31~1        ; out              ;
+; |Test_cont_img|control_imagen:inst1|Selector32~0        ; |Test_cont_img|control_imagen:inst1|Selector32~0        ; out              ;
+; |Test_cont_img|control_imagen:inst1|Selector32~1        ; |Test_cont_img|control_imagen:inst1|Selector32~1        ; out              ;
+; |Test_cont_img|control_imagen:inst1|LessThan0~0         ; |Test_cont_img|control_imagen:inst1|LessThan0~0         ; out0             ;
+; |Test_cont_img|control_imagen:inst1|LessThan0~1         ; |Test_cont_img|control_imagen:inst1|LessThan0~1         ; out0             ;
+; |Test_cont_img|control_imagen:inst1|LessThan0~2         ; |Test_cont_img|control_imagen:inst1|LessThan0~2         ; out0             ;
+; |Test_cont_img|control_imagen:inst1|LessThan0~3         ; |Test_cont_img|control_imagen:inst1|LessThan0~3         ; out0             ;
+; |Test_cont_img|control_imagen:inst1|LessThan0~4         ; |Test_cont_img|control_imagen:inst1|LessThan0~4         ; out0             ;
+; |Test_cont_img|control_imagen:inst1|LessThan0~5         ; |Test_cont_img|control_imagen:inst1|LessThan0~5         ; out0             ;
+; |Test_cont_img|control_imagen:inst1|LessThan0~6         ; |Test_cont_img|control_imagen:inst1|LessThan0~6         ; out0             ;
+; |Test_cont_img|control_imagen:inst1|LessThan1~0         ; |Test_cont_img|control_imagen:inst1|LessThan1~0         ; out0             ;
+; |Test_cont_img|control_imagen:inst1|LessThan1~1         ; |Test_cont_img|control_imagen:inst1|LessThan1~1         ; out0             ;
+; |Test_cont_img|control_imagen:inst1|LessThan2~0         ; |Test_cont_img|control_imagen:inst1|LessThan2~0         ; out0             ;
+; |Test_cont_img|control_imagen:inst1|LessThan2~1         ; |Test_cont_img|control_imagen:inst1|LessThan2~1         ; out0             ;
+; |Test_cont_img|control_imagen:inst1|LessThan2~2         ; |Test_cont_img|control_imagen:inst1|LessThan2~2         ; out0             ;
+; |Test_cont_img|control_imagen:inst1|LessThan2~3         ; |Test_cont_img|control_imagen:inst1|LessThan2~3         ; out0             ;
+; |Test_cont_img|control_imagen:inst1|LessThan2~4         ; |Test_cont_img|control_imagen:inst1|LessThan2~4         ; out0             ;
+; |Test_cont_img|control_imagen:inst1|LessThan2~5         ; |Test_cont_img|control_imagen:inst1|LessThan2~5         ; out0             ;
+; |Test_cont_img|control_imagen:inst1|LessThan2~6         ; |Test_cont_img|control_imagen:inst1|LessThan2~6         ; out0             ;
+; |Test_cont_img|control_imagen:inst1|LessThan2~7         ; |Test_cont_img|control_imagen:inst1|LessThan2~7         ; out0             ;
+; |Test_cont_img|control_imagen:inst1|LessThan2~8         ; |Test_cont_img|control_imagen:inst1|LessThan2~8         ; out0             ;
+; |Test_cont_img|control_imagen:inst1|LessThan3~0         ; |Test_cont_img|control_imagen:inst1|LessThan3~0         ; out0             ;
+; |Test_cont_img|control_imagen:inst1|LessThan3~1         ; |Test_cont_img|control_imagen:inst1|LessThan3~1         ; out0             ;
+; |Test_cont_img|control_imagen:inst1|LessThan3~2         ; |Test_cont_img|control_imagen:inst1|LessThan3~2         ; out0             ;
+; |Test_cont_img|control_imagen:inst1|LessThan3~3         ; |Test_cont_img|control_imagen:inst1|LessThan3~3         ; out0             ;
+; |Test_cont_img|control_imagen:inst1|LessThan3~4         ; |Test_cont_img|control_imagen:inst1|LessThan3~4         ; out0             ;
+; |Test_cont_img|control_imagen:inst1|LessThan3~5         ; |Test_cont_img|control_imagen:inst1|LessThan3~5         ; out0             ;
+; |Test_cont_img|control_imagen:inst1|LessThan3~6         ; |Test_cont_img|control_imagen:inst1|LessThan3~6         ; out0             ;
+; |Test_cont_img|control_imagen:inst1|LessThan3~7         ; |Test_cont_img|control_imagen:inst1|LessThan3~7         ; out0             ;
+; |Test_cont_img|control_imagen:inst1|LessThan3~8         ; |Test_cont_img|control_imagen:inst1|LessThan3~8         ; out0             ;
+; |Test_cont_img|control_imagen:inst1|LessThan3~9         ; |Test_cont_img|control_imagen:inst1|LessThan3~9         ; out0             ;
+; |Test_cont_img|control_imagen:inst1|LessThan3~10        ; |Test_cont_img|control_imagen:inst1|LessThan3~10        ; out0             ;
+; |Test_cont_img|control_imagen:inst1|LessThan3~11        ; |Test_cont_img|control_imagen:inst1|LessThan3~11        ; out0             ;
+; |Test_cont_img|test_control_img:inst|Add0~0             ; |Test_cont_img|test_control_img:inst|Add0~0             ; out0             ;
+; |Test_cont_img|test_control_img:inst|Add0~1             ; |Test_cont_img|test_control_img:inst|Add0~1             ; out0             ;
+; |Test_cont_img|test_control_img:inst|Add0~2             ; |Test_cont_img|test_control_img:inst|Add0~2             ; out0             ;
+; |Test_cont_img|test_control_img:inst|Add0~3             ; |Test_cont_img|test_control_img:inst|Add0~3             ; out0             ;
+; |Test_cont_img|test_control_img:inst|Add0~4             ; |Test_cont_img|test_control_img:inst|Add0~4             ; out0             ;
+; |Test_cont_img|test_control_img:inst|Add0~5             ; |Test_cont_img|test_control_img:inst|Add0~5             ; out0             ;
+; |Test_cont_img|test_control_img:inst|Add0~6             ; |Test_cont_img|test_control_img:inst|Add0~6             ; out0             ;
+; |Test_cont_img|test_control_img:inst|Add0~7             ; |Test_cont_img|test_control_img:inst|Add0~7             ; out0             ;
+; |Test_cont_img|test_control_img:inst|Add0~8             ; |Test_cont_img|test_control_img:inst|Add0~8             ; out0             ;
+; |Test_cont_img|test_control_img:inst|Add0~9             ; |Test_cont_img|test_control_img:inst|Add0~9             ; out0             ;
+; |Test_cont_img|test_control_img:inst|Add0~10            ; |Test_cont_img|test_control_img:inst|Add0~10            ; out0             ;
+; |Test_cont_img|test_control_img:inst|Add0~11            ; |Test_cont_img|test_control_img:inst|Add0~11            ; out0             ;
+; |Test_cont_img|test_control_img:inst|Add0~12            ; |Test_cont_img|test_control_img:inst|Add0~12            ; out0             ;
+; |Test_cont_img|test_control_img:inst|Add0~13            ; |Test_cont_img|test_control_img:inst|Add0~13            ; out0             ;
+; |Test_cont_img|test_control_img:inst|Add0~14            ; |Test_cont_img|test_control_img:inst|Add0~14            ; out0             ;
+; |Test_cont_img|test_control_img:inst|Add0~15            ; |Test_cont_img|test_control_img:inst|Add0~15            ; out0             ;
+; |Test_cont_img|test_control_img:inst|Add0~16            ; |Test_cont_img|test_control_img:inst|Add0~16            ; out0             ;
+; |Test_cont_img|test_control_img:inst|Add1~0             ; |Test_cont_img|test_control_img:inst|Add1~0             ; out0             ;
+; |Test_cont_img|test_control_img:inst|Add1~1             ; |Test_cont_img|test_control_img:inst|Add1~1             ; out0             ;
+; |Test_cont_img|test_control_img:inst|Add1~2             ; |Test_cont_img|test_control_img:inst|Add1~2             ; out0             ;
+; |Test_cont_img|test_control_img:inst|Add1~3             ; |Test_cont_img|test_control_img:inst|Add1~3             ; out0             ;
+; |Test_cont_img|test_control_img:inst|Add1~4             ; |Test_cont_img|test_control_img:inst|Add1~4             ; out0             ;
+; |Test_cont_img|test_control_img:inst|Add1~5             ; |Test_cont_img|test_control_img:inst|Add1~5             ; out0             ;
+; |Test_cont_img|test_control_img:inst|Add1~6             ; |Test_cont_img|test_control_img:inst|Add1~6             ; out0             ;
+; |Test_cont_img|test_control_img:inst|Add1~7             ; |Test_cont_img|test_control_img:inst|Add1~7             ; out0             ;
+; |Test_cont_img|test_control_img:inst|Add1~8             ; |Test_cont_img|test_control_img:inst|Add1~8             ; out0             ;
+; |Test_cont_img|test_control_img:inst|Add1~9             ; |Test_cont_img|test_control_img:inst|Add1~9             ; out0             ;
+; |Test_cont_img|test_control_img:inst|Add1~10            ; |Test_cont_img|test_control_img:inst|Add1~10            ; out0             ;
+; |Test_cont_img|test_control_img:inst|Add1~11            ; |Test_cont_img|test_control_img:inst|Add1~11            ; out0             ;
+; |Test_cont_img|test_control_img:inst|Add1~12            ; |Test_cont_img|test_control_img:inst|Add1~12            ; out0             ;
+; |Test_cont_img|control_imagen:inst1|Add0~6              ; |Test_cont_img|control_imagen:inst1|Add0~6              ; out0             ;
+; |Test_cont_img|control_imagen:inst1|Add0~7              ; |Test_cont_img|control_imagen:inst1|Add0~7              ; out0             ;
+; |Test_cont_img|control_imagen:inst1|Add0~8              ; |Test_cont_img|control_imagen:inst1|Add0~8              ; out0             ;
+; |Test_cont_img|control_imagen:inst1|Add0~9              ; |Test_cont_img|control_imagen:inst1|Add0~9              ; out0             ;
+; |Test_cont_img|control_imagen:inst1|Add0~10             ; |Test_cont_img|control_imagen:inst1|Add0~10             ; out0             ;
+; |Test_cont_img|control_imagen:inst1|Add0~11             ; |Test_cont_img|control_imagen:inst1|Add0~11             ; out0             ;
+; |Test_cont_img|control_imagen:inst1|Add0~12             ; |Test_cont_img|control_imagen:inst1|Add0~12             ; out0             ;
+; |Test_cont_img|control_imagen:inst1|Add1~0              ; |Test_cont_img|control_imagen:inst1|Add1~0              ; out0             ;
+; |Test_cont_img|control_imagen:inst1|Add1~1              ; |Test_cont_img|control_imagen:inst1|Add1~1              ; out0             ;
+; |Test_cont_img|control_imagen:inst1|Add1~2              ; |Test_cont_img|control_imagen:inst1|Add1~2              ; out0             ;
+; |Test_cont_img|control_imagen:inst1|Add1~3              ; |Test_cont_img|control_imagen:inst1|Add1~3              ; out0             ;
+; |Test_cont_img|control_imagen:inst1|Add1~4              ; |Test_cont_img|control_imagen:inst1|Add1~4              ; out0             ;
+; |Test_cont_img|control_imagen:inst1|Add1~5              ; |Test_cont_img|control_imagen:inst1|Add1~5              ; out0             ;
+; |Test_cont_img|control_imagen:inst1|Add1~6              ; |Test_cont_img|control_imagen:inst1|Add1~6              ; out0             ;
+; |Test_cont_img|control_imagen:inst1|Add1~7              ; |Test_cont_img|control_imagen:inst1|Add1~7              ; out0             ;
+; |Test_cont_img|control_imagen:inst1|Add1~8              ; |Test_cont_img|control_imagen:inst1|Add1~8              ; out0             ;
+; |Test_cont_img|control_imagen:inst1|Add1~9              ; |Test_cont_img|control_imagen:inst1|Add1~9              ; out0             ;
+; |Test_cont_img|control_imagen:inst1|Add2~0              ; |Test_cont_img|control_imagen:inst1|Add2~0              ; out0             ;
+; |Test_cont_img|control_imagen:inst1|Add2~1              ; |Test_cont_img|control_imagen:inst1|Add2~1              ; out0             ;
+; |Test_cont_img|control_imagen:inst1|Add2~2              ; |Test_cont_img|control_imagen:inst1|Add2~2              ; out0             ;
+; |Test_cont_img|control_imagen:inst1|Add2~3              ; |Test_cont_img|control_imagen:inst1|Add2~3              ; out0             ;
+; |Test_cont_img|control_imagen:inst1|Add2~4              ; |Test_cont_img|control_imagen:inst1|Add2~4              ; out0             ;
+; |Test_cont_img|control_imagen:inst1|Add2~5              ; |Test_cont_img|control_imagen:inst1|Add2~5              ; out0             ;
+; |Test_cont_img|control_imagen:inst1|Add2~6              ; |Test_cont_img|control_imagen:inst1|Add2~6              ; out0             ;
+; |Test_cont_img|control_imagen:inst1|Add2~7              ; |Test_cont_img|control_imagen:inst1|Add2~7              ; out0             ;
+; |Test_cont_img|control_imagen:inst1|Add2~8              ; |Test_cont_img|control_imagen:inst1|Add2~8              ; out0             ;
+; |Test_cont_img|control_imagen:inst1|Add2~9              ; |Test_cont_img|control_imagen:inst1|Add2~9              ; out0             ;
+; |Test_cont_img|control_imagen:inst1|Add2~10             ; |Test_cont_img|control_imagen:inst1|Add2~10             ; out0             ;
+; |Test_cont_img|control_imagen:inst1|Add2~11             ; |Test_cont_img|control_imagen:inst1|Add2~11             ; out0             ;
+; |Test_cont_img|control_imagen:inst1|Add2~12             ; |Test_cont_img|control_imagen:inst1|Add2~12             ; out0             ;
+; |Test_cont_img|control_imagen:inst1|Add3~6              ; |Test_cont_img|control_imagen:inst1|Add3~6              ; out0             ;
+; |Test_cont_img|control_imagen:inst1|Add3~8              ; |Test_cont_img|control_imagen:inst1|Add3~8              ; out0             ;
+; |Test_cont_img|control_imagen:inst1|Add3~10             ; |Test_cont_img|control_imagen:inst1|Add3~10             ; out0             ;
+; |Test_cont_img|control_imagen:inst1|Add3~12             ; |Test_cont_img|control_imagen:inst1|Add3~12             ; out0             ;
+; |Test_cont_img|control_imagen:inst1|Add3~14             ; |Test_cont_img|control_imagen:inst1|Add3~14             ; out0             ;
+; |Test_cont_img|control_imagen:inst1|Add3~16             ; |Test_cont_img|control_imagen:inst1|Add3~16             ; out0             ;
+; |Test_cont_img|control_imagen:inst1|Add3~18             ; |Test_cont_img|control_imagen:inst1|Add3~18             ; out0             ;
+; |Test_cont_img|control_imagen:inst1|Add4~0              ; |Test_cont_img|control_imagen:inst1|Add4~0              ; out0             ;
+; |Test_cont_img|control_imagen:inst1|Add4~1              ; |Test_cont_img|control_imagen:inst1|Add4~1              ; out0             ;
+; |Test_cont_img|control_imagen:inst1|Add4~2              ; |Test_cont_img|control_imagen:inst1|Add4~2              ; out0             ;
+; |Test_cont_img|control_imagen:inst1|Add4~3              ; |Test_cont_img|control_imagen:inst1|Add4~3              ; out0             ;
+; |Test_cont_img|control_imagen:inst1|Add4~4              ; |Test_cont_img|control_imagen:inst1|Add4~4              ; out0             ;
+; |Test_cont_img|control_imagen:inst1|Add4~5              ; |Test_cont_img|control_imagen:inst1|Add4~5              ; out0             ;
+; |Test_cont_img|control_imagen:inst1|Add4~6              ; |Test_cont_img|control_imagen:inst1|Add4~6              ; out0             ;
+; |Test_cont_img|control_imagen:inst1|Add4~7              ; |Test_cont_img|control_imagen:inst1|Add4~7              ; out0             ;
+; |Test_cont_img|control_imagen:inst1|Add4~8              ; |Test_cont_img|control_imagen:inst1|Add4~8              ; out0             ;
+; |Test_cont_img|control_imagen:inst1|Add4~9              ; |Test_cont_img|control_imagen:inst1|Add4~9              ; out0             ;
+; |Test_cont_img|control_imagen:inst1|Add4~10             ; |Test_cont_img|control_imagen:inst1|Add4~10             ; out0             ;
+; |Test_cont_img|control_imagen:inst1|Add4~11             ; |Test_cont_img|control_imagen:inst1|Add4~11             ; out0             ;
+; |Test_cont_img|control_imagen:inst1|Add4~12             ; |Test_cont_img|control_imagen:inst1|Add4~12             ; out0             ;
+; |Test_cont_img|control_imagen:inst1|Add4~13             ; |Test_cont_img|control_imagen:inst1|Add4~13             ; out0             ;
+; |Test_cont_img|control_imagen:inst1|Add4~14             ; |Test_cont_img|control_imagen:inst1|Add4~14             ; out0             ;
+; |Test_cont_img|control_imagen:inst1|Add4~15             ; |Test_cont_img|control_imagen:inst1|Add4~15             ; out0             ;
+; |Test_cont_img|control_imagen:inst1|Add4~16             ; |Test_cont_img|control_imagen:inst1|Add4~16             ; out0             ;
+; |Test_cont_img|control_imagen:inst1|Add5~0              ; |Test_cont_img|control_imagen:inst1|Add5~0              ; out0             ;
+; |Test_cont_img|control_imagen:inst1|Add5~1              ; |Test_cont_img|control_imagen:inst1|Add5~1              ; out0             ;
+; |Test_cont_img|control_imagen:inst1|Add5~2              ; |Test_cont_img|control_imagen:inst1|Add5~2              ; out0             ;
+; |Test_cont_img|control_imagen:inst1|Add5~3              ; |Test_cont_img|control_imagen:inst1|Add5~3              ; out0             ;
+; |Test_cont_img|control_imagen:inst1|Add5~4              ; |Test_cont_img|control_imagen:inst1|Add5~4              ; out0             ;
+; |Test_cont_img|control_imagen:inst1|Add5~5              ; |Test_cont_img|control_imagen:inst1|Add5~5              ; out0             ;
+; |Test_cont_img|control_imagen:inst1|Add5~6              ; |Test_cont_img|control_imagen:inst1|Add5~6              ; out0             ;
+; |Test_cont_img|control_imagen:inst1|Add5~7              ; |Test_cont_img|control_imagen:inst1|Add5~7              ; out0             ;
+; |Test_cont_img|control_imagen:inst1|Add5~8              ; |Test_cont_img|control_imagen:inst1|Add5~8              ; out0             ;
+; |Test_cont_img|control_imagen:inst1|Add5~9              ; |Test_cont_img|control_imagen:inst1|Add5~9              ; out0             ;
+; |Test_cont_img|control_imagen:inst1|Add5~10             ; |Test_cont_img|control_imagen:inst1|Add5~10             ; out0             ;
+; |Test_cont_img|control_imagen:inst1|Add5~11             ; |Test_cont_img|control_imagen:inst1|Add5~11             ; out0             ;
+; |Test_cont_img|control_imagen:inst1|Add5~12             ; |Test_cont_img|control_imagen:inst1|Add5~12             ; out0             ;
+; |Test_cont_img|control_imagen:inst1|Add5~13             ; |Test_cont_img|control_imagen:inst1|Add5~13             ; out0             ;
+; |Test_cont_img|control_imagen:inst1|Add5~14             ; |Test_cont_img|control_imagen:inst1|Add5~14             ; out0             ;
+; |Test_cont_img|control_imagen:inst1|Add5~15             ; |Test_cont_img|control_imagen:inst1|Add5~15             ; out0             ;
+; |Test_cont_img|control_imagen:inst1|Add5~16             ; |Test_cont_img|control_imagen:inst1|Add5~16             ; out0             ;
+; |Test_cont_img|control_imagen:inst1|Add6~0              ; |Test_cont_img|control_imagen:inst1|Add6~0              ; out0             ;
+; |Test_cont_img|control_imagen:inst1|Add6~1              ; |Test_cont_img|control_imagen:inst1|Add6~1              ; out0             ;
+; |Test_cont_img|control_imagen:inst1|Add6~2              ; |Test_cont_img|control_imagen:inst1|Add6~2              ; out0             ;
+; |Test_cont_img|control_imagen:inst1|Add6~3              ; |Test_cont_img|control_imagen:inst1|Add6~3              ; out0             ;
+; |Test_cont_img|control_imagen:inst1|Add6~4              ; |Test_cont_img|control_imagen:inst1|Add6~4              ; out0             ;
+; |Test_cont_img|control_imagen:inst1|Add6~5              ; |Test_cont_img|control_imagen:inst1|Add6~5              ; out0             ;
+; |Test_cont_img|control_imagen:inst1|Add6~6              ; |Test_cont_img|control_imagen:inst1|Add6~6              ; out0             ;
+; |Test_cont_img|control_imagen:inst1|Add6~7              ; |Test_cont_img|control_imagen:inst1|Add6~7              ; out0             ;
+; |Test_cont_img|control_imagen:inst1|Add6~8              ; |Test_cont_img|control_imagen:inst1|Add6~8              ; out0             ;
+; |Test_cont_img|control_imagen:inst1|Add6~9              ; |Test_cont_img|control_imagen:inst1|Add6~9              ; out0             ;
+; |Test_cont_img|control_imagen:inst1|Add6~10             ; |Test_cont_img|control_imagen:inst1|Add6~10             ; out0             ;
+; |Test_cont_img|control_imagen:inst1|Add6~11             ; |Test_cont_img|control_imagen:inst1|Add6~11             ; out0             ;
+; |Test_cont_img|control_imagen:inst1|Add6~12             ; |Test_cont_img|control_imagen:inst1|Add6~12             ; out0             ;
+; |Test_cont_img|control_imagen:inst1|Add6~14             ; |Test_cont_img|control_imagen:inst1|Add6~14             ; out0             ;
+; |Test_cont_img|control_imagen:inst1|Add6~15             ; |Test_cont_img|control_imagen:inst1|Add6~15             ; out0             ;
+; |Test_cont_img|control_imagen:inst1|Add6~17             ; |Test_cont_img|control_imagen:inst1|Add6~17             ; out0             ;
+; |Test_cont_img|control_imagen:inst1|Add6~18             ; |Test_cont_img|control_imagen:inst1|Add6~18             ; out0             ;
+; |Test_cont_img|control_imagen:inst1|Add6~20             ; |Test_cont_img|control_imagen:inst1|Add6~20             ; out0             ;
+; |Test_cont_img|control_imagen:inst1|Add6~21             ; |Test_cont_img|control_imagen:inst1|Add6~21             ; out0             ;
+; |Test_cont_img|control_imagen:inst1|Add6~23             ; |Test_cont_img|control_imagen:inst1|Add6~23             ; out0             ;
+; |Test_cont_img|test_control_img:inst|Equal0~0           ; |Test_cont_img|test_control_img:inst|Equal0~0           ; out0             ;
+; |Test_cont_img|control_imagen:inst1|Equal0~0            ; |Test_cont_img|control_imagen:inst1|Equal0~0            ; out0             ;
+; |Test_cont_img|control_imagen:inst1|Equal0~1            ; |Test_cont_img|control_imagen:inst1|Equal0~1            ; out0             ;
+; |Test_cont_img|control_imagen:inst1|Equal0~2            ; |Test_cont_img|control_imagen:inst1|Equal0~2            ; out0             ;
+; |Test_cont_img|control_imagen:inst1|Equal0~3            ; |Test_cont_img|control_imagen:inst1|Equal0~3            ; out0             ;
+; |Test_cont_img|control_imagen:inst1|Equal0~4            ; |Test_cont_img|control_imagen:inst1|Equal0~4            ; out0             ;
+; |Test_cont_img|control_imagen:inst1|Equal0~5            ; |Test_cont_img|control_imagen:inst1|Equal0~5            ; out0             ;
+; |Test_cont_img|control_imagen:inst1|Equal0~6            ; |Test_cont_img|control_imagen:inst1|Equal0~6            ; out0             ;
+; |Test_cont_img|control_imagen:inst1|Equal0~10           ; |Test_cont_img|control_imagen:inst1|Equal0~10           ; out0             ;
+; |Test_cont_img|control_imagen:inst1|Equal1~0            ; |Test_cont_img|control_imagen:inst1|Equal1~0            ; out0             ;
+; |Test_cont_img|control_imagen:inst1|Equal1~1            ; |Test_cont_img|control_imagen:inst1|Equal1~1            ; out0             ;
+; |Test_cont_img|control_imagen:inst1|Equal1~2            ; |Test_cont_img|control_imagen:inst1|Equal1~2            ; out0             ;
+; |Test_cont_img|control_imagen:inst1|Equal1~3            ; |Test_cont_img|control_imagen:inst1|Equal1~3            ; out0             ;
+; |Test_cont_img|control_imagen:inst1|Equal1~4            ; |Test_cont_img|control_imagen:inst1|Equal1~4            ; out0             ;
+; |Test_cont_img|control_imagen:inst1|Equal1~5            ; |Test_cont_img|control_imagen:inst1|Equal1~5            ; out0             ;
+; |Test_cont_img|control_imagen:inst1|Equal1~6            ; |Test_cont_img|control_imagen:inst1|Equal1~6            ; out0             ;
+; |Test_cont_img|control_imagen:inst1|Equal1~7            ; |Test_cont_img|control_imagen:inst1|Equal1~7            ; out0             ;
+; |Test_cont_img|control_imagen:inst1|Equal1~8            ; |Test_cont_img|control_imagen:inst1|Equal1~8            ; out0             ;
+; |Test_cont_img|control_imagen:inst1|Equal1~9            ; |Test_cont_img|control_imagen:inst1|Equal1~9            ; out0             ;
+; |Test_cont_img|control_imagen:inst1|Equal1~10           ; |Test_cont_img|control_imagen:inst1|Equal1~10           ; out0             ;
+; |Test_cont_img|control_imagen:inst1|Equal2~0            ; |Test_cont_img|control_imagen:inst1|Equal2~0            ; out0             ;
++---------------------------------------------------------+---------------------------------------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 1 during simulation.
++------------------------------------------------------------------------------------------------------------------------------+
+; Missing 1-Value Coverage                                                                                                     ;
++-----------------------------------------------------+-----------------------------------------------------+------------------+
+; Node Name                                           ; Output Port Name                                    ; Output Port Type ;
++-----------------------------------------------------+-----------------------------------------------------+------------------+
+; |Test_cont_img|col_sim[2]                           ; |Test_cont_img|col_sim[2]                           ; pin_out          ;
+; |Test_cont_img|col_sim[1]                           ; |Test_cont_img|col_sim[1]                           ; pin_out          ;
+; |Test_cont_img|col_sim[0]                           ; |Test_cont_img|col_sim[0]                           ; pin_out          ;
+; |Test_cont_img|reset                                ; |Test_cont_img|reset                                ; out              ;
+; |Test_cont_img|dir[13]                              ; |Test_cont_img|dir[13]                              ; pin_out          ;
+; |Test_cont_img|dir[12]                              ; |Test_cont_img|dir[12]                              ; pin_out          ;
+; |Test_cont_img|dir[11]                              ; |Test_cont_img|dir[11]                              ; pin_out          ;
+; |Test_cont_img|dir[10]                              ; |Test_cont_img|dir[10]                              ; pin_out          ;
+; |Test_cont_img|dir[9]                               ; |Test_cont_img|dir[9]                               ; pin_out          ;
+; |Test_cont_img|fila_sim[9]                          ; |Test_cont_img|fila_sim[9]                          ; pin_out          ;
+; |Test_cont_img|fila_sim[8]                          ; |Test_cont_img|fila_sim[8]                          ; pin_out          ;
+; |Test_cont_img|fila_sim[7]                          ; |Test_cont_img|fila_sim[7]                          ; pin_out          ;
+; |Test_cont_img|fila_sim[6]                          ; |Test_cont_img|fila_sim[6]                          ; pin_out          ;
+; |Test_cont_img|fila_sim[2]                          ; |Test_cont_img|fila_sim[2]                          ; pin_out          ;
+; |Test_cont_img|Fila_sim_int[9]                      ; |Test_cont_img|Fila_sim_int[9]                      ; pin_out          ;
+; |Test_cont_img|Fila_sim_int[8]                      ; |Test_cont_img|Fila_sim_int[8]                      ; pin_out          ;
+; |Test_cont_img|Fila_sim_int[7]                      ; |Test_cont_img|Fila_sim_int[7]                      ; pin_out          ;
+; |Test_cont_img|Fila_sim_int[5]                      ; |Test_cont_img|Fila_sim_int[5]                      ; pin_out          ;
+; |Test_cont_img|test_control_img:inst|fila_int~0     ; |Test_cont_img|test_control_img:inst|fila_int~0     ; out              ;
+; |Test_cont_img|test_control_img:inst|fila_int~1     ; |Test_cont_img|test_control_img:inst|fila_int~1     ; out              ;
+; |Test_cont_img|test_control_img:inst|fila_int[9]    ; |Test_cont_img|test_control_img:inst|fila_int[9]    ; regout           ;
+; |Test_cont_img|test_control_img:inst|fila_int[8]    ; |Test_cont_img|test_control_img:inst|fila_int[8]    ; regout           ;
+; |Test_cont_img|test_control_img:inst|fila_int[7]    ; |Test_cont_img|test_control_img:inst|fila_int[7]    ; regout           ;
+; |Test_cont_img|test_control_img:inst|fila_int[5]    ; |Test_cont_img|test_control_img:inst|fila_int[5]    ; regout           ;
+; |Test_cont_img|control_imagen:inst1|process_0~0     ; |Test_cont_img|control_imagen:inst1|process_0~0     ; out0             ;
+; |Test_cont_img|control_imagen:inst1|col_n~7         ; |Test_cont_img|control_imagen:inst1|col_n~7         ; out              ;
+; |Test_cont_img|control_imagen:inst1|col_n~8         ; |Test_cont_img|control_imagen:inst1|col_n~8         ; out              ;
+; |Test_cont_img|control_imagen:inst1|col_n~9         ; |Test_cont_img|control_imagen:inst1|col_n~9         ; out              ;
+; |Test_cont_img|control_imagen:inst1|fila_n~0        ; |Test_cont_img|control_imagen:inst1|fila_n~0        ; out              ;
+; |Test_cont_img|control_imagen:inst1|fila_n~1        ; |Test_cont_img|control_imagen:inst1|fila_n~1        ; out              ;
+; |Test_cont_img|control_imagen:inst1|fila_n~2        ; |Test_cont_img|control_imagen:inst1|fila_n~2        ; out              ;
+; |Test_cont_img|control_imagen:inst1|fila_n~3        ; |Test_cont_img|control_imagen:inst1|fila_n~3        ; out              ;
+; |Test_cont_img|control_imagen:inst1|fila_n~4        ; |Test_cont_img|control_imagen:inst1|fila_n~4        ; out              ;
+; |Test_cont_img|control_imagen:inst1|fila_n~7        ; |Test_cont_img|control_imagen:inst1|fila_n~7        ; out              ;
+; |Test_cont_img|control_imagen:inst1|fila_n~8        ; |Test_cont_img|control_imagen:inst1|fila_n~8        ; out              ;
+; |Test_cont_img|control_imagen:inst1|fila_n~9        ; |Test_cont_img|control_imagen:inst1|fila_n~9        ; out              ;
+; |Test_cont_img|control_imagen:inst1|mem_dir_int~0   ; |Test_cont_img|control_imagen:inst1|mem_dir_int~0   ; out              ;
+; |Test_cont_img|control_imagen:inst1|mem_dir_int~1   ; |Test_cont_img|control_imagen:inst1|mem_dir_int~1   ; out              ;
+; |Test_cont_img|control_imagen:inst1|mem_dir_int~2   ; |Test_cont_img|control_imagen:inst1|mem_dir_int~2   ; out              ;
+; |Test_cont_img|control_imagen:inst1|mem_dir_int~3   ; |Test_cont_img|control_imagen:inst1|mem_dir_int~3   ; out              ;
+; |Test_cont_img|control_imagen:inst1|mem_dir_int~4   ; |Test_cont_img|control_imagen:inst1|mem_dir_int~4   ; out              ;
+; |Test_cont_img|control_imagen:inst1|fila_n~10       ; |Test_cont_img|control_imagen:inst1|fila_n~10       ; out              ;
+; |Test_cont_img|control_imagen:inst1|fila_n~11       ; |Test_cont_img|control_imagen:inst1|fila_n~11       ; out              ;
+; |Test_cont_img|control_imagen:inst1|fila_n~12       ; |Test_cont_img|control_imagen:inst1|fila_n~12       ; out              ;
+; |Test_cont_img|control_imagen:inst1|fila_n~13       ; |Test_cont_img|control_imagen:inst1|fila_n~13       ; out              ;
+; |Test_cont_img|control_imagen:inst1|fila_n~17       ; |Test_cont_img|control_imagen:inst1|fila_n~17       ; out              ;
+; |Test_cont_img|control_imagen:inst1|col_n~17        ; |Test_cont_img|control_imagen:inst1|col_n~17        ; out              ;
+; |Test_cont_img|control_imagen:inst1|col_n~18        ; |Test_cont_img|control_imagen:inst1|col_n~18        ; out              ;
+; |Test_cont_img|control_imagen:inst1|col_n~19        ; |Test_cont_img|control_imagen:inst1|col_n~19        ; out              ;
+; |Test_cont_img|control_imagen:inst1|col_n~27        ; |Test_cont_img|control_imagen:inst1|col_n~27        ; out              ;
+; |Test_cont_img|control_imagen:inst1|col_n~28        ; |Test_cont_img|control_imagen:inst1|col_n~28        ; out              ;
+; |Test_cont_img|control_imagen:inst1|col_n~29        ; |Test_cont_img|control_imagen:inst1|col_n~29        ; out              ;
+; |Test_cont_img|control_imagen:inst1|fila_n[9]       ; |Test_cont_img|control_imagen:inst1|fila_n[9]       ; regout           ;
+; |Test_cont_img|control_imagen:inst1|fila_n[8]       ; |Test_cont_img|control_imagen:inst1|fila_n[8]       ; regout           ;
+; |Test_cont_img|control_imagen:inst1|fila_n[7]       ; |Test_cont_img|control_imagen:inst1|fila_n[7]       ; regout           ;
+; |Test_cont_img|control_imagen:inst1|fila_n[6]       ; |Test_cont_img|control_imagen:inst1|fila_n[6]       ; regout           ;
+; |Test_cont_img|control_imagen:inst1|fila_n[2]       ; |Test_cont_img|control_imagen:inst1|fila_n[2]       ; regout           ;
+; |Test_cont_img|control_imagen:inst1|col_n[2]        ; |Test_cont_img|control_imagen:inst1|col_n[2]        ; regout           ;
+; |Test_cont_img|control_imagen:inst1|col_n[1]        ; |Test_cont_img|control_imagen:inst1|col_n[1]        ; regout           ;
+; |Test_cont_img|control_imagen:inst1|col_n[0]        ; |Test_cont_img|control_imagen:inst1|col_n[0]        ; regout           ;
+; |Test_cont_img|control_imagen:inst1|mem_dir_int[13] ; |Test_cont_img|control_imagen:inst1|mem_dir_int[13] ; regout           ;
+; |Test_cont_img|control_imagen:inst1|mem_dir_int[12] ; |Test_cont_img|control_imagen:inst1|mem_dir_int[12] ; regout           ;
+; |Test_cont_img|control_imagen:inst1|mem_dir_int[11] ; |Test_cont_img|control_imagen:inst1|mem_dir_int[11] ; regout           ;
+; |Test_cont_img|control_imagen:inst1|mem_dir_int[10] ; |Test_cont_img|control_imagen:inst1|mem_dir_int[10] ; regout           ;
+; |Test_cont_img|control_imagen:inst1|mem_dir_int[9]  ; |Test_cont_img|control_imagen:inst1|mem_dir_int[9]  ; regout           ;
+; |Test_cont_img|control_imagen:inst1|state~3         ; |Test_cont_img|control_imagen:inst1|state~3         ; out0             ;
+; |Test_cont_img|control_imagen:inst1|state~11        ; |Test_cont_img|control_imagen:inst1|state~11        ; out0             ;
+; |Test_cont_img|control_imagen:inst1|Selector10~0    ; |Test_cont_img|control_imagen:inst1|Selector10~0    ; out              ;
+; |Test_cont_img|control_imagen:inst1|Selector10~1    ; |Test_cont_img|control_imagen:inst1|Selector10~1    ; out              ;
+; |Test_cont_img|control_imagen:inst1|Selector11~0    ; |Test_cont_img|control_imagen:inst1|Selector11~0    ; out              ;
+; |Test_cont_img|control_imagen:inst1|Selector11~1    ; |Test_cont_img|control_imagen:inst1|Selector11~1    ; out              ;
+; |Test_cont_img|control_imagen:inst1|Selector12~0    ; |Test_cont_img|control_imagen:inst1|Selector12~0    ; out              ;
+; |Test_cont_img|control_imagen:inst1|Selector12~1    ; |Test_cont_img|control_imagen:inst1|Selector12~1    ; out              ;
+; |Test_cont_img|control_imagen:inst1|Selector13~0    ; |Test_cont_img|control_imagen:inst1|Selector13~0    ; out              ;
+; |Test_cont_img|control_imagen:inst1|Selector13~1    ; |Test_cont_img|control_imagen:inst1|Selector13~1    ; out              ;
+; |Test_cont_img|control_imagen:inst1|Selector14~0    ; |Test_cont_img|control_imagen:inst1|Selector14~0    ; out              ;
+; |Test_cont_img|control_imagen:inst1|Selector14~1    ; |Test_cont_img|control_imagen:inst1|Selector14~1    ; out              ;
+; |Test_cont_img|control_imagen:inst1|Selector15~0    ; |Test_cont_img|control_imagen:inst1|Selector15~0    ; out              ;
+; |Test_cont_img|control_imagen:inst1|Selector15~1    ; |Test_cont_img|control_imagen:inst1|Selector15~1    ; out              ;
+; |Test_cont_img|control_imagen:inst1|Selector16~0    ; |Test_cont_img|control_imagen:inst1|Selector16~0    ; out              ;
+; |Test_cont_img|control_imagen:inst1|Selector16~1    ; |Test_cont_img|control_imagen:inst1|Selector16~1    ; out              ;
+; |Test_cont_img|control_imagen:inst1|Selector17~0    ; |Test_cont_img|control_imagen:inst1|Selector17~0    ; out              ;
+; |Test_cont_img|control_imagen:inst1|Selector17~1    ; |Test_cont_img|control_imagen:inst1|Selector17~1    ; out              ;
+; |Test_cont_img|control_imagen:inst1|Selector20~0    ; |Test_cont_img|control_imagen:inst1|Selector20~0    ; out              ;
+; |Test_cont_img|control_imagen:inst1|Selector20~1    ; |Test_cont_img|control_imagen:inst1|Selector20~1    ; out              ;
+; |Test_cont_img|control_imagen:inst1|Selector21~0    ; |Test_cont_img|control_imagen:inst1|Selector21~0    ; out              ;
+; |Test_cont_img|control_imagen:inst1|Selector21~1    ; |Test_cont_img|control_imagen:inst1|Selector21~1    ; out              ;
+; |Test_cont_img|control_imagen:inst1|Selector22~0    ; |Test_cont_img|control_imagen:inst1|Selector22~0    ; out              ;
+; |Test_cont_img|control_imagen:inst1|Selector22~1    ; |Test_cont_img|control_imagen:inst1|Selector22~1    ; out              ;
+; |Test_cont_img|control_imagen:inst1|Selector23~0    ; |Test_cont_img|control_imagen:inst1|Selector23~0    ; out              ;
+; |Test_cont_img|control_imagen:inst1|Selector23~1    ; |Test_cont_img|control_imagen:inst1|Selector23~1    ; out              ;
+; |Test_cont_img|control_imagen:inst1|Selector24~0    ; |Test_cont_img|control_imagen:inst1|Selector24~0    ; out              ;
+; |Test_cont_img|control_imagen:inst1|Selector24~1    ; |Test_cont_img|control_imagen:inst1|Selector24~1    ; out              ;
+; |Test_cont_img|control_imagen:inst1|Selector25~0    ; |Test_cont_img|control_imagen:inst1|Selector25~0    ; out              ;
+; |Test_cont_img|control_imagen:inst1|Selector25~1    ; |Test_cont_img|control_imagen:inst1|Selector25~1    ; out              ;
+; |Test_cont_img|control_imagen:inst1|Selector26~0    ; |Test_cont_img|control_imagen:inst1|Selector26~0    ; out              ;
+; |Test_cont_img|control_imagen:inst1|Selector26~1    ; |Test_cont_img|control_imagen:inst1|Selector26~1    ; out              ;
+; |Test_cont_img|control_imagen:inst1|Selector27~0    ; |Test_cont_img|control_imagen:inst1|Selector27~0    ; out              ;
+; |Test_cont_img|control_imagen:inst1|Selector27~1    ; |Test_cont_img|control_imagen:inst1|Selector27~1    ; out              ;
+; |Test_cont_img|control_imagen:inst1|LessThan0~7     ; |Test_cont_img|control_imagen:inst1|LessThan0~7     ; out0             ;
+; |Test_cont_img|control_imagen:inst1|LessThan0~8     ; |Test_cont_img|control_imagen:inst1|LessThan0~8     ; out0             ;
+; |Test_cont_img|control_imagen:inst1|LessThan0~9     ; |Test_cont_img|control_imagen:inst1|LessThan0~9     ; out0             ;
+; |Test_cont_img|control_imagen:inst1|LessThan0~10    ; |Test_cont_img|control_imagen:inst1|LessThan0~10    ; out0             ;
+; |Test_cont_img|control_imagen:inst1|LessThan0~11    ; |Test_cont_img|control_imagen:inst1|LessThan0~11    ; out0             ;
+; |Test_cont_img|control_imagen:inst1|LessThan0~12    ; |Test_cont_img|control_imagen:inst1|LessThan0~12    ; out0             ;
+; |Test_cont_img|control_imagen:inst1|LessThan0~13    ; |Test_cont_img|control_imagen:inst1|LessThan0~13    ; out0             ;
+; |Test_cont_img|control_imagen:inst1|LessThan0~14    ; |Test_cont_img|control_imagen:inst1|LessThan0~14    ; out0             ;
+; |Test_cont_img|control_imagen:inst1|LessThan0~15    ; |Test_cont_img|control_imagen:inst1|LessThan0~15    ; out0             ;
+; |Test_cont_img|control_imagen:inst1|LessThan1~3     ; |Test_cont_img|control_imagen:inst1|LessThan1~3     ; out0             ;
+; |Test_cont_img|control_imagen:inst1|LessThan1~4     ; |Test_cont_img|control_imagen:inst1|LessThan1~4     ; out0             ;
+; |Test_cont_img|control_imagen:inst1|LessThan1~5     ; |Test_cont_img|control_imagen:inst1|LessThan1~5     ; out0             ;
+; |Test_cont_img|control_imagen:inst1|LessThan1~6     ; |Test_cont_img|control_imagen:inst1|LessThan1~6     ; out0             ;
+; |Test_cont_img|control_imagen:inst1|LessThan1~7     ; |Test_cont_img|control_imagen:inst1|LessThan1~7     ; out0             ;
+; |Test_cont_img|test_control_img:inst|Add1~13        ; |Test_cont_img|test_control_img:inst|Add1~13        ; out0             ;
+; |Test_cont_img|test_control_img:inst|Add1~14        ; |Test_cont_img|test_control_img:inst|Add1~14        ; out0             ;
+; |Test_cont_img|test_control_img:inst|Add1~15        ; |Test_cont_img|test_control_img:inst|Add1~15        ; out0             ;
+; |Test_cont_img|test_control_img:inst|Add1~16        ; |Test_cont_img|test_control_img:inst|Add1~16        ; out0             ;
+; |Test_cont_img|control_imagen:inst1|Add0~0          ; |Test_cont_img|control_imagen:inst1|Add0~0          ; out0             ;
+; |Test_cont_img|control_imagen:inst1|Add0~3          ; |Test_cont_img|control_imagen:inst1|Add0~3          ; out0             ;
+; |Test_cont_img|control_imagen:inst1|Add0~5          ; |Test_cont_img|control_imagen:inst1|Add0~5          ; out0             ;
+; |Test_cont_img|control_imagen:inst1|Add0~13         ; |Test_cont_img|control_imagen:inst1|Add0~13         ; out0             ;
+; |Test_cont_img|control_imagen:inst1|Add0~14         ; |Test_cont_img|control_imagen:inst1|Add0~14         ; out0             ;
+; |Test_cont_img|control_imagen:inst1|Add0~15         ; |Test_cont_img|control_imagen:inst1|Add0~15         ; out0             ;
+; |Test_cont_img|control_imagen:inst1|Add0~16         ; |Test_cont_img|control_imagen:inst1|Add0~16         ; out0             ;
+; |Test_cont_img|control_imagen:inst1|Add0~17         ; |Test_cont_img|control_imagen:inst1|Add0~17         ; out0             ;
+; |Test_cont_img|control_imagen:inst1|Add0~18         ; |Test_cont_img|control_imagen:inst1|Add0~18         ; out0             ;
+; |Test_cont_img|control_imagen:inst1|Add0~19         ; |Test_cont_img|control_imagen:inst1|Add0~19         ; out0             ;
+; |Test_cont_img|control_imagen:inst1|Add1~10         ; |Test_cont_img|control_imagen:inst1|Add1~10         ; out0             ;
+; |Test_cont_img|control_imagen:inst1|Add1~11         ; |Test_cont_img|control_imagen:inst1|Add1~11         ; out0             ;
+; |Test_cont_img|control_imagen:inst1|Add1~12         ; |Test_cont_img|control_imagen:inst1|Add1~12         ; out0             ;
+; |Test_cont_img|control_imagen:inst1|Add1~13         ; |Test_cont_img|control_imagen:inst1|Add1~13         ; out0             ;
+; |Test_cont_img|control_imagen:inst1|Add1~14         ; |Test_cont_img|control_imagen:inst1|Add1~14         ; out0             ;
+; |Test_cont_img|control_imagen:inst1|Add1~15         ; |Test_cont_img|control_imagen:inst1|Add1~15         ; out0             ;
+; |Test_cont_img|control_imagen:inst1|Add1~16         ; |Test_cont_img|control_imagen:inst1|Add1~16         ; out0             ;
+; |Test_cont_img|control_imagen:inst1|Add1~17         ; |Test_cont_img|control_imagen:inst1|Add1~17         ; out0             ;
+; |Test_cont_img|control_imagen:inst1|Add2~13         ; |Test_cont_img|control_imagen:inst1|Add2~13         ; out0             ;
+; |Test_cont_img|control_imagen:inst1|Add2~14         ; |Test_cont_img|control_imagen:inst1|Add2~14         ; out0             ;
+; |Test_cont_img|control_imagen:inst1|Add2~15         ; |Test_cont_img|control_imagen:inst1|Add2~15         ; out0             ;
+; |Test_cont_img|control_imagen:inst1|Add2~16         ; |Test_cont_img|control_imagen:inst1|Add2~16         ; out0             ;
+; |Test_cont_img|control_imagen:inst1|Add3~0          ; |Test_cont_img|control_imagen:inst1|Add3~0          ; out0             ;
+; |Test_cont_img|control_imagen:inst1|Add3~1          ; |Test_cont_img|control_imagen:inst1|Add3~1          ; out0             ;
+; |Test_cont_img|control_imagen:inst1|Add3~2          ; |Test_cont_img|control_imagen:inst1|Add3~2          ; out0             ;
+; |Test_cont_img|control_imagen:inst1|Add3~3          ; |Test_cont_img|control_imagen:inst1|Add3~3          ; out0             ;
+; |Test_cont_img|control_imagen:inst1|Add3~4          ; |Test_cont_img|control_imagen:inst1|Add3~4          ; out0             ;
+; |Test_cont_img|control_imagen:inst1|Add3~5          ; |Test_cont_img|control_imagen:inst1|Add3~5          ; out0             ;
+; |Test_cont_img|control_imagen:inst1|Add3~7          ; |Test_cont_img|control_imagen:inst1|Add3~7          ; out0             ;
+; |Test_cont_img|control_imagen:inst1|Add3~9          ; |Test_cont_img|control_imagen:inst1|Add3~9          ; out0             ;
+; |Test_cont_img|control_imagen:inst1|Add3~11         ; |Test_cont_img|control_imagen:inst1|Add3~11         ; out0             ;
+; |Test_cont_img|control_imagen:inst1|Add3~13         ; |Test_cont_img|control_imagen:inst1|Add3~13         ; out0             ;
+; |Test_cont_img|control_imagen:inst1|Add3~15         ; |Test_cont_img|control_imagen:inst1|Add3~15         ; out0             ;
+; |Test_cont_img|control_imagen:inst1|Add3~17         ; |Test_cont_img|control_imagen:inst1|Add3~17         ; out0             ;
+; |Test_cont_img|control_imagen:inst1|Add3~19         ; |Test_cont_img|control_imagen:inst1|Add3~19         ; out0             ;
+; |Test_cont_img|control_imagen:inst1|Add4~17         ; |Test_cont_img|control_imagen:inst1|Add4~17         ; out0             ;
+; |Test_cont_img|control_imagen:inst1|Add4~18         ; |Test_cont_img|control_imagen:inst1|Add4~18         ; out0             ;
+; |Test_cont_img|control_imagen:inst1|Add4~19         ; |Test_cont_img|control_imagen:inst1|Add4~19         ; out0             ;
+; |Test_cont_img|control_imagen:inst1|Add4~20         ; |Test_cont_img|control_imagen:inst1|Add4~20         ; out0             ;
+; |Test_cont_img|control_imagen:inst1|Add4~21         ; |Test_cont_img|control_imagen:inst1|Add4~21         ; out0             ;
+; |Test_cont_img|control_imagen:inst1|Add4~22         ; |Test_cont_img|control_imagen:inst1|Add4~22         ; out0             ;
+; |Test_cont_img|control_imagen:inst1|Add4~23         ; |Test_cont_img|control_imagen:inst1|Add4~23         ; out0             ;
+; |Test_cont_img|control_imagen:inst1|Add4~24         ; |Test_cont_img|control_imagen:inst1|Add4~24         ; out0             ;
+; |Test_cont_img|control_imagen:inst1|Add6~13         ; |Test_cont_img|control_imagen:inst1|Add6~13         ; out0             ;
+; |Test_cont_img|control_imagen:inst1|Add6~16         ; |Test_cont_img|control_imagen:inst1|Add6~16         ; out0             ;
+; |Test_cont_img|control_imagen:inst1|Add6~19         ; |Test_cont_img|control_imagen:inst1|Add6~19         ; out0             ;
+; |Test_cont_img|control_imagen:inst1|Add6~22         ; |Test_cont_img|control_imagen:inst1|Add6~22         ; out0             ;
+; |Test_cont_img|test_control_img:inst|Equal1~0       ; |Test_cont_img|test_control_img:inst|Equal1~0       ; out0             ;
+; |Test_cont_img|control_imagen:inst1|Equal0~7        ; |Test_cont_img|control_imagen:inst1|Equal0~7        ; out0             ;
+; |Test_cont_img|control_imagen:inst1|Equal0~8        ; |Test_cont_img|control_imagen:inst1|Equal0~8        ; out0             ;
+; |Test_cont_img|control_imagen:inst1|Equal0~9        ; |Test_cont_img|control_imagen:inst1|Equal0~9        ; out0             ;
++-----------------------------------------------------+-----------------------------------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 0 during simulation.
++------------------------------------------------------------------------------------------------------------------------------+
+; Missing 0-Value Coverage                                                                                                     ;
++-----------------------------------------------------+-----------------------------------------------------+------------------+
+; Node Name                                           ; Output Port Name                                    ; Output Port Type ;
++-----------------------------------------------------+-----------------------------------------------------+------------------+
+; |Test_cont_img|col_sim[2]                           ; |Test_cont_img|col_sim[2]                           ; pin_out          ;
+; |Test_cont_img|col_sim[1]                           ; |Test_cont_img|col_sim[1]                           ; pin_out          ;
+; |Test_cont_img|col_sim[0]                           ; |Test_cont_img|col_sim[0]                           ; pin_out          ;
+; |Test_cont_img|reset                                ; |Test_cont_img|reset                                ; out              ;
+; |Test_cont_img|dir[13]                              ; |Test_cont_img|dir[13]                              ; pin_out          ;
+; |Test_cont_img|dir[12]                              ; |Test_cont_img|dir[12]                              ; pin_out          ;
+; |Test_cont_img|dir[11]                              ; |Test_cont_img|dir[11]                              ; pin_out          ;
+; |Test_cont_img|dir[10]                              ; |Test_cont_img|dir[10]                              ; pin_out          ;
+; |Test_cont_img|dir[9]                               ; |Test_cont_img|dir[9]                               ; pin_out          ;
+; |Test_cont_img|fila_sim[9]                          ; |Test_cont_img|fila_sim[9]                          ; pin_out          ;
+; |Test_cont_img|fila_sim[8]                          ; |Test_cont_img|fila_sim[8]                          ; pin_out          ;
+; |Test_cont_img|fila_sim[7]                          ; |Test_cont_img|fila_sim[7]                          ; pin_out          ;
+; |Test_cont_img|fila_sim[6]                          ; |Test_cont_img|fila_sim[6]                          ; pin_out          ;
+; |Test_cont_img|fila_sim[5]                          ; |Test_cont_img|fila_sim[5]                          ; pin_out          ;
+; |Test_cont_img|fila_sim[4]                          ; |Test_cont_img|fila_sim[4]                          ; pin_out          ;
+; |Test_cont_img|fila_sim[2]                          ; |Test_cont_img|fila_sim[2]                          ; pin_out          ;
+; |Test_cont_img|fila_sim[1]                          ; |Test_cont_img|fila_sim[1]                          ; pin_out          ;
+; |Test_cont_img|fila_sim[0]                          ; |Test_cont_img|fila_sim[0]                          ; pin_out          ;
+; |Test_cont_img|Fila_sim_int[9]                      ; |Test_cont_img|Fila_sim_int[9]                      ; pin_out          ;
+; |Test_cont_img|Fila_sim_int[8]                      ; |Test_cont_img|Fila_sim_int[8]                      ; pin_out          ;
+; |Test_cont_img|Fila_sim_int[7]                      ; |Test_cont_img|Fila_sim_int[7]                      ; pin_out          ;
+; |Test_cont_img|Fila_sim_int[6]                      ; |Test_cont_img|Fila_sim_int[6]                      ; pin_out          ;
+; |Test_cont_img|test_control_img:inst|fila_int~0     ; |Test_cont_img|test_control_img:inst|fila_int~0     ; out              ;
+; |Test_cont_img|test_control_img:inst|fila_int~1     ; |Test_cont_img|test_control_img:inst|fila_int~1     ; out              ;
+; |Test_cont_img|test_control_img:inst|fila_int[9]    ; |Test_cont_img|test_control_img:inst|fila_int[9]    ; regout           ;
+; |Test_cont_img|test_control_img:inst|fila_int[8]    ; |Test_cont_img|test_control_img:inst|fila_int[8]    ; regout           ;
+; |Test_cont_img|test_control_img:inst|fila_int[7]    ; |Test_cont_img|test_control_img:inst|fila_int[7]    ; regout           ;
+; |Test_cont_img|test_control_img:inst|fila_int[6]    ; |Test_cont_img|test_control_img:inst|fila_int[6]    ; regout           ;
+; |Test_cont_img|control_imagen:inst1|process_0~0     ; |Test_cont_img|control_imagen:inst1|process_0~0     ; out0             ;
+; |Test_cont_img|control_imagen:inst1|col_n~7         ; |Test_cont_img|control_imagen:inst1|col_n~7         ; out              ;
+; |Test_cont_img|control_imagen:inst1|col_n~8         ; |Test_cont_img|control_imagen:inst1|col_n~8         ; out              ;
+; |Test_cont_img|control_imagen:inst1|col_n~9         ; |Test_cont_img|control_imagen:inst1|col_n~9         ; out              ;
+; |Test_cont_img|control_imagen:inst1|fila_n~0        ; |Test_cont_img|control_imagen:inst1|fila_n~0        ; out              ;
+; |Test_cont_img|control_imagen:inst1|fila_n~1        ; |Test_cont_img|control_imagen:inst1|fila_n~1        ; out              ;
+; |Test_cont_img|control_imagen:inst1|fila_n~2        ; |Test_cont_img|control_imagen:inst1|fila_n~2        ; out              ;
+; |Test_cont_img|control_imagen:inst1|fila_n~3        ; |Test_cont_img|control_imagen:inst1|fila_n~3        ; out              ;
+; |Test_cont_img|control_imagen:inst1|fila_n~4        ; |Test_cont_img|control_imagen:inst1|fila_n~4        ; out              ;
+; |Test_cont_img|control_imagen:inst1|fila_n~7        ; |Test_cont_img|control_imagen:inst1|fila_n~7        ; out              ;
+; |Test_cont_img|control_imagen:inst1|fila_n~8        ; |Test_cont_img|control_imagen:inst1|fila_n~8        ; out              ;
+; |Test_cont_img|control_imagen:inst1|fila_n~9        ; |Test_cont_img|control_imagen:inst1|fila_n~9        ; out              ;
+; |Test_cont_img|control_imagen:inst1|mem_dir_int~0   ; |Test_cont_img|control_imagen:inst1|mem_dir_int~0   ; out              ;
+; |Test_cont_img|control_imagen:inst1|mem_dir_int~1   ; |Test_cont_img|control_imagen:inst1|mem_dir_int~1   ; out              ;
+; |Test_cont_img|control_imagen:inst1|mem_dir_int~2   ; |Test_cont_img|control_imagen:inst1|mem_dir_int~2   ; out              ;
+; |Test_cont_img|control_imagen:inst1|mem_dir_int~3   ; |Test_cont_img|control_imagen:inst1|mem_dir_int~3   ; out              ;
+; |Test_cont_img|control_imagen:inst1|mem_dir_int~4   ; |Test_cont_img|control_imagen:inst1|mem_dir_int~4   ; out              ;
+; |Test_cont_img|control_imagen:inst1|fila_n~10       ; |Test_cont_img|control_imagen:inst1|fila_n~10       ; out              ;
+; |Test_cont_img|control_imagen:inst1|fila_n~11       ; |Test_cont_img|control_imagen:inst1|fila_n~11       ; out              ;
+; |Test_cont_img|control_imagen:inst1|fila_n~12       ; |Test_cont_img|control_imagen:inst1|fila_n~12       ; out              ;
+; |Test_cont_img|control_imagen:inst1|fila_n~13       ; |Test_cont_img|control_imagen:inst1|fila_n~13       ; out              ;
+; |Test_cont_img|control_imagen:inst1|fila_n~14       ; |Test_cont_img|control_imagen:inst1|fila_n~14       ; out              ;
+; |Test_cont_img|control_imagen:inst1|fila_n~15       ; |Test_cont_img|control_imagen:inst1|fila_n~15       ; out              ;
+; |Test_cont_img|control_imagen:inst1|fila_n~17       ; |Test_cont_img|control_imagen:inst1|fila_n~17       ; out              ;
+; |Test_cont_img|control_imagen:inst1|fila_n~18       ; |Test_cont_img|control_imagen:inst1|fila_n~18       ; out              ;
+; |Test_cont_img|control_imagen:inst1|fila_n~19       ; |Test_cont_img|control_imagen:inst1|fila_n~19       ; out              ;
+; |Test_cont_img|control_imagen:inst1|col_n~17        ; |Test_cont_img|control_imagen:inst1|col_n~17        ; out              ;
+; |Test_cont_img|control_imagen:inst1|col_n~18        ; |Test_cont_img|control_imagen:inst1|col_n~18        ; out              ;
+; |Test_cont_img|control_imagen:inst1|col_n~19        ; |Test_cont_img|control_imagen:inst1|col_n~19        ; out              ;
+; |Test_cont_img|control_imagen:inst1|col_n~27        ; |Test_cont_img|control_imagen:inst1|col_n~27        ; out              ;
+; |Test_cont_img|control_imagen:inst1|col_n~28        ; |Test_cont_img|control_imagen:inst1|col_n~28        ; out              ;
+; |Test_cont_img|control_imagen:inst1|col_n~29        ; |Test_cont_img|control_imagen:inst1|col_n~29        ; out              ;
+; |Test_cont_img|control_imagen:inst1|fila_n[9]       ; |Test_cont_img|control_imagen:inst1|fila_n[9]       ; regout           ;
+; |Test_cont_img|control_imagen:inst1|fila_n[8]       ; |Test_cont_img|control_imagen:inst1|fila_n[8]       ; regout           ;
+; |Test_cont_img|control_imagen:inst1|fila_n[7]       ; |Test_cont_img|control_imagen:inst1|fila_n[7]       ; regout           ;
+; |Test_cont_img|control_imagen:inst1|fila_n[6]       ; |Test_cont_img|control_imagen:inst1|fila_n[6]       ; regout           ;
+; |Test_cont_img|control_imagen:inst1|fila_n[5]       ; |Test_cont_img|control_imagen:inst1|fila_n[5]       ; regout           ;
+; |Test_cont_img|control_imagen:inst1|fila_n[4]       ; |Test_cont_img|control_imagen:inst1|fila_n[4]       ; regout           ;
+; |Test_cont_img|control_imagen:inst1|fila_n[2]       ; |Test_cont_img|control_imagen:inst1|fila_n[2]       ; regout           ;
+; |Test_cont_img|control_imagen:inst1|fila_n[1]       ; |Test_cont_img|control_imagen:inst1|fila_n[1]       ; regout           ;
+; |Test_cont_img|control_imagen:inst1|fila_n[0]       ; |Test_cont_img|control_imagen:inst1|fila_n[0]       ; regout           ;
+; |Test_cont_img|control_imagen:inst1|col_n[2]        ; |Test_cont_img|control_imagen:inst1|col_n[2]        ; regout           ;
+; |Test_cont_img|control_imagen:inst1|col_n[1]        ; |Test_cont_img|control_imagen:inst1|col_n[1]        ; regout           ;
+; |Test_cont_img|control_imagen:inst1|col_n[0]        ; |Test_cont_img|control_imagen:inst1|col_n[0]        ; regout           ;
+; |Test_cont_img|control_imagen:inst1|mem_dir_int[13] ; |Test_cont_img|control_imagen:inst1|mem_dir_int[13] ; regout           ;
+; |Test_cont_img|control_imagen:inst1|mem_dir_int[12] ; |Test_cont_img|control_imagen:inst1|mem_dir_int[12] ; regout           ;
+; |Test_cont_img|control_imagen:inst1|mem_dir_int[11] ; |Test_cont_img|control_imagen:inst1|mem_dir_int[11] ; regout           ;
+; |Test_cont_img|control_imagen:inst1|mem_dir_int[10] ; |Test_cont_img|control_imagen:inst1|mem_dir_int[10] ; regout           ;
+; |Test_cont_img|control_imagen:inst1|mem_dir_int[9]  ; |Test_cont_img|control_imagen:inst1|mem_dir_int[9]  ; regout           ;
+; |Test_cont_img|control_imagen:inst1|state~3         ; |Test_cont_img|control_imagen:inst1|state~3         ; out0             ;
+; |Test_cont_img|control_imagen:inst1|state~11        ; |Test_cont_img|control_imagen:inst1|state~11        ; out0             ;
+; |Test_cont_img|control_imagen:inst1|Selector10~0    ; |Test_cont_img|control_imagen:inst1|Selector10~0    ; out              ;
+; |Test_cont_img|control_imagen:inst1|Selector10~1    ; |Test_cont_img|control_imagen:inst1|Selector10~1    ; out              ;
+; |Test_cont_img|control_imagen:inst1|Selector11~0    ; |Test_cont_img|control_imagen:inst1|Selector11~0    ; out              ;
+; |Test_cont_img|control_imagen:inst1|Selector11~1    ; |Test_cont_img|control_imagen:inst1|Selector11~1    ; out              ;
+; |Test_cont_img|control_imagen:inst1|Selector12~0    ; |Test_cont_img|control_imagen:inst1|Selector12~0    ; out              ;
+; |Test_cont_img|control_imagen:inst1|Selector12~1    ; |Test_cont_img|control_imagen:inst1|Selector12~1    ; out              ;
+; |Test_cont_img|control_imagen:inst1|Selector13~0    ; |Test_cont_img|control_imagen:inst1|Selector13~0    ; out              ;
+; |Test_cont_img|control_imagen:inst1|Selector13~1    ; |Test_cont_img|control_imagen:inst1|Selector13~1    ; out              ;
+; |Test_cont_img|control_imagen:inst1|Selector14~0    ; |Test_cont_img|control_imagen:inst1|Selector14~0    ; out              ;
+; |Test_cont_img|control_imagen:inst1|Selector14~1    ; |Test_cont_img|control_imagen:inst1|Selector14~1    ; out              ;
+; |Test_cont_img|control_imagen:inst1|Selector15~0    ; |Test_cont_img|control_imagen:inst1|Selector15~0    ; out              ;
+; |Test_cont_img|control_imagen:inst1|Selector15~1    ; |Test_cont_img|control_imagen:inst1|Selector15~1    ; out              ;
+; |Test_cont_img|control_imagen:inst1|Selector16~0    ; |Test_cont_img|control_imagen:inst1|Selector16~0    ; out              ;
+; |Test_cont_img|control_imagen:inst1|Selector16~1    ; |Test_cont_img|control_imagen:inst1|Selector16~1    ; out              ;
+; |Test_cont_img|control_imagen:inst1|Selector17~0    ; |Test_cont_img|control_imagen:inst1|Selector17~0    ; out              ;
+; |Test_cont_img|control_imagen:inst1|Selector17~1    ; |Test_cont_img|control_imagen:inst1|Selector17~1    ; out              ;
+; |Test_cont_img|control_imagen:inst1|Selector18~1    ; |Test_cont_img|control_imagen:inst1|Selector18~1    ; out              ;
+; |Test_cont_img|control_imagen:inst1|Selector20~0    ; |Test_cont_img|control_imagen:inst1|Selector20~0    ; out              ;
+; |Test_cont_img|control_imagen:inst1|Selector20~1    ; |Test_cont_img|control_imagen:inst1|Selector20~1    ; out              ;
+; |Test_cont_img|control_imagen:inst1|Selector21~0    ; |Test_cont_img|control_imagen:inst1|Selector21~0    ; out              ;
+; |Test_cont_img|control_imagen:inst1|Selector21~1    ; |Test_cont_img|control_imagen:inst1|Selector21~1    ; out              ;
+; |Test_cont_img|control_imagen:inst1|Selector22~0    ; |Test_cont_img|control_imagen:inst1|Selector22~0    ; out              ;
+; |Test_cont_img|control_imagen:inst1|Selector22~1    ; |Test_cont_img|control_imagen:inst1|Selector22~1    ; out              ;
+; |Test_cont_img|control_imagen:inst1|Selector23~0    ; |Test_cont_img|control_imagen:inst1|Selector23~0    ; out              ;
+; |Test_cont_img|control_imagen:inst1|Selector23~1    ; |Test_cont_img|control_imagen:inst1|Selector23~1    ; out              ;
+; |Test_cont_img|control_imagen:inst1|Selector24~0    ; |Test_cont_img|control_imagen:inst1|Selector24~0    ; out              ;
+; |Test_cont_img|control_imagen:inst1|Selector24~1    ; |Test_cont_img|control_imagen:inst1|Selector24~1    ; out              ;
+; |Test_cont_img|control_imagen:inst1|Selector25~0    ; |Test_cont_img|control_imagen:inst1|Selector25~0    ; out              ;
+; |Test_cont_img|control_imagen:inst1|Selector25~1    ; |Test_cont_img|control_imagen:inst1|Selector25~1    ; out              ;
+; |Test_cont_img|control_imagen:inst1|Selector26~0    ; |Test_cont_img|control_imagen:inst1|Selector26~0    ; out              ;
+; |Test_cont_img|control_imagen:inst1|Selector26~1    ; |Test_cont_img|control_imagen:inst1|Selector26~1    ; out              ;
+; |Test_cont_img|control_imagen:inst1|Selector27~0    ; |Test_cont_img|control_imagen:inst1|Selector27~0    ; out              ;
+; |Test_cont_img|control_imagen:inst1|Selector27~1    ; |Test_cont_img|control_imagen:inst1|Selector27~1    ; out              ;
+; |Test_cont_img|control_imagen:inst1|LessThan0~8     ; |Test_cont_img|control_imagen:inst1|LessThan0~8     ; out0             ;
+; |Test_cont_img|control_imagen:inst1|LessThan0~10    ; |Test_cont_img|control_imagen:inst1|LessThan0~10    ; out0             ;
+; |Test_cont_img|control_imagen:inst1|LessThan0~11    ; |Test_cont_img|control_imagen:inst1|LessThan0~11    ; out0             ;
+; |Test_cont_img|control_imagen:inst1|LessThan0~12    ; |Test_cont_img|control_imagen:inst1|LessThan0~12    ; out0             ;
+; |Test_cont_img|control_imagen:inst1|LessThan0~13    ; |Test_cont_img|control_imagen:inst1|LessThan0~13    ; out0             ;
+; |Test_cont_img|control_imagen:inst1|LessThan0~14    ; |Test_cont_img|control_imagen:inst1|LessThan0~14    ; out0             ;
+; |Test_cont_img|control_imagen:inst1|LessThan0~15    ; |Test_cont_img|control_imagen:inst1|LessThan0~15    ; out0             ;
+; |Test_cont_img|control_imagen:inst1|LessThan1~2     ; |Test_cont_img|control_imagen:inst1|LessThan1~2     ; out0             ;
+; |Test_cont_img|control_imagen:inst1|LessThan1~3     ; |Test_cont_img|control_imagen:inst1|LessThan1~3     ; out0             ;
+; |Test_cont_img|control_imagen:inst1|LessThan1~4     ; |Test_cont_img|control_imagen:inst1|LessThan1~4     ; out0             ;
+; |Test_cont_img|control_imagen:inst1|LessThan1~5     ; |Test_cont_img|control_imagen:inst1|LessThan1~5     ; out0             ;
+; |Test_cont_img|control_imagen:inst1|LessThan1~6     ; |Test_cont_img|control_imagen:inst1|LessThan1~6     ; out0             ;
+; |Test_cont_img|control_imagen:inst1|LessThan1~7     ; |Test_cont_img|control_imagen:inst1|LessThan1~7     ; out0             ;
+; |Test_cont_img|test_control_img:inst|Add1~13        ; |Test_cont_img|test_control_img:inst|Add1~13        ; out0             ;
+; |Test_cont_img|test_control_img:inst|Add1~14        ; |Test_cont_img|test_control_img:inst|Add1~14        ; out0             ;
+; |Test_cont_img|test_control_img:inst|Add1~15        ; |Test_cont_img|test_control_img:inst|Add1~15        ; out0             ;
+; |Test_cont_img|test_control_img:inst|Add1~16        ; |Test_cont_img|test_control_img:inst|Add1~16        ; out0             ;
+; |Test_cont_img|control_imagen:inst1|Add0~0          ; |Test_cont_img|control_imagen:inst1|Add0~0          ; out0             ;
+; |Test_cont_img|control_imagen:inst1|Add0~1          ; |Test_cont_img|control_imagen:inst1|Add0~1          ; out0             ;
+; |Test_cont_img|control_imagen:inst1|Add0~2          ; |Test_cont_img|control_imagen:inst1|Add0~2          ; out0             ;
+; |Test_cont_img|control_imagen:inst1|Add0~4          ; |Test_cont_img|control_imagen:inst1|Add0~4          ; out0             ;
+; |Test_cont_img|control_imagen:inst1|Add0~5          ; |Test_cont_img|control_imagen:inst1|Add0~5          ; out0             ;
+; |Test_cont_img|control_imagen:inst1|Add0~13         ; |Test_cont_img|control_imagen:inst1|Add0~13         ; out0             ;
+; |Test_cont_img|control_imagen:inst1|Add0~14         ; |Test_cont_img|control_imagen:inst1|Add0~14         ; out0             ;
+; |Test_cont_img|control_imagen:inst1|Add0~15         ; |Test_cont_img|control_imagen:inst1|Add0~15         ; out0             ;
+; |Test_cont_img|control_imagen:inst1|Add0~16         ; |Test_cont_img|control_imagen:inst1|Add0~16         ; out0             ;
+; |Test_cont_img|control_imagen:inst1|Add0~17         ; |Test_cont_img|control_imagen:inst1|Add0~17         ; out0             ;
+; |Test_cont_img|control_imagen:inst1|Add0~18         ; |Test_cont_img|control_imagen:inst1|Add0~18         ; out0             ;
+; |Test_cont_img|control_imagen:inst1|Add0~19         ; |Test_cont_img|control_imagen:inst1|Add0~19         ; out0             ;
+; |Test_cont_img|control_imagen:inst1|Add1~10         ; |Test_cont_img|control_imagen:inst1|Add1~10         ; out0             ;
+; |Test_cont_img|control_imagen:inst1|Add1~11         ; |Test_cont_img|control_imagen:inst1|Add1~11         ; out0             ;
+; |Test_cont_img|control_imagen:inst1|Add1~12         ; |Test_cont_img|control_imagen:inst1|Add1~12         ; out0             ;
+; |Test_cont_img|control_imagen:inst1|Add1~13         ; |Test_cont_img|control_imagen:inst1|Add1~13         ; out0             ;
+; |Test_cont_img|control_imagen:inst1|Add1~14         ; |Test_cont_img|control_imagen:inst1|Add1~14         ; out0             ;
+; |Test_cont_img|control_imagen:inst1|Add1~15         ; |Test_cont_img|control_imagen:inst1|Add1~15         ; out0             ;
+; |Test_cont_img|control_imagen:inst1|Add1~16         ; |Test_cont_img|control_imagen:inst1|Add1~16         ; out0             ;
+; |Test_cont_img|control_imagen:inst1|Add1~17         ; |Test_cont_img|control_imagen:inst1|Add1~17         ; out0             ;
+; |Test_cont_img|control_imagen:inst1|Add2~13         ; |Test_cont_img|control_imagen:inst1|Add2~13         ; out0             ;
+; |Test_cont_img|control_imagen:inst1|Add2~14         ; |Test_cont_img|control_imagen:inst1|Add2~14         ; out0             ;
+; |Test_cont_img|control_imagen:inst1|Add2~15         ; |Test_cont_img|control_imagen:inst1|Add2~15         ; out0             ;
+; |Test_cont_img|control_imagen:inst1|Add2~16         ; |Test_cont_img|control_imagen:inst1|Add2~16         ; out0             ;
+; |Test_cont_img|control_imagen:inst1|Add3~0          ; |Test_cont_img|control_imagen:inst1|Add3~0          ; out0             ;
+; |Test_cont_img|control_imagen:inst1|Add3~1          ; |Test_cont_img|control_imagen:inst1|Add3~1          ; out0             ;
+; |Test_cont_img|control_imagen:inst1|Add3~2          ; |Test_cont_img|control_imagen:inst1|Add3~2          ; out0             ;
+; |Test_cont_img|control_imagen:inst1|Add3~3          ; |Test_cont_img|control_imagen:inst1|Add3~3          ; out0             ;
+; |Test_cont_img|control_imagen:inst1|Add3~4          ; |Test_cont_img|control_imagen:inst1|Add3~4          ; out0             ;
+; |Test_cont_img|control_imagen:inst1|Add3~5          ; |Test_cont_img|control_imagen:inst1|Add3~5          ; out0             ;
+; |Test_cont_img|control_imagen:inst1|Add3~7          ; |Test_cont_img|control_imagen:inst1|Add3~7          ; out0             ;
+; |Test_cont_img|control_imagen:inst1|Add3~9          ; |Test_cont_img|control_imagen:inst1|Add3~9          ; out0             ;
+; |Test_cont_img|control_imagen:inst1|Add3~11         ; |Test_cont_img|control_imagen:inst1|Add3~11         ; out0             ;
+; |Test_cont_img|control_imagen:inst1|Add3~13         ; |Test_cont_img|control_imagen:inst1|Add3~13         ; out0             ;
+; |Test_cont_img|control_imagen:inst1|Add3~15         ; |Test_cont_img|control_imagen:inst1|Add3~15         ; out0             ;
+; |Test_cont_img|control_imagen:inst1|Add3~17         ; |Test_cont_img|control_imagen:inst1|Add3~17         ; out0             ;
+; |Test_cont_img|control_imagen:inst1|Add3~19         ; |Test_cont_img|control_imagen:inst1|Add3~19         ; out0             ;
+; |Test_cont_img|control_imagen:inst1|Add4~17         ; |Test_cont_img|control_imagen:inst1|Add4~17         ; out0             ;
+; |Test_cont_img|control_imagen:inst1|Add4~18         ; |Test_cont_img|control_imagen:inst1|Add4~18         ; out0             ;
+; |Test_cont_img|control_imagen:inst1|Add4~19         ; |Test_cont_img|control_imagen:inst1|Add4~19         ; out0             ;
+; |Test_cont_img|control_imagen:inst1|Add4~20         ; |Test_cont_img|control_imagen:inst1|Add4~20         ; out0             ;
+; |Test_cont_img|control_imagen:inst1|Add4~21         ; |Test_cont_img|control_imagen:inst1|Add4~21         ; out0             ;
+; |Test_cont_img|control_imagen:inst1|Add4~22         ; |Test_cont_img|control_imagen:inst1|Add4~22         ; out0             ;
+; |Test_cont_img|control_imagen:inst1|Add4~23         ; |Test_cont_img|control_imagen:inst1|Add4~23         ; out0             ;
+; |Test_cont_img|control_imagen:inst1|Add4~24         ; |Test_cont_img|control_imagen:inst1|Add4~24         ; out0             ;
+; |Test_cont_img|control_imagen:inst1|Add6~13         ; |Test_cont_img|control_imagen:inst1|Add6~13         ; out0             ;
+; |Test_cont_img|control_imagen:inst1|Add6~16         ; |Test_cont_img|control_imagen:inst1|Add6~16         ; out0             ;
+; |Test_cont_img|control_imagen:inst1|Add6~19         ; |Test_cont_img|control_imagen:inst1|Add6~19         ; out0             ;
+; |Test_cont_img|control_imagen:inst1|Add6~22         ; |Test_cont_img|control_imagen:inst1|Add6~22         ; out0             ;
+; |Test_cont_img|test_control_img:inst|Equal1~0       ; |Test_cont_img|test_control_img:inst|Equal1~0       ; out0             ;
+; |Test_cont_img|control_imagen:inst1|Equal0~7        ; |Test_cont_img|control_imagen:inst1|Equal0~7        ; out0             ;
+; |Test_cont_img|control_imagen:inst1|Equal0~8        ; |Test_cont_img|control_imagen:inst1|Equal0~8        ; out0             ;
+; |Test_cont_img|control_imagen:inst1|Equal0~9        ; |Test_cont_img|control_imagen:inst1|Equal0~9        ; out0             ;
++-----------------------------------------------------+-----------------------------------------------------+------------------+
+
+
++---------------------+
+; Simulator INI Usage ;
++--------+------------+
+; Option ; Usage      ;
++--------+------------+
+
+
++--------------------+
+; Simulator Messages ;
++--------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit Simulator
+    Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+    Info: Processing started: Tue Jul 02 20:27:57 2024
+Info: Command: quartus_sim --simulation_results_format=VWF Proyect5 -c Proyect5
+Info (324025): Using vector source file "C:/Users/Gaspar/Documents/GitHub/optativa_FPGA/Proyect5_VGA/Waveform3.vwf"
+Warning (328012): Can't find signal in vector source file for input pin "|Test_cont_img|reset"
+Info (310003): Option to preserve fewer signal transitions to reduce memory requirements is enabled
+    Info (310004): Simulation has been partitioned into sub-simulations according to the maximum transition count determined by the engine. Transitions from memory will be flushed out to disk at the end of each sub-simulation to reduce memory requirements.
+Info (310002): Simulation partitioned into 1 sub-simulations
+Info (328053): Simulation coverage is      65.88 %
+Info (328052): Number of transitions in simulation is 889942
+Info (324045): Vector file Proyect5.sim.vwf is saved in VWF text format. You can compress it into CVWF format in order to reduce file size. For more details please refer to the Quartus II Help.
+Info: Quartus II 64-Bit Simulator was successful. 0 errors, 1 warning
+    Info: Peak virtual memory: 4442 megabytes
+    Info: Processing ended: Tue Jul 02 20:27:59 2024
+    Info: Elapsed time: 00:00:02
+    Info: Total CPU time (on all processors): 00:00:01
+
+

@@ -60,6 +60,38 @@
 					"strict" : false
 				},
 				{
+					"name" : "Ent_led[7]",
+					"strict" : false
+				},
+				{
+					"name" : "Ent_led[6]",
+					"strict" : false
+				},
+				{
+					"name" : "Ent_led[5]",
+					"strict" : false
+				},
+				{
+					"name" : "Ent_led[4]",
+					"strict" : false
+				},
+				{
+					"name" : "Ent_led[3]",
+					"strict" : false
+				},
+				{
+					"name" : "Ent_led[2]",
+					"strict" : false
+				},
+				{
+					"name" : "Ent_led[1]",
+					"strict" : false
+				},
+				{
+					"name" : "Ent_led[0]",
+					"strict" : false
+				},
+				{
 					"name" : "unidades[6]",
 					"strict" : false
 				},
@@ -85,22 +117,6 @@
 				},
 				{
 					"name" : "unidades[0]",
-					"strict" : false
-				},
-				{
-					"name" : "Reset",
-					"strict" : false
-				},
-				{
-					"name" : "CLK",
-					"strict" : false
-				},
-				{
-					"name" : "Charge",
-					"strict" : false
-				},
-				{
-					"name" : "Start",
 					"strict" : false
 				},
 				{
@@ -133,6 +149,22 @@
 				},
 				{
 					"name" : "Entrada[0]",
+					"strict" : false
+				},
+				{
+					"name" : "Reset",
+					"strict" : false
+				},
+				{
+					"name" : "CLK",
+					"strict" : false
+				},
+				{
+					"name" : "Charge",
+					"strict" : false
+				},
+				{
+					"name" : "Start",
 					"strict" : false
 				}
 			]

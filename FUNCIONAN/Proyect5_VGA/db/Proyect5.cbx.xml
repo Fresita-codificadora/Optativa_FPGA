@@ -1,5 +1,8 @@
 <?xml version="1.0" ?>
 <LOG_ROOT>
 	<PROJECT NAME="Proyect5">
+		<CBX_INST_ENTRY INSTANCE_NAME="|d|Block1:inst1|Azul_reg:inst6|altsyncram:altsyncram_component" CBX_FILE_NAME="altsyncram_kls1.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|d|Block1:inst1|Rojo_reg:inst7|altsyncram:altsyncram_component" CBX_FILE_NAME="altsyncram_ils1.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|d|Block1:inst1|Verde_reg:inst5|altsyncram:altsyncram_component" CBX_FILE_NAME="altsyncram_eos1.tdf"/>
 	</PROJECT>
 </LOG_ROOT>

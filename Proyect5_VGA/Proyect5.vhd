@@ -1,3 +1,5 @@
+--maquina de estados main que se encarga de mandar las señales de sincronismo, recibe 3 señales de color de 6 bit, y la transforma en 3 señales de color de 10 bit
+--lo que hace es contar pulsos de reloj para saber donde debe mandar las señales 
 library ieee;
 use ieee.std_logic_1164.all;
 
