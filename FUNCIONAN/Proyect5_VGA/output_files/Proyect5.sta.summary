@@ -2,49 +2,49 @@
 TimeQuest Timing Analyzer Summary
 ------------------------------------------------------------
 
-Type  : Slow Model Setup 'clk'
-Slack : -4.694
-TNS   : -3051.339
-
 Type  : Slow Model Setup 'Proyect5_8bit:inst|clk_2'
-Slack : -2.896
-TNS   : -130.298
+Slack : -5.400
+TNS   : -196.260
+
+Type  : Slow Model Setup 'clk'
+Slack : -4.646
+TNS   : -3643.941
 
 Type  : Slow Model Hold 'clk'
-Slack : -2.557
-TNS   : -2.557
+Slack : -2.558
+TNS   : -2.558
 
 Type  : Slow Model Hold 'Proyect5_8bit:inst|clk_2'
 Slack : 0.391
 TNS   : 0.000
 
 Type  : Slow Model Minimum Pulse Width 'clk'
-Slack : -1.627
-TNS   : -8479.748
+Slack : -1.423
+TNS   : -3321.972
 
 Type  : Slow Model Minimum Pulse Width 'Proyect5_8bit:inst|clk_2'
 Slack : -0.500
 TNS   : -58.000
 
-Type  : Fast Model Setup 'clk'
-Slack : -1.604
-TNS   : -973.386
-
 Type  : Fast Model Setup 'Proyect5_8bit:inst|clk_2'
-Slack : -1.275
-TNS   : -38.267
+Slack : -2.872
+TNS   : -82.516
+
+Type  : Fast Model Setup 'clk'
+Slack : -1.628
+TNS   : -1150.924
 
 Type  : Fast Model Hold 'clk'
-Slack : -1.597
-TNS   : -1.597
+Slack : -1.599
+TNS   : -1.599
 
 Type  : Fast Model Hold 'Proyect5_8bit:inst|clk_2'
 Slack : 0.215
 TNS   : 0.000
 
 Type  : Fast Model Minimum Pulse Width 'clk'
-Slack : -1.627
-TNS   : -8479.748
+Slack : -1.423
+TNS   : -3321.972
 
 Type  : Fast Model Minimum Pulse Width 'Proyect5_8bit:inst|clk_2'
 Slack : -0.500

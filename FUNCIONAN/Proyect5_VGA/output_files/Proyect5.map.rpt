@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Proyect5
-Wed Jul 03 15:53:17 2024
+Wed Jul 03 18:03:15 2024
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -14,22 +14,20 @@ Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edit
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
   8. Analysis & Synthesis RAM Summary
-  9. Analysis & Synthesis IP Cores Summary
- 10. State Machine - |d|control_imagen:inst2|state
- 11. State Machine - |d|Proyect5_8bit:inst|state
- 12. Registers Removed During Synthesis
- 13. General Register Statistics
- 14. Inverted Register Statistics
- 15. Multiplexer Restructuring Statistics (Restructuring Performed)
- 16. Source assignments for Block1:inst1|Azul_reg:inst6|altsyncram:altsyncram_component|altsyncram_kls1:auto_generated
- 17. Source assignments for Block1:inst1|Rojo_reg:inst7|altsyncram:altsyncram_component|altsyncram_ils1:auto_generated
- 18. Source assignments for Block1:inst1|Verde_reg:inst5|altsyncram:altsyncram_component|altsyncram_eos1:auto_generated
- 19. Parameter Settings for User Entity Instance: Block1:inst1|Azul_reg:inst6|altsyncram:altsyncram_component
- 20. Parameter Settings for User Entity Instance: Block1:inst1|Rojo_reg:inst7|altsyncram:altsyncram_component
- 21. Parameter Settings for User Entity Instance: Block1:inst1|Verde_reg:inst5|altsyncram:altsyncram_component
- 22. altsyncram Parameter Settings by Entity Instance
- 23. Elapsed Time Per Partition
- 24. Analysis & Synthesis Messages
+  9. State Machine - |d|control_imagen:inst2|state
+ 10. State Machine - |d|Proyect5_8bit:inst|state
+ 11. Registers Removed During Synthesis
+ 12. General Register Statistics
+ 13. Inverted Register Statistics
+ 14. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 15. Source assignments for Block1:inst1|LPM_ROM:inst5|altrom:srom|altsyncram:rom_block|altsyncram_g201:auto_generated
+ 16. Source assignments for Block1:inst1|LPM_ROM:inst2|altrom:srom|altsyncram:rom_block|altsyncram_e201:auto_generated
+ 17. Source assignments for Block1:inst1|LPM_ROM:inst3|altrom:srom|altsyncram:rom_block|altsyncram_a501:auto_generated
+ 18. Parameter Settings for User Entity Instance: Block1:inst1|LPM_ROM:inst5
+ 19. Parameter Settings for User Entity Instance: Block1:inst1|LPM_ROM:inst2
+ 20. Parameter Settings for User Entity Instance: Block1:inst1|LPM_ROM:inst3
+ 21. Elapsed Time Per Partition
+ 22. Analysis & Synthesis Messages
 
 
 
@@ -55,15 +53,15 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Wed Jul 03 15:53:17 2024           ;
+; Analysis & Synthesis Status        ; Successful - Wed Jul 03 18:03:15 2024           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; Proyect5                                        ;
 ; Top-level Entity Name              ; d                                               ;
 ; Family                             ; Cyclone II                                      ;
-; Total logic elements               ; 249                                             ;
-;     Total combinational functions  ; 245                                             ;
-;     Dedicated logic registers      ; 102                                             ;
-; Total registers                    ; 102                                             ;
+; Total logic elements               ; 250                                             ;
+;     Total combinational functions  ; 248                                             ;
+;     Dedicated logic registers      ; 100                                             ;
+; Total registers                    ; 100                                             ;
 ; Total pins                         ; 37                                              ;
 ; Total virtual pins                 ; 0                                               ;
 ; Total memory bits                  ; 393,216                                         ;
@@ -164,38 +162,42 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+--------+
 ; Processors                 ; Number ;
 +----------------------------+--------+
-; Number detected on machine ; 12     ;
+; Number detected on machine ; 4      ;
 ; Maximum allowed            ; 1      ;
 +----------------------------+--------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                                           ;
-+----------------------------------+-----------------+------------------------------------+----------------------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                                                 ; Library ;
-+----------------------------------+-----------------+------------------------------------+----------------------------------------------------------------------------------------------+---------+
-; Verde_reg.vhd                    ; yes             ; User Wizard-Generated File         ; C:/Users/Gaspar/Documents/GitHub/optativa_FPGA/FUNCIONAN/Proyect5_VGA/Verde_reg.vhd          ;         ;
-; Rojo_reg.vhd                     ; yes             ; User Wizard-Generated File         ; C:/Users/Gaspar/Documents/GitHub/optativa_FPGA/FUNCIONAN/Proyect5_VGA/Rojo_reg.vhd           ;         ;
-; control_imagen.vhd               ; yes             ; User VHDL File                     ; C:/Users/Gaspar/Documents/GitHub/optativa_FPGA/FUNCIONAN/Proyect5_VGA/control_imagen.vhd     ;         ;
-; Block1.bdf                       ; yes             ; User Block Diagram/Schematic File  ; C:/Users/Gaspar/Documents/GitHub/optativa_FPGA/FUNCIONAN/Proyect5_VGA/Block1.bdf             ;         ;
-; Azul_reg.vhd                     ; yes             ; User Wizard-Generated File         ; C:/Users/Gaspar/Documents/GitHub/optativa_FPGA/FUNCIONAN/Proyect5_VGA/Azul_reg.vhd           ;         ;
-; Proyect5_8bit.vhd                ; yes             ; User VHDL File                     ; C:/Users/Gaspar/Documents/GitHub/optativa_FPGA/FUNCIONAN/Proyect5_VGA/Proyect5_8bit.vhd      ;         ;
-; d.bdf                            ; yes             ; User Block Diagram/Schematic File  ; C:/Users/Gaspar/Documents/GitHub/optativa_FPGA/FUNCIONAN/Proyect5_VGA/d.bdf                  ;         ;
-; altsyncram.tdf                   ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/altsyncram.tdf                             ;         ;
-; stratix_ram_block.inc            ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/stratix_ram_block.inc                      ;         ;
-; lpm_mux.inc                      ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/lpm_mux.inc                                ;         ;
-; lpm_decode.inc                   ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/lpm_decode.inc                             ;         ;
-; aglobal130.inc                   ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/aglobal130.inc                             ;         ;
-; a_rdenreg.inc                    ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/a_rdenreg.inc                              ;         ;
-; altrom.inc                       ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/altrom.inc                                 ;         ;
-; altram.inc                       ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/altram.inc                                 ;         ;
-; altdpram.inc                     ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/altdpram.inc                               ;         ;
-; db/altsyncram_kls1.tdf           ; yes             ; Auto-Generated Megafunction        ; C:/Users/Gaspar/Documents/GitHub/optativa_FPGA/FUNCIONAN/Proyect5_VGA/db/altsyncram_kls1.tdf ;         ;
-; db/decode_4oa.tdf                ; yes             ; Auto-Generated Megafunction        ; C:/Users/Gaspar/Documents/GitHub/optativa_FPGA/FUNCIONAN/Proyect5_VGA/db/decode_4oa.tdf      ;         ;
-; db/mux_kib.tdf                   ; yes             ; Auto-Generated Megafunction        ; C:/Users/Gaspar/Documents/GitHub/optativa_FPGA/FUNCIONAN/Proyect5_VGA/db/mux_kib.tdf         ;         ;
-; db/altsyncram_ils1.tdf           ; yes             ; Auto-Generated Megafunction        ; C:/Users/Gaspar/Documents/GitHub/optativa_FPGA/FUNCIONAN/Proyect5_VGA/db/altsyncram_ils1.tdf ;         ;
-; db/altsyncram_eos1.tdf           ; yes             ; Auto-Generated Megafunction        ; C:/Users/Gaspar/Documents/GitHub/optativa_FPGA/FUNCIONAN/Proyect5_VGA/db/altsyncram_eos1.tdf ;         ;
-+----------------------------------+-----------------+------------------------------------+----------------------------------------------------------------------------------------------+---------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                     ;
++----------------------------------+-----------------+------------------------------------+----------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                                           ; Library ;
++----------------------------------+-----------------+------------------------------------+----------------------------------------------------------------------------------------+---------+
+; verde.mif                        ; yes             ; User Memory Initialization File    ; C:/intelFPGA_lite/optativa/Optativa_FPGA/FUNCIONAN/Proyect5_VGA/verde.mif              ;         ;
+; azul.mif                         ; yes             ; User Memory Initialization File    ; C:/intelFPGA_lite/optativa/Optativa_FPGA/FUNCIONAN/Proyect5_VGA/azul.mif               ;         ;
+; control_imagen.vhd               ; yes             ; User VHDL File                     ; C:/intelFPGA_lite/optativa/Optativa_FPGA/FUNCIONAN/Proyect5_VGA/control_imagen.vhd     ;         ;
+; Block1.bdf                       ; yes             ; User Block Diagram/Schematic File  ; C:/intelFPGA_lite/optativa/Optativa_FPGA/FUNCIONAN/Proyect5_VGA/Block1.bdf             ;         ;
+; Proyect5_8bit.vhd                ; yes             ; User VHDL File                     ; C:/intelFPGA_lite/optativa/Optativa_FPGA/FUNCIONAN/Proyect5_VGA/Proyect5_8bit.vhd      ;         ;
+; d.bdf                            ; yes             ; User Block Diagram/Schematic File  ; C:/intelFPGA_lite/optativa/Optativa_FPGA/FUNCIONAN/Proyect5_VGA/d.bdf                  ;         ;
+; rojo.mif                         ; yes             ; User Memory Initialization File    ; C:/intelFPGA_lite/optativa/Optativa_FPGA/FUNCIONAN/Proyect5_VGA/rojo.mif               ;         ;
+; lpm_rom.tdf                      ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/lpm_rom.tdf                          ;         ;
+; altrom.inc                       ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/altrom.inc                           ;         ;
+; aglobal130.inc                   ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/aglobal130.inc                       ;         ;
+; altrom.tdf                       ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/altrom.tdf                           ;         ;
+; memmodes.inc                     ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/others/maxplus2/memmodes.inc                       ;         ;
+; lpm_decode.inc                   ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/lpm_decode.inc                       ;         ;
+; lpm_mux.inc                      ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/lpm_mux.inc                          ;         ;
+; altsyncram.inc                   ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/altsyncram.inc                       ;         ;
+; altsyncram.tdf                   ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/altsyncram.tdf                       ;         ;
+; stratix_ram_block.inc            ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/stratix_ram_block.inc                ;         ;
+; a_rdenreg.inc                    ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/a_rdenreg.inc                        ;         ;
+; altram.inc                       ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/altram.inc                           ;         ;
+; altdpram.inc                     ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/altdpram.inc                         ;         ;
+; db/altsyncram_g201.tdf           ; yes             ; Auto-Generated Megafunction        ; C:/intelFPGA_lite/optativa/Optativa_FPGA/FUNCIONAN/Proyect5_VGA/db/altsyncram_g201.tdf ;         ;
+; db/decode_4oa.tdf                ; yes             ; Auto-Generated Megafunction        ; C:/intelFPGA_lite/optativa/Optativa_FPGA/FUNCIONAN/Proyect5_VGA/db/decode_4oa.tdf      ;         ;
+; db/mux_kib.tdf                   ; yes             ; Auto-Generated Megafunction        ; C:/intelFPGA_lite/optativa/Optativa_FPGA/FUNCIONAN/Proyect5_VGA/db/mux_kib.tdf         ;         ;
+; db/altsyncram_e201.tdf           ; yes             ; Auto-Generated Megafunction        ; C:/intelFPGA_lite/optativa/Optativa_FPGA/FUNCIONAN/Proyect5_VGA/db/altsyncram_e201.tdf ;         ;
+; db/altsyncram_a501.tdf           ; yes             ; Auto-Generated Megafunction        ; C:/intelFPGA_lite/optativa/Optativa_FPGA/FUNCIONAN/Proyect5_VGA/db/altsyncram_a501.tdf ;         ;
++----------------------------------+-----------------+------------------------------------+----------------------------------------------------------------------------------------+---------+
 
 
 +------------------------------------------------------+
@@ -203,77 +205,70 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +---------------------------------------------+--------+
 ; Resource                                    ; Usage  ;
 +---------------------------------------------+--------+
-; Estimated Total logic elements              ; 249    ;
+; Estimated Total logic elements              ; 250    ;
 ;                                             ;        ;
-; Total combinational functions               ; 245    ;
+; Total combinational functions               ; 248    ;
 ; Logic element usage by number of LUT inputs ;        ;
-;     -- 4 input functions                    ; 109    ;
-;     -- 3 input functions                    ; 22     ;
-;     -- <=2 input functions                  ; 114    ;
+;     -- 4 input functions                    ; 92     ;
+;     -- 3 input functions                    ; 44     ;
+;     -- <=2 input functions                  ; 112    ;
 ;                                             ;        ;
 ; Logic elements by mode                      ;        ;
-;     -- normal mode                          ; 168    ;
-;     -- arithmetic mode                      ; 77     ;
+;     -- normal mode                          ; 170    ;
+;     -- arithmetic mode                      ; 78     ;
 ;                                             ;        ;
-; Total registers                             ; 102    ;
-;     -- Dedicated logic registers            ; 102    ;
+; Total registers                             ; 100    ;
+;     -- Dedicated logic registers            ; 100    ;
 ;     -- I/O registers                        ; 0      ;
 ;                                             ;        ;
 ; I/O pins                                    ; 37     ;
 ; Total memory bits                           ; 393216 ;
 ; Embedded Multiplier 9-bit elements          ; 0      ;
 ; Maximum fan-out node                        ; clk    ;
-; Maximum fan-out                             ; 140    ;
-; Total fan-out                               ; 2463   ;
+; Maximum fan-out                             ; 138    ;
+; Total fan-out                               ; 2466   ;
 ; Average fan-out                             ; 5.13   ;
 +---------------------------------------------+--------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                   ;
-+----------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------------------------------------------+--------------+
-; Compilation Hierarchy Node                   ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                         ; Library Name ;
-+----------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------------------------------------------+--------------+
-; |d                                           ; 245 (1)           ; 102 (0)      ; 393216      ; 0            ; 0       ; 0         ; 37   ; 0            ; |d                                                                                                          ; work         ;
-;    |Block1:inst1|                            ; 48 (0)            ; 4 (0)        ; 393216      ; 0            ; 0       ; 0         ; 0    ; 0            ; |d|Block1:inst1                                                                                             ; work         ;
-;       |Azul_reg:inst6|                       ; 16 (0)            ; 0 (0)        ; 131072      ; 0            ; 0       ; 0         ; 0    ; 0            ; |d|Block1:inst1|Azul_reg:inst6                                                                              ; work         ;
-;          |altsyncram:altsyncram_component|   ; 16 (0)            ; 0 (0)        ; 131072      ; 0            ; 0       ; 0         ; 0    ; 0            ; |d|Block1:inst1|Azul_reg:inst6|altsyncram:altsyncram_component                                              ; work         ;
-;             |altsyncram_kls1:auto_generated| ; 16 (0)            ; 0 (0)        ; 131072      ; 0            ; 0       ; 0         ; 0    ; 0            ; |d|Block1:inst1|Azul_reg:inst6|altsyncram:altsyncram_component|altsyncram_kls1:auto_generated               ; work         ;
-;                |mux_kib:mux3|                ; 16 (16)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |d|Block1:inst1|Azul_reg:inst6|altsyncram:altsyncram_component|altsyncram_kls1:auto_generated|mux_kib:mux3  ; work         ;
-;       |Rojo_reg:inst7|                       ; 16 (0)            ; 0 (0)        ; 131072      ; 0            ; 0       ; 0         ; 0    ; 0            ; |d|Block1:inst1|Rojo_reg:inst7                                                                              ; work         ;
-;          |altsyncram:altsyncram_component|   ; 16 (0)            ; 0 (0)        ; 131072      ; 0            ; 0       ; 0         ; 0    ; 0            ; |d|Block1:inst1|Rojo_reg:inst7|altsyncram:altsyncram_component                                              ; work         ;
-;             |altsyncram_ils1:auto_generated| ; 16 (0)            ; 0 (0)        ; 131072      ; 0            ; 0       ; 0         ; 0    ; 0            ; |d|Block1:inst1|Rojo_reg:inst7|altsyncram:altsyncram_component|altsyncram_ils1:auto_generated               ; work         ;
-;                |mux_kib:mux3|                ; 16 (16)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |d|Block1:inst1|Rojo_reg:inst7|altsyncram:altsyncram_component|altsyncram_ils1:auto_generated|mux_kib:mux3  ; work         ;
-;       |Verde_reg:inst5|                      ; 16 (0)            ; 4 (0)        ; 131072      ; 0            ; 0       ; 0         ; 0    ; 0            ; |d|Block1:inst1|Verde_reg:inst5                                                                             ; work         ;
-;          |altsyncram:altsyncram_component|   ; 16 (0)            ; 4 (0)        ; 131072      ; 0            ; 0       ; 0         ; 0    ; 0            ; |d|Block1:inst1|Verde_reg:inst5|altsyncram:altsyncram_component                                             ; work         ;
-;             |altsyncram_eos1:auto_generated| ; 16 (0)            ; 4 (4)        ; 131072      ; 0            ; 0       ; 0         ; 0    ; 0            ; |d|Block1:inst1|Verde_reg:inst5|altsyncram:altsyncram_component|altsyncram_eos1:auto_generated              ; work         ;
-;                |mux_kib:mux3|                ; 16 (16)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |d|Block1:inst1|Verde_reg:inst5|altsyncram:altsyncram_component|altsyncram_eos1:auto_generated|mux_kib:mux3 ; work         ;
-;    |Proyect5_8bit:inst|                      ; 72 (72)           ; 61 (61)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |d|Proyect5_8bit:inst                                                                                       ; work         ;
-;    |control_imagen:inst2|                    ; 124 (124)         ; 37 (37)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |d|control_imagen:inst2                                                                                     ; work         ;
-+----------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------------------------------------------+--------------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                               ;
++-------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------------------------------------------------------------------------+--------------+
+; Compilation Hierarchy Node                      ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                  ; Library Name ;
++-------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------------------------------------------------------------------------+--------------+
+; |d                                              ; 248 (0)           ; 100 (0)      ; 393216      ; 0            ; 0       ; 0         ; 37   ; 0            ; |d                                                                                                                   ; work         ;
+;    |Block1:inst1|                               ; 52 (0)            ; 2 (0)        ; 393216      ; 0            ; 0       ; 0         ; 0    ; 0            ; |d|Block1:inst1                                                                                                      ; work         ;
+;       |lpm_rom:inst2|                           ; 16 (0)            ; 0 (0)        ; 131072      ; 0            ; 0       ; 0         ; 0    ; 0            ; |d|Block1:inst1|lpm_rom:inst2                                                                                        ; work         ;
+;          |altrom:srom|                          ; 16 (0)            ; 0 (0)        ; 131072      ; 0            ; 0       ; 0         ; 0    ; 0            ; |d|Block1:inst1|lpm_rom:inst2|altrom:srom                                                                            ; work         ;
+;             |altsyncram:rom_block|              ; 16 (0)            ; 0 (0)        ; 131072      ; 0            ; 0       ; 0         ; 0    ; 0            ; |d|Block1:inst1|lpm_rom:inst2|altrom:srom|altsyncram:rom_block                                                       ; work         ;
+;                |altsyncram_e201:auto_generated| ; 16 (0)            ; 0 (0)        ; 131072      ; 0            ; 0       ; 0         ; 0    ; 0            ; |d|Block1:inst1|lpm_rom:inst2|altrom:srom|altsyncram:rom_block|altsyncram_e201:auto_generated                        ; work         ;
+;                   |mux_kib:mux2|                ; 16 (16)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |d|Block1:inst1|lpm_rom:inst2|altrom:srom|altsyncram:rom_block|altsyncram_e201:auto_generated|mux_kib:mux2           ; work         ;
+;       |lpm_rom:inst3|                           ; 20 (0)            ; 2 (0)        ; 131072      ; 0            ; 0       ; 0         ; 0    ; 0            ; |d|Block1:inst1|lpm_rom:inst3                                                                                        ; work         ;
+;          |altrom:srom|                          ; 20 (0)            ; 2 (0)        ; 131072      ; 0            ; 0       ; 0         ; 0    ; 0            ; |d|Block1:inst1|lpm_rom:inst3|altrom:srom                                                                            ; work         ;
+;             |altsyncram:rom_block|              ; 20 (0)            ; 2 (0)        ; 131072      ; 0            ; 0       ; 0         ; 0    ; 0            ; |d|Block1:inst1|lpm_rom:inst3|altrom:srom|altsyncram:rom_block                                                       ; work         ;
+;                |altsyncram_a501:auto_generated| ; 20 (0)            ; 2 (2)        ; 131072      ; 0            ; 0       ; 0         ; 0    ; 0            ; |d|Block1:inst1|lpm_rom:inst3|altrom:srom|altsyncram:rom_block|altsyncram_a501:auto_generated                        ; work         ;
+;                   |decode_4oa:deep_decode|      ; 4 (4)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |d|Block1:inst1|lpm_rom:inst3|altrom:srom|altsyncram:rom_block|altsyncram_a501:auto_generated|decode_4oa:deep_decode ; work         ;
+;                   |mux_kib:mux2|                ; 16 (16)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |d|Block1:inst1|lpm_rom:inst3|altrom:srom|altsyncram:rom_block|altsyncram_a501:auto_generated|mux_kib:mux2           ; work         ;
+;       |lpm_rom:inst5|                           ; 16 (0)            ; 0 (0)        ; 131072      ; 0            ; 0       ; 0         ; 0    ; 0            ; |d|Block1:inst1|lpm_rom:inst5                                                                                        ; work         ;
+;          |altrom:srom|                          ; 16 (0)            ; 0 (0)        ; 131072      ; 0            ; 0       ; 0         ; 0    ; 0            ; |d|Block1:inst1|lpm_rom:inst5|altrom:srom                                                                            ; work         ;
+;             |altsyncram:rom_block|              ; 16 (0)            ; 0 (0)        ; 131072      ; 0            ; 0       ; 0         ; 0    ; 0            ; |d|Block1:inst1|lpm_rom:inst5|altrom:srom|altsyncram:rom_block                                                       ; work         ;
+;                |altsyncram_g201:auto_generated| ; 16 (0)            ; 0 (0)        ; 131072      ; 0            ; 0       ; 0         ; 0    ; 0            ; |d|Block1:inst1|lpm_rom:inst5|altrom:srom|altsyncram:rom_block|altsyncram_g201:auto_generated                        ; work         ;
+;                   |mux_kib:mux2|                ; 16 (16)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |d|Block1:inst1|lpm_rom:inst5|altrom:srom|altsyncram:rom_block|altsyncram_g201:auto_generated|mux_kib:mux2           ; work         ;
+;    |Proyect5_8bit:inst|                         ; 69 (69)           ; 61 (61)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |d|Proyect5_8bit:inst                                                                                                ; work         ;
+;    |control_imagen:inst2|                       ; 127 (127)         ; 37 (37)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |d|control_imagen:inst2                                                                                              ; work         ;
++-------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------------------------------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis RAM Summary                                                                                                                                                                             ;
-+--------------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+--------+------+
-; Name                                                                                                   ; Type ; Mode             ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Size   ; MIF  ;
-+--------------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+--------+------+
-; Block1:inst1|Azul_reg:inst6|altsyncram:altsyncram_component|altsyncram_kls1:auto_generated|ALTSYNCRAM  ; AUTO ; Simple Dual Port ; 16384        ; 8            ; 16384        ; 8            ; 131072 ; None ;
-; Block1:inst1|Rojo_reg:inst7|altsyncram:altsyncram_component|altsyncram_ils1:auto_generated|ALTSYNCRAM  ; AUTO ; Simple Dual Port ; 16384        ; 8            ; 16384        ; 8            ; 131072 ; None ;
-; Block1:inst1|Verde_reg:inst5|altsyncram:altsyncram_component|altsyncram_eos1:auto_generated|ALTSYNCRAM ; AUTO ; Simple Dual Port ; 16384        ; 8            ; 16384        ; 8            ; 131072 ; None ;
-+--------------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+--------+------+
-
-
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis IP Cores Summary                                                                                                                                                 ;
-+--------+--------------+---------+--------------+--------------+---------------------------------+-------------------------------------------------------------------------------------+
-; Vendor ; IP Core Name ; Version ; Release Date ; License Type ; Entity Instance                 ; IP Include File                                                                     ;
-+--------+--------------+---------+--------------+--------------+---------------------------------+-------------------------------------------------------------------------------------+
-; Altera ; RAM: 2-PORT  ; N/A     ; N/A          ; N/A          ; |d|Block1:inst1|Verde_reg:inst5 ; C:/Users/Gaspar/Documents/GitHub/optativa_FPGA/FUNCIONAN/Proyect5_VGA/Verde_reg.vhd ;
-; Altera ; RAM: 2-PORT  ; N/A     ; N/A          ; N/A          ; |d|Block1:inst1|Azul_reg:inst6  ; C:/Users/Gaspar/Documents/GitHub/optativa_FPGA/FUNCIONAN/Proyect5_VGA/Azul_reg.vhd  ;
-; Altera ; RAM: 2-PORT  ; N/A     ; N/A          ; N/A          ; |d|Block1:inst1|Rojo_reg:inst7  ; C:/Users/Gaspar/Documents/GitHub/optativa_FPGA/FUNCIONAN/Proyect5_VGA/Rojo_reg.vhd  ;
-+--------+--------------+---------+--------------+--------------+---------------------------------+-------------------------------------------------------------------------------------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis RAM Summary                                                                                                                                                                     ;
++-------------------------------------------------------------------------------------------------------+------+------+--------------+--------------+--------------+--------------+--------+-----------+
+; Name                                                                                                  ; Type ; Mode ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Size   ; MIF       ;
++-------------------------------------------------------------------------------------------------------+------+------+--------------+--------------+--------------+--------------+--------+-----------+
+; Block1:inst1|lpm_rom:inst2|altrom:srom|altsyncram:rom_block|altsyncram_e201:auto_generated|ALTSYNCRAM ; AUTO ; ROM  ; 16384        ; 8            ; --           ; --           ; 131072 ; rojo.mif  ;
+; Block1:inst1|lpm_rom:inst3|altrom:srom|altsyncram:rom_block|altsyncram_a501:auto_generated|ALTSYNCRAM ; AUTO ; ROM  ; 16384        ; 8            ; --           ; --           ; 131072 ; verde.mif ;
+; Block1:inst1|lpm_rom:inst5|altrom:srom|altsyncram:rom_block|altsyncram_g201:auto_generated|ALTSYNCRAM ; AUTO ; ROM  ; 16384        ; 8            ; --           ; --           ; 131072 ; azul.mif  ;
++-------------------------------------------------------------------------------------------------------+------+------+--------------+--------------+--------------+--------------+--------+-----------+
 
 
 Encoding Type:  One-Hot
@@ -301,21 +296,17 @@ Encoding Type:  One-Hot
 +---------+---------+---------+---------+---------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                                                                                                                                                                                             ;
-+-----------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------+
-; Register name                                                                                                   ; Reason for Removal                                                                                                           ;
-+-----------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------+
-; Block1:inst1|Azul_reg:inst6|altsyncram:altsyncram_component|altsyncram_kls1:auto_generated|address_reg_b[1]     ; Merged with Block1:inst1|Verde_reg:inst5|altsyncram:altsyncram_component|altsyncram_eos1:auto_generated|address_reg_b[1]     ;
-; Block1:inst1|Rojo_reg:inst7|altsyncram:altsyncram_component|altsyncram_ils1:auto_generated|address_reg_b[1]     ; Merged with Block1:inst1|Verde_reg:inst5|altsyncram:altsyncram_component|altsyncram_eos1:auto_generated|address_reg_b[1]     ;
-; Block1:inst1|Azul_reg:inst6|altsyncram:altsyncram_component|altsyncram_kls1:auto_generated|address_reg_b[0]     ; Merged with Block1:inst1|Verde_reg:inst5|altsyncram:altsyncram_component|altsyncram_eos1:auto_generated|address_reg_b[0]     ;
-; Block1:inst1|Rojo_reg:inst7|altsyncram:altsyncram_component|altsyncram_ils1:auto_generated|address_reg_b[0]     ; Merged with Block1:inst1|Verde_reg:inst5|altsyncram:altsyncram_component|altsyncram_eos1:auto_generated|address_reg_b[0]     ;
-; Block1:inst1|Azul_reg:inst6|altsyncram:altsyncram_component|altsyncram_kls1:auto_generated|out_address_reg_b[1] ; Merged with Block1:inst1|Verde_reg:inst5|altsyncram:altsyncram_component|altsyncram_eos1:auto_generated|out_address_reg_b[1] ;
-; Block1:inst1|Rojo_reg:inst7|altsyncram:altsyncram_component|altsyncram_ils1:auto_generated|out_address_reg_b[1] ; Merged with Block1:inst1|Verde_reg:inst5|altsyncram:altsyncram_component|altsyncram_eos1:auto_generated|out_address_reg_b[1] ;
-; Block1:inst1|Azul_reg:inst6|altsyncram:altsyncram_component|altsyncram_kls1:auto_generated|out_address_reg_b[0] ; Merged with Block1:inst1|Verde_reg:inst5|altsyncram:altsyncram_component|altsyncram_eos1:auto_generated|out_address_reg_b[0] ;
-; Block1:inst1|Rojo_reg:inst7|altsyncram:altsyncram_component|altsyncram_ils1:auto_generated|out_address_reg_b[0] ; Merged with Block1:inst1|Verde_reg:inst5|altsyncram:altsyncram_component|altsyncram_eos1:auto_generated|out_address_reg_b[0] ;
-; Total Number of Removed Registers = 8                                                                           ;                                                                                                                              ;
-+-----------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                                                                                                                                                                    ;
++-------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------+
+; Register name                                                                                               ; Reason for Removal                                                                                                      ;
++-------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------+
+; Block1:inst1|lpm_rom:inst5|altrom:srom|altsyncram:rom_block|altsyncram_g201:auto_generated|address_reg_a[1] ; Merged with Block1:inst1|lpm_rom:inst3|altrom:srom|altsyncram:rom_block|altsyncram_a501:auto_generated|address_reg_a[1] ;
+; Block1:inst1|lpm_rom:inst2|altrom:srom|altsyncram:rom_block|altsyncram_e201:auto_generated|address_reg_a[1] ; Merged with Block1:inst1|lpm_rom:inst3|altrom:srom|altsyncram:rom_block|altsyncram_a501:auto_generated|address_reg_a[1] ;
+; Block1:inst1|lpm_rom:inst5|altrom:srom|altsyncram:rom_block|altsyncram_g201:auto_generated|address_reg_a[0] ; Merged with Block1:inst1|lpm_rom:inst3|altrom:srom|altsyncram:rom_block|altsyncram_a501:auto_generated|address_reg_a[0] ;
+; Block1:inst1|lpm_rom:inst2|altrom:srom|altsyncram:rom_block|altsyncram_e201:auto_generated|address_reg_a[0] ; Merged with Block1:inst1|lpm_rom:inst3|altrom:srom|altsyncram:rom_block|altsyncram_a501:auto_generated|address_reg_a[0] ;
+; Total Number of Removed Registers = 4                                                                       ;                                                                                                                         ;
++-------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------+
 
 
 +------------------------------------------------------+
@@ -323,8 +314,8 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 102   ;
-; Number of registers using Synchronous Clear  ; 10    ;
+; Total registers                              ; 100   ;
+; Number of registers using Synchronous Clear  ; 20    ;
 ; Number of registers using Synchronous Load   ; 10    ;
 ; Number of registers using Asynchronous Clear ; 95    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
@@ -352,19 +343,20 @@ Encoding Type:  One-Hot
 +--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                        ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------+
-; 3:1                ; 10 bits   ; 20 LEs        ; 10 LEs               ; 10 LEs                 ; Yes        ; |d|Proyect5_8bit:inst|col_int[7]                  ;
+; 3:1                ; 10 bits   ; 20 LEs        ; 10 LEs               ; 10 LEs                 ; Yes        ; |d|Proyect5_8bit:inst|col_int[8]                  ;
 ; 5:1                ; 2 bits    ; 6 LEs         ; 4 LEs                ; 2 LEs                  ; Yes        ; |d|Proyect5_8bit:inst|VGA_VS                      ;
-; 5:1                ; 7 bits    ; 21 LEs        ; 7 LEs                ; 14 LEs                 ; Yes        ; |d|control_imagen:inst2|fila_n[4]                 ;
-; 6:1                ; 8 bits    ; 32 LEs        ; 8 LEs                ; 24 LEs                 ; Yes        ; |d|control_imagen:inst2|col_n[2]                  ;
-; 6:1                ; 10 bits   ; 40 LEs        ; 20 LEs               ; 20 LEs                 ; Yes        ; |d|control_imagen:inst2|mem_dir_int[6]            ;
+; 5:1                ; 7 bits    ; 21 LEs        ; 7 LEs                ; 14 LEs                 ; Yes        ; |d|control_imagen:inst2|fila_n[9]                 ;
+; 5:1                ; 4 bits    ; 12 LEs        ; 4 LEs                ; 8 LEs                  ; Yes        ; |d|control_imagen:inst2|mem_dir_int[3]            ;
+; 6:1                ; 8 bits    ; 32 LEs        ; 8 LEs                ; 24 LEs                 ; Yes        ; |d|control_imagen:inst2|col_n[0]                  ;
+; 7:1                ; 10 bits   ; 40 LEs        ; 20 LEs               ; 20 LEs                 ; Yes        ; |d|control_imagen:inst2|mem_dir_int[4]            ;
 ; 8:1                ; 10 bits   ; 50 LEs        ; 10 LEs               ; 40 LEs                 ; Yes        ; |d|Proyect5_8bit:inst|\VGA_horizontal:cont_int[9] ;
-; 5:1                ; 3 bits    ; 9 LEs         ; 3 LEs                ; 6 LEs                  ; Yes        ; |d|control_imagen:inst2|fila_n[5]                 ;
+; 5:1                ; 3 bits    ; 9 LEs         ; 3 LEs                ; 6 LEs                  ; Yes        ; |d|control_imagen:inst2|fila_n[0]                 ;
 ; 6:1                ; 2 bits    ; 8 LEs         ; 2 LEs                ; 6 LEs                  ; Yes        ; |d|control_imagen:inst2|col_n[7]                  ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------+
 
 
 +-------------------------------------------------------------------------------------------------------------------+
-; Source assignments for Block1:inst1|Azul_reg:inst6|altsyncram:altsyncram_component|altsyncram_kls1:auto_generated ;
+; Source assignments for Block1:inst1|LPM_ROM:inst5|altrom:srom|altsyncram:rom_block|altsyncram_g201:auto_generated ;
 +---------------------------------+--------------------+------+-----------------------------------------------------+
 ; Assignment                      ; Value              ; From ; To                                                  ;
 +---------------------------------+--------------------+------+-----------------------------------------------------+
@@ -373,7 +365,7 @@ Encoding Type:  One-Hot
 
 
 +-------------------------------------------------------------------------------------------------------------------+
-; Source assignments for Block1:inst1|Rojo_reg:inst7|altsyncram:altsyncram_component|altsyncram_ils1:auto_generated ;
+; Source assignments for Block1:inst1|LPM_ROM:inst2|altrom:srom|altsyncram:rom_block|altsyncram_e201:auto_generated ;
 +---------------------------------+--------------------+------+-----------------------------------------------------+
 ; Assignment                      ; Value              ; From ; To                                                  ;
 +---------------------------------+--------------------+------+-----------------------------------------------------+
@@ -381,238 +373,73 @@ Encoding Type:  One-Hot
 +---------------------------------+--------------------+------+-----------------------------------------------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------+
-; Source assignments for Block1:inst1|Verde_reg:inst5|altsyncram:altsyncram_component|altsyncram_eos1:auto_generated ;
-+---------------------------------+--------------------+------+------------------------------------------------------+
-; Assignment                      ; Value              ; From ; To                                                   ;
-+---------------------------------+--------------------+------+------------------------------------------------------+
-; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                                                    ;
-+---------------------------------+--------------------+------+------------------------------------------------------+
++-------------------------------------------------------------------------------------------------------------------+
+; Source assignments for Block1:inst1|LPM_ROM:inst3|altrom:srom|altsyncram:rom_block|altsyncram_a501:auto_generated ;
++---------------------------------+--------------------+------+-----------------------------------------------------+
+; Assignment                      ; Value              ; From ; To                                                  ;
++---------------------------------+--------------------+------+-----------------------------------------------------+
+; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                                                   ;
++---------------------------------+--------------------+------+-----------------------------------------------------+
 
 
-+----------------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: Block1:inst1|Azul_reg:inst6|altsyncram:altsyncram_component ;
-+------------------------------------+------------------------------------+--------------------------------+
-; Parameter Name                     ; Value                              ; Type                           ;
-+------------------------------------+------------------------------------+--------------------------------+
-; BYTE_SIZE_BLOCK                    ; 8                                  ; Untyped                        ;
-; AUTO_CARRY_CHAINS                  ; ON                                 ; AUTO_CARRY                     ;
-; IGNORE_CARRY_BUFFERS               ; OFF                                ; IGNORE_CARRY                   ;
-; AUTO_CASCADE_CHAINS                ; ON                                 ; AUTO_CASCADE                   ;
-; IGNORE_CASCADE_BUFFERS             ; OFF                                ; IGNORE_CASCADE                 ;
-; WIDTH_BYTEENA                      ; 1                                  ; Untyped                        ;
-; OPERATION_MODE                     ; DUAL_PORT                          ; Untyped                        ;
-; WIDTH_A                            ; 8                                  ; Signed Integer                 ;
-; WIDTHAD_A                          ; 14                                 ; Signed Integer                 ;
-; NUMWORDS_A                         ; 16384                              ; Signed Integer                 ;
-; OUTDATA_REG_A                      ; UNREGISTERED                       ; Untyped                        ;
-; ADDRESS_ACLR_A                     ; NONE                               ; Untyped                        ;
-; OUTDATA_ACLR_A                     ; NONE                               ; Untyped                        ;
-; WRCONTROL_ACLR_A                   ; NONE                               ; Untyped                        ;
-; INDATA_ACLR_A                      ; NONE                               ; Untyped                        ;
-; BYTEENA_ACLR_A                     ; NONE                               ; Untyped                        ;
-; WIDTH_B                            ; 8                                  ; Signed Integer                 ;
-; WIDTHAD_B                          ; 14                                 ; Signed Integer                 ;
-; NUMWORDS_B                         ; 16384                              ; Signed Integer                 ;
-; INDATA_REG_B                       ; CLOCK1                             ; Untyped                        ;
-; WRCONTROL_WRADDRESS_REG_B          ; CLOCK1                             ; Untyped                        ;
-; RDCONTROL_REG_B                    ; CLOCK1                             ; Untyped                        ;
-; ADDRESS_REG_B                      ; CLOCK0                             ; Untyped                        ;
-; OUTDATA_REG_B                      ; CLOCK0                             ; Untyped                        ;
-; BYTEENA_REG_B                      ; CLOCK1                             ; Untyped                        ;
-; INDATA_ACLR_B                      ; NONE                               ; Untyped                        ;
-; WRCONTROL_ACLR_B                   ; NONE                               ; Untyped                        ;
-; ADDRESS_ACLR_B                     ; NONE                               ; Untyped                        ;
-; OUTDATA_ACLR_B                     ; NONE                               ; Untyped                        ;
-; RDCONTROL_ACLR_B                   ; NONE                               ; Untyped                        ;
-; BYTEENA_ACLR_B                     ; NONE                               ; Untyped                        ;
-; WIDTH_BYTEENA_A                    ; 1                                  ; Signed Integer                 ;
-; WIDTH_BYTEENA_B                    ; 1                                  ; Untyped                        ;
-; RAM_BLOCK_TYPE                     ; AUTO                               ; Untyped                        ;
-; BYTE_SIZE                          ; 8                                  ; Untyped                        ;
-; READ_DURING_WRITE_MODE_MIXED_PORTS ; OLD_DATA                           ; Untyped                        ;
-; READ_DURING_WRITE_MODE_PORT_A      ; NEW_DATA_NO_NBE_READ               ; Untyped                        ;
-; READ_DURING_WRITE_MODE_PORT_B      ; NEW_DATA_NO_NBE_READ               ; Untyped                        ;
-; INIT_FILE                          ; ../../Convertidor_img_hex/azul.hex ; Untyped                        ;
-; INIT_FILE_LAYOUT                   ; PORT_A                             ; Untyped                        ;
-; MAXIMUM_DEPTH                      ; 0                                  ; Untyped                        ;
-; CLOCK_ENABLE_INPUT_A               ; BYPASS                             ; Untyped                        ;
-; CLOCK_ENABLE_INPUT_B               ; BYPASS                             ; Untyped                        ;
-; CLOCK_ENABLE_OUTPUT_A              ; BYPASS                             ; Untyped                        ;
-; CLOCK_ENABLE_OUTPUT_B              ; BYPASS                             ; Untyped                        ;
-; CLOCK_ENABLE_CORE_A                ; USE_INPUT_CLKEN                    ; Untyped                        ;
-; CLOCK_ENABLE_CORE_B                ; USE_INPUT_CLKEN                    ; Untyped                        ;
-; ENABLE_ECC                         ; FALSE                              ; Untyped                        ;
-; ECC_PIPELINE_STAGE_ENABLED         ; FALSE                              ; Untyped                        ;
-; WIDTH_ECCSTATUS                    ; 3                                  ; Untyped                        ;
-; DEVICE_FAMILY                      ; Cyclone II                         ; Untyped                        ;
-; CBXI_PARAMETER                     ; altsyncram_kls1                    ; Untyped                        ;
-+------------------------------------+------------------------------------+--------------------------------+
++-------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Block1:inst1|LPM_ROM:inst5 ;
++------------------------+--------------+---------------------------------+
+; Parameter Name         ; Value        ; Type                            ;
++------------------------+--------------+---------------------------------+
+; LPM_WIDTH              ; 8            ; Untyped                         ;
+; LPM_WIDTHAD            ; 14           ; Untyped                         ;
+; LPM_NUMWORDS           ; 16384        ; Untyped                         ;
+; LPM_ADDRESS_CONTROL    ; UNREGISTERED ; Untyped                         ;
+; LPM_OUTDATA            ; REGISTERED   ; Untyped                         ;
+; LPM_FILE               ; azul.mif     ; Untyped                         ;
+; DEVICE_FAMILY          ; Cyclone II   ; Untyped                         ;
+; AUTO_CARRY_CHAINS      ; ON           ; AUTO_CARRY                      ;
+; IGNORE_CARRY_BUFFERS   ; OFF          ; IGNORE_CARRY                    ;
+; AUTO_CASCADE_CHAINS    ; ON           ; AUTO_CASCADE                    ;
+; IGNORE_CASCADE_BUFFERS ; OFF          ; IGNORE_CASCADE                  ;
++------------------------+--------------+---------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+----------------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: Block1:inst1|Rojo_reg:inst7|altsyncram:altsyncram_component ;
-+------------------------------------+------------------------------------+--------------------------------+
-; Parameter Name                     ; Value                              ; Type                           ;
-+------------------------------------+------------------------------------+--------------------------------+
-; BYTE_SIZE_BLOCK                    ; 8                                  ; Untyped                        ;
-; AUTO_CARRY_CHAINS                  ; ON                                 ; AUTO_CARRY                     ;
-; IGNORE_CARRY_BUFFERS               ; OFF                                ; IGNORE_CARRY                   ;
-; AUTO_CASCADE_CHAINS                ; ON                                 ; AUTO_CASCADE                   ;
-; IGNORE_CASCADE_BUFFERS             ; OFF                                ; IGNORE_CASCADE                 ;
-; WIDTH_BYTEENA                      ; 1                                  ; Untyped                        ;
-; OPERATION_MODE                     ; DUAL_PORT                          ; Untyped                        ;
-; WIDTH_A                            ; 8                                  ; Signed Integer                 ;
-; WIDTHAD_A                          ; 14                                 ; Signed Integer                 ;
-; NUMWORDS_A                         ; 16384                              ; Signed Integer                 ;
-; OUTDATA_REG_A                      ; UNREGISTERED                       ; Untyped                        ;
-; ADDRESS_ACLR_A                     ; NONE                               ; Untyped                        ;
-; OUTDATA_ACLR_A                     ; NONE                               ; Untyped                        ;
-; WRCONTROL_ACLR_A                   ; NONE                               ; Untyped                        ;
-; INDATA_ACLR_A                      ; NONE                               ; Untyped                        ;
-; BYTEENA_ACLR_A                     ; NONE                               ; Untyped                        ;
-; WIDTH_B                            ; 8                                  ; Signed Integer                 ;
-; WIDTHAD_B                          ; 14                                 ; Signed Integer                 ;
-; NUMWORDS_B                         ; 16384                              ; Signed Integer                 ;
-; INDATA_REG_B                       ; CLOCK1                             ; Untyped                        ;
-; WRCONTROL_WRADDRESS_REG_B          ; CLOCK1                             ; Untyped                        ;
-; RDCONTROL_REG_B                    ; CLOCK1                             ; Untyped                        ;
-; ADDRESS_REG_B                      ; CLOCK0                             ; Untyped                        ;
-; OUTDATA_REG_B                      ; CLOCK0                             ; Untyped                        ;
-; BYTEENA_REG_B                      ; CLOCK1                             ; Untyped                        ;
-; INDATA_ACLR_B                      ; NONE                               ; Untyped                        ;
-; WRCONTROL_ACLR_B                   ; NONE                               ; Untyped                        ;
-; ADDRESS_ACLR_B                     ; NONE                               ; Untyped                        ;
-; OUTDATA_ACLR_B                     ; NONE                               ; Untyped                        ;
-; RDCONTROL_ACLR_B                   ; NONE                               ; Untyped                        ;
-; BYTEENA_ACLR_B                     ; NONE                               ; Untyped                        ;
-; WIDTH_BYTEENA_A                    ; 1                                  ; Signed Integer                 ;
-; WIDTH_BYTEENA_B                    ; 1                                  ; Untyped                        ;
-; RAM_BLOCK_TYPE                     ; AUTO                               ; Untyped                        ;
-; BYTE_SIZE                          ; 8                                  ; Untyped                        ;
-; READ_DURING_WRITE_MODE_MIXED_PORTS ; OLD_DATA                           ; Untyped                        ;
-; READ_DURING_WRITE_MODE_PORT_A      ; NEW_DATA_NO_NBE_READ               ; Untyped                        ;
-; READ_DURING_WRITE_MODE_PORT_B      ; NEW_DATA_NO_NBE_READ               ; Untyped                        ;
-; INIT_FILE                          ; ../../Convertidor_img_hex/rojo.hex ; Untyped                        ;
-; INIT_FILE_LAYOUT                   ; PORT_A                             ; Untyped                        ;
-; MAXIMUM_DEPTH                      ; 0                                  ; Untyped                        ;
-; CLOCK_ENABLE_INPUT_A               ; BYPASS                             ; Untyped                        ;
-; CLOCK_ENABLE_INPUT_B               ; BYPASS                             ; Untyped                        ;
-; CLOCK_ENABLE_OUTPUT_A              ; BYPASS                             ; Untyped                        ;
-; CLOCK_ENABLE_OUTPUT_B              ; BYPASS                             ; Untyped                        ;
-; CLOCK_ENABLE_CORE_A                ; USE_INPUT_CLKEN                    ; Untyped                        ;
-; CLOCK_ENABLE_CORE_B                ; USE_INPUT_CLKEN                    ; Untyped                        ;
-; ENABLE_ECC                         ; FALSE                              ; Untyped                        ;
-; ECC_PIPELINE_STAGE_ENABLED         ; FALSE                              ; Untyped                        ;
-; WIDTH_ECCSTATUS                    ; 3                                  ; Untyped                        ;
-; DEVICE_FAMILY                      ; Cyclone II                         ; Untyped                        ;
-; CBXI_PARAMETER                     ; altsyncram_ils1                    ; Untyped                        ;
-+------------------------------------+------------------------------------+--------------------------------+
++-------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Block1:inst1|LPM_ROM:inst2 ;
++------------------------+--------------+---------------------------------+
+; Parameter Name         ; Value        ; Type                            ;
++------------------------+--------------+---------------------------------+
+; LPM_WIDTH              ; 8            ; Untyped                         ;
+; LPM_WIDTHAD            ; 14           ; Untyped                         ;
+; LPM_NUMWORDS           ; 16384        ; Untyped                         ;
+; LPM_ADDRESS_CONTROL    ; UNREGISTERED ; Untyped                         ;
+; LPM_OUTDATA            ; REGISTERED   ; Untyped                         ;
+; LPM_FILE               ; rojo.mif     ; Untyped                         ;
+; DEVICE_FAMILY          ; Cyclone II   ; Untyped                         ;
+; AUTO_CARRY_CHAINS      ; ON           ; AUTO_CARRY                      ;
+; IGNORE_CARRY_BUFFERS   ; OFF          ; IGNORE_CARRY                    ;
+; AUTO_CASCADE_CHAINS    ; ON           ; AUTO_CASCADE                    ;
+; IGNORE_CASCADE_BUFFERS ; OFF          ; IGNORE_CASCADE                  ;
++------------------------+--------------+---------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+-----------------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: Block1:inst1|Verde_reg:inst5|altsyncram:altsyncram_component ;
-+------------------------------------+-------------------------------------+--------------------------------+
-; Parameter Name                     ; Value                               ; Type                           ;
-+------------------------------------+-------------------------------------+--------------------------------+
-; BYTE_SIZE_BLOCK                    ; 8                                   ; Untyped                        ;
-; AUTO_CARRY_CHAINS                  ; ON                                  ; AUTO_CARRY                     ;
-; IGNORE_CARRY_BUFFERS               ; OFF                                 ; IGNORE_CARRY                   ;
-; AUTO_CASCADE_CHAINS                ; ON                                  ; AUTO_CASCADE                   ;
-; IGNORE_CASCADE_BUFFERS             ; OFF                                 ; IGNORE_CASCADE                 ;
-; WIDTH_BYTEENA                      ; 1                                   ; Untyped                        ;
-; OPERATION_MODE                     ; DUAL_PORT                           ; Untyped                        ;
-; WIDTH_A                            ; 8                                   ; Signed Integer                 ;
-; WIDTHAD_A                          ; 14                                  ; Signed Integer                 ;
-; NUMWORDS_A                         ; 16384                               ; Signed Integer                 ;
-; OUTDATA_REG_A                      ; UNREGISTERED                        ; Untyped                        ;
-; ADDRESS_ACLR_A                     ; NONE                                ; Untyped                        ;
-; OUTDATA_ACLR_A                     ; NONE                                ; Untyped                        ;
-; WRCONTROL_ACLR_A                   ; NONE                                ; Untyped                        ;
-; INDATA_ACLR_A                      ; NONE                                ; Untyped                        ;
-; BYTEENA_ACLR_A                     ; NONE                                ; Untyped                        ;
-; WIDTH_B                            ; 8                                   ; Signed Integer                 ;
-; WIDTHAD_B                          ; 14                                  ; Signed Integer                 ;
-; NUMWORDS_B                         ; 16384                               ; Signed Integer                 ;
-; INDATA_REG_B                       ; CLOCK1                              ; Untyped                        ;
-; WRCONTROL_WRADDRESS_REG_B          ; CLOCK1                              ; Untyped                        ;
-; RDCONTROL_REG_B                    ; CLOCK1                              ; Untyped                        ;
-; ADDRESS_REG_B                      ; CLOCK0                              ; Untyped                        ;
-; OUTDATA_REG_B                      ; CLOCK0                              ; Untyped                        ;
-; BYTEENA_REG_B                      ; CLOCK1                              ; Untyped                        ;
-; INDATA_ACLR_B                      ; NONE                                ; Untyped                        ;
-; WRCONTROL_ACLR_B                   ; NONE                                ; Untyped                        ;
-; ADDRESS_ACLR_B                     ; NONE                                ; Untyped                        ;
-; OUTDATA_ACLR_B                     ; NONE                                ; Untyped                        ;
-; RDCONTROL_ACLR_B                   ; NONE                                ; Untyped                        ;
-; BYTEENA_ACLR_B                     ; NONE                                ; Untyped                        ;
-; WIDTH_BYTEENA_A                    ; 1                                   ; Signed Integer                 ;
-; WIDTH_BYTEENA_B                    ; 1                                   ; Untyped                        ;
-; RAM_BLOCK_TYPE                     ; AUTO                                ; Untyped                        ;
-; BYTE_SIZE                          ; 8                                   ; Untyped                        ;
-; READ_DURING_WRITE_MODE_MIXED_PORTS ; OLD_DATA                            ; Untyped                        ;
-; READ_DURING_WRITE_MODE_PORT_A      ; NEW_DATA_NO_NBE_READ                ; Untyped                        ;
-; READ_DURING_WRITE_MODE_PORT_B      ; NEW_DATA_NO_NBE_READ                ; Untyped                        ;
-; INIT_FILE                          ; ../../Convertidor_img_hex/verde.hex ; Untyped                        ;
-; INIT_FILE_LAYOUT                   ; PORT_A                              ; Untyped                        ;
-; MAXIMUM_DEPTH                      ; 0                                   ; Untyped                        ;
-; CLOCK_ENABLE_INPUT_A               ; BYPASS                              ; Untyped                        ;
-; CLOCK_ENABLE_INPUT_B               ; BYPASS                              ; Untyped                        ;
-; CLOCK_ENABLE_OUTPUT_A              ; BYPASS                              ; Untyped                        ;
-; CLOCK_ENABLE_OUTPUT_B              ; BYPASS                              ; Untyped                        ;
-; CLOCK_ENABLE_CORE_A                ; USE_INPUT_CLKEN                     ; Untyped                        ;
-; CLOCK_ENABLE_CORE_B                ; USE_INPUT_CLKEN                     ; Untyped                        ;
-; ENABLE_ECC                         ; FALSE                               ; Untyped                        ;
-; ECC_PIPELINE_STAGE_ENABLED         ; FALSE                               ; Untyped                        ;
-; WIDTH_ECCSTATUS                    ; 3                                   ; Untyped                        ;
-; DEVICE_FAMILY                      ; Cyclone II                          ; Untyped                        ;
-; CBXI_PARAMETER                     ; altsyncram_eos1                     ; Untyped                        ;
-+------------------------------------+-------------------------------------+--------------------------------+
++-------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Block1:inst1|LPM_ROM:inst3 ;
++------------------------+--------------+---------------------------------+
+; Parameter Name         ; Value        ; Type                            ;
++------------------------+--------------+---------------------------------+
+; LPM_WIDTH              ; 8            ; Untyped                         ;
+; LPM_WIDTHAD            ; 14           ; Untyped                         ;
+; LPM_NUMWORDS           ; 16384        ; Untyped                         ;
+; LPM_ADDRESS_CONTROL    ; UNREGISTERED ; Untyped                         ;
+; LPM_OUTDATA            ; REGISTERED   ; Untyped                         ;
+; LPM_FILE               ; verde.mif    ; Untyped                         ;
+; DEVICE_FAMILY          ; Cyclone II   ; Untyped                         ;
+; AUTO_CARRY_CHAINS      ; ON           ; AUTO_CARRY                      ;
+; IGNORE_CARRY_BUFFERS   ; OFF          ; IGNORE_CARRY                    ;
+; AUTO_CASCADE_CHAINS    ; ON           ; AUTO_CASCADE                    ;
+; IGNORE_CASCADE_BUFFERS ; OFF          ; IGNORE_CASCADE                  ;
++------------------------+--------------+---------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+----------------------------------------------------------------------------------------------------------+
-; altsyncram Parameter Settings by Entity Instance                                                         ;
-+-------------------------------------------+--------------------------------------------------------------+
-; Name                                      ; Value                                                        ;
-+-------------------------------------------+--------------------------------------------------------------+
-; Number of entity instances                ; 3                                                            ;
-; Entity Instance                           ; Block1:inst1|Azul_reg:inst6|altsyncram:altsyncram_component  ;
-;     -- OPERATION_MODE                     ; DUAL_PORT                                                    ;
-;     -- WIDTH_A                            ; 8                                                            ;
-;     -- NUMWORDS_A                         ; 16384                                                        ;
-;     -- OUTDATA_REG_A                      ; UNREGISTERED                                                 ;
-;     -- WIDTH_B                            ; 8                                                            ;
-;     -- NUMWORDS_B                         ; 16384                                                        ;
-;     -- ADDRESS_REG_B                      ; CLOCK0                                                       ;
-;     -- OUTDATA_REG_B                      ; CLOCK0                                                       ;
-;     -- RAM_BLOCK_TYPE                     ; AUTO                                                         ;
-;     -- READ_DURING_WRITE_MODE_MIXED_PORTS ; OLD_DATA                                                     ;
-; Entity Instance                           ; Block1:inst1|Rojo_reg:inst7|altsyncram:altsyncram_component  ;
-;     -- OPERATION_MODE                     ; DUAL_PORT                                                    ;
-;     -- WIDTH_A                            ; 8                                                            ;
-;     -- NUMWORDS_A                         ; 16384                                                        ;
-;     -- OUTDATA_REG_A                      ; UNREGISTERED                                                 ;
-;     -- WIDTH_B                            ; 8                                                            ;
-;     -- NUMWORDS_B                         ; 16384                                                        ;
-;     -- ADDRESS_REG_B                      ; CLOCK0                                                       ;
-;     -- OUTDATA_REG_B                      ; CLOCK0                                                       ;
-;     -- RAM_BLOCK_TYPE                     ; AUTO                                                         ;
-;     -- READ_DURING_WRITE_MODE_MIXED_PORTS ; OLD_DATA                                                     ;
-; Entity Instance                           ; Block1:inst1|Verde_reg:inst5|altsyncram:altsyncram_component ;
-;     -- OPERATION_MODE                     ; DUAL_PORT                                                    ;
-;     -- WIDTH_A                            ; 8                                                            ;
-;     -- NUMWORDS_A                         ; 16384                                                        ;
-;     -- OUTDATA_REG_A                      ; UNREGISTERED                                                 ;
-;     -- WIDTH_B                            ; 8                                                            ;
-;     -- NUMWORDS_B                         ; 16384                                                        ;
-;     -- ADDRESS_REG_B                      ; CLOCK0                                                       ;
-;     -- OUTDATA_REG_B                      ; CLOCK0                                                       ;
-;     -- RAM_BLOCK_TYPE                     ; AUTO                                                         ;
-;     -- READ_DURING_WRITE_MODE_MIXED_PORTS ; OLD_DATA                                                     ;
-+-------------------------------------------+--------------------------------------------------------------+
 
 
 +-------------------------------+
@@ -620,7 +447,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:00     ;
+; Top            ; 00:00:01     ;
 +----------------+--------------+
 
 
@@ -630,7 +457,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Wed Jul 03 15:53:14 2024
+    Info: Processing started: Wed Jul 03 18:03:10 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Proyect5 -c Proyect5
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 2 design units, including 1 entities, in source file verde_reg.vhd
@@ -676,97 +503,94 @@ Info (12021): Found 1 design units, including 1 entities, in source file d.bdf
 Info (12127): Elaborating entity "d" for the top level hierarchy
 Info (12128): Elaborating entity "Proyect5_8bit" for hierarchy "Proyect5_8bit:inst"
 Info (12128): Elaborating entity "Block1" for hierarchy "Block1:inst1"
-Info (12128): Elaborating entity "Azul_reg" for hierarchy "Block1:inst1|Azul_reg:inst6"
-Info (12128): Elaborating entity "altsyncram" for hierarchy "Block1:inst1|Azul_reg:inst6|altsyncram:altsyncram_component"
-Info (12130): Elaborated megafunction instantiation "Block1:inst1|Azul_reg:inst6|altsyncram:altsyncram_component"
-Info (12133): Instantiated megafunction "Block1:inst1|Azul_reg:inst6|altsyncram:altsyncram_component" with the following parameter:
-    Info (12134): Parameter "address_reg_b" = "CLOCK0"
-    Info (12134): Parameter "clock_enable_input_a" = "BYPASS"
-    Info (12134): Parameter "clock_enable_input_b" = "BYPASS"
-    Info (12134): Parameter "clock_enable_output_a" = "BYPASS"
-    Info (12134): Parameter "clock_enable_output_b" = "BYPASS"
-    Info (12134): Parameter "init_file" = "../../Convertidor_img_hex/azul.hex"
-    Info (12134): Parameter "intended_device_family" = "Cyclone II"
-    Info (12134): Parameter "lpm_type" = "altsyncram"
-    Info (12134): Parameter "numwords_a" = "16384"
-    Info (12134): Parameter "numwords_b" = "16384"
-    Info (12134): Parameter "operation_mode" = "DUAL_PORT"
-    Info (12134): Parameter "outdata_aclr_b" = "NONE"
-    Info (12134): Parameter "outdata_reg_b" = "CLOCK0"
-    Info (12134): Parameter "power_up_uninitialized" = "FALSE"
-    Info (12134): Parameter "read_during_write_mode_mixed_ports" = "OLD_DATA"
-    Info (12134): Parameter "widthad_a" = "14"
-    Info (12134): Parameter "widthad_b" = "14"
-    Info (12134): Parameter "width_a" = "8"
-    Info (12134): Parameter "width_b" = "8"
-    Info (12134): Parameter "width_byteena_a" = "1"
-Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_kls1.tdf
-    Info (12023): Found entity 1: altsyncram_kls1
-Info (12128): Elaborating entity "altsyncram_kls1" for hierarchy "Block1:inst1|Azul_reg:inst6|altsyncram:altsyncram_component|altsyncram_kls1:auto_generated"
-Critical Warning (127002): Can't read Memory Initialization File or Hexadecimal (Intel-Format) File ../../Convertidor_img_hex/azul.hex -- setting all initial values to 0
+Warning (275006): Can't find a definition for parameter LPM_FILE -- assuming rojo.mif was intended to be a quoted string
+Warning (275006): Can't find a definition for parameter LPM_FILE -- assuming verde.mif was intended to be a quoted string
+Warning (275006): Can't find a definition for parameter LPM_FILE -- assuming azul.mif was intended to be a quoted string
+Info (12128): Elaborating entity "LPM_ROM" for hierarchy "Block1:inst1|LPM_ROM:inst5"
+Info (12130): Elaborated megafunction instantiation "Block1:inst1|LPM_ROM:inst5"
+Info (12133): Instantiated megafunction "Block1:inst1|LPM_ROM:inst5" with the following parameter:
+    Info (12134): Parameter "LPM_ADDRESS_CONTROL" = "UNREGISTERED"
+    Info (12134): Parameter "LPM_FILE" = "azul.mif"
+    Info (12134): Parameter "LPM_OUTDATA" = "REGISTERED"
+    Info (12134): Parameter "LPM_WIDTH" = "8"
+    Info (12134): Parameter "LPM_WIDTHAD" = "14"
+Info (12128): Elaborating entity "altrom" for hierarchy "Block1:inst1|LPM_ROM:inst5|altrom:srom"
+Warning (287001): Assertion warning: Can't convert ROM for Cyclone II device family using altsyncram megafunction -- implementing ROM using benchmarking mode by moving output registers to the input side. Power-up states and behavior may be different.
+Info (287000): Assertion information: Clocko port is used as clock for the address input port
+Info (12131): Elaborated megafunction instantiation "Block1:inst1|LPM_ROM:inst5|altrom:srom", which is child of megafunction instantiation "Block1:inst1|LPM_ROM:inst5"
+Info (12128): Elaborating entity "altsyncram" for hierarchy "Block1:inst1|LPM_ROM:inst5|altrom:srom|altsyncram:rom_block"
+Info (12131): Elaborated megafunction instantiation "Block1:inst1|LPM_ROM:inst5|altrom:srom|altsyncram:rom_block", which is child of megafunction instantiation "Block1:inst1|LPM_ROM:inst5"
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_g201.tdf
+    Info (12023): Found entity 1: altsyncram_g201
+Info (12128): Elaborating entity "altsyncram_g201" for hierarchy "Block1:inst1|LPM_ROM:inst5|altrom:srom|altsyncram:rom_block|altsyncram_g201:auto_generated"
+Critical Warning (127005): Memory depth (16384) in the design file differs from memory depth (5040) in the Memory Initialization File "C:/intelFPGA_lite/optativa/Optativa_FPGA/FUNCIONAN/Proyect5_VGA/azul.mif" -- setting initial value for remaining addresses to 0
 Info (12021): Found 1 design units, including 1 entities, in source file db/decode_4oa.tdf
     Info (12023): Found entity 1: decode_4oa
-Info (12128): Elaborating entity "decode_4oa" for hierarchy "Block1:inst1|Azul_reg:inst6|altsyncram:altsyncram_component|altsyncram_kls1:auto_generated|decode_4oa:decode2"
+Info (12128): Elaborating entity "decode_4oa" for hierarchy "Block1:inst1|LPM_ROM:inst5|altrom:srom|altsyncram:rom_block|altsyncram_g201:auto_generated|decode_4oa:deep_decode"
 Info (12021): Found 1 design units, including 1 entities, in source file db/mux_kib.tdf
     Info (12023): Found entity 1: mux_kib
-Info (12128): Elaborating entity "mux_kib" for hierarchy "Block1:inst1|Azul_reg:inst6|altsyncram:altsyncram_component|altsyncram_kls1:auto_generated|mux_kib:mux3"
-Info (12128): Elaborating entity "Rojo_reg" for hierarchy "Block1:inst1|Rojo_reg:inst7"
-Info (12128): Elaborating entity "altsyncram" for hierarchy "Block1:inst1|Rojo_reg:inst7|altsyncram:altsyncram_component"
-Info (12130): Elaborated megafunction instantiation "Block1:inst1|Rojo_reg:inst7|altsyncram:altsyncram_component"
-Info (12133): Instantiated megafunction "Block1:inst1|Rojo_reg:inst7|altsyncram:altsyncram_component" with the following parameter:
-    Info (12134): Parameter "address_reg_b" = "CLOCK0"
-    Info (12134): Parameter "clock_enable_input_a" = "BYPASS"
-    Info (12134): Parameter "clock_enable_input_b" = "BYPASS"
-    Info (12134): Parameter "clock_enable_output_a" = "BYPASS"
-    Info (12134): Parameter "clock_enable_output_b" = "BYPASS"
-    Info (12134): Parameter "init_file" = "../../Convertidor_img_hex/rojo.hex"
-    Info (12134): Parameter "intended_device_family" = "Cyclone II"
-    Info (12134): Parameter "lpm_type" = "altsyncram"
-    Info (12134): Parameter "numwords_a" = "16384"
-    Info (12134): Parameter "numwords_b" = "16384"
-    Info (12134): Parameter "operation_mode" = "DUAL_PORT"
-    Info (12134): Parameter "outdata_aclr_b" = "NONE"
-    Info (12134): Parameter "outdata_reg_b" = "CLOCK0"
-    Info (12134): Parameter "power_up_uninitialized" = "FALSE"
-    Info (12134): Parameter "read_during_write_mode_mixed_ports" = "OLD_DATA"
-    Info (12134): Parameter "widthad_a" = "14"
-    Info (12134): Parameter "widthad_b" = "14"
-    Info (12134): Parameter "width_a" = "8"
-    Info (12134): Parameter "width_b" = "8"
-    Info (12134): Parameter "width_byteena_a" = "1"
-Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_ils1.tdf
-    Info (12023): Found entity 1: altsyncram_ils1
-Info (12128): Elaborating entity "altsyncram_ils1" for hierarchy "Block1:inst1|Rojo_reg:inst7|altsyncram:altsyncram_component|altsyncram_ils1:auto_generated"
-Critical Warning (127002): Can't read Memory Initialization File or Hexadecimal (Intel-Format) File ../../Convertidor_img_hex/rojo.hex -- setting all initial values to 0
-Info (12128): Elaborating entity "Verde_reg" for hierarchy "Block1:inst1|Verde_reg:inst5"
-Info (12128): Elaborating entity "altsyncram" for hierarchy "Block1:inst1|Verde_reg:inst5|altsyncram:altsyncram_component"
-Info (12130): Elaborated megafunction instantiation "Block1:inst1|Verde_reg:inst5|altsyncram:altsyncram_component"
-Info (12133): Instantiated megafunction "Block1:inst1|Verde_reg:inst5|altsyncram:altsyncram_component" with the following parameter:
-    Info (12134): Parameter "address_reg_b" = "CLOCK0"
-    Info (12134): Parameter "clock_enable_input_a" = "BYPASS"
-    Info (12134): Parameter "clock_enable_input_b" = "BYPASS"
-    Info (12134): Parameter "clock_enable_output_a" = "BYPASS"
-    Info (12134): Parameter "clock_enable_output_b" = "BYPASS"
-    Info (12134): Parameter "init_file" = "../../Convertidor_img_hex/verde.hex"
-    Info (12134): Parameter "intended_device_family" = "Cyclone II"
-    Info (12134): Parameter "lpm_type" = "altsyncram"
-    Info (12134): Parameter "numwords_a" = "16384"
-    Info (12134): Parameter "numwords_b" = "16384"
-    Info (12134): Parameter "operation_mode" = "DUAL_PORT"
-    Info (12134): Parameter "outdata_aclr_b" = "NONE"
-    Info (12134): Parameter "outdata_reg_b" = "CLOCK0"
-    Info (12134): Parameter "power_up_uninitialized" = "FALSE"
-    Info (12134): Parameter "read_during_write_mode_mixed_ports" = "OLD_DATA"
-    Info (12134): Parameter "widthad_a" = "14"
-    Info (12134): Parameter "widthad_b" = "14"
-    Info (12134): Parameter "width_a" = "8"
-    Info (12134): Parameter "width_b" = "8"
-    Info (12134): Parameter "width_byteena_a" = "1"
-Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_eos1.tdf
-    Info (12023): Found entity 1: altsyncram_eos1
-Info (12128): Elaborating entity "altsyncram_eos1" for hierarchy "Block1:inst1|Verde_reg:inst5|altsyncram:altsyncram_component|altsyncram_eos1:auto_generated"
-Critical Warning (127002): Can't read Memory Initialization File or Hexadecimal (Intel-Format) File ../../Convertidor_img_hex/verde.hex -- setting all initial values to 0
+Info (12128): Elaborating entity "mux_kib" for hierarchy "Block1:inst1|LPM_ROM:inst5|altrom:srom|altsyncram:rom_block|altsyncram_g201:auto_generated|mux_kib:mux2"
+Info (12128): Elaborating entity "LPM_ROM" for hierarchy "Block1:inst1|LPM_ROM:inst2"
+Info (12130): Elaborated megafunction instantiation "Block1:inst1|LPM_ROM:inst2"
+Info (12133): Instantiated megafunction "Block1:inst1|LPM_ROM:inst2" with the following parameter:
+    Info (12134): Parameter "LPM_ADDRESS_CONTROL" = "UNREGISTERED"
+    Info (12134): Parameter "LPM_FILE" = "rojo.mif"
+    Info (12134): Parameter "LPM_OUTDATA" = "REGISTERED"
+    Info (12134): Parameter "LPM_WIDTH" = "8"
+    Info (12134): Parameter "LPM_WIDTHAD" = "14"
+Info (12128): Elaborating entity "altrom" for hierarchy "Block1:inst1|LPM_ROM:inst2|altrom:srom"
+Warning (287001): Assertion warning: Can't convert ROM for Cyclone II device family using altsyncram megafunction -- implementing ROM using benchmarking mode by moving output registers to the input side. Power-up states and behavior may be different.
+Info (287000): Assertion information: Clocko port is used as clock for the address input port
+Info (12131): Elaborated megafunction instantiation "Block1:inst1|LPM_ROM:inst2|altrom:srom", which is child of megafunction instantiation "Block1:inst1|LPM_ROM:inst2"
+Info (12128): Elaborating entity "altsyncram" for hierarchy "Block1:inst1|LPM_ROM:inst2|altrom:srom|altsyncram:rom_block"
+Info (12131): Elaborated megafunction instantiation "Block1:inst1|LPM_ROM:inst2|altrom:srom|altsyncram:rom_block", which is child of megafunction instantiation "Block1:inst1|LPM_ROM:inst2"
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_e201.tdf
+    Info (12023): Found entity 1: altsyncram_e201
+Info (12128): Elaborating entity "altsyncram_e201" for hierarchy "Block1:inst1|LPM_ROM:inst2|altrom:srom|altsyncram:rom_block|altsyncram_e201:auto_generated"
+Info (12128): Elaborating entity "LPM_ROM" for hierarchy "Block1:inst1|LPM_ROM:inst3"
+Info (12130): Elaborated megafunction instantiation "Block1:inst1|LPM_ROM:inst3"
+Info (12133): Instantiated megafunction "Block1:inst1|LPM_ROM:inst3" with the following parameter:
+    Info (12134): Parameter "LPM_ADDRESS_CONTROL" = "UNREGISTERED"
+    Info (12134): Parameter "LPM_FILE" = "verde.mif"
+    Info (12134): Parameter "LPM_OUTDATA" = "REGISTERED"
+    Info (12134): Parameter "LPM_WIDTH" = "8"
+    Info (12134): Parameter "LPM_WIDTHAD" = "14"
+Info (12128): Elaborating entity "altrom" for hierarchy "Block1:inst1|LPM_ROM:inst3|altrom:srom"
+Warning (287001): Assertion warning: Can't convert ROM for Cyclone II device family using altsyncram megafunction -- implementing ROM using benchmarking mode by moving output registers to the input side. Power-up states and behavior may be different.
+Info (287000): Assertion information: Clocko port is used as clock for the address input port
+Info (12131): Elaborated megafunction instantiation "Block1:inst1|LPM_ROM:inst3|altrom:srom", which is child of megafunction instantiation "Block1:inst1|LPM_ROM:inst3"
+Info (12128): Elaborating entity "altsyncram" for hierarchy "Block1:inst1|LPM_ROM:inst3|altrom:srom|altsyncram:rom_block"
+Info (12131): Elaborated megafunction instantiation "Block1:inst1|LPM_ROM:inst3|altrom:srom|altsyncram:rom_block", which is child of megafunction instantiation "Block1:inst1|LPM_ROM:inst3"
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_a501.tdf
+    Info (12023): Found entity 1: altsyncram_a501
+Info (12128): Elaborating entity "altsyncram_a501" for hierarchy "Block1:inst1|LPM_ROM:inst3|altrom:srom|altsyncram:rom_block|altsyncram_a501:auto_generated"
+Critical Warning (127005): Memory depth (16384) in the design file differs from memory depth (5040) in the Memory Initialization File "C:/intelFPGA_lite/optativa/Optativa_FPGA/FUNCIONAN/Proyect5_VGA/verde.mif" -- setting initial value for remaining addresses to 0
 Info (12128): Elaborating entity "control_imagen" for hierarchy "control_imagen:inst2"
+Warning (13046): Tri-state node(s) do not directly drive top-level pin(s)
+    Warning (13049): Converted tri-state buffer "Block1:inst1|lpm_rom:inst3|otri[7]" feeding internal logic into a wire
+    Warning (13049): Converted tri-state buffer "Block1:inst1|lpm_rom:inst3|otri[6]" feeding internal logic into a wire
+    Warning (13049): Converted tri-state buffer "Block1:inst1|lpm_rom:inst3|otri[5]" feeding internal logic into a wire
+    Warning (13049): Converted tri-state buffer "Block1:inst1|lpm_rom:inst3|otri[4]" feeding internal logic into a wire
+    Warning (13049): Converted tri-state buffer "Block1:inst1|lpm_rom:inst3|otri[3]" feeding internal logic into a wire
+    Warning (13049): Converted tri-state buffer "Block1:inst1|lpm_rom:inst3|otri[2]" feeding internal logic into a wire
+    Warning (13049): Converted tri-state buffer "Block1:inst1|lpm_rom:inst3|otri[1]" feeding internal logic into a wire
+    Warning (13049): Converted tri-state buffer "Block1:inst1|lpm_rom:inst3|otri[0]" feeding internal logic into a wire
+    Warning (13049): Converted tri-state buffer "Block1:inst1|lpm_rom:inst2|otri[7]" feeding internal logic into a wire
+    Warning (13049): Converted tri-state buffer "Block1:inst1|lpm_rom:inst2|otri[6]" feeding internal logic into a wire
+    Warning (13049): Converted tri-state buffer "Block1:inst1|lpm_rom:inst2|otri[5]" feeding internal logic into a wire
+    Warning (13049): Converted tri-state buffer "Block1:inst1|lpm_rom:inst2|otri[4]" feeding internal logic into a wire
+    Warning (13049): Converted tri-state buffer "Block1:inst1|lpm_rom:inst2|otri[3]" feeding internal logic into a wire
+    Warning (13049): Converted tri-state buffer "Block1:inst1|lpm_rom:inst2|otri[2]" feeding internal logic into a wire
+    Warning (13049): Converted tri-state buffer "Block1:inst1|lpm_rom:inst2|otri[1]" feeding internal logic into a wire
+    Warning (13049): Converted tri-state buffer "Block1:inst1|lpm_rom:inst2|otri[0]" feeding internal logic into a wire
+    Warning (13049): Converted tri-state buffer "Block1:inst1|lpm_rom:inst5|otri[7]" feeding internal logic into a wire
+    Warning (13049): Converted tri-state buffer "Block1:inst1|lpm_rom:inst5|otri[6]" feeding internal logic into a wire
+    Warning (13049): Converted tri-state buffer "Block1:inst1|lpm_rom:inst5|otri[5]" feeding internal logic into a wire
+    Warning (13049): Converted tri-state buffer "Block1:inst1|lpm_rom:inst5|otri[4]" feeding internal logic into a wire
+    Warning (13049): Converted tri-state buffer "Block1:inst1|lpm_rom:inst5|otri[3]" feeding internal logic into a wire
+    Warning (13049): Converted tri-state buffer "Block1:inst1|lpm_rom:inst5|otri[2]" feeding internal logic into a wire
+    Warning (13049): Converted tri-state buffer "Block1:inst1|lpm_rom:inst5|otri[1]" feeding internal logic into a wire
+    Warning (13049): Converted tri-state buffer "Block1:inst1|lpm_rom:inst5|otri[0]" feeding internal logic into a wire
 Info (13000): Registers with preset signals will power-up high
 Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
 Warning (13024): Output pins are stuck at VCC or GND
@@ -785,15 +609,15 @@ Critical Warning (18061): Ignored Power-Up Level option on the following registe
     Critical Warning (18010): Register control_imagen:inst2|fila_n[5] will power up to High
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 388 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 389 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 2 input pins
     Info (21059): Implemented 35 output pins
-    Info (21061): Implemented 255 logic cells
+    Info (21061): Implemented 256 logic cells
     Info (21064): Implemented 96 RAM segments
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 18 warnings
-    Info: Peak virtual memory: 4665 megabytes
-    Info: Processing ended: Wed Jul 03 15:53:17 2024
-    Info: Elapsed time: 00:00:03
-    Info: Total CPU time (on all processors): 00:00:02
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 48 warnings
+    Info: Peak virtual memory: 4667 megabytes
+    Info: Processing ended: Wed Jul 03 18:03:15 2024
+    Info: Elapsed time: 00:00:05
+    Info: Total CPU time (on all processors): 00:00:05
 
 

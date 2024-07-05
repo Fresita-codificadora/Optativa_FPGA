@@ -4,7 +4,7 @@ JedecChain;
 	DefaultMfr(6E);
 
 	P ActionCode(Cfg)
-		Device PartName(EP2C35F672) Path("C:/Users/User/Desktop/Proyect5_VGA/output_files/") File("Proyect5.sof") MfrSpec(OpMask(1));
+		Device PartName(EP2C35F672) Path("C:/intelFPGA_lite/optativa/Optativa_FPGA/FUNCIONAN/Proyect5_VGA/output_files/") File("Proyect5.sof") MfrSpec(OpMask(1));
 
 ChainEnd;
 

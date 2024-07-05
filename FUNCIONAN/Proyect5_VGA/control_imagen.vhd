@@ -52,6 +52,7 @@ begin
 							state<=idle;	-- aca es donde no hacemos nada
 							col_n:=144;
 							fila_n:=35;
+							mem_dir_int<=0;
 					end if;
 				when fila_state=>
 -- debug					estado<=1;
